@@ -1,0 +1,77 @@
+{
+  "skills": [
+    {
+      "category": "categories.agility",
+      "items": [
+        { "name": "skills.boat", "base": 5 },
+        { "name": "skills.climb", "base": 40 },
+        { "name": "skills.dodge", "base": "DEX*2" },
+        { "name": "skills.drive", "base": 5 },
+        { "name": "skills.jump", "base": "DEX*3" },
+        { "name": "skills.ride", "base": 5 },
+        { "name": "skills.swim", "base": 15 }
+      ]
+    },
+    {
+      "category": "categories.communication",
+      "items": [
+        { "name": "skills.act", "base": 5},
+        { "name": "skills.art", "base": 5},
+        { "name": "skills.bargain", "base": 5},
+        { "name": "skills.charm", "base": 15},
+        { "name": "skills.dance", "base": 10},
+        { "name": "skills.disguise", "base": 5},
+        { "name": "skills.fast_talk", "base": 5},
+        { "name": "skills.intimidate", "base": 15},
+        { "name": "skills.intrigue", "base": 5},
+        { "name": "skills.orate", "base": 10},
+        { "name": "skills.sing", "base": 10},
+        { "name": "skills.speak_other_language", "base": 0},
+        { "name": "skills.speak_own_language", "base": 50}
+      ]
+    },
+    {
+      "category": "categories.knowledge",
+      "items": [
+        { "name": "skills.alchemy", "base": 0},
+        { "name": "skills.animal_lore", "base": 5},
+        { "name": "skills.battle", "base": 10},
+        { "name": "skills.bureaucracy", "base": 0},
+        { "name": "skills.celestial_lore", "base": 5},
+        { "name": "skills.cult_lore", "base": 5},
+        { "name": "skills.customs_local", "base": 25},
+        { "name": "skills.customs", "base": 0},
+        { "name": "skills.elder_race_lore", "base": 5},
+        { "name": "skills.evaluate", "base": 10},
+        { "name": "skills.farm", "base": 10},
+        { "name": "skills.first_aid", "base": 10},
+        { "name": "skills.game", "base": 15},
+        { "name": "skills.herd", "base": 5},
+        { "name": "skills.homeland_lore_own", "base": 30},
+        { "name": "skills.homeland_lore", "base": 0},
+        { "name": "skills.library_use", "base": 0},
+        { "name": "skills.manage_household", "base": 10},
+        { "name": "skills.mineral_lore", "base": 5},
+        { "name": "skills.peaceful_cut", "base": 10},
+        { "name": "skills.plant_lore", "base": 5},
+        { "name": "skills.read_write", "base": 0},
+        { "name": "skills.shiphandling", "base": 0},
+        { "name": "skills.survival", "base": 15},
+        { "name": "skills.treat_disease", "base": 5},
+        { "name": "skills.treat_poison", "base": 5}
+      ]
+    },
+    {
+      "category": "categories.magic",
+      "items": [
+        { "name": "skills.meditate", "base": 0}
+      ]
+    },
+    {
+      "category": "categories.manipulation",
+      "items": [
+        { "name": "skills.conceal", "base": 5}
+      ]
+    }
+  ]
+}
