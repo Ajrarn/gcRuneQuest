@@ -1,4 +1,130 @@
 {
+  "characteristics": {
+    "STR": "3D6",
+    "CON": "3D6",
+    "SIZ": "2D6+6",
+    "DEX": "3D6",
+    "INT": "2D6+6",
+    "CHA": "3D6"
+  },
+  "runes": [
+    { "elemental": 60 },
+    { "elemental": 40 },
+    { "elemental": 20 }
+  ],
+  "homelands": [
+    {
+      "name": "homelands.sartar",
+      "passions": [
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.air", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.esrolia",
+      "passions": [
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.city')" , "value": 60 },
+        { "name":  "passions.loyalty('groups.clan')" , "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.earth", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.grazelands",
+      "passions": [
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+        { "name":  "passions.loyalty('persons.feathered_horse_queen')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.fire", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.prax.bison_rider",
+      "passions": [
+        { "name":  "passions.hate('groups.chaos')", "value": 60 },
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.air", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.prax.high_llama_rider",
+      "passions": [
+        { "name":  "passions.hate('groups.chaos')", "value": 60 },
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.water", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.prax.impala_rider",
+      "passions": [
+        { "name":  "passions.hate('groups.chaos')", "value": 60 },
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.fire", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.prax.pol_joni",
+      "passions": [
+        { "name":  "passions.hate('groups.chaos')", "value": 60 },
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.air", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.prax.sable_rider",
+      "passions": [
+        { "name":  "passions.hate('groups.chaos')", "value": 60 },
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.moon", "bonus": 10}
+      ]
+    },
+    {
+      "name": "homelands.lunar_tarsh",
+      "passions": [
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.city')", "value": 60 },
+        { "name":  "passions.loyalty('persons.red_emperor')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.moon", "bonus": 10}
+      ]
+    }
+  ,
+    {
+      "name": "homelands.old_tarsh",
+      "passions": [
+        { "name":  "passions.love('groups.family')", "value": 60 },
+        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+        { "name":  "passions.love('groups.shaker_temple')", "value": 60 }
+      ],
+      "runes": [
+        { "name":  "elemental.earth", "bonus": 10}
+      ]
+    }
+  ],
   "skills": [
     {
       "category": "categories.agility",
@@ -15,62 +141,139 @@
     {
       "category": "categories.communication",
       "items": [
-        { "name": "skills.act", "base": 5},
-        { "name": "skills.art", "base": 5},
-        { "name": "skills.bargain", "base": 5},
-        { "name": "skills.charm", "base": 15},
-        { "name": "skills.dance", "base": 10},
-        { "name": "skills.disguise", "base": 5},
-        { "name": "skills.fast_talk", "base": 5},
-        { "name": "skills.intimidate", "base": 15},
+        { "name": "skills.act", "base": 5 },
+        { "name": "skills.art", "base": 5 },
+        { "name": "skills.bargain", "base": 5 },
+        { "name": "skills.charm", "base": 15 },
+        { "name": "skills.dance", "base": 10 },
+        { "name": "skills.disguise", "base": 5 },
+        { "name": "skills.fast_talk", "base": 5 },
+        { "name": "skills.intimidate", "base": 15 },
         { "name": "skills.intrigue", "base": 5},
         { "name": "skills.orate", "base": 10},
         { "name": "skills.sing", "base": 10},
-        { "name": "skills.speak_other_language", "base": 0},
-        { "name": "skills.speak_own_language", "base": 50}
+        { "name": "skills.speak_other_language", "base": 0 },
+        { "name": "skills.speak_own_language", "base": 50 }
       ]
     },
     {
       "category": "categories.knowledge",
       "items": [
-        { "name": "skills.alchemy", "base": 0},
-        { "name": "skills.animal_lore", "base": 5},
-        { "name": "skills.battle", "base": 10},
-        { "name": "skills.bureaucracy", "base": 0},
-        { "name": "skills.celestial_lore", "base": 5},
-        { "name": "skills.cult_lore", "base": 5},
-        { "name": "skills.customs_local", "base": 25},
-        { "name": "skills.customs", "base": 0},
-        { "name": "skills.elder_race_lore", "base": 5},
-        { "name": "skills.evaluate", "base": 10},
-        { "name": "skills.farm", "base": 10},
-        { "name": "skills.first_aid", "base": 10},
-        { "name": "skills.game", "base": 15},
-        { "name": "skills.herd", "base": 5},
-        { "name": "skills.homeland_lore_own", "base": 30},
-        { "name": "skills.homeland_lore", "base": 0},
-        { "name": "skills.library_use", "base": 0},
-        { "name": "skills.manage_household", "base": 10},
-        { "name": "skills.mineral_lore", "base": 5},
-        { "name": "skills.peaceful_cut", "base": 10},
-        { "name": "skills.plant_lore", "base": 5},
-        { "name": "skills.read_write", "base": 0},
-        { "name": "skills.shiphandling", "base": 0},
-        { "name": "skills.survival", "base": 15},
-        { "name": "skills.treat_disease", "base": 5},
-        { "name": "skills.treat_poison", "base": 5}
+        { "name": "skills.alchemy", "base": 0 },
+        { "name": "skills.animal_lore", "base": 5 },
+        { "name": "skills.battle", "base": 10 },
+        { "name": "skills.bureaucracy", "base": 0 },
+        { "name": "skills.celestial_lore", "base": 5 },
+        { "name": "skills.cult_lore", "base": 5 },
+        { "name": "skills.customs_local", "base": 25 },
+        { "name": "skills.customs", "base": 0 },
+        { "name": "skills.elder_race_lore", "base": 5 },
+        { "name": "skills.evaluate", "base": 10 },
+        { "name": "skills.farm", "base": 10 },
+        { "name": "skills.first_aid", "base": 10 },
+        { "name": "skills.game", "base": 15 },
+        { "name": "skills.herd", "base": 5 },
+        { "name": "skills.homeland_lore_own", "base": 30 },
+        { "name": "skills.homeland_lore", "base": 0 },
+        { "name": "skills.library_use", "base": 0 },
+        { "name": "skills.manage_household", "base": 10 },
+        { "name": "skills.mineral_lore", "base": 5 },
+        { "name": "skills.peaceful_cut", "base": 10 },
+        { "name": "skills.plant_lore", "base": 5 },
+        { "name": "skills.read_write", "base": 0 },
+        { "name": "skills.shiphandling", "base": 0 },
+        { "name": "skills.survival", "base": 15 },
+        { "name": "skills.treat_disease", "base": 5 },
+        { "name": "skills.treat_poison", "base": 5 }
       ]
     },
     {
       "category": "categories.magic",
       "items": [
-        { "name": "skills.meditate", "base": 0}
+        { "name": "skills.meditate", "base": 0 },
+        { "name": "skills.prepare_corpse", "base": 10 },
+        { "name": "skills.sense_assassin", "base": 0 },
+        { "name": "skills.sense_chaos", "base": 0 },
+        { "name": "skills.spirit_combat", "base": 20 },
+        { "name": "skills.spirit_dance", "base": 0 },
+        { "name": "skills.spirit_lore", "base": 0 },
+        { "name": "skills.spirit_travel", "base": 10 },
+        { "name": "skills.understand_herd_beast", "base": 0 },
+        { "name": "skills.worship", "base": 5 }
       ]
     },
     {
       "category": "categories.manipulation",
       "items": [
-        { "name": "skills.conceal", "base": 5}
+        { "name": "skills.conceal", "base": 5 },
+        { "name": "skills.craft", "base": 5 },
+        { "name": "skills.devise", "base": 5 },
+        { "name": "skills.play_instrument", "base": 5 },
+        { "name": "skills.sleight", "base": 5 }
+      ]
+    },
+    {
+      "category": "categories.perception",
+      "items": [
+        { "name": "skills.insight_own_species", "base": 20 },
+        { "name": "skills.insight", "base": 0 },
+        { "name": "skills.listen", "base": 25 },
+        { "name": "skills.scan", "base": 25 },
+        { "name": "skills.search", "base": 25 },
+        { "name": "skills.search", "base": 5 }
+      ]
+    },
+    {
+      "category": "categories.stealth",
+      "items": [
+        { "name": "skills.hide", "base": 10 },
+        { "name": "skills.move_quietly", "base": 10 },
+      ]
+    },
+    {
+      "category": "categories.melee_weapon",
+      "items": [
+        { "name": "skills.1h_axe", "base": 10 },
+        { "name": "skills.2h_axe", "base": 5 },
+        { "name": "skills.broadsword", "base": 10 },
+        { "name": "skills.dagger", "base": 15 },
+        { "name": "skills.kopis", "base": 10 },
+        { "name": "skills.1h_mace", "base": 15 },
+        { "name": "skills.pike", "base": 15 },
+        { "name": "skills.rapier", "base": 10 },
+        { "name": "skills.shortsword", "base": 10 },
+        { "name": "skills.1h_spear", "base": 5 },
+        { "name": "skills.2h_spear", "base": 15 },
+        { "name": "skills.2h_sword", "base": 5 }
+      ]
+    },
+    {
+      "category": "categories.missile_weapon",
+      "items": [
+        { "name": "skills.composite_bow", "base": 5 },
+        { "name": "skills.crossbow", "base": 25 },
+        { "name": "skills.javelin", "base": 10 },
+        { "name": "skills.pole_lasso", "base": 5 },
+        { "name": "skills.self_bow", "base": 5 },
+        { "name": "skills.sling", "base": 5 },
+        { "name": "skills.throwing_dagger", "base": 5 },
+        { "name": "skills.thrown_axe", "base": 10 }
+      ]
+    },
+    {
+      "category": "categories.shields",
+      "items": [
+        { "name": "skills.small_shield", "base": 15 },
+        { "name": "skills.medium_shield", "base": 15 },
+        { "name": "skills.large_shield", "base": 15 }
+      ]
+    },
+    {
+      "category": "categories.natural_weapons",
+      "items": [
+        { "name": "skills.fist", "base": 25 },
+        { "name": "skills.grapple", "base": 25 },
+        { "name": "skills.kick", "base": 15 }
       ]
     }
   ]

@@ -19,28 +19,71 @@
 		"text": "This is a simple demonstration app for ngx-translate",
 		"title": "Translation demo"
 	},
+	"groups": {
+		"chaos": "Chaos",
+		"city": "City",
+		"clan": "Clan",
+		"family": "Family",
+		"shaker_templs": "Shaker temple",
+		"tribe": "Tribe"
+	},
+	"homelands": {
+		"grazelands": "Grazelands",
+		"lunar_tarsh": "Lunar Tarsh",
+		"old_tarsh": "Old Tarsh",
+		"prax": {
+			"bison_rider": "Prax Bison Rider",
+			"high_llama_rider": "Prax High Llama Rider",
+			"impala_rider": "Impala Rider",
+			"pol_joni": "Pol Joni",
+			"sable_rider": "Sable Rider"
+		},
+		"sartar": "Sartar"
+	},
 	"passions": {
 		"hate": "Hate ({{name}})",
 		"honor": "Honor",
+		"love": "Love ({{name}})",
 		"loyalty": "Loyalty ({{name}})"
 	},
+	"persons": {
+		"feathered_horse_queen": "Feathered Horse Queen",
+		"prince_of_sartar": "Prince of Sartar",
+		"red_emperor": "Red Emperor",
+		"white_bull": "White Bull"
+	},
 	"runes": {
-		"air": "Air",
-		"beast": "Beast",
-		"darkness": "Darkness",
-		"death": "Death",
-		"disorder": "Disorder",
-		"earth": "Earth",
-		"fertility": "Fertility",
-		"fire": "Fire",
-		"harmony": "Harmony",
-		"illusion": "Illusion",
-		"man": "Man",
-		"moon": "Moon",
-		"movement": "Movement",
-		"stasis": "Stasis",
-		"truth": "Truth",
-		"water": "Water"
+		"conditions": {
+			"fate": "Fate",
+			"infinity": "Infinity",
+			"luck": "Luck",
+			"magic": "Magic",
+			"mastery": "Mastery"
+		},
+		"elemental": {
+			"air": "Air",
+			"darkness": "Darkness",
+			"earth": "Earth",
+			"fire": "Fire",
+			"moon": "Moon",
+			"water": "Water"
+		},
+		"power_form": {
+			"beast": "Beast",
+			"chaos": "Chaos",
+			"death": "Death",
+			"disorder": "Disorder",
+			"dragonewt": "Dragonewt",
+			"fertility": "Fertility",
+			"harmony": "Harmony",
+			"illusion": "Illusion",
+			"man": "Man",
+			"movement": "Movement",
+			"plant": "Plant",
+			"spirit": "Spirit",
+			"stasis": "Stasis",
+			"truth": "Truth"
+		}
 	},
 	"skills": {
 		"1h_axe": "1H Axe",

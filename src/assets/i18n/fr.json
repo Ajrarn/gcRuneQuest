@@ -19,28 +19,71 @@
 		"text": "Simple démonstrateur pour ngx-translate",
 		"title": "Démo de traduction"
 	},
+	"groups": {
+		"chaos": "Chaos",
+		"city": "Cité",
+		"clan": "Clan",
+		"family": "Famille",
+		"shaker_templs": "Temple-qui-ébranle",
+		"tribe": "Tribu"
+	},
+	"homelands": {
+		"grazelands": "Pâturages",
+		"lunar_tarsh": "Tarsh Lunar",
+		"old_tarsh": "Vieux Tarsh",
+		"prax": {
+			"bison_rider": "Monteur de bison",
+			"high_llama_rider": "Monteur du Grand Lama de Prax",
+			"impala_rider": "Monteur d'Impala",
+			"pol_joni": "Pol Joni",
+			"sable_rider": "Monteur de l'Antilope Noire"
+		},
+		"sartar": "Sartar"
+	},
 	"passions": {
 		"hate": "Haine ({{name}})",
 		"honor": "Honneur",
+		"love": "Amour ({{name}})",
 		"loyalty": "Loyauté ({{name}})"
 	},
+	"persons": {
+		"feathered_horse_queen": "Reine Cheval-Plume",
+		"prince_of_sartar": "Prince de Sartar",
+		"red_emperor": "Empereur rouge",
+		"white_bull": "Taureau Blanc"
+	},
 	"runes": {
-		"air": "Air",
-		"beast": "Bête",
-		"darkness": "Ténèbres",
-		"death": "Mort",
-		"disorder": "Désordre",
-		"earth": "Terre",
-		"fertility": "Fertilité",
-		"fire": "Feu",
-		"harmony": "Harmonie",
-		"illusion": "Illusion",
-		"man": "Homme",
-		"moon": "Lune",
-		"movement": "Mouvement",
-		"stasis": "Stase",
-		"truth": "Vérité",
-		"water": "Eau"
+		"conditions": {
+			"fate": "Destinée",
+			"infinity": "Infinitude",
+			"luck": "Chance",
+			"magic": "Magie",
+			"mastery": "Maîtrise"
+		},
+		"elemental": {
+			"air": "Air",
+			"darkness": "Ténèbres",
+			"earth": "Terre",
+			"fire": "Feu",
+			"moon": "Lune",
+			"water": "Eau"
+		},
+		"power_form": {
+			"beast": "Bête",
+			"chaos": "Chaos",
+			"death": "Mort",
+			"disorder": "Désordre",
+			"dragonewt": "Dragonewt",
+			"fertility": "Fertilité",
+			"harmony": "Harmonie",
+			"illusion": "Illusion",
+			"man": "Homme",
+			"movement": "Mouvement",
+			"plant": "Plante",
+			"spirit": "Esprit",
+			"stasis": "Stase",
+			"truth": "Vérité"
+		}
 	},
 	"skills": {
 		"1h_axe": "Hache 1 main",
