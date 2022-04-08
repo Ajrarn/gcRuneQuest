@@ -227,7 +227,7 @@
       "category": "categories.stealth",
       "items": [
         { "name": "skills.hide", "base": 10 },
-        { "name": "skills.move_quietly", "base": 10 },
+        { "name": "skills.move_quietly", "base": 10 }
       ]
     },
     {
