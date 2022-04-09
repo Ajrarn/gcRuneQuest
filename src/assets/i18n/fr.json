@@ -181,5 +181,24 @@
 		"treat_poison": "Traitements des poisons",
 		"understand_herd_beast": "Compréhension des troupeaux",
 		"worship": "Vénération ({{name}})"
+	},
+	"species": {
+		"agimori": "Agimori / Homme et demi",
+		"baboon": "Babouin",
+		"centaur": "Centaure",
+		"dark_troll": "Troll Sombre",
+		"duck": "Canard",
+		"dwarf": "Mostali / Nain",
+		"elf": "Aldryami / Elfe",
+		"great_troll": "Grand Troll",
+		"human": "Humain",
+		"minotaur": "Minotaure",
+		"morokanth": "Morokanth",
+		"trollkin": "Trollkin"
+	},
+	"static": {
+		"datas": "Données",
+		"language": "Langage",
+		"title": "Assistant de Création de Personnage pour RuneQuest"
 	}
 }

@@ -17,7 +17,6 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gcRuneQuest';
 
   constructor(private translate: TranslateService, private store: Store ) {
     const browser = translate.getBrowserLang()
@@ -34,7 +33,15 @@ export class AppComponent {
       new LoadMorokanth(), new LoadTrollkin()]);
   }
 
+  isCollapsed = false;
+  languages = [
+    { name: "Français", value: 'fr' },
+    { name: "Anglais", value: 'en' }
+  ]
+
   useLanguage(language: string): void {
     this.translate.use(language);
   }
+
+
 }

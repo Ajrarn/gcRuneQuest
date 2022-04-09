@@ -181,5 +181,24 @@
 		"treat_poison": "Treat Poison",
 		"understand_herd_beast": "Understand Herd Beast",
 		"worship": "Worship ({{name}})"
+	},
+	"species": {
+		"agimori": "Agimori / Man and a half",
+		"baboon": "Baboon",
+		"centaur": "Centaur",
+		"dark_troll": "Dark Troll",
+		"duck": "Duck",
+		"dwarf": "Mostali / Dwarf",
+		"elf": "Aldryami / Elf",
+		"great_troll": "Great Troll",
+		"human": "Human",
+		"minotaur": "Minotaur",
+		"morokanth": "Morokanth",
+		"trollkin": "Trollkin"
+	},
+	"static": {
+		"datas": "Datas",
+		"language": "Language",
+		"title": "Runequest Character Creation Assistant "
 	}
 }

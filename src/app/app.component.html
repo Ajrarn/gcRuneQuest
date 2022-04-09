@@ -1,24 +1,53 @@
-<div>
-  <h1>{{ 'demo.title' | translate }}</h1>
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <span class="runes white">W</span>
+      <h1>RuneQuest</h1>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="{{'static.datas' | translate}}" nzIcon="table">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">Welcome</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Monitor</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Workplace</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="{{'static.language' | translate}}" nzIcon="translation">
+        <ul *ngFor="let language of languages">
+          <li nz-menu-item nzMatchRouter (click)="useLanguage(language.value)">{{ language.name | translate }}</li>
+        </ul>
+      </li>
+    </ul>
 
-  <!-- translation: translation pipe -->
-  <p>{{ 'demo.text' | translate }}</p>
+  </nz-sider>
+  <nz-layout>
+    <nz-header >
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+          <span class="page-title">{{'static.title' | translate}}</span>
+        </span>
 
-  <!-- translation: directive (key as attribute)-->
-  <p [translate]="'demo.text'"></p>
-
-  <!-- translation: directive (key as content of element) -->
-  <p translate>demo.text</p>
-
-  <!-- translation with parameters: translation pipe -->
-  <p>{{ 'demo.greeting' | translate:{'name':'Andreas'} }}</p>
-
-  <!-- translation: directive (key as attribute) -->
-  <p [translate]="'demo.greeting'" [translateParams]="{name: 'Andreas'}"></p>
-
-  <!-- translation: directive (key as content of element)-->
-  <p translate [translateParams]="{name: 'Andreas'}">demo.greeting</p>
-
-  <button (click)="useLanguage('en')">en</button>
-  <button (click)="useLanguage('fr')">fr</button>
-</div>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
