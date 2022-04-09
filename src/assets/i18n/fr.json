@@ -1,7 +1,6 @@
 {
 	"categories": {
 		"agility": "Agilité",
-		"characteristics": "Caractéristiques",
 		"communication": "Communication",
 		"knowledge": "Connaissance",
 		"magic": "Magie",
@@ -14,10 +13,16 @@
 		"shields": "Boucliers",
 		"stealth": "Discrétion"
 	},
-	"demo": {
-		"greeting": "Bonjour {{name}}!",
-		"text": "Simple démonstrateur pour ngx-translate",
-		"title": "Démo de traduction"
+	"characteristics": {
+		"abrev": {
+			"CHA": "CHA",
+			"CON": "CON",
+			"DEX": "DEX",
+			"INT": "INT",
+			"POW": "POU",
+			"SIZ": "TAI",
+			"STR": "FOR"
+		}
 	},
 	"groups": {
 		"chaos": "Chaos",
@@ -64,7 +69,7 @@
 			"air": "Air",
 			"darkness": "Ténèbres",
 			"earth": "Terre",
-			"fire": "Feu",
+			"fire": "Feu / Ciel",
 			"moon": "Lune",
 			"water": "Eau"
 		},

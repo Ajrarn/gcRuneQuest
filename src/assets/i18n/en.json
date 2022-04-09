@@ -1,7 +1,6 @@
 {
 	"categories": {
 		"agility": "Agility",
-		"characteristics": "Characteristics",
 		"communication": "Communication",
 		"knowledge": "Knowledge",
 		"magic": "Magic",
@@ -14,10 +13,16 @@
 		"shields": "Shields",
 		"stealth": "Stealth"
 	},
-	"demo": {
-		"greeting": "Hello {{name}}!",
-		"text": "This is a simple demonstration app for ngx-translate",
-		"title": "Translation demo"
+	"characteristics": {
+		"abrev": {
+			"CHA": "CHA",
+			"CON": "CON",
+			"DEX": "DEX",
+			"INT": "INT",
+			"POW": "POW",
+			"SIZ": "SIZ",
+			"STR": "STR"
+		}
 	},
 	"groups": {
 		"chaos": "Chaos",
@@ -64,7 +69,7 @@
 			"air": "Air",
 			"darkness": "Darkness",
 			"earth": "Earth",
-			"fire": "Fire",
+			"fire": "Fire / Sky",
 			"moon": "Moon",
 			"water": "Water"
 		},

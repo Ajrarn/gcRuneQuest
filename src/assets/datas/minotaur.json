@@ -4,14 +4,15 @@
     "STR": "3D6",
     "CON": "3D6",
     "SIZ": "2D6+6",
-    "DEX": "3D6",
     "INT": "2D6+6",
+    "POW": "3D6",
+    "DEX": "3D6",
     "CHA": "3D6"
   },
   "runes": [
-    { "elemental": 60 },
-    { "elemental": 40 },
-    { "elemental": 20 }
+    { "name": "elemental", "value": 60 },
+    { "name": "elemental", "value": 40 },
+    { "name": "elemental", "value": 20 }
   ],
   "homelands": [
     {
@@ -221,7 +222,7 @@
         { "name": "skills.listen", "base": 25 },
         { "name": "skills.scan", "base": 25 },
         { "name": "skills.search", "base": 25 },
-        { "name": "skills.search", "base": 5 }
+        { "name": "skills.track", "base": 5 }
       ]
     },
     {

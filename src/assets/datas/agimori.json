@@ -1,137 +1,23 @@
 {
   "specie": "agimori",
   "characteristics": {
-    "STR": "3D6",
-    "CON": "3D6",
-    "SIZ": "2D6+6",
-    "DEX": "3D6",
+    "STR": "3D6+6",
+    "CON": "1D4+14",
+    "SIZ": "3D6+6",
     "INT": "2D6+6",
+    "POW": "3D6",
+    "DEX": "3D6",
     "CHA": "3D6"
   },
   "runes": [
-    { "elemental": 60 },
-    { "elemental": 40 },
-    { "elemental": 20 }
-  ],
-  "homelands": [
-    {
-      "name": "homelands.sartar",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.air", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.esrolia",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.city')" , "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')" , "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.earth", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.grazelands",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
-        { "name":  "passions.loyalty('persons.feathered_horse_queen')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.fire", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.bison_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.air", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.high_llama_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.water", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.impala_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.fire", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.pol_joni",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.air", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.sable_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.moon", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.lunar_tarsh",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.city')", "value": 60 },
-        { "name":  "passions.loyalty('persons.red_emperor')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.moon", "bonus": 10}
-      ]
-    }
-  ,
-    {
-      "name": "homelands.old_tarsh",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
-        { "name":  "passions.love('groups.shaker_temple')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.earth", "bonus": 10}
-      ]
-    }
+    { "name": "runes.elemental.fire", "value": 100 }
   ],
   "skills": [
     {
       "category": "categories.agility",
       "items": [
         { "name": "skills.boat", "base": 5 },
-        { "name": "skills.climb", "base": 40 },
+        { "name": "skills.climb", "base": 15 },
         { "name": "skills.dodge", "base": "DEX*2" },
         { "name": "skills.drive", "base": 5 },
         { "name": "skills.jump", "base": "DEX*3" },
@@ -218,17 +104,17 @@
       "items": [
         { "name": "skills.insight_own_species", "base": 20 },
         { "name": "skills.insight", "base": 0 },
-        { "name": "skills.listen", "base": 25 },
-        { "name": "skills.scan", "base": 25 },
-        { "name": "skills.search", "base": 25 },
-        { "name": "skills.search", "base": 5 }
+        { "name": "skills.listen", "base": 35 },
+        { "name": "skills.scan", "base": 50 },
+        { "name": "skills.search", "base": 50 },
+        { "name": "skills.track", "base": 50 }
       ]
     },
     {
       "category": "categories.stealth",
       "items": [
-        { "name": "skills.hide", "base": 10 },
-        { "name": "skills.move_quietly", "base": 10 }
+        { "name": "skills.hide", "base": 40 },
+        { "name": "skills.move_quietly", "base": 40 }
       ]
     },
     {
@@ -240,10 +126,10 @@
         { "name": "skills.dagger", "base": 15 },
         { "name": "skills.kopis", "base": 10 },
         { "name": "skills.1h_mace", "base": 15 },
-        { "name": "skills.pike", "base": 15 },
+        { "name": "skills.pike", "base": 30 },
         { "name": "skills.rapier", "base": 10 },
-        { "name": "skills.shortsword", "base": 10 },
-        { "name": "skills.1h_spear", "base": 5 },
+        { "name": "skills.shortsword", "base": 20 },
+        { "name": "skills.1h_spear", "base": 30 },
         { "name": "skills.2h_spear", "base": 15 },
         { "name": "skills.2h_sword", "base": 5 }
       ]
@@ -253,7 +139,7 @@
       "items": [
         { "name": "skills.composite_bow", "base": 5 },
         { "name": "skills.crossbow", "base": 25 },
-        { "name": "skills.javelin", "base": 10 },
+        { "name": "skills.javelin", "base": 30 },
         { "name": "skills.pole_lasso", "base": 5 },
         { "name": "skills.self_bow", "base": 5 },
         { "name": "skills.sling", "base": 5 },
@@ -266,7 +152,7 @@
       "items": [
         { "name": "skills.small_shield", "base": 15 },
         { "name": "skills.medium_shield", "base": 15 },
-        { "name": "skills.large_shield", "base": 15 }
+        { "name": "skills.large_shield", "base": 25 }
       ]
     },
     {

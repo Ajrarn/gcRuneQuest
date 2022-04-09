@@ -11,13 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class SpeciesComponent implements OnInit {
 
-  specieData = {
-    skills: [
-      { category: 'toto', items: [] },
-      { category: 'titi', items: [] },
-      { category: 'tata', items: [] },
-    ]
-  };
+  specieData: any;
 
   skillPanels = [
     {
@@ -53,7 +47,7 @@ export class SpeciesComponent implements OnInit {
   }
 
   preparePanels() {
-    this.skillPanels = this.specieData.skills.map(item => {
+    this.skillPanels = this.specieData.skills.map( (item:any) => {
       return {
         name: item.category,
         active: false,
@@ -64,7 +58,7 @@ export class SpeciesComponent implements OnInit {
 
   getSkillDatas(category: string):any[] {
     let datas:any[] = [];
-     const specie = this.specieData.skills.find(item => item.category === category);
+     const specie = this.specieData.skills.find((item: any) => item.category === category);
      if (specie && specie.items) {
        datas = specie.items
      }
