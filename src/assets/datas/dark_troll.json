@@ -1,4 +1,5 @@
 {
+  "specie": "dark_troll",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",
@@ -231,7 +232,7 @@
       ]
     },
     {
-      "category": "categories.melee_weapon",
+      "category": "categories.melee_weapons",
       "items": [
         { "name": "skills.1h_axe", "base": 10 },
         { "name": "skills.2h_axe", "base": 5 },
@@ -248,7 +249,7 @@
       ]
     },
     {
-      "category": "categories.missile_weapon",
+      "category": "categories.missile_weapons",
       "items": [
         { "name": "skills.composite_bow", "base": 5 },
         { "name": "skills.crossbow", "base": 25 },

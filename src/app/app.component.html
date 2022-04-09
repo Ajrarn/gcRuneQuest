@@ -10,16 +10,17 @@
       <h1>RuneQuest</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="{{'static.datas' | translate}}" nzIcon="table">
+      <li nz-submenu nzOpen nzTitle="{{'static.assistant' | translate}}" nzIcon="dingtalk">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
+            <a routerLink="/character">{{'static.character' | translate}}</a>
           </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="{{'static.datas' | translate}}" nzIcon="table">
+        <ul *ngFor="let specie of species">
           <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Workplace</a>
+            <a routerLink="/species/{{specie}}">{{ 'species.' + specie | translate}}</a>
           </li>
         </ul>
       </li>

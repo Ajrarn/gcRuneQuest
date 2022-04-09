@@ -18,6 +18,26 @@ import {
 })
 export class AppComponent {
 
+  languages = [
+    { name: "Français", value: 'fr' },
+    { name: "English", value: 'en' }
+  ]
+
+  species = [
+    'agimori',
+    'baboon',
+    'centaur',
+    'dark_troll',
+    'duck',
+    'dwarf',
+    'elf',
+    'great_troll',
+    'human',
+    'minotaur',
+    'morokanth',
+    'trollkin',
+  ]
+
   constructor(private translate: TranslateService, private store: Store ) {
     const browser = translate.getBrowserLang()
     let current = 'en';
@@ -34,10 +54,7 @@ export class AppComponent {
   }
 
   isCollapsed = false;
-  languages = [
-    { name: "Français", value: 'fr' },
-    { name: "Anglais", value: 'en' }
-  ]
+
 
   useLanguage(language: string): void {
     this.translate.use(language);

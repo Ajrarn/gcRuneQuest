@@ -197,8 +197,15 @@
 		"trollkin": "Trollkin"
 	},
 	"static": {
+		"assistant": "Assistant",
+		"base": "Base",
+		"character": "Personnage",
+		"characteristics": "Caractéristiques",
 		"datas": "Données",
 		"language": "Langage",
+		"name": "Nom",
+		"runes": "Runes",
+		"skills": "Compétences",
 		"title": "Assistant de Création de Personnage pour RuneQuest"
 	}
 }

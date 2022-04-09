@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Action, State, StateContext } from '@ngxs/store';
+import { Action, createSelector, State, StateContext } from '@ngxs/store';
 import {
   LoadAgimori,
   LoadBaboon,
@@ -16,18 +16,7 @@ import { tap } from 'rxjs';
 @State<any>({
   name: 'data',
   defaults: {
-    agimori: {},
-    baboon: {},
-    centaur: {},
-    darkTroll: {},
-    duck: {},
-    dwarf: {},
-    elf: {},
-    greatTroll: {},
-    humans: {},
-    minotaur: {},
-    morokanth: {},
-    trollkin: {}
+    species: []
   }
 })
 @Injectable()
@@ -37,120 +26,71 @@ export class DataState {
 
   @Action(LoadAgimori)
   loadAgimori(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/agimori.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({agimori: data});
-        })
-      );
+    return this.load('assets/datas/agimori.json', ctx);
   }
 
   @Action(LoadBaboon)
   loadBaboon(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/baboon.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({baboon: data});
-        })
-      );
+    return this.load('assets/datas/baboon.json', ctx);
   }
 
   @Action(LoadCentaur)
   loadCentaur(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/centaur.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({centaur: data});
-        })
-      );
+    return this.load('assets/datas/centaur.json', ctx);
   }
 
   @Action(LoadDarkTroll)
   loadDarkTroll(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/dark_troll.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({darkTroll: data});
-        })
-      );
+    return this.load('assets/datas/dark_troll.json', ctx);
   }
 
   @Action(LoadDuck)
   loadDuck(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/duck.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({duck: data});
-        })
-      );
+    return this.load('assets/datas/duck.json', ctx);
   }
 
   @Action(LoadDwarf)
   loadDwarf(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/dwarf.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({dwarf: data});
-        })
-      );
+    return this.load('assets/datas/dwarf.json', ctx);
   }
 
   @Action(LoadElf)
   loadElf(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/elf.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({elf: data});
-        })
-      );
+    return this.load('assets/datas/elf.json', ctx);
   }
 
   @Action(LoadGreatTroll)
   loadGreatTroll(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/great_troll.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({greatTroll: data});
-        })
-      );
+    return this.load('assets/datas/great_troll.json', ctx);
   }
 
   @Action(LoadHumans)
   loadHumans(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/humans.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({humans: data});
-        })
-      );
+    return this.load('assets/datas/humans.json', ctx);
+
   }
 
   @Action(LoadMinotaur)
   loadMinotaur(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/minotaur.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({minotaur: data});
-        })
-      );
+    return this.load('assets/datas/minotaur.json', ctx);
   }
 
   @Action(LoadMorokanth)
   loadMorokanth(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/humans.json', { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          ctx.patchState({morokanth: data});
-        })
-      );
+    return this.load('assets/datas/morokanth.json', ctx);
   }
 
   @Action(LoadTrollkin)
   loadTrollkin(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/trollkin.json', { responseType: 'json' })
+    return this.load('assets/datas/trollkin.json', ctx);
+  }
+
+  load(param: string, ctx: StateContext<any>) {
+    return this.httpClient.get(param, { responseType: 'json' })
       .pipe(
         tap((data: any) => {
-          ctx.patchState({trollkin: data});
+          const state = ctx.getState();
+          ctx.setState({species: [...state.species, data]});
         })
       );
   }
