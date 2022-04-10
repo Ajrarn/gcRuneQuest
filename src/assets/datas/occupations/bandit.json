@@ -1,0 +1,14 @@
+{
+  "name": "occupations.bandit",
+  "skills": [
+    {"name":  "skills.intimidate", "value": 10},
+    {"name":  "skills.hide", "value": 30},
+    {"name":  "skills.cultural_weapon", "value": 30},
+    {"name":  "skills.cultural_weapon", "value": 10},
+    {"name":  "skills.lore(animal_or_plant)", "value": 10},
+    {"name":  "skills.first_aid", "value": 10},
+    {"name":  "skills.survival", "value": 30},
+    {"name":  "skills.shield", "value": 10},
+    {"name":  "skills.track", "value": 10}
+  ]
+}

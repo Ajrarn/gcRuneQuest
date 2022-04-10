@@ -1,0 +1,13 @@
+{
+  "name": "occupations.chariot_driver",
+  "skills": [
+    {"name":  "skills.battle", "value": 20},
+    {"name":  "skills.drive_chariot", "value": 40},
+    {"name":  "skills.whip", "value": 20},
+    {"name":  "skills.cultural_melee_weapon", "value": 20},
+    {"name":  "skills.cultural_missile_weapon", "value": 20},
+    {"name":  "skills.dance", "value": 15},
+    {"name":  "skills.first_aid", "value": 10},
+    {"name":  "skills.svan", "value": 15}
+  ]
+}

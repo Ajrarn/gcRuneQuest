@@ -1,7 +1,7 @@
 import { Action, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LoadAllOccupations, LoadAssistantShaman } from './occupations.actions';
+import { LoadAllOccupations, LoadAssistantShaman, LoadBandit, LoadChariotDriver } from './occupations.actions';
 import { tap } from 'rxjs';
 
 
@@ -16,13 +16,23 @@ export class OccupationsState {
   }
 
   @Action(LoadAllOccupations)
-  loadAllSpecies(ctx: StateContext<any>) {
-    return ctx.dispatch([new LoadAssistantShaman()]);
+  loadAllOccupations(ctx: StateContext<any>) {
+    return ctx.dispatch([new LoadAssistantShaman(), new LoadBandit(), new LoadChariotDriver()]);
   }
 
   @Action(LoadAssistantShaman)
-  loadAgimori(ctx: StateContext<any>) {
+  loadAssistantChaman(ctx: StateContext<any>) {
     return this.load('assets/datas/occupations/assistant_shaman.json', ctx);
+  }
+
+  @Action(LoadBandit)
+  loadBandit(ctx: StateContext<any>) {
+    return this.load('assets/datas/occupations/bandit.json', ctx);
+  }
+
+  @Action(LoadChariotDriver)
+  loadChariotDriver(ctx: StateContext<any>) {
+    return this.load('assets/datas/occupations/chariot_driver.json', ctx);
   }
 
   load(param: string, ctx: StateContext<any>) {
