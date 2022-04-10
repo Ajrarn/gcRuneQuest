@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { Store } from '@ngxs/store';
 import {
-  LoadAgimori,
+  LoadAgimori, LoadAllSpecies,
   LoadBaboon,
   LoadCentaur,
   LoadDarkTroll,
   LoadDuck,
   LoadDwarf, LoadElf, LoadGreatTroll,
   LoadHumans, LoadMinotaur, LoadMorokanth, LoadTrollkin
-} from './store/data.actions';
+} from './store/species.actions';
+import { LoadAllOccupations } from './store/occupations.actions';
 
 @Component({
   selector: 'app-root',
@@ -48,9 +49,7 @@ export class AppComponent {
     console.log('browserLang', translate.getBrowserLang());
     console.log('browserCultureLang', translate.getBrowserCultureLang());
 
-    this.store.dispatch([new LoadAgimori(), new LoadBaboon(), new LoadCentaur(), new LoadDarkTroll(),
-      new LoadDuck(), new LoadDwarf(), new LoadElf(), new LoadGreatTroll(), new LoadHumans(), new LoadMinotaur(),
-      new LoadMorokanth(), new LoadTrollkin()]);
+    this.store.dispatch([new LoadAllSpecies(), new LoadAllOccupations()]);
   }
 
   isCollapsed = false;

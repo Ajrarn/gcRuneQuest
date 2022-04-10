@@ -45,6 +45,25 @@
 		},
 		"sartar": "Sartar"
 	},
+	"occupations": {
+		"assistant_shaman": "Assistant Shaman",
+		"bandit": "Bandit",
+		"chariot_driver": "Conducteur de Char",
+		"crafter": "Artisan",
+		"entertainer": "Artiste",
+		"farmer": "Fermier",
+		"fisher": "Pêcheur",
+		"healer": "Guérisseur",
+		"herder": "Berger",
+		"hunter": "Chasseur",
+		"merchant": "Marchand",
+		"noble": "Noble",
+		"philosopher": "Philosophe",
+		"priest": "Prêtre",
+		"scribe": "Scribe",
+		"thief": "Voleur",
+		"warrior": "Guerrier"
+	},
 	"passions": {
 		"hate": "Haine ({{name}})",
 		"honor": "Honneur",
@@ -209,8 +228,15 @@
 		"datas": "Données",
 		"language": "Langage",
 		"name": "Nom",
+		"occupation": "Occupation",
 		"runes": "Runes",
 		"skills": "Compétences",
 		"title": "Assistant de Création de Personnage pour RuneQuest"
+	},
+	"unit": {
+		"heavy_cavalry": "Cavalerie lourde",
+		"heavy_infantry": "Infanterie lourde",
+		"light_cavalry": "Cavalerie Légère",
+		"light_infantry": "Infanterie légère"
 	}
 }

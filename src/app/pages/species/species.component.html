@@ -1,44 +1,43 @@
-<div>
-  <span>
-  <h1>{{'static.characteristics' | translate}}</h1>
-  <p><b>{{'characteristics.abrev.STR' | translate}}</b>: {{specieData.characteristics.STR}}</p>
-  <p><b>{{'characteristics.abrev.CON' | translate}}</b>: {{specieData.characteristics.CON}}</p>
-  <p><b>{{'characteristics.abrev.SIZ' | translate}}</b>: {{specieData.characteristics.SIZ}}</p>
-  <p><b>{{'characteristics.abrev.INT' | translate}}</b>: {{specieData.characteristics.INT}}</p>
-  <p><b>{{'characteristics.abrev.POW' | translate}}</b>: {{specieData.characteristics.POW}}</p>
-  <p><b>{{'characteristics.abrev.DEX' | translate}}</b>: {{specieData.characteristics.DEX}}</p>
-  <p><b>{{'characteristics.abrev.CHA' | translate}}</b>: {{specieData.characteristics.CHA}}</p>
+<div class="inner-content">
+  <nz-card style="width:300px;" nzTitle="{{'static.characteristics' | translate}}">
+    <p><b>{{'characteristics.abrev.STR' | translate}}</b>: {{specieData.characteristics.STR}}</p>
+    <p><b>{{'characteristics.abrev.CON' | translate}}</b>: {{specieData.characteristics.CON}}</p>
+    <p><b>{{'characteristics.abrev.SIZ' | translate}}</b>: {{specieData.characteristics.SIZ}}</p>
+    <p><b>{{'characteristics.abrev.INT' | translate}}</b>: {{specieData.characteristics.INT}}</p>
+    <p><b>{{'characteristics.abrev.POW' | translate}}</b>: {{specieData.characteristics.POW}}</p>
+    <p><b>{{'characteristics.abrev.DEX' | translate}}</b>: {{specieData.characteristics.DEX}}</p>
+    <p><b>{{'characteristics.abrev.CHA' | translate}}</b>: {{specieData.characteristics.CHA}}</p>
+  </nz-card>
 
-</span>
-  <span>
-  <h1>{{'static.runes' | translate}}</h1>
+  <nz-card style="width:300px;" nzTitle="{{'static.runes' | translate}}">
     <p *ngFor="let rune of specieData.runes"><b>{{rune.name | translate}}</b>: {{rune.value}}</p>
-  </span>
-</div>
-<div>
-  <h1>{{'static.skills' | translate}}</h1>
-  <nz-collapse>
-    <nz-collapse-panel
-      *ngFor="let panel of skillPanels"
-      [nzHeader]="panel.name | translate"
-      [nzActive]="panel.active"
-      [nzDisabled]="panel.disabled"
-    >
-      <nz-table #basicTable [nzData]="getSkillDatas(panel.name)">
-        <thead>
-        <tr>
-          <th>{{ 'static.name' | translate}}</th>
-          <th>{{ 'static.base' | translate}}</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let data of basicTable.data">
-          <td>{{data.name | translate}}</td>
-          <td>{{data.base}}</td>
-        </tr>
-        </tbody>
-      </nz-table>
-    </nz-collapse-panel>
-  </nz-collapse>
+  </nz-card>
+
+  <div>
+    <h1>{{'static.skills' | translate}}</h1>
+    <nz-collapse>
+      <nz-collapse-panel
+        *ngFor="let panel of skillPanels"
+        [nzHeader]="panel.name | translate"
+        [nzActive]="panel.active"
+        [nzDisabled]="panel.disabled"
+      >
+        <nz-table #basicTable [nzData]="getSkillDatas(panel.name)">
+          <thead>
+          <tr>
+            <th>{{ 'static.name' | translate}}</th>
+            <th>{{ 'static.base' | translate}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>{{data.name | translate}}</td>
+            <td>{{data.base}}</td>
+          </tr>
+          </tbody>
+        </nz-table>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </div>
 </div>
 

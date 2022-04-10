@@ -45,6 +45,25 @@
 		},
 		"sartar": "Sartar"
 	},
+	"occupations": {
+		"assistant_shaman": "Assistant Shaman",
+		"bandit": "Bandit",
+		"chariot_driver": "Chariot Driver",
+		"crafter": "Crafter",
+		"entertainer": "Entertainer",
+		"farmer": "Farmer",
+		"fisher": "Fisher",
+		"healer": "Healer",
+		"herder": "Herder",
+		"hunter": "Hunter",
+		"merchant": "Merchant",
+		"noble": "Noble",
+		"philosopher": "Philosopher",
+		"priest": "Priest",
+		"scribe": "Scribe",
+		"thief": "Thief",
+		"warrior": "Warrior"
+	},
 	"passions": {
 		"hate": "Hate ({{name}})",
 		"honor": "Honor",
@@ -209,8 +228,15 @@
 		"datas": "Datas",
 		"language": "Language",
 		"name": "Name",
+		"occupation": "Occupation",
 		"runes": "Runes",
 		"skills": "Skills",
 		"title": "Runequest Character Creation Assistant "
+	},
+	"unit": {
+		"heavy_cavalry": "Heavy Cavalry",
+		"heavy_infantry": "Heavy Infantry",
+		"light_cavalry": "Light Cavalry",
+		"light_infantry": "Light Infantry"
 	}
 }

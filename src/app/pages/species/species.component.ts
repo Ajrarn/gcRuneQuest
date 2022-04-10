@@ -37,7 +37,7 @@ export class SpeciesComponent implements OnInit {
 
     // listen to the params to filter with the good specie
     this.route.params.subscribe(params => {
-      const data$ = this.store.select(state => state.data.species)
+      const data$ = this.store.select(state => state.species)
         .pipe(first())
         .subscribe(datas => {
           this.specieData = datas.find((item: any) => item.specie === params['id']);

@@ -18,3 +18,21 @@
   font-size: 30px;
   margin-left: 50px;
 }
+
+nz-sider {
+  overflow: auto;
+  height: 100%;
+  position: fixed;
+  left: 0;
+}
+
+nz-content {
+  // margin: 24px 16px 0;
+  overflow: auto;
+}
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  text-align: center;
+}

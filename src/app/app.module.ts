@@ -11,7 +11,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { NgxsModule } from '@ngxs/store';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
-import { DataState } from './store/data.state';
+import { SpeciesState } from './store/species.state';
 import { environment } from '../environments/environment';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { fr_FR } from 'ng-zorro-antd/i18n';
@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { OccupationsState } from './store/occupations.state';
 
 registerLocaleData(fr);
 
@@ -40,7 +41,7 @@ registerLocaleData(fr);
         deps: [HttpClient]
       }
     }),
-    NgxsModule.forRoot([DataState], {
+    NgxsModule.forRoot([SpeciesState, OccupationsState], {
       developmentMode: !environment.production
     }),
     NgxsLoggerPluginModule.forRoot(),
