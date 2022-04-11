@@ -5,13 +5,13 @@ import { first } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-species',
-  templateUrl: './species.component.html',
-  styleUrls: ['./species.component.scss']
+  selector: 'app-occupations',
+  templateUrl: './occupations.component.html',
+  styleUrls: ['./occupations.component.scss']
 })
-export class SpeciesComponent implements OnInit {
+export class OccupationsComponent implements OnInit {
 
-  specieData: any;
+  occupationData: any;
 
   skillPanels = [
     {
@@ -37,18 +37,17 @@ export class SpeciesComponent implements OnInit {
 
     // listen to the params to filter with the good specie
     this.route.params.subscribe(params => {
-      const data$ = this.store.select(state => state.species)
+      const data$ = this.store.select(state => state.occupations)
         .pipe(first())
         .subscribe(datas => {
-          this.specieData = datas.find((item: any) => item.specie === params['id']);
-          console.log('specieData', this.specieData);
+          this.occupationData = datas.find((item: any) => item.name === params['id']);
           this.preparePanels();
         });
     });
   }
 
   preparePanels() {
-    this.skillPanels = this.specieData.skills.map( (item:any) => {
+    this.skillPanels = this.occupationData.skills.map( (item:any) => {
       return {
         name: item.category,
         active: false,
@@ -59,16 +58,11 @@ export class SpeciesComponent implements OnInit {
 
   getSkillDatas(category: string):any[] {
     let datas:any[] = [];
-    if (this.specieData) {
-      const specie = this.specieData.skills.find((item: any) => item.category === category);
-      if (specie && specie.items) {
-        datas = specie.items
-      }
+     const specie = this.occupationData.skills.find((item: any) => item.category === category);
+     if (specie && specie.items) {
+       datas = specie.items
+     }
       return datas;
-    } else {
-      return [];
-    }
-
   }
 
   ngOnInit(): void {

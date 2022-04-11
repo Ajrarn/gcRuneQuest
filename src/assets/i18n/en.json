@@ -45,6 +45,9 @@
 		},
 		"sartar": "Sartar"
 	},
+	"languages": {
+		"spirit": "Spirit Language"
+	},
 	"occupations": {
 		"assistant_shaman": "Assistant Shaman",
 		"bandit": "Bandit",
@@ -229,8 +232,10 @@
 		"language": "Language",
 		"name": "Name",
 		"occupation": "Occupation",
+		"occupations": "Occupations",
 		"runes": "Runes",
 		"skills": "Skills",
+		"species": "Species",
 		"title": "Runequest Character Creation Assistant "
 	},
 	"unit": {

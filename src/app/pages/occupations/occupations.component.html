@@ -1,0 +1,29 @@
+<div class="inner-content">
+  <div>
+    <h1>{{'static.skills' | translate}}</h1>
+    <nz-collapse>
+      <nz-collapse-panel
+        *ngFor="let panel of skillPanels"
+        [nzHeader]="panel.name | translate"
+        [nzActive]="panel.active"
+        [nzDisabled]="panel.disabled"
+      >
+        <nz-table #basicTable [nzData]="getSkillDatas(panel.name)">
+          <thead>
+          <tr>
+            <th>{{ 'static.name' | translate}}</th>
+            <th>{{ 'static.base' | translate}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>{{data.name | translate}}</td>
+            <td>{{data.base}}</td>
+          </tr>
+          </tbody>
+        </nz-table>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </div>
+</div>
+

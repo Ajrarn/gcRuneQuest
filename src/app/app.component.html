@@ -13,14 +13,21 @@
       <li nz-submenu nzOpen nzTitle="{{'static.assistant' | translate}}" nzIcon="dingtalk">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/character">{{'static.character' | translate}}</a>
+            <span class="runes white">,</span><a routerLink="/character">{{'static.character' | translate}}</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.datas' | translate}}" nzIcon="table">
+      <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="table">
         <ul *ngFor="let specie of species">
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/species/{{specie}}">{{ 'species.' + specie | translate}}</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="table">
+        <ul *ngFor="let occupation of occupations">
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/occupations/{{occupation}}">{{ 'occupations.' + occupation | translate}}</a>
           </li>
         </ul>
       </li>

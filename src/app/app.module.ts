@@ -24,11 +24,24 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { OccupationsState } from './store/occupations.state';
 
+
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { SpeciesComponent } from './pages/species/species.component';
+import { CharacterComponent } from './pages/character/character.component';
+import { OccupationsComponent } from './pages/occupations/occupations.component';
+import { ReadyState } from './store/ready.state';
+import { CanActivateWhenReady } from './can-activate-when-ready';
+
 registerLocaleData(fr);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpeciesComponent,
+    CharacterComponent,
+    OccupationsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +54,7 @@ registerLocaleData(fr);
         deps: [HttpClient]
       }
     }),
-    NgxsModule.forRoot([SpeciesState, OccupationsState], {
+    NgxsModule.forRoot([SpeciesState, OccupationsState, ReadyState], {
       developmentMode: !environment.production
     }),
     NgxsLoggerPluginModule.forRoot(),
@@ -49,9 +62,12 @@ registerLocaleData(fr);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzCollapseModule,
+    NzTableModule,
+    NzCardModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: fr_FR }],
+  providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
