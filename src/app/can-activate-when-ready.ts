@@ -13,11 +13,11 @@ export class CanActivateWhenReady implements CanActivate {
 
   constructor(private store: Store) {}
 
-  canActivate(): Observable<boolean> {
+  canActivate(): Observable<boolean>| boolean {
 
     const ready = this.store.selectSnapshot(state => state.app.ready);
     if (ready) {
-      this.ready$.next(true);
+      return true;
     } else {
       const that = this
       this.store.dispatch([new LoadAllSpecies(), new LoadAllOccupations()])
@@ -28,8 +28,8 @@ export class CanActivateWhenReady implements CanActivate {
           },
           error: () => this.ready$.next(false)
         });
+      return this.ready$;
     }
-    return this.ready$;
   }
 
 }

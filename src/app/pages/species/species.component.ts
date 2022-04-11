@@ -36,11 +36,11 @@ export class SpeciesComponent implements OnInit {
   constructor(private route: ActivatedRoute, private store: Store, private translate: TranslateService) {
 
     // listen to the params to filter with the good specie
-    this.route.params.subscribe(params => {
+    this.route.paramMap.subscribe(params => {
       const data$ = this.store.select(state => state.species)
         .pipe(first())
         .subscribe(datas => {
-          this.specieData = datas.find((item: any) => item.specie === params['id']);
+          this.specieData = datas.find((item: any) => item.specie === params.get('id'));
           console.log('specieData', this.specieData);
           this.preparePanels();
         });
