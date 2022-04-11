@@ -9,23 +9,27 @@ import { AppReady } from './store/ready.actions';
 @Injectable()
 export class CanActivateWhenReady implements CanActivate {
 
+  private ready$ = new Subject<boolean>();
+
   constructor(private store: Store) {}
 
   canActivate(): Observable<boolean> {
 
-    const ready$ = new Subject<boolean>();
     const ready = this.store.selectSnapshot(state => state.app.ready);
     if (ready) {
-      ready$.next(true);
+      this.ready$.next(true);
     } else {
+      const that = this
       this.store.dispatch([new LoadAllSpecies(), new LoadAllOccupations()])
-        .subscribe( () => {
-          this.store.dispatch(new AppReady());
-          ready$.next(true);
-        }, () => {
-          ready$.next(false);
+        .subscribe({
+          complete: () => {
+            that.store.dispatch(new AppReady());
+            that.ready$.next(true);
+          },
+          error: () => this.ready$.next(false)
         });
     }
-    return ready$;
+    return this.ready$;
   }
+
 }
