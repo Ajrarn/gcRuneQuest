@@ -24,9 +24,6 @@ jobs:
       - name: Install packages
         run: yarn install
 
-      - name: Autogenerate GraphQL
-        run: yarn codegen
-
       - name: Run Typescript Checks
         run: yarn lint
 
