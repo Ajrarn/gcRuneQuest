@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { Store } from '@ngxs/store';
-import { LoadAllSpecies } from './store/species.actions';
-import { LoadAllOccupations } from './store/occupations.actions';
-import { AppReady } from './store/ready.actions';
 
 @Component({
   selector: 'app-root',
