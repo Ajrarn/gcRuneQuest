@@ -6,7 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.0",
+    "yarn": "1.22.11"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +28,9 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "@ngxs/logger-plugin": "^3.7.3",
     "@ngxs/store": "^3.7.3",
+    "express": "^4.17.3",
     "ng-zorro-antd": "13.1.1",
+    "path": "^0.12.7",
     "rxjs": "^7.5.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

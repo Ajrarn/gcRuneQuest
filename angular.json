@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "charRuneQuest": {
+    "gc-runequest": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/char-rune-quest",
+            "outputPath": "dist/gc-runequest",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "charRuneQuest:build:production"
+              "browserTarget": "gc-runequest:build:production"
             },
             "development": {
-              "browserTarget": "charRuneQuest:build:development"
+              "browserTarget": "gc-runequest:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "charRuneQuest:build"
+            "browserTarget": "gc-runequest:build"
           }
         },
         "test": {
@@ -114,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "charRuneQuest"
+  "defaultProject": "gc-runequest"
 }
