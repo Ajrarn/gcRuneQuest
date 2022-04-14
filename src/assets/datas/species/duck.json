@@ -1,5 +1,5 @@
 {
-  "specie": "species.duck",
+  "name": "species.duck",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",

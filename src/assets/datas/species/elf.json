@@ -1,5 +1,5 @@
 {
-  "specie": "species.elf",
+  "name": "species.elf",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",

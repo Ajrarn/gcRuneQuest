@@ -1,5 +1,5 @@
 {
-  "specie": "species.minotaur",
+  "name": "species.minotaur",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",

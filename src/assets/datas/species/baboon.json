@@ -1,5 +1,5 @@
 {
-  "specie": "species.baboon",
+  "name": "species.baboon",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",

@@ -1,5 +1,5 @@
 {
-  "specie": "species.dwarf",
+  "name": "species.dwarf",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",

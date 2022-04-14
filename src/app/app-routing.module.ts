@@ -7,7 +7,7 @@ import { CanActivateWhenReady } from './can-activate-when-ready';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/character' },
-  { path: 'character', component: CharacterComponent },
+  { path: 'character', component: CharacterComponent, canActivate: [CanActivateWhenReady] },
   { path: 'species/:id', component: SpeciesComponent, canActivate: [CanActivateWhenReady] },
   { path: 'occupations/:id', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
 ];

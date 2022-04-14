@@ -40,7 +40,7 @@ export class SpeciesComponent implements OnInit {
       const data$ = this.store.select(state => state.species)
         .pipe(first())
         .subscribe(datas => {
-          this.specieData = datas.find((item: any) => item.specie === params.get('id'));
+          this.specieData = datas.find((item: any) => item.name === params.get('id'));
           console.log('specieData', this.specieData);
           this.preparePanels();
         });

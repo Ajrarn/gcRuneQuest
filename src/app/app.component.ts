@@ -15,7 +15,7 @@ export class AppComponent {
   ]
 
   species = [
-    'species.agimori',
+    /*'species.agimori',
     'species.baboon',
     'species.centaur',
     'species.dark_troll',
@@ -26,13 +26,13 @@ export class AppComponent {
     'species.human',
     'species.minotaur',
     'species.morokanth',
-    'species.trollkin',
+    'species.trollkin',*/
   ]
 
   occupations = [
-    'occupations.assistant_shaman',
+    /*'occupations.assistant_shaman',
     'occupations.bandit',
-    'occupations.chariot_driver'
+    'occupations.chariot_driver'*/
   ]
 
   constructor(private translate: TranslateService, private store: Store ) {
@@ -42,6 +42,16 @@ export class AppComponent {
       current = browser;
     }
     translate.setDefaultLang(current);
+  }
+
+  ngOnInit()  {
+    this.store.select(state => state.species).subscribe((species) => {
+      this.species = species.map((specie: any)  => specie.name);
+    })
+
+    this.store.select(state => state.occupations).subscribe((occupations) => {
+      this.occupations = occupations.map((occupation: any)  => occupation.name);
+    })
   }
 
   isCollapsed = false;

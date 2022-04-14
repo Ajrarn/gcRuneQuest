@@ -1,5 +1,5 @@
 {
-  "specie": "species.great_troll",
+  "name": "species.great_troll",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",

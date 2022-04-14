@@ -13,3 +13,7 @@ export class LoadBandit {
 export class LoadChariotDriver {
   static readonly type = '[Occupations] LoadChariotDriver';
 }
+
+export class LoadCrafter {
+  static readonly type = '[Occupations] LoadCrafter';
+}

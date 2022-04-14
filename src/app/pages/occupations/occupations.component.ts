@@ -13,26 +13,6 @@ export class OccupationsComponent implements OnInit {
 
   occupationData: any;
 
-  skillPanels = [
-    {
-      active: true,
-      name: 'This is panel header 1',
-      disabled: false
-    },
-    {
-      active: false,
-      disabled: false,
-      name: 'This is panel header 2'
-    },
-    {
-      active: false,
-      disabled: true,
-      name: 'This is panel header 3'
-    }
-  ];
-
-
-
   constructor(private route: ActivatedRoute, private store: Store, private translate: TranslateService) {
 
     // listen to the params to filter with the good specie
@@ -43,15 +23,6 @@ export class OccupationsComponent implements OnInit {
           this.occupationData = datas.find((item: any) => item.name === params['id']);
         });
     });
-  }
-
-  getSkillDatas(category: string):any[] {
-    let datas:any[] = [];
-     const specie = this.occupationData.skills.find((item: any) => item.category === category);
-     if (specie && specie.items) {
-       datas = specie.items
-     }
-      return datas;
   }
 
   ngOnInit(): void {
