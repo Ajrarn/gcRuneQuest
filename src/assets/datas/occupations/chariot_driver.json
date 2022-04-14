@@ -8,6 +8,6 @@
     {"name":  "skills.cultural_missile_weapon", "value": 20},
     {"name":  "skills.dance", "value": 15},
     {"name":  "skills.first_aid", "value": 10},
-    {"name":  "skills.svan", "value": 15}
+    {"name":  "skills.scan", "value": 15}
   ]
 }

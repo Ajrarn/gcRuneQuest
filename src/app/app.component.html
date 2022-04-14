@@ -20,14 +20,14 @@
       <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="table">
         <ul *ngFor="let specie of species">
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/species/{{specie}}">{{ 'species.' + specie | translate}}</a>
+            <a routerLink="/species/{{specie}}">{{ specie | translate}}</a>
           </li>
         </ul>
       </li>
       <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="table">
         <ul *ngFor="let occupation of occupations">
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/occupations/{{occupation}}">{{ 'occupations.' + occupation | translate}}</a>
+            <a routerLink="/occupations/{{occupation}}">{{ occupation | translate}}</a>
           </li>
         </ul>
       </li>

@@ -41,18 +41,7 @@ export class OccupationsComponent implements OnInit {
         .pipe(first())
         .subscribe(datas => {
           this.occupationData = datas.find((item: any) => item.name === params['id']);
-          this.preparePanels();
         });
-    });
-  }
-
-  preparePanels() {
-    this.skillPanels = this.occupationData.skills.map( (item:any) => {
-      return {
-        name: item.category,
-        active: false,
-        disabled: false
-      }
     });
   }
 

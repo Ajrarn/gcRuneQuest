@@ -1,5 +1,5 @@
 {
-  "specie": "elf",
+  "specie": "species.elf",
   "characteristics": {
     "STR": "3D6",
     "CON": "3D6",
@@ -134,7 +134,7 @@
         { "name": "skills.boat", "base": 5 },
         { "name": "skills.climb", "base": 40 },
         { "name": "skills.dodge", "base": "DEX*2" },
-        { "name": "skills.drive", "base": 5 },
+        { "name": "skills.drive_chariot", "base": 5 },
         { "name": "skills.jump", "base": "DEX*3" },
         { "name": "skills.ride", "base": 5 },
         { "name": "skills.swim", "base": 15 }

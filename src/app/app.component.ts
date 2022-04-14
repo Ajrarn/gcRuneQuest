@@ -15,24 +15,24 @@ export class AppComponent {
   ]
 
   species = [
-    'agimori',
-    'baboon',
-    'centaur',
-    'dark_troll',
-    'duck',
-    'dwarf',
-    'elf',
-    'great_troll',
-    'human',
-    'minotaur',
-    'morokanth',
-    'trollkin',
+    'species.agimori',
+    'species.baboon',
+    'species.centaur',
+    'species.dark_troll',
+    'species.duck',
+    'species.dwarf',
+    'species.elf',
+    'species.great_troll',
+    'species.human',
+    'species.minotaur',
+    'species.morokanth',
+    'species.trollkin',
   ]
 
   occupations = [
-    'assistant_shaman',
-    'bandit',
-    'chariot_driver'
+    'occupations.assistant_shaman',
+    'occupations.bandit',
+    'occupations.chariot_driver'
   ]
 
   constructor(private translate: TranslateService, private store: Store ) {

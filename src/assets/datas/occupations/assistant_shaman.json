@@ -4,7 +4,7 @@
     {"name":  "skills.sing", "value": 10},
     {"name":  "skills.spirit_combat", "value": 30},
     {"name":  "skills.animal_lore", "value": 15},
-    {"name":  "skills.speak(language.spirit)", "value": 10},
+    {"name":  "skills.speak_spiritspeech", "value": 10},
     {"name":  "skills.spirit_dance", "value": 10},
     {"name":  "skills.first_aid", "value": 15},
     {"name":  "skills.spirit_lore", "value": 20},
