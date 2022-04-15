@@ -51,7 +51,7 @@ export class SpeciesState {
       .pipe(
         tap((data: any) => {
           const state = ctx.getState();
-          ctx.setState([...state, data].sort());
+          ctx.setState([...state, data].sort(item => item.name));
         })
       );
   }
