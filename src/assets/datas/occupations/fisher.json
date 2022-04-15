@@ -1,0 +1,14 @@
+{
+  "name": "occupations.fisher",
+  "skills": [
+    {"name":  "skills.boat", "value": 30},
+    {"name":  "skills.javelin_selfbow_or_thrown_net", "value": 20},
+    {"name":  "skills.swim", "value": 30},
+    {"name":  "skills.1h_spear", "value": 10},
+    {"name":  "skills.first_aid", "value": 10},
+    {"name":  "skills.shield_any", "value": 10},
+    {"name":  "skills.river_lore", "value": 15},
+    {"name":  "skills.scan", "value": 10}
+  ]
+}
+
