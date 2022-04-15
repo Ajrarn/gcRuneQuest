@@ -1,0 +1,12 @@
+{
+  "name": "occupations.hunter",
+  "skills": [
+    {"name":  "skills.animal_lore", "value": 30},
+    {"name":  "skills.scan", "value": 10},
+    {"name":  "skills.lore_local", "value": 10},
+    {"name":  "skills.track", "value": 30},
+    {"name":  "skills.conceal", "value": 10},
+    {"name":  "skills.hide", "value": 10},
+    {"name":  "skills.cultural_missile_weapon", "value": 30}
+  ]
+}

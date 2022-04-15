@@ -2861,7 +2861,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>read_write</name>
+                        <name>read_write_any</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
                         <comment/>
@@ -2869,11 +2869,11 @@
                         <translations>
                             <translation>
                                 <language>en-US</language>
-                                <approved>true</approved>
+                                <approved>false</approved>
                             </translation>
                             <translation>
                                 <language>fr-FR</language>
-                                <approved>true</approved>
+                                <approved>false</approved>
                             </translation>
                         </translations>
                     </concept_node>
@@ -3151,6 +3151,23 @@
                     </concept_node>
                     <concept_node>
                         <name>speak_spiritspeech</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description/>
+                        <comment/>
+                        <default_text/>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>speak_tradetalk</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
                         <comment/>

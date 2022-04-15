@@ -7,3 +7,5 @@ farmer.json
 fisher.json
 healer.json
 herder.json
+hunter.json
+merchant.json
