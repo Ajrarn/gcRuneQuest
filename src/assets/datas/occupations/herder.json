@@ -1,0 +1,16 @@
+{
+  "name": "occupations.herder",
+  "skills": [
+    {"name":  "skills.jump_or_climb", "value": 10},
+    {"name":  "skills.scan", "value": 10},
+    {"name":  "skills.animal_lore", "value": 10},
+    {"name":  "skills.track", "value": 10},
+    {"name":  "skills.lore_local", "value": 30},
+    {"name":  "skills.cultural_missile_weapon", "value": 30},
+    {"name":  "skills.first_aid", "value": 10},
+    {"name":  "skills.cultural_weapon", "value": 10},
+    {"name":  "skills.herd", "value": 30},
+    {"name":  "skills.shield_any", "value": 10},
+    {"name":  "skills.peaceful_cut", "value": 30}
+  ]
+}

@@ -3,3 +3,7 @@ bandit.json
 chariot_driver.json
 crafter.json
 entertainer.json
+farmer.json
+fisher.json
+healer.json
+herder.json
