@@ -30,6 +30,7 @@ export class SpeciesState {
         ctx.dispatch(dispatchList).subscribe({
           complete: () => {
             ready$.next(true);
+            ready$.complete();
           },
           error: () => ready$.error(false)
         });

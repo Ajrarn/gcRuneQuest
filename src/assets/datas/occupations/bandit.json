@@ -8,7 +8,7 @@
     {"name":  "skills.lore_animal_or_plant", "value": 10},
     {"name":  "skills.first_aid", "value": 10},
     {"name":  "skills.survival", "value": 30},
-    {"name":  "skills.shield", "value": 10},
+    {"name":  "skills.shield_any", "value": 10},
     {"name":  "skills.track", "value": 10}
   ]
 }

@@ -31,6 +31,7 @@ export class OccupationsState {
         ctx.dispatch(dispatchList).subscribe({
           complete: () => {
             ready$.next(true);
+            ready$.complete();
           },
             error: () => ready$.error(false)
         });

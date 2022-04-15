@@ -217,7 +217,7 @@
     {
       "category": "categories.perception",
       "items": [
-        { "name": "skills.insight_own_species", "base": 20 },
+        { "name": "skills.insight_own_specie", "base": 20 },
         { "name": "skills.insight", "base": 0 },
         { "name": "skills.listen", "base": 25 },
         { "name": "skills.scan", "base": 25 },

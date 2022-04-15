@@ -1892,6 +1892,40 @@
                         </translations>
                     </concept_node>
                     <concept_node>
+                        <name>craft_primary</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description/>
+                        <comment/>
+                        <default_text/>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>craft_secondary</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description/>
+                        <comment/>
+                        <default_text/>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
                         <name>crossbow</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
@@ -1977,7 +2011,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>customs</name>
+                        <name>customs_any</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
                         <comment/>
@@ -2334,7 +2368,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>insight_own_species</name>
+                        <name>insight_own_specie</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
                         <comment/>
@@ -2505,6 +2539,23 @@
                     </concept_node>
                     <concept_node>
                         <name>lore_animal_or_plant</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description/>
+                        <comment/>
+                        <default_text/>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>lore_any</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
                         <comment/>
@@ -2857,6 +2908,23 @@
                             <translation>
                                 <language>fr-FR</language>
                                 <approved>true</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>shield_any</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description/>
+                        <comment/>
+                        <default_text/>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
                             </translation>
                         </translations>
                     </concept_node>

@@ -14,26 +14,9 @@ export class AppComponent {
     { name: "English", value: 'en' }
   ]
 
-  species = [
-    /*'species.agimori',
-    'species.baboon',
-    'species.centaur',
-    'species.dark_troll',
-    'species.duck',
-    'species.dwarf',
-    'species.elf',
-    'species.great_troll',
-    'species.human',
-    'species.minotaur',
-    'species.morokanth',
-    'species.trollkin',*/
-  ]
+  species = []
 
-  occupations = [
-    /*'occupations.assistant_shaman',
-    'occupations.bandit',
-    'occupations.chariot_driver'*/
-  ]
+  occupations = []
 
   constructor(private translate: TranslateService, private store: Store ) {
     const browser = translate.getBrowserLang()
@@ -54,7 +37,7 @@ export class AppComponent {
     })
   }
 
-  isCollapsed = false;
+  isCollapsed = true;
 
 
   useLanguage(language: string): void {
