@@ -1,15 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
-import {
-  LoadAgimori, LoadAllSpecies,
-  LoadBaboon,
-  LoadCentaur,
-  LoadDarkTroll,
-  LoadDuck,
-  LoadDwarf,
-  LoadElf, LoadGreatTroll,
-  LoadHumans, LoadMinotaur, LoadMorokanth, LoadSpecie, LoadTrollkin
-} from './species.actions';
+import { LoadAllSpecies,LoadSpecie } from './species.actions';
 import { HttpClient } from '@angular/common/http';
 import { Subject, tap } from 'rxjs';
 import { LoadOccupation } from './occupations.actions';

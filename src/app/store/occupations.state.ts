@@ -1,12 +1,8 @@
 import { Action, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {
-  LoadAllOccupations,
-  LoadOccupation
-} from './occupations.actions';
+import { LoadAllOccupations, LoadOccupation } from './occupations.actions';
 import { Subject, tap } from 'rxjs';
-import { AppReady } from './ready.actions';
 
 
 @State<any>({
