@@ -50,7 +50,9 @@ export class OccupationsState {
       .pipe(
         tap((data: any) => {
           const state = ctx.getState();
-          ctx.setState([...state, data].sort(item => item.name));
+          ctx.setState([...state, data].sort((previous: any, current: any) => {
+            return previous.name.localeCompare(current.name);
+          }));
         })
       );
   }
