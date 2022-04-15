@@ -5,7 +5,8 @@ import {
   LoadAllOccupations,
   LoadOccupation
 } from './occupations.actions';
-import { tap } from 'rxjs';
+import { Subject, tap } from 'rxjs';
+import { AppReady } from './ready.actions';
 
 
 @State<any>({
@@ -20,16 +21,25 @@ export class OccupationsState {
 
   @Action(LoadAllOccupations)
   loadAllOccupations(ctx: StateContext<any>) {
+    const ready$ = new Subject<boolean>();
     this.httpClient.get('assets/datas/occupations/index.txt', { responseType: 'text' })
       .subscribe(index => {
-          const dispatchList:LoadOccupation[] = [];
-          const filesList = index.split(/\r\n|\n/).filter(item => item !== '');
-          filesList.forEach((file => {
-            console.log('file', file);
-            dispatchList.push(new LoadOccupation(file));
-          }));
-          return ctx.dispatch(dispatchList);
+        // read the index to create a list of actions
+        const dispatchList:LoadOccupation[] = [];
+        const filesList = index.split(/\r\n|\n/).filter(item => item !== '');
+        filesList.forEach((file => {
+          dispatchList.push(new LoadOccupation(file));
+        }));
+
+        //dispatch this actions
+        ctx.dispatch(dispatchList).subscribe({
+          complete: () => {
+            ready$.next(true);
+          },
+            error: () => ready$.error(false)
         });
+      });
+    return ready$;
   }
 
   @Action(LoadOccupation)
@@ -43,7 +53,7 @@ export class OccupationsState {
       .pipe(
         tap((data: any) => {
           const state = ctx.getState();
-          ctx.setState([...state, data]);
+          ctx.setState([...state, data].sort());
         })
       );
   }

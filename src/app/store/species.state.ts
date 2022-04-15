@@ -11,7 +11,7 @@ import {
   LoadHumans, LoadMinotaur, LoadMorokanth, LoadSpecie, LoadTrollkin
 } from './species.actions';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs';
+import { Subject, tap } from 'rxjs';
 import { LoadOccupation } from './occupations.actions';
 
 @State<any>({
@@ -25,18 +25,26 @@ export class SpeciesState {
 
   @Action(LoadAllSpecies)
   loadAllSpecies(ctx: StateContext<any>) {
-    return this.httpClient.get('assets/datas/species/index.txt', { responseType: 'text' })
-      .pipe(
-        tap(index => {
-          const dispatchList:LoadOccupation[] = [];
-          const filesList = index.split(/\r\n|\n/).filter(item => item !== '');
-          filesList.forEach((file => {
-            console.log('file', file);
-            dispatchList.push(new LoadSpecie(file));
-          }));
-          return ctx.dispatch(dispatchList);
-        })
+    const ready$ = new Subject<boolean>();
+    this.httpClient.get('assets/datas/species/index.txt', { responseType: 'text' })
+      .subscribe(index => {
+        // read the index to create a list of actions
+        const dispatchList:LoadOccupation[] = [];
+        const filesList = index.split(/\r\n|\n/).filter(item => item !== '');
+        filesList.forEach((file => {
+          dispatchList.push(new LoadSpecie(file));
+        }));
+
+        //dispatch this actions
+        ctx.dispatch(dispatchList).subscribe({
+          complete: () => {
+            ready$.next(true);
+          },
+          error: () => ready$.error(false)
+        });
+        }
       );
+    return ready$;
   }
 
   @Action(LoadSpecie)
@@ -51,7 +59,7 @@ export class SpeciesState {
       .pipe(
         tap((data: any) => {
           const state = ctx.getState();
-          ctx.setState([...state, data]);
+          ctx.setState([...state, data].sort());
         })
       );
   }
