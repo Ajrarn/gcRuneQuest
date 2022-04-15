@@ -1,0 +1,4 @@
+assistant_shaman.json
+bandit.json
+chariot_driver.json
+crafter.json

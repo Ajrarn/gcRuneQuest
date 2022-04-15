@@ -31,8 +31,6 @@ export class SpeciesComponent implements OnInit {
     }
   ];
 
-
-
   constructor(private route: ActivatedRoute, private store: Store, private translate: TranslateService) {
 
     // listen to the params to filter with the good specie

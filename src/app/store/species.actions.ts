@@ -1,3 +1,12 @@
+export class LoadAllSpecies {
+  static readonly type = '[Species] LoadAllSpecies';
+}
+
+export class LoadSpecie {
+  static readonly type = '[Species] LoadHumans';
+  constructor(public filename: string) {}
+}
+
 export class LoadHumans {
   static readonly type = '[Species] LoadHumans';
 }
@@ -46,6 +55,4 @@ export class LoadTrollkin {
   static readonly type = '[Species] LoadTrollkin';
 }
 
-export class LoadAllSpecies {
-  static readonly type = '[Species] LoadAllSpecies';
-}
+

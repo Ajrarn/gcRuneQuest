@@ -1,0 +1,12 @@
+agimori.json
+baboon.json
+centaur.json
+dark_troll.json
+duck.json
+dwarf.json
+elf.json
+great_troll.json
+human.json
+minotaur.json
+morokanth.json
+trollkin.json

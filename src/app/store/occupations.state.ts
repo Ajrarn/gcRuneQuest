@@ -3,10 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
   LoadAllOccupations,
-  LoadAssistantShaman,
-  LoadBandit,
-  LoadChariotDriver,
-  LoadCrafter
+  LoadOccupation
 } from './occupations.actions';
 import { tap } from 'rxjs';
 
@@ -23,27 +20,22 @@ export class OccupationsState {
 
   @Action(LoadAllOccupations)
   loadAllOccupations(ctx: StateContext<any>) {
-    return ctx.dispatch([new LoadAssistantShaman(), new LoadBandit(), new LoadChariotDriver(), new LoadCrafter()]);
+    this.httpClient.get('assets/datas/occupations/index.txt', { responseType: 'text' })
+      .subscribe(index => {
+          const dispatchList:LoadOccupation[] = [];
+          const filesList = index.split(/\r\n|\n/).filter(item => item !== '');
+          filesList.forEach((file => {
+            console.log('file', file);
+            dispatchList.push(new LoadOccupation(file));
+          }));
+          return ctx.dispatch(dispatchList);
+        });
   }
 
-  @Action(LoadAssistantShaman)
-  loadAssistantChaman(ctx: StateContext<any>) {
-    return this.load('assets/datas/occupations/assistant_shaman.json', ctx);
-  }
-
-  @Action(LoadBandit)
-  loadBandit(ctx: StateContext<any>) {
-    return this.load('assets/datas/occupations/bandit.json', ctx);
-  }
-
-  @Action(LoadChariotDriver)
-  loadChariotDriver(ctx: StateContext<any>) {
-    return this.load('assets/datas/occupations/chariot_driver.json', ctx);
-  }
-
-  @Action(LoadCrafter)
-  loadCrafter(ctx: StateContext<any>) {
-    return this.load('assets/datas/occupations/crafter.json', ctx);
+  @Action(LoadOccupation)
+  loadOccupation(ctx: StateContext<any>, loadOccupation: LoadOccupation) {
+    console.log('filename', loadOccupation.filename);
+    return this.load('assets/datas/occupations/' + loadOccupation.filename, ctx);
   }
 
   load(param: string, ctx: StateContext<any>) {
