@@ -10,21 +10,17 @@
       <h1>RuneQuest</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="{{'static.assistant' | translate}}" nzIcon="dingtalk">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <span class="runes white">,</span><a routerLink="/character">{{'static.character' | translate}}</a>
-          </li>
-        </ul>
+      <li nz-menu-item nzMatchRouter>
+        <a routerLink="/character"><i nz-icon [nzType]="'custom:RuneMaker'"></i> {{'static.character' | translate}}</a>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="table">
+      <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="custom:RuneMan">
         <ul *ngFor="let specie of species">
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/species/{{specie}}">{{ specie | translate}}</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="table">
+      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="custom:RuneFate">
         <ul *ngFor="let occupation of occupations">
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/occupations/{{occupation}}">{{ occupation | translate}}</a>
