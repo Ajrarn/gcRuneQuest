@@ -1,19 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-@font-face {
-  font-family: "Runes";
-  src: local("Runes"), url(./assets/fonts/GloranthaCoreRunes1.5.ttf) format("truetype");
-}
-
-.runes {
-  font-family: "Runes", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-}
-
-.white {
-  color: white;
-}
-
 .page-title {
   font-size: 30px;
   margin-left: 50px;
