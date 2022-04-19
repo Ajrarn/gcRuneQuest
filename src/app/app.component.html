@@ -10,8 +10,10 @@
       <h1>RuneQuest</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-menu-item nzMatchRouter>
-        <a routerLink="/character"><i nz-icon [nzType]="'rune:maker'"></i> {{'static.character' | translate}}</a>
+      <li nz-menu-item nz-tooltip nzTooltipPlacement="right"
+          [nzTooltipTitle]="isCollapsed ? ('static.character' | translate) : ''">
+        <i nz-icon nzType="rune:maker"></i>
+        <span><a routerLink="/character">{{'static.character' | translate}}</a></span>
       </li>
       <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="rune:man">
         <ul *ngFor="let specie of species">

@@ -240,11 +240,11 @@
 		"trollkin": "Trollkin"
 	},
 	"static": {
-		"assistant": "Assistant",
 		"base": "Base",
 		"bonus": "Bonus",
 		"character": "Personnage",
 		"characteristics": "Caractéristiques",
+		"creation": "Création",
 		"datas": "Données",
 		"language": "Langage",
 		"name": "Nom",
