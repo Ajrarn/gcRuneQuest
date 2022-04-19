@@ -6,28 +6,28 @@
             [(nzCollapsed)]="isCollapsed"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-      <span class="runes white">W</span>
+      <i nz-icon [nzType]="'rune:mastery'" style="color: white"></i>
       <h1>RuneQuest</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
       <li nz-menu-item nzMatchRouter>
-        <a routerLink="/character"><i nz-icon [nzType]="'custom:RuneMaker'"></i> {{'static.character' | translate}}</a>
+        <a routerLink="/character"><i nz-icon [nzType]="'rune:maker'"></i> {{'static.character' | translate}}</a>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="custom:RuneMan">
+      <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="rune:man">
         <ul *ngFor="let specie of species">
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/species/{{specie}}">{{ specie | translate}}</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="custom:RuneFate">
+      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="rune:fate">
         <ul *ngFor="let occupation of occupations">
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/occupations/{{occupation}}">{{ occupation | translate}}</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.language' | translate}}" nzIcon="custom:RuneCommunication">
+      <li nz-submenu nzOpen nzTitle="{{'static.language' | translate}}" nzIcon="rune:communication-trade">
         <ul *ngFor="let language of languages">
           <li nz-menu-item nzMatchRouter (click)="useLanguage(language.value)">{{ language.name | translate }}</li>
         </ul>

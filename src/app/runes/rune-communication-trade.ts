@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+import { IconDefinition } from '@ant-design/icons-angular';
 
-<svg
+const communicationTradeSvg = `<svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -65,4 +64,9 @@
          inkscape:connector-curvature="0" />
     </g>
   </g>
-</svg>
+</svg>`;
+
+export const RuneCommunicationTrade: IconDefinition = {
+  name: 'rune:communication-trade',
+  icon: communicationTradeSvg
+};

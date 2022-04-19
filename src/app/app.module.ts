@@ -33,6 +33,8 @@ import { CharacterComponent } from './pages/character/character.component';
 import { OccupationsComponent } from './pages/occupations/occupations.component';
 import { ReadyState } from './store/ready.state';
 import { CanActivateWhenReady } from './can-activate-when-ready';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { runes } from './runes';
 
 registerLocaleData(fr);
 
@@ -65,7 +67,8 @@ registerLocaleData(fr);
     NzMenuModule,
     NzCollapseModule,
     NzTableModule,
-    NzCardModule
+    NzCardModule,
+    NzIconModule.forRoot(runes),
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
