@@ -27,7 +27,7 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.language' | translate}}" nzIcon="translation">
+      <li nz-submenu nzOpen nzTitle="{{'static.language' | translate}}" nzIcon="custom:RuneCommunication">
         <ul *ngFor="let language of languages">
           <li nz-menu-item nzMatchRouter (click)="useLanguage(language.value)">{{ language.name | translate }}</li>
         </ul>
