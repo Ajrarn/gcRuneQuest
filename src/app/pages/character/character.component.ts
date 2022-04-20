@@ -7,11 +7,9 @@ import { ChangeTitle } from '../../store/title.action';
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss']
 })
-export class CharacterComponent implements OnInit {
+export class CharacterComponent {
 
-  constructor(private store: Store) {}
-
-  ngOnInit(): void {
+  constructor(private store: Store) {
     this.store.dispatch(new ChangeTitle('static.character'))
   }
 

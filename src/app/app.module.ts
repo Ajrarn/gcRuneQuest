@@ -38,6 +38,7 @@ import { runes } from './runes';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { TitleState } from './store/title.state';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzStepsModule } from 'ng-zorro-antd/steps';
 
 registerLocaleData(fr);
 
@@ -74,6 +75,7 @@ registerLocaleData(fr);
     NzIconModule.forRoot(runes),
     NzToolTipModule,
     NzSpaceModule,
+    NzStepsModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
