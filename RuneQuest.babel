@@ -3478,23 +3478,6 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>dark_troll</name>
-                        <definition_loaded>false</definition_loaded>
-                        <description/>
-                        <comment/>
-                        <default_text/>
-                        <translations>
-                            <translation>
-                                <language>en-US</language>
-                                <approved>false</approved>
-                            </translation>
-                            <translation>
-                                <language>fr-FR</language>
-                                <approved>false</approved>
-                            </translation>
-                        </translations>
-                    </concept_node>
-                    <concept_node>
                         <name>duck</name>
                         <definition_loaded>false</definition_loaded>
                         <description/>
@@ -3528,40 +3511,62 @@
                             </translation>
                         </translations>
                     </concept_node>
-                    <concept_node>
+                    <folder_node>
                         <name>elf</name>
-                        <definition_loaded>false</definition_loaded>
-                        <description/>
-                        <comment/>
-                        <default_text/>
-                        <translations>
-                            <translation>
-                                <language>en-US</language>
-                                <approved>false</approved>
-                            </translation>
-                            <translation>
-                                <language>fr-FR</language>
-                                <approved>false</approved>
-                            </translation>
-                        </translations>
-                    </concept_node>
-                    <concept_node>
-                        <name>great_troll</name>
-                        <definition_loaded>false</definition_loaded>
-                        <description/>
-                        <comment/>
-                        <default_text/>
-                        <translations>
-                            <translation>
-                                <language>en-US</language>
-                                <approved>false</approved>
-                            </translation>
-                            <translation>
-                                <language>fr-FR</language>
-                                <approved>false</approved>
-                            </translation>
-                        </translations>
-                    </concept_node>
+                        <children>
+                            <concept_node>
+                                <name>brown_elf</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>green_elf</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>yellow_elf</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                        </children>
+                    </folder_node>
                     <concept_node>
                         <name>human</name>
                         <definition_loaded>false</definition_loaded>
@@ -3613,23 +3618,62 @@
                             </translation>
                         </translations>
                     </concept_node>
-                    <concept_node>
-                        <name>trollkin</name>
-                        <definition_loaded>false</definition_loaded>
-                        <description/>
-                        <comment/>
-                        <default_text/>
-                        <translations>
-                            <translation>
-                                <language>en-US</language>
-                                <approved>true</approved>
-                            </translation>
-                            <translation>
-                                <language>fr-FR</language>
-                                <approved>true</approved>
-                            </translation>
-                        </translations>
-                    </concept_node>
+                    <folder_node>
+                        <name>troll</name>
+                        <children>
+                            <concept_node>
+                                <name>dark_troll</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>great_troll</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>trollkin</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                        </children>
+                    </folder_node>
                 </children>
             </folder_node>
             <folder_node>

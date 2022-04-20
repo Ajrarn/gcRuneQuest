@@ -1,131 +1,18 @@
 {
-  "name": "species.troll.great_troll",
+  "name": "species.elf.green_elf",
   "characteristics": {
-    "STR": "3D6",
+    "STR": "2D6+4",
     "CON": "3D6",
-    "SIZ": "2D6+6",
-    "INT": "2D6+6",
-    "POW": "3D6",
-    "DEX": "3D6",
+    "SIZ": "3D6",
+    "INT": "3D6+6",
+    "POW": "2D6+6",
+    "DEX": "3D6+3",
     "CHA": "3D6"
   },
   "runes": [
     { "name": "elemental", "value": 60 },
     { "name": "elemental", "value": 40 },
     { "name": "elemental", "value": 20 }
-  ],
-  "homelands": [
-    {
-      "name": "homelands.sartar",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.air", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.esrolia",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.city')" , "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')" , "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.earth", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.grazelands",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
-        { "name":  "passions.loyalty('persons.feathered_horse_queen')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.fire", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.bison_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.air", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.high_llama_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.water", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.impala_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.fire", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.pol_joni",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.air", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.prax.sable_rider",
-      "passions": [
-        { "name":  "passions.hate('groups.chaos')", "value": 60 },
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.moon", "bonus": 10}
-      ]
-    },
-    {
-      "name": "homelands.lunar_tarsh",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.city')", "value": 60 },
-        { "name":  "passions.loyalty('persons.red_emperor')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.moon", "bonus": 10}
-      ]
-    }
-  ,
-    {
-      "name": "homelands.old_tarsh",
-      "passions": [
-        { "name":  "passions.love('groups.family')", "value": 60 },
-        { "name":  "passions.loyalty('groups.clan')", "value": 60 },
-        { "name":  "passions.love('groups.shaker_temple')", "value": 60 }
-      ],
-      "runes": [
-        { "name":  "elemental.earth", "bonus": 10}
-      ]
-    }
   ],
   "skills": [
     {

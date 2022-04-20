@@ -226,18 +226,24 @@
 		"worship": "Worship ({{name}})"
 	},
 	"species": {
-		"agimori": "Agimori / Man and a half",
+		"agimori": "Man and a half (Agimori)",
 		"baboon": "Baboon",
 		"centaur": "Centaur",
-		"dark_troll": "Dark Troll",
 		"duck": "Duck",
-		"dwarf": "Mostali / Dwarf",
-		"elf": "Aldryami / Elf",
-		"great_troll": "Great Troll",
+		"dwarf": "Dwarf (Mostali)",
+		"elf": {
+			"brown_elf": "Brown Elf (Aldryami)",
+			"green_elf": "Green Elf (Aldryami)",
+			"yellow_elf": "Yellow Elf (Aldryami)"
+		},
 		"human": "Human",
 		"minotaur": "Minotaur",
 		"morokanth": "Morokanth",
-		"trollkin": "Trollkin"
+		"troll": {
+			"dark_troll": "Dark Troll (Uz)",
+			"great_troll": "Great Troll (Uz)",
+			"trollkin": "Trollkin (Uz)"
+		}
 	},
 	"static": {
 		"base": "Base",

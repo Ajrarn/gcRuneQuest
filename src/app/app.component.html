@@ -6,7 +6,7 @@
             [(nzCollapsed)]="isCollapsed"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-      <i nz-icon [nzType]="'rune:mastery'" style="color: white"></i>
+      <i nz-icon [nzType]="'rune:dragonewt'" style="color: white"></i>
       <h1>RuneQuest</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
@@ -22,7 +22,7 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="rune:fate">
+      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="rune:mastery">
         <ul *ngFor="let occupation of occupations">
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/occupations/{{occupation}}">{{ occupation | translate}}</a>

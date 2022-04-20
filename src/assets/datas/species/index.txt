@@ -1,12 +1,14 @@
 agimori.json
 baboon.json
 centaur.json
+brown_elf.json
 dark_troll.json
 duck.json
 dwarf.json
-elf.json
 great_troll.json
+green_elf.json
 human.json
 minotaur.json
 morokanth.json
 trollkin.json
+yellow_elf.json

@@ -226,18 +226,24 @@
 		"worship": "Vénération ({{name}})"
 	},
 	"species": {
-		"agimori": "Agimori / Homme et demi",
+		"agimori": "Homme et demi (Agimori)",
 		"baboon": "Babouin",
 		"centaur": "Centaure",
-		"dark_troll": "Troll Sombre",
 		"duck": "Canard",
-		"dwarf": "Mostali / Nain",
-		"elf": "Aldryami / Elfe",
-		"great_troll": "Grand Troll",
+		"dwarf": "Nain (Mostali)",
+		"elf": {
+			"brown_elf": "Elfe brun (Aldryami)",
+			"green_elf": "Elfe vert (Aldryami)",
+			"yellow_elf": "Elfe jaune (Aldryami)"
+		},
 		"human": "Humain",
 		"minotaur": "Minotaure",
 		"morokanth": "Morokanth",
-		"trollkin": "Trollkin"
+		"troll": {
+			"dark_troll": "Troll Sombre (Uz)",
+			"great_troll": "Grand Troll (Uz)",
+			"trollkin": "Trollkin (Uz)"
+		}
 	},
 	"static": {
 		"base": "Base",
