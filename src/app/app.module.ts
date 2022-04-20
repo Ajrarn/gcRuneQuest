@@ -37,6 +37,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { runes } from './runes';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { TitleState } from './store/title.state';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 registerLocaleData(fr);
 
@@ -47,32 +48,33 @@ registerLocaleData(fr);
     CharacterComponent,
     OccupationsComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        NgxsModule.forRoot([SpeciesState, OccupationsState, ReadyState, TitleState], {
-            developmentMode: !environment.production
-        }),
-        NgxsLoggerPluginModule.forRoot(),
-        FormsModule,
-        BrowserAnimationsModule,
-        IconsProviderModule,
-        NzLayoutModule,
-        NzMenuModule,
-        NzCollapseModule,
-        NzTableModule,
-        NzCardModule,
-        NzIconModule.forRoot(runes),
-        NzToolTipModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    NgxsModule.forRoot([SpeciesState, OccupationsState, ReadyState, TitleState], {
+      developmentMode: !environment.production
+    }),
+    NgxsLoggerPluginModule.forRoot(),
+    FormsModule,
+    BrowserAnimationsModule,
+    IconsProviderModule,
+    NzLayoutModule,
+    NzMenuModule,
+    NzCollapseModule,
+    NzTableModule,
+    NzCardModule,
+    NzIconModule.forRoot(runes),
+    NzToolTipModule,
+    NzSpaceModule,
+  ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
 })
