@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import { Store } from '@ngxs/store';
-import { NzIconService } from 'ng-zorro-antd/icon';
+import { Select, Store } from '@ngxs/store';
+import { Title, TitleState } from './store/title.state';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,9 @@ export class AppComponent {
   species = []
 
   occupations = []
+
+  @Select(TitleState) title$!: Observable<Title>;
+  public title = '';
 
   constructor(private translate: TranslateService, private store: Store) {
     const browser = translate.getBrowserLang()
@@ -36,6 +40,10 @@ export class AppComponent {
     this.store.select(state => state.occupations).subscribe((occupations) => {
       this.occupations = occupations.map((occupation: any)  => occupation.name);
     })
+
+    this.title$.subscribe(title => {
+      this.title = title.value;
+    });
   }
 
   isCollapsed = true;

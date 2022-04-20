@@ -36,6 +36,7 @@ import { CanActivateWhenReady } from './can-activate-when-ready';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { runes } from './runes';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { TitleState } from './store/title.state';
 
 registerLocaleData(fr);
 
@@ -57,7 +58,7 @@ registerLocaleData(fr);
                 deps: [HttpClient]
             }
         }),
-        NgxsModule.forRoot([SpeciesState, OccupationsState, ReadyState], {
+        NgxsModule.forRoot([SpeciesState, OccupationsState, ReadyState, TitleState], {
             developmentMode: !environment.production
         }),
         NgxsLoggerPluginModule.forRoot(),

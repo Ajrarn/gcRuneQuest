@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { first } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { ChangeTitle } from '../../store/title.action';
 
 @Component({
   selector: 'app-species',
@@ -35,13 +36,17 @@ export class SpeciesComponent implements OnInit {
 
     // listen to the params to filter with the good specie
     this.route.paramMap.subscribe(params => {
-      const data$ = this.store.select(state => state.species)
-        .pipe(first())
-        .subscribe(datas => {
-          this.specieData = datas.find((item: any) => item.name === params.get('id'));
-          console.log('specieData', this.specieData);
-          this.preparePanels();
-        });
+      const id = params.get('id');
+      if (id) {
+        this.store.select(state => state.species)
+          .pipe(first())
+          .subscribe(datas => {
+            this.specieData = datas.find((item: any) => item.name === id);
+            console.log('specieData', this.specieData);
+            this.preparePanels();
+          });
+        this.store.dispatch(new ChangeTitle(id));
+      }
     });
   }
 

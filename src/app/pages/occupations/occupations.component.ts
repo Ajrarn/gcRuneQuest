@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { first } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { ChangeTitle } from '../../store/title.action';
 
 @Component({
   selector: 'app-occupations',
@@ -16,12 +17,19 @@ export class OccupationsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private store: Store, private translate: TranslateService) {
 
     // listen to the params to filter with the good specie
-    this.route.params.subscribe(params => {
-      const data$ = this.store.select(state => state.occupations)
-        .pipe(first())
-        .subscribe(datas => {
-          this.occupationData = datas.find((item: any) => item.name === params['id']);
-        });
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) {
+        this.store.select(state => state.occupations)
+          .pipe(first())
+          .subscribe(datas => {
+            this.occupationData = datas.find((item: any) => item.name === id);
+          });
+
+        this.store.dispatch(new ChangeTitle(id));
+      }
+
+
     });
   }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { ChangeTitle } from '../../store/title.action';
 
 @Component({
   selector: 'app-character',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
+    this.store.dispatch(new ChangeTitle('static.character'))
   }
 
 }
