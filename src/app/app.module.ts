@@ -41,6 +41,7 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { CulturesState } from './store/cultures.state';
 
 registerLocaleData(fr);
 
@@ -62,7 +63,7 @@ registerLocaleData(fr);
         deps: [HttpClient]
       }
     }),
-    NgxsModule.forRoot([SpeciesState, OccupationsState, ReadyState, TitleState], {
+    NgxsModule.forRoot([SpeciesState, OccupationsState, CulturesState, ReadyState, TitleState], {
       developmentMode: !environment.production
     }),
     NgxsLoggerPluginModule.forRoot(),

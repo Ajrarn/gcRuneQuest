@@ -24,15 +24,7 @@
 			"STR": "STR"
 		}
 	},
-	"groups": {
-		"chaos": "Chaos",
-		"city": "City",
-		"clan": "Clan",
-		"family": "Family",
-		"shaker_templs": "Shaker temple",
-		"tribe": "Tribe"
-	},
-	"homelands": {
+	"cultures": {
 		"grazelands": "Grazelands",
 		"lunar_tarsh": "Lunar Tarsh",
 		"old_tarsh": "Old Tarsh",
@@ -44,6 +36,14 @@
 			"sable_rider": "Sable Rider"
 		},
 		"sartar": "Sartar"
+	},
+	"groups": {
+		"chaos": "Chaos",
+		"city": "City",
+		"clan": "Clan",
+		"family": "Family",
+		"shaker_templs": "Shaker temple",
+		"tribe": "Tribe"
 	},
 	"languages": {
 		"spirit": "Spirit Language"

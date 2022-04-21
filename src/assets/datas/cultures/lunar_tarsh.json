@@ -1,0 +1,11 @@
+{
+  "name": "cultures.lunar_tarsh",
+  "passions": [
+    { "name":  "passions.love('groups.family')", "value": 60 },
+    { "name":  "passions.loyalty('groups.city')", "value": 60 },
+    { "name":  "passions.loyalty('persons.red_emperor')", "value": 60 }
+  ],
+  "runes": [
+    { "name":  "elemental.moon", "bonus": 10}
+  ]
+}

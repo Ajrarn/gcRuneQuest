@@ -5,6 +5,7 @@ import { Store } from '@ngxs/store';
 import { LoadAllSpecies } from './store/species.actions';
 import { LoadAllOccupations } from './store/occupations.actions';
 import { AppReady } from './store/ready.actions';
+import { LoadAllCultures } from './store/cultures.actions';
 
 @Injectable()
 export class CanActivateWhenReady implements CanActivate {
@@ -20,7 +21,7 @@ export class CanActivateWhenReady implements CanActivate {
       return true;
     } else {
       const that = this
-      this.store.dispatch([new LoadAllSpecies(), new LoadAllOccupations()])
+      this.store.dispatch([new LoadAllSpecies(), new LoadAllOccupations(), new LoadAllCultures()])
         .subscribe({
           complete: () => {
             that.store.dispatch(new AppReady());

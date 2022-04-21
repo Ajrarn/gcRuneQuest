@@ -1,0 +1,11 @@
+{
+  "name": "cultures.grazelands",
+  "passions": [
+    { "name":  "passions.love('groups.family')", "value": 60 },
+    { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+    { "name":  "passions.loyalty('persons.feathered_horse_queen')", "value": 60 }
+  ],
+  "runes": [
+    { "name":  "elemental.fire", "bonus": 10}
+  ]
+}

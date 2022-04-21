@@ -24,15 +24,7 @@
 			"STR": "FOR"
 		}
 	},
-	"groups": {
-		"chaos": "Chaos",
-		"city": "Cité",
-		"clan": "Clan",
-		"family": "Famille",
-		"shaker_templs": "Temple-qui-ébranle",
-		"tribe": "Tribu"
-	},
-	"homelands": {
+	"cultures": {
 		"grazelands": "Pâturages",
 		"lunar_tarsh": "Tarsh Lunar",
 		"old_tarsh": "Vieux Tarsh",
@@ -44,6 +36,14 @@
 			"sable_rider": "Monteur de l'Antilope Noire"
 		},
 		"sartar": "Sartar"
+	},
+	"groups": {
+		"chaos": "Chaos",
+		"city": "Cité",
+		"clan": "Clan",
+		"family": "Famille",
+		"shaker_templs": "Temple-qui-ébranle",
+		"tribe": "Tribu"
 	},
 	"languages": {
 		"spirit": "langue des esprits"

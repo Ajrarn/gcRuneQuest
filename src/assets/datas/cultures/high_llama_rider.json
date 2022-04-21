@@ -1,0 +1,11 @@
+{
+  "name": "cultures.prax.high_llama_rider",
+  "passions": [
+    { "name":  "passions.hate('groups.chaos')", "value": 60 },
+    { "name":  "passions.love('groups.family')", "value": 60 },
+    { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+  ],
+  "runes": [
+    { "name":  "elemental.water", "bonus": 10}
+  ]
+}
