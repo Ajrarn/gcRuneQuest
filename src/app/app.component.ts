@@ -17,12 +17,12 @@ export class AppComponent {
   ]
 
   species = []
-
   occupations = []
+  cultures = []
 
   subscriptions = new Subscription();
 
-  // @ts-ignore
+  // @ts-ignore for typescript it can be undefined, but it's not
   @Select((state: any) => state.title.value) title$: Observable<string>;
   public title = '';
 
@@ -42,10 +42,15 @@ export class AppComponent {
       })
     );
 
-
     this.subscriptions.add(
       this.store.select(state => state.occupations).subscribe((occupations) => {
         this.occupations = occupations.map((occupation: any)  => occupation.name);
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.select(state => state.cultures).subscribe((cultures) => {
+        this.cultures = cultures.map((culture: any)  => culture.name);
       })
     );
 

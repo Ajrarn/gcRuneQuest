@@ -25,6 +25,7 @@
 		}
 	},
 	"cultures": {
+		"esrolia": "Esrolia",
 		"grazelands": "Grazelands",
 		"lunar_tarsh": "Lunar Tarsh",
 		"old_tarsh": "Old Tarsh",
@@ -252,6 +253,7 @@
 		"characteristics": "Characteristics",
 		"creation": "Creation",
 		"creation_steps": "Creation steps",
+		"cultures": "Cultures",
 		"datas": "Datas",
 		"language": "Language",
 		"name": "Name",

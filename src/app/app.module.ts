@@ -42,6 +42,7 @@ import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { CulturesState } from './store/cultures.state';
+import { CulturesComponent } from './pages/cultures/cultures.component';
 
 registerLocaleData(fr);
 
@@ -50,7 +51,8 @@ registerLocaleData(fr);
     AppComponent,
     SpeciesComponent,
     CharacterComponent,
-    OccupationsComponent
+    OccupationsComponent,
+    CulturesComponent
   ],
   imports: [
     BrowserModule,

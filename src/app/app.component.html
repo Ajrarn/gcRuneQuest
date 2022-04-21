@@ -22,6 +22,13 @@
           </li>
         </ul>
       </li>
+      <li nz-submenu nzOpen nzTitle="{{'static.cultures' | translate}}" nzIcon="rune:harmony">
+        <ul *ngFor="let culture of cultures">
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/cultures/{{culture}}">{{ culture | translate}}</a>
+          </li>
+        </ul>
+      </li>
       <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="rune:mastery">
         <ul *ngFor="let occupation of occupations">
           <li nz-menu-item nzMatchRouter>

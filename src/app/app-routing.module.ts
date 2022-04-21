@@ -4,12 +4,14 @@ import { SpeciesComponent } from './pages/species/species.component';
 import { CharacterComponent } from './pages/character/character.component';
 import { OccupationsComponent } from './pages/occupations/occupations.component';
 import { CanActivateWhenReady } from './can-activate-when-ready';
+import { CulturesComponent } from './pages/cultures/cultures.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/character' },
   { path: 'character', component: CharacterComponent, canActivate: [CanActivateWhenReady] },
   { path: 'species/:id', component: SpeciesComponent, canActivate: [CanActivateWhenReady] },
   { path: 'occupations/:id', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
+  { path: 'cultures/:id', component: CulturesComponent, canActivate: [CanActivateWhenReady] }
 ];
 
 @NgModule({
