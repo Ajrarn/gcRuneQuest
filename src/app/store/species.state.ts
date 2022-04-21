@@ -2,17 +2,20 @@ import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
 import { LoadAllSpecies,LoadSpecie } from './species.actions';
 import { HttpClient } from '@angular/common/http';
-import { Subject, tap } from 'rxjs';
+import { Subject } from 'rxjs';
 import { LoadOccupation } from './occupations.actions';
+import { AbstractDataState } from './abstract-data-state';
 
 @State<any>({
   name: 'species',
   defaults: []
 })
 @Injectable()
-export class SpeciesState {
+export class SpeciesState extends AbstractDataState {
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(httpClient: HttpClient) {
+    super(httpClient);
+  }
 
   @Action(LoadAllSpecies)
   loadAllSpecies(ctx: StateContext<any>) {
@@ -44,18 +47,4 @@ export class SpeciesState {
     console.log('filename', loadSpecie.filename);
     return this.load('assets/datas/species/' + loadSpecie.filename, ctx);
   }
-
-
-  load(param: string, ctx: StateContext<any>) {
-    return this.httpClient.get(param, { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          const state = ctx.getState();
-          ctx.setState([...state, data].sort((previous: any, current: any) => {
-            return previous.name.localeCompare(current.name);
-          }));
-        })
-      );
-  }
-
 }

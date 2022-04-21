@@ -2,7 +2,8 @@ import { Action, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoadAllOccupations, LoadOccupation } from './occupations.actions';
-import { Subject, tap } from 'rxjs';
+import { Subject } from 'rxjs';
+import { AbstractDataState } from './abstract-data-state';
 
 
 @State<any>({
@@ -10,9 +11,10 @@ import { Subject, tap } from 'rxjs';
   defaults: []
 })
 @Injectable()
-export class OccupationsState {
+export class OccupationsState extends AbstractDataState {
 
-  constructor(private httpClient: HttpClient) {
+  constructor(httpClient: HttpClient) {
+    super(httpClient);
   }
 
   @Action(LoadAllOccupations)
@@ -43,17 +45,5 @@ export class OccupationsState {
   loadOccupation(ctx: StateContext<any>, loadOccupation: LoadOccupation) {
     console.log('filename', loadOccupation.filename);
     return this.load('assets/datas/occupations/' + loadOccupation.filename, ctx);
-  }
-
-  load(param: string, ctx: StateContext<any>) {
-    return this.httpClient.get(param, { responseType: 'json' })
-      .pipe(
-        tap((data: any) => {
-          const state = ctx.getState();
-          ctx.setState([...state, data].sort((previous: any, current: any) => {
-            return previous.name.localeCompare(current.name);
-          }));
-        })
-      );
   }
 }
