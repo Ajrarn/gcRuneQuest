@@ -1,1 +1,35 @@
-<p>character works!</p>
+<!--h1>{{'static.creation_steps' | translate}}</h1-->
+<nz-divider nzText="{{'static.creation_steps' | translate}}"></nz-divider>
+<nz-tabset [nzTabPosition]="'left'">
+  <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+    <ng-template #titleTemplate>
+      <i nz-icon [nzType]="getIcon(tab.name)" style="{{getStyleIcon(tab.name)}}"></i>
+      {{ tab.name | translate }}
+    </ng-template>
+    <div *ngIf="tab.name === 'steps.homeland'">
+      Homeland
+    </div>
+    <div *ngIf="tab.name === 'steps.family_history'">
+      Family
+    </div>
+    <div *ngIf="tab.name === 'steps.rune_affinities'">
+      Runes
+    </div>
+    <div *ngIf="tab.name === 'steps.characteristics'">
+      Char
+    </div>
+    <div *ngIf="tab.name === 'steps.occupation'">
+      Occupation
+    </div>
+    <div *ngIf="tab.name === 'steps.cult'">
+      Cult
+    </div>
+    <div *ngIf="tab.name === 'steps.personal_skill_bonuses'">
+      bonus
+    </div>
+    <div *ngIf="tab.name === 'steps.other_informations'">
+      other
+    </div>
+  </nz-tab>
+</nz-tabset>
+<nz-divider nzText="{{'static.character' | translate}}"></nz-divider>

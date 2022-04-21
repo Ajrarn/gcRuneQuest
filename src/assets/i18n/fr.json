@@ -251,6 +251,7 @@
 		"character": "Personnage",
 		"characteristics": "Caractéristiques",
 		"creation": "Création",
+		"creation_steps": "Étapes de création",
 		"datas": "Données",
 		"language": "Langage",
 		"name": "Nom",
@@ -260,6 +261,16 @@
 		"skills": "Compétences",
 		"species": "Races",
 		"title": "Assistant de Création de Personnage pour RuneQuest"
+	},
+	"steps": {
+		"characteristics": "Caractéristiques",
+		"cult": "Culte",
+		"family_history": "Passé familial",
+		"homeland": "Région d'origine",
+		"occupation": "Occupation",
+		"other_informations": "Autres informations",
+		"personal_skill_bonuses": "Bonus personnels aux compétences",
+		"rune_affinities": "Affinités runiques"
 	},
 	"unit": {
 		"heavy_cavalry": "Cavalerie lourde",

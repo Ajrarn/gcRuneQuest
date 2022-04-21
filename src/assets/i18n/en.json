@@ -251,6 +251,7 @@
 		"character": "Character",
 		"characteristics": "Characteristics",
 		"creation": "Creation",
+		"creation_steps": "Creation steps",
 		"datas": "Datas",
 		"language": "Language",
 		"name": "Name",
@@ -260,6 +261,16 @@
 		"skills": "Skills",
 		"species": "Species",
 		"title": "Runequest Character Creation Assistant "
+	},
+	"steps": {
+		"characteristics": "Characteristics",
+		"cult": "Cult",
+		"family_history": "Family History",
+		"homeland": "Homeland",
+		"occupation": "Occupation",
+		"other_informations": "Other Informations",
+		"personal_skill_bonuses": "Personal Skill Bonuses",
+		"rune_affinities": "Rune Affinities"
 	},
 	"unit": {
 		"heavy_cavalry": "Heavy Cavalry",

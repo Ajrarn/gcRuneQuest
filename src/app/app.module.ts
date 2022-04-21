@@ -39,6 +39,8 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { TitleState } from './store/title.state';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 registerLocaleData(fr);
 
@@ -76,6 +78,8 @@ registerLocaleData(fr);
     NzToolTipModule,
     NzSpaceModule,
     NzStepsModule,
+    NzTabsModule,
+    NzDividerModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
