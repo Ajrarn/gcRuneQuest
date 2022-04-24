@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Action, State, StateContext } from '@ngxs/store';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { LoadAllSpecies,LoadSpecie } from './species.actions';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
@@ -15,6 +15,13 @@ export class SpeciesState extends AbstractDataState {
 
   constructor(httpClient: HttpClient) {
     super(httpClient);
+  }
+
+  @Selector()
+  static specieForSelect(state: any[]): string[] {
+    return state.map((item:any) => {
+      return item.name;
+    });
   }
 
   @Action(LoadAllSpecies)

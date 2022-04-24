@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { SpeciesState } from '../../store/species.state';
 
 @Component({
   selector: 'app-character',
@@ -38,8 +41,30 @@ export class CharacterComponent {
     }
   ];
 
-  constructor(private store: Store) {
-    this.store.dispatch(new ChangeTitle('static.character'))
+  formHomeland: FormGroup;
+
+  // @ts-ignore
+  @Select(SpeciesState.specieForSelect) species$: Observable<string>;
+  species: string[] = [];
+
+  constructor(private store: Store, fb: FormBuilder) {
+    this.store.dispatch(new ChangeTitle('static.character'));
+
+    this.formHomeland = fb.group({
+      specie: fb.control('species.human'),
+      culture: fb.control(null)
+    });
+
+    // @ts-ignore
+    this.species$.subscribe((values:string[]) => {
+      this.species = values;
+      console.log('species', this.species);
+    });
+
+    this.formHomeland.valueChanges.subscribe((item) => {
+      console.log('item', item);
+    })
+
   }
 
   getIcon(key: string | null): string {

@@ -7,7 +7,11 @@
       {{ tab.name | translate }}
     </ng-template>
     <div *ngIf="tab.name === 'steps.homeland'">
-      Homeland
+      <form [formGroup]="formHomeland">
+        <nz-select [formControlName]="'specie'">
+          <nz-option *ngFor="let specie of species" nzValue="{{specie}}" nzLabel="{{specie |translate}}"></nz-option>
+        </nz-select>
+      </form>
     </div>
     <div *ngIf="tab.name === 'steps.family_history'">
       Family

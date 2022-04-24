@@ -17,7 +17,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { fr_FR } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import fr from '@angular/common/locales/fr';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -45,6 +45,7 @@ import { CulturesState } from './store/cultures.state';
 import { CulturesComponent } from './pages/cultures/cultures.component';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 
 registerLocaleData(fr);
 
@@ -72,6 +73,7 @@ registerLocaleData(fr);
     }),
     NgxsLoggerPluginModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
@@ -87,6 +89,7 @@ registerLocaleData(fr);
     NzDividerModule,
     NzListModule,
     NzGridModule,
+    NzSelectModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
