@@ -14,31 +14,24 @@
       <p *ngFor="let rune of specieData?.runes"><b>{{rune.name | translate}}</b>: {{rune.value}}</p>
     </nz-card>
   </nz-space>
-  <div>
-    <h1>{{'static.skills' | translate}}</h1>
-    <nz-collapse>
-      <nz-collapse-panel
-        *ngFor="let panel of skillPanels"
-        [nzHeader]="panel.name | translate"
-        [nzActive]="panel.active"
-        [nzDisabled]="panel.disabled"
-      >
-        <nz-table #basicTable [nzData]="getSkillDatas(panel.name)">
-          <thead>
-          <tr>
-            <th>{{ 'static.name' | translate}}</th>
-            <th>{{ 'static.base' | translate}}</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let data of basicTable.data">
-            <td>{{data.name | translate}}</td>
-            <td>{{data.base}}</td>
-          </tr>
-          </tbody>
-        </nz-table>
-      </nz-collapse-panel>
-    </nz-collapse>
-  </div>
+  <nz-divider nzText="{{'static.skills' | translate}}"></nz-divider>
+  <nz-list nzGrid>
+    <div nz-row [nzGutter]="16">
+      <div nz-col [nzXXl]="8" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let panel of skillPanels">
+        <nz-list-item>
+          <nz-card [nzTitle]="panel.name | translate">
+            <nz-table #basicTable [nzData]="getSkillDatas(panel.name)" [nzSize]="'small'" [nzPageSize]="50" [nzShowPagination]="false" [nzScroll]="{ y: '300px' }">
+              <tbody>
+              <tr *ngFor="let data of basicTable.data">
+                <td>{{data.name | translate}}</td>
+                <td>{{data.base}}</td>
+              </tr>
+              </tbody>
+            </nz-table>
+          </nz-card>
+        </nz-list-item>
+      </div>
+    </div>
+  </nz-list>
 </div>
 

@@ -43,6 +43,8 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { CulturesState } from './store/cultures.state';
 import { CulturesComponent } from './pages/cultures/cultures.component';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 registerLocaleData(fr);
 
@@ -83,6 +85,8 @@ registerLocaleData(fr);
     NzStepsModule,
     NzTabsModule,
     NzDividerModule,
+    NzListModule,
+    NzGridModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
   bootstrap: [AppComponent]
