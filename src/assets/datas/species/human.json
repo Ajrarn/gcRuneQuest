@@ -14,9 +14,9 @@
     { "name": "elemental", "value": 40 },
     { "name": "elemental", "value": 20 }
   ],
-  "cultures": [ "cultures.bison_rider", "cultures.esrolia", "cultures.grazelands", "cultures.high_llama",
-    "cultures.impala_rider", "cultures.lunar_tarsh", "cultures.old_tarsh", "cultures.pol_joni",
-    "cultures.sable_rider", "cultures.sartar"
+  "cultures": [ "cultures.prax.bison_rider", "cultures.esrolia", "cultures.grazelands", "cultures.prax.high_llama_rider",
+    "cultures.prax.impala_rider", "cultures.lunar_tarsh", "cultures.old_tarsh", "cultures.prax.pol_joni",
+    "cultures.prax.sable_rider", "cultures.sartar"
   ],
   "skills": [
     {

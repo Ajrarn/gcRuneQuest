@@ -6,6 +6,11 @@ import { Subject } from 'rxjs';
 import { LoadOccupation } from './occupations.actions';
 import { AbstractDataState } from './abstract-data-state';
 
+export interface SpeciesSelect {
+  name: string;
+  cultures: string[];
+}
+
 @State<any>({
   name: 'species',
   defaults: []
@@ -18,9 +23,12 @@ export class SpeciesState extends AbstractDataState {
   }
 
   @Selector()
-  static specieForSelect(state: any[]): string[] {
-    return state.map((item:any) => {
-      return item.name;
+  static specieForSelect(state: any[]): SpeciesSelect[] {
+    return state.map((item: any) => {
+      return {
+        name: item.name,
+        cultures: item.cultures
+      };
     });
   }
 

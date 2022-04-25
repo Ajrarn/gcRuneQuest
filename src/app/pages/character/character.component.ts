@@ -3,7 +3,7 @@ import { Select, Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { SpeciesState } from '../../store/species.state';
+import { SpeciesSelect, SpeciesState } from '../../store/species.state';
 
 @Component({
   selector: 'app-character',
@@ -45,7 +45,8 @@ export class CharacterComponent {
 
   // @ts-ignore
   @Select(SpeciesState.specieForSelect) species$: Observable<string>;
-  species: string[] = [];
+  species: SpeciesSelect[] = [];
+  cultures: string[] = [];
 
   constructor(private store: Store, fb: FormBuilder) {
     this.store.dispatch(new ChangeTitle('static.character'));
@@ -56,13 +57,20 @@ export class CharacterComponent {
     });
 
     // @ts-ignore
-    this.species$.subscribe((values:string[]) => {
+    this.species$.subscribe((values: SpeciesSelect[]) => {
       this.species = values;
       console.log('species', this.species);
     });
 
     this.formHomeland.valueChanges.subscribe((item) => {
       console.log('item', item);
+      if (item.specie) {
+        const  specie = this.species.find((specie: any) => specie.name === item.specie);
+        if (specie && specie.cultures) {
+          this.cultures = specie.cultures
+        }
+        console.log('cultures', this.cultures);
+      }
     })
 
   }
