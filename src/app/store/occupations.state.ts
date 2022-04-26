@@ -43,7 +43,6 @@ export class OccupationsState extends AbstractDataState {
 
   @Action(LoadOccupation)
   loadOccupation(ctx: StateContext<any>, loadOccupation: LoadOccupation) {
-    console.log('filename', loadOccupation.filename);
     return this.load('assets/datas/occupations/' + loadOccupation.filename, ctx);
   }
 }

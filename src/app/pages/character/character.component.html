@@ -8,12 +8,22 @@
     </ng-template>
     <div *ngIf="tab.name === 'steps.homeland'">
       <form [formGroup]="formHomeland">
-        <nz-select [formControlName]="'specie'">
-          <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name |translate}}"></nz-option>
-        </nz-select>
-        <nz-select [formControlName]="'culture'">
-          <nz-option *ngFor="let culture of cultures" nzValue="{{culture}}" nzLabel="{{culture |translate}}"></nz-option>
-        </nz-select>
+        <nz-space nzDirection="vertical">
+          <nz-space *nzSpaceItem>
+            <p *nzSpaceItem>Race</p>
+            <nz-select [formControlName]="'specie'" *nzSpaceItem>
+              <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name |translate}}"></nz-option>
+            </nz-select>
+          </nz-space>
+          <nz-space *nzSpaceItem>
+            <p *nzSpaceItem>Culture</p>
+            <nz-select [formControlName]="'culture'" *nzSpaceItem>
+              <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
+                <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture}}" nzLabel="{{culture |translate}}"></nz-option>
+              </nz-option-group>
+            </nz-select>
+          </nz-space>
+        </nz-space>
       </form>
     </div>
     <div *ngIf="tab.name === 'steps.family_history'">

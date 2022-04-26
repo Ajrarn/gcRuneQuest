@@ -27,16 +27,18 @@
 	"cultures": {
 		"esrolia": "Esrolia",
 		"grazelands": "Pâturages",
-		"lunar_tarsh": "Tarsh Lunar",
-		"old_tarsh": "Vieux Tarsh",
 		"prax": {
 			"bison_rider": "Monteur de bison",
-			"high_llama_rider": "Monteur du Grand Lama de Prax",
+			"high_llama_rider": "Monteur du Grand Lama",
 			"impala_rider": "Monteur d'Impala",
 			"pol_joni": "Pol Joni",
 			"sable_rider": "Monteur de l'Antilope Noire"
 		},
-		"sartar": "Sartar"
+		"sartar": "Sartar",
+		"tarsh": {
+			"lunar_tarsh": "Tarsh Lunar",
+			"old_tarsh": "Vieux Tarsh"
+		}
 	},
 	"groups": {
 		"chaos": "Chaos",
@@ -45,6 +47,13 @@
 		"family": "Famille",
 		"shaker_templs": "Temple-qui-ébranle",
 		"tribe": "Tribu"
+	},
+	"homeland": {
+		"esrolia": "Esrolia",
+		"grazelands": "Pâturages",
+		"prax": "Prax",
+		"sartar": "Sartar",
+		"tarsh": "Tarsh"
 	},
 	"languages": {
 		"spirit": "langue des esprits"

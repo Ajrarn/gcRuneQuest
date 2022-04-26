@@ -27,16 +27,18 @@
 	"cultures": {
 		"esrolia": "Esrolia",
 		"grazelands": "Grazelands",
-		"lunar_tarsh": "Lunar Tarsh",
-		"old_tarsh": "Old Tarsh",
 		"prax": {
-			"bison_rider": "Prax Bison Rider",
-			"high_llama_rider": "Prax High Llama Rider",
+			"bison_rider": "Bison Rider",
+			"high_llama_rider": "High Llama Rider",
 			"impala_rider": "Impala Rider",
 			"pol_joni": "Pol Joni",
 			"sable_rider": "Sable Rider"
 		},
-		"sartar": "Sartar"
+		"sartar": "Sartar",
+		"tarsh": {
+			"lunar_tarsh": "Lunar Tarsh",
+			"old_tarsh": "Old Tarsh"
+		}
 	},
 	"groups": {
 		"chaos": "Chaos",
@@ -45,6 +47,13 @@
 		"family": "Family",
 		"shaker_templs": "Shaker temple",
 		"tribe": "Tribe"
+	},
+	"homeland": {
+		"esrolia": "Esrolia",
+		"grazelands": "Grazelands",
+		"prax": "Prax",
+		"sartar": "Sartar",
+		"tarsh": "Tarsh"
 	},
 	"languages": {
 		"spirit": "Spirit Language"
