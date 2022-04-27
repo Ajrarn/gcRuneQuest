@@ -1,0 +1,13 @@
+{
+  "name": "occupations.heavy_infantry",
+  "skills": [
+    {"name":  "skills.sing", "value": 10},
+    {"name":  "skills.scan", "value": 10},
+    {"name":  "skills.battle", "value": 30},
+    {"name":  "skills.all_unit_weapons", "value": 25},
+    {"name":  "skills.first_aid", "value": 15},
+    {"name":  "skills.other_weapon", "value": 25},
+    {"name":  "skills.listen", "value": 10},
+    {"name":  "skills.tertiary_weapon", "value": 15}
+  ]
+}

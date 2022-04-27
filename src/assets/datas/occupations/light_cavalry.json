@@ -1,0 +1,13 @@
+{
+  "name": "occupations.light_cavalry",
+  "skills": [
+    {"name":  "skills.ride", "value": 35},
+    {"name":  "skills.listen", "value": 10},
+    {"name":  "skills.sing", "value": 10},
+    {"name":  "skills.scan", "value": 10},
+    {"name":  "skills.battle", "value": 30},
+    {"name":  "skills.all_unit_weapons", "value": 25},
+    {"name":  "skills.first_aid", "value": 10},
+    {"name":  "skills.other_weapon", "value": 20}
+  ]
+}

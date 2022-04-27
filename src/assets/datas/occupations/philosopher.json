@@ -1,0 +1,14 @@
+{
+  "name": "occupations.philosopher",
+  "skills": [
+    {"name":  "skills.read_write_any", "value": 50},
+    {"name":  "skills.sorcery_spell", "value": 10},
+    {"name":  "skills.orate", "value": 25},
+    {"name":  "skills.lore_any", "value": 30},
+    {"name":  "skills.sorcery_spell", "value": 20},
+    {"name":  "skills.library_use", "value": 10},
+    {"name":  "skills.sorcery_spell", "value": 10},
+    {"name":  "skills.lore_any", "value": 10},
+    {"name":  "skills.meditate", "value": 20}
+  ]
+}

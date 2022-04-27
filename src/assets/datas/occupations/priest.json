@@ -1,0 +1,14 @@
+{
+  "name": "occupations.priest",
+  "skills": [
+    {"name":  "skills.any_cult", "value": 10},
+    {"name":  "skills.lore_cult", "value": 30},
+    {"name":  "skills.dance", "value": 10},
+    {"name":  "skills.read_write_own", "value": 10},
+    {"name":  "skills.orate", "value": 10},
+    {"name":  "skills.manage_household", "value": 10},
+    {"name":  "skills.sing", "value": 30},
+    {"name":  "skills.worship_deity", "value": 30},
+    {"name":  "skills.meditate", "value": 10}
+  ]
+}

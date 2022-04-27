@@ -1,0 +1,14 @@
+{
+  "name": "occupations.ligh_infantry",
+  "skills": [
+    {"name":  "skills.battle", "value": 30},
+    {"name":  "skills.hide", "value": 10},
+    {"name":  "skills.first_aid", "value": 15},
+    {"name":  "skills.move_quietly", "value": 10},
+    {"name":  "skills.survival", "value": 10},
+    {"name":  "skills.all_unit_weapons", "value": 25},
+    {"name":  "skills.listen", "value": 10},
+    {"name":  "skills.other_weapon", "value": 25},
+    {"name":  "skills.scan", "value": 10}
+  ]
+}

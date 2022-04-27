@@ -1,0 +1,14 @@
+{
+  "name": "occupations.thief",
+  "skills": [
+    {"name":  "skills.climb", "value": 10},
+    {"name":  "skills.devise", "value": 10},
+    {"name":  "skills.disguise", "value": 30},
+    {"name":  "skills.sleight", "value": 30},
+    {"name":  "skills.fast_talk", "value": 30},
+    {"name":  "skills.hide", "value": 10},
+    {"name":  "skills.lore_local", "value": 10},
+    {"name":  "skills.move_quietly", "value": 30},
+    {"name":  "skills.cultural_weapon", "value": 15}
+  ]
+}

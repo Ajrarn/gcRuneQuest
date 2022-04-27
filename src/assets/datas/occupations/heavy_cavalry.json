@@ -1,0 +1,13 @@
+{
+  "name": "occupations.heavy_cavalry",
+  "skills": [
+    {"name":  "skills.battle", "value": 30},
+    {"name":  "skills.first_aid", "value": 10},
+    {"name":  "skills.ride_any", "value": 35},
+    {"name":  "skills.listen", "value": 10},
+    {"name":  "skills.all_unit_weapons", "value": 25},
+    {"name":  "skills.scan", "value": 10},
+    {"name":  "skills.other_weapon", "value": 20},
+    {"name":  "skills.sing", "value": 10}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "occupations.scribe",
+  "skills": [
+    {"name":  "skills.speak_any", "value": 10},
+    {"name":  "skills.lore_any", "value": 30},
+    {"name":  "skills.bureaucracy", "value": 30},
+    {"name":  "skills.lore_any", "value": 10},
+    {"name":  "skills.customs_any", "value": 30},
+    {"name":  "skills.read_write_any", "value": 30},
+    {"name":  "skills.library_use", "value": 10},
+    {"name":  "skills.read_write_own", "value": 50},
+    {"name":  "skills.evaluate", "value": 10}
+  ]
+}
