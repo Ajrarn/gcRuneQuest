@@ -75,7 +75,12 @@
 		"priest": "Priest",
 		"scribe": "Scribe",
 		"thief": "Thief",
-		"warrior": "Warrior"
+		"warrior": {
+			"heavy_cavalry": "Heavy Cavalry",
+			"heavy_infantry": "Heavy Infantry",
+			"light_cavalry": "Light Cavalry",
+			"light_infantry": "Light Infantry"
+		}
 	},
 	"passions": {
 		"hate": "Hate ({{name}})",

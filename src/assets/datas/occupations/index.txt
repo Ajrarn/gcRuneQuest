@@ -6,6 +6,15 @@ entertainer.json
 farmer.json
 fisher.json
 healer.json
+heavy_cavalry.json
+heavy_infantry.json
 herder.json
 hunter.json
+light_cavalry.json
+light_infantry.json
 merchant.json
+noble.json
+philosopher.json
+priest.json
+scribe.json
+thief.json

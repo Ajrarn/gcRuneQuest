@@ -1,5 +1,5 @@
 {
-  "name": "occupations.light_cavalry",
+  "name": "occupations.warrior.light_cavalry",
   "skills": [
     {"name":  "skills.ride", "value": 35},
     {"name":  "skills.listen", "value": 10},
