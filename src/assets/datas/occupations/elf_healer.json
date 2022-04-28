@@ -1,0 +1,13 @@
+{
+  "name": "occupations.elf.healer",
+  "skills": [
+    {"name":  "skills.alchemy", "value": 10},
+    {"name":  "skills.elfsense", "value": 10},
+    {"name":  "skills.first_aid", "value": 30},
+    {"name":  "skills.lore_other_any", "value": 10},
+    {"name":  "skills.plant_lore", "value": 30},
+    {"name":  "skills.sing", "value": 20},
+    {"name":  "skills.treat_disease", "value": 30},
+    {"name":  "skills.treat_poison", "value": 10}
+  ]
+}

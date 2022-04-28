@@ -1,0 +1,13 @@
+{
+  "name": "occupations.dwarf.gold",
+  "skills": [
+    {"name":  "skills.craft_gold", "value": 15},
+    {"name":  "skills.dwarf_lore", "value": 30},
+    {"name":  "skills.evaluate", "value": 20},
+    {"name":  "skills.glorantha_lore", "value": 30},
+    {"name":  "skills.mineral_lore", "value": 15},
+    {"name":  "skills.orate", "value": 25},
+    {"name":  "skills.read_write_mostali", "value": 25},
+    {"name":  "skills.speak_mostali", "value": 20}
+  ]
+}

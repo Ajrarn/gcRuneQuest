@@ -1,0 +1,12 @@
+{
+  "name": "occupations.dwarf.brass",
+  "skills": [
+    {"name":  "skills.craft_redsmithing", "value": 25},
+    {"name":  "skills.dwarf_lore", "value": 10},
+    {"name":  "skills.evaluate", "value": 30},
+    {"name":  "skills.metal_lore", "value": 30},
+    {"name":  "skills.read_write_mostali", "value": 10},
+    {"name":  "skills.devise", "value": 30},
+    {"name":  "skills.earthsense_search", "value": 5}
+  ]
+}

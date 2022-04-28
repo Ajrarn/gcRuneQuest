@@ -1,0 +1,14 @@
+{
+  "name": "occupations.elf.crafter",
+  "skills": [
+    {"name":  "skills.bargain", "value": 10},
+    {"name":  "skills.conceal", "value": 10},
+    {"name":  "skills.craft_primary", "value": 30},
+    {"name":  "skills.craft_secondary", "value": 10},
+    {"name":  "skills.elf_bow", "value": 15},
+    {"name":  "skills.elfsense", "value": 10},
+    {"name":  "skills.lore_any", "value": 10},
+    {"name":  "skills.plant_lore", "value": 30},
+    {"name":  "skills.speak_other_language_any", "value": 10}
+  ]
+}

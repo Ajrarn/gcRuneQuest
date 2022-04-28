@@ -1,0 +1,14 @@
+{
+  "name": "occupations.baboon.troop",
+  "skills": [
+    {"name":  "skills.area_lore_local", "value": 20},
+    {"name":  "skills.bite", "value": 25},
+    {"name":  "skills.hide", "value": 10},
+    {"name":  "skills.move_quietly", "value": 10},
+    {"name":  "skills.plant_lore", "value": 10},
+    {"name":  "skills.scan", "value": 20},
+    {"name":  "skills.short_spear", "value": 15},
+    {"name":  "skills.sling", "value": 15},
+    {"name":  "skills.track", "value": 10}
+  ]
+}
