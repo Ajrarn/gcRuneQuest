@@ -60,9 +60,31 @@
 	},
 	"occupations": {
 		"assistant_shaman": "Assistant Shaman",
+		"baboon": {
+			"troop": "Troop Baboon"
+		},
 		"bandit": "Bandit",
 		"chariot_driver": "Chariot Driver",
 		"crafter": "Crafter",
+		"dwarf": {
+			"brass": "Brass Dwarf",
+			"copper": "Copper Dwarf",
+			"gold": "Gold Dwarf",
+			"iron": "Iron Dwarf",
+			"lead": "Lead Dwarf",
+			"quicksilver": "Quicksilver Dwarf",
+			"rock": "Rock Dwarf",
+			"silver": "Silver Dwarf",
+			"tin": "Tin Dwarf"
+		},
+		"elf": {
+			"crafter": "Crafter",
+			"healer": "Healer",
+			"noble": "Noble",
+			"plant_tender": "Plant Tender",
+			"priestess_shaman": "Priestess Shaman",
+			"warrior": "Warrior"
+		},
 		"entertainer": "Entertainer",
 		"farmer": "Farmer",
 		"fisher": "Fisher",

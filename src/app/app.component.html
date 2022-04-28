@@ -15,30 +15,22 @@
         <i nz-icon nzType="rune:maker"></i>
         <span><a routerLink="/character">{{'static.character' | translate}}</a></span>
       </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.species' | translate}}" nzIcon="rune:man">
-        <ul *ngFor="let specie of species">
+      <li nz-submenu nzOpen nzTitle="{{'static.datas' | translate}}" nzIcon="rune:mastery">
+        <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/species/{{specie}}">{{ specie | translate}}</a>
+            <a routerLink="/species">{{ 'static.species' | translate}}</a>
           </li>
-        </ul>
-      </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.cultures' | translate}}" nzIcon="rune:harmony">
-        <ul *ngFor="let culture of cultures">
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/cultures/{{culture}}">{{ culture | translate}}</a>
+            <a routerLink="/cultures">{{ 'static.cultures'  | translate}}</a>
           </li>
-        </ul>
-      </li>
-      <li nz-submenu nzOpen nzTitle="{{'static.occupations' | translate}}" nzIcon="rune:mastery">
-        <ul *ngFor="let occupation of occupations">
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/occupations/{{occupation}}">{{ occupation | translate}}</a>
+            <a routerLink="/occupations">{{ 'static.occupations' | translate}}</a>
           </li>
         </ul>
       </li>
       <li nz-submenu nzOpen nzTitle="{{'static.language' | translate}}" nzIcon="rune:communication-trade">
-        <ul *ngFor="let language of languages">
-          <li nz-menu-item nzMatchRouter (click)="useLanguage(language.value)">{{ language.name | translate }}</li>
+        <ul>
+          <li *ngFor="let language of languages" nz-menu-item nzMatchRouter (click)="useLanguage(language.value)">{{ language.name | translate }}</li>
         </ul>
       </li>
     </ul>

@@ -60,9 +60,31 @@
 	},
 	"occupations": {
 		"assistant_shaman": "Assistant Shaman",
+		"baboon": {
+			"troop": "Babouin de meute"
+		},
 		"bandit": "Bandit",
 		"chariot_driver": "Conducteur de Char",
 		"crafter": "Artisan",
+		"dwarf": {
+			"brass": "Nain de laiton",
+			"copper": "Nain de cuivre",
+			"gold": "Nain d'or",
+			"iron": "Nain de fer",
+			"lead": "Nain de plomb",
+			"quicksilver": "Nain de mercure",
+			"rock": "Nain de Pierre",
+			"silver": "Nain d'argent",
+			"tin": "Nain d'étain"
+		},
+		"elf": {
+			"crafter": "Artisan",
+			"healer": "Guérisseur",
+			"noble": "Noble",
+			"plant_tender": "Tuteur",
+			"priestess_shaman": "Prêtresse-chaman",
+			"warrior": "Guerrier"
+		},
 		"entertainer": "Artiste",
 		"farmer": "Fermier",
 		"fisher": "Pêcheur",
