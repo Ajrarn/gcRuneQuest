@@ -2,11 +2,27 @@ import { Action, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoadAllOccupations, LoadOccupation } from './occupations.actions';
-import { Subject } from 'rxjs';
+import { Subject, tap } from 'rxjs';
 import { AbstractDataState } from './abstract-data-state';
+import * as _ from 'lodash';
 
 
-@State<any>({
+export interface Skills {
+  name: string;
+  value: number | string;
+}
+
+export interface Occupation {
+  name: string;
+  skills: Skills[];
+}
+
+export interface OccupationGroup {
+  name: string;
+  occupations: Occupation[];
+}
+
+@State<OccupationGroup[]>({
   name: 'occupations',
   defaults: []
 })
@@ -43,6 +59,28 @@ export class OccupationsState extends AbstractDataState {
 
   @Action(LoadOccupation)
   loadOccupation(ctx: StateContext<any>, loadOccupation: LoadOccupation) {
-    return this.load('assets/datas/occupations/' + loadOccupation.filename, ctx);
+    //return this.load('assets/datas/occupations/' + loadOccupation.filename, ctx);
+    return this.httpClient.get('assets/datas/occupations/' + loadOccupation.filename, { responseType: 'json' })
+      .pipe(
+        tap((data: any) => {
+          const state = _.cloneDeep(ctx.getState());
+
+          let line = data.name.split('.');
+          let group = line[0] + '.' + line[1] + '.name';
+          let theGroup = state.find((itemGroup: any) => itemGroup.name.startsWith(group));
+          if (theGroup) {
+            theGroup.occupations.push(data);
+            theGroup.occupations = theGroup.occupations.sort((previous: Occupation, current: Occupation) => {
+              return previous.name.localeCompare(current.name);
+            })
+          } else {
+            state.push({name: group, occupations: [data]})
+          }
+
+          ctx.setState(state.sort((previous: any, current: any) => {
+            return previous.name.localeCompare(current.name);
+          }));
+        })
+      );
   }
 }

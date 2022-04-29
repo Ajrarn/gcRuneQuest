@@ -43,7 +43,6 @@ export class CulturesState extends AbstractDataState {
 
   @Action(LoadCulture)
   loadOccupation(ctx: StateContext<any>, loadCulture: LoadCulture) {
-    console.log('filename', loadCulture.filename);
     return this.load('assets/datas/cultures/' + loadCulture.filename, ctx);
   }
 

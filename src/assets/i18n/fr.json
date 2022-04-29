@@ -60,6 +60,7 @@
 	},
 	"occupations": {
 		"baboon": {
+			"name": "Babouins",
 			"troop": "Babouin de meute"
 		},
 		"common": {
@@ -74,6 +75,7 @@
 			"herder": "Berger",
 			"hunter": "Chasseur",
 			"merchant": "Marchand",
+			"name": "Communes",
 			"noble": "Noble",
 			"philosopher": "Philosophe",
 			"priest": "Prêtre",
@@ -92,6 +94,7 @@
 			"gold": "Nain d'or",
 			"iron": "Nain de fer",
 			"lead": "Nain de plomb",
+			"name": "Naines",
 			"quicksilver": "Nain de mercure",
 			"rock": "Nain de Pierre",
 			"silver": "Nain d'argent",
@@ -100,6 +103,7 @@
 		"elf": {
 			"crafter": "Artisan",
 			"healer": "Guérisseur",
+			"name": "Elfes",
 			"noble": "Noble",
 			"plant_tender": "Tuteur",
 			"priestess_shaman": "Prêtresse-chaman",

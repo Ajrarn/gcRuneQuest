@@ -60,6 +60,7 @@
 	},
 	"occupations": {
 		"baboon": {
+			"name": "Baboon",
 			"troop": "Troop Baboon"
 		},
 		"common": {
@@ -74,6 +75,7 @@
 			"herder": "Herder",
 			"hunter": "Hunter",
 			"merchant": "Merchant",
+			"name": "Common",
 			"noble": "Noble",
 			"philosopher": "Philosopher",
 			"priest": "Priest",
@@ -92,6 +94,7 @@
 			"gold": "Gold Dwarf",
 			"iron": "Iron Dwarf",
 			"lead": "Lead Dwarf",
+			"name": "Dwarf",
 			"quicksilver": "Quicksilver Dwarf",
 			"rock": "Rock Dwarf",
 			"silver": "Silver Dwarf",
@@ -100,6 +103,7 @@
 		"elf": {
 			"crafter": "Crafter",
 			"healer": "Healer",
+			"name": "Elf",
 			"noble": "Noble",
 			"plant_tender": "Plant Tender",
 			"priestess_shaman": "Priestess Shaman",

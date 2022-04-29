@@ -2,7 +2,7 @@
   <div>
     <h1>{{'static.skills' | translate}}</h1>
 
-    <nz-table #basicTable [nzData]="occupationData.skills">
+    <nz-table #basicTable [nzData]="occupationData?.skills">
       <thead>
       <tr>
         <th>{{ 'static.name' | translate}}</th>
@@ -16,7 +16,6 @@
       </tr>
       </tbody>
     </nz-table>
-
   </div>
 </div>
 

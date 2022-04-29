@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { first } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
 import { ChangeTitle } from '../../store/title.action';
 
 @Component({
@@ -14,7 +13,9 @@ export class OccupationsComponent implements OnInit {
 
   occupationData: any;
 
-  constructor(private route: ActivatedRoute, private store: Store, private translate: TranslateService) {
+
+
+  constructor(private route: ActivatedRoute, private store: Store) {
 
     // listen to the params to filter with the good specie
     this.route.paramMap.subscribe(params => {
