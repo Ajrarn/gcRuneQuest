@@ -1,5 +1,5 @@
 {
-  "name": "occupations.scribe",
+  "name": "occupations.common.scribe",
   "skills": [
     {"name":  "skills.speak_any", "value": 10},
     {"name":  "skills.lore_any", "value": 30},

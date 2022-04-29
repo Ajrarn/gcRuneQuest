@@ -59,13 +59,33 @@
 		"spirit": "Spirit Language"
 	},
 	"occupations": {
-		"assistant_shaman": "Assistant Shaman",
 		"baboon": {
 			"troop": "Troop Baboon"
 		},
-		"bandit": "Bandit",
-		"chariot_driver": "Chariot Driver",
-		"crafter": "Crafter",
+		"common": {
+			"assistant_shaman": "Assistant Shaman",
+			"bandit": "Bandit",
+			"chariot_driver": "Chariot Driver",
+			"crafter": "Crafter",
+			"entertainer": "Entertainer",
+			"farmer": "Farmer",
+			"fisher": "Fisher",
+			"healer": "Healer",
+			"herder": "Herder",
+			"hunter": "Hunter",
+			"merchant": "Merchant",
+			"noble": "Noble",
+			"philosopher": "Philosopher",
+			"priest": "Priest",
+			"scribe": "Scribe",
+			"thief": "Thief",
+			"warrior": {
+				"heavy_cavalry": "Heavy Cavalry",
+				"heavy_infantry": "Heavy Infantry",
+				"light_cavalry": "Light Cavalry",
+				"light_infantry": "Light Infantry"
+			}
+		},
 		"dwarf": {
 			"brass": "Brass Dwarf",
 			"copper": "Copper Dwarf",
@@ -84,24 +104,6 @@
 			"plant_tender": "Plant Tender",
 			"priestess_shaman": "Priestess Shaman",
 			"warrior": "Warrior"
-		},
-		"entertainer": "Entertainer",
-		"farmer": "Farmer",
-		"fisher": "Fisher",
-		"healer": "Healer",
-		"herder": "Herder",
-		"hunter": "Hunter",
-		"merchant": "Merchant",
-		"noble": "Noble",
-		"philosopher": "Philosopher",
-		"priest": "Priest",
-		"scribe": "Scribe",
-		"thief": "Thief",
-		"warrior": {
-			"heavy_cavalry": "Heavy Cavalry",
-			"heavy_infantry": "Heavy Infantry",
-			"light_cavalry": "Light Cavalry",
-			"light_infantry": "Light Infantry"
 		}
 	},
 	"passions": {

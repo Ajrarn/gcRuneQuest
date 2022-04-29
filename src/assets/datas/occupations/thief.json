@@ -1,5 +1,5 @@
 {
-  "name": "occupations.thief",
+  "name": "occupations.common.thief",
   "skills": [
     {"name":  "skills.climb", "value": 10},
     {"name":  "skills.devise", "value": 10},

@@ -1,5 +1,5 @@
 {
-  "name": "occupations.warrior.heavy_cavalry",
+  "name": "occupations.common.warrior.heavy_cavalry",
   "skills": [
     {"name":  "skills.battle", "value": 30},
     {"name":  "skills.first_aid", "value": 10},

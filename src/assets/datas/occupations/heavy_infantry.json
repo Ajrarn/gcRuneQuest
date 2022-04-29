@@ -1,5 +1,5 @@
 {
-  "name": "occupations.warrior.heavy_infantry",
+  "name": "occupations.common.warrior.heavy_infantry",
   "skills": [
     {"name":  "skills.sing", "value": 10},
     {"name":  "skills.scan", "value": 10},

@@ -1,5 +1,5 @@
 {
-  "name": "occupations.assistant_shaman",
+  "name": "occupations.common.assistant_shaman",
   "skills": [
     {"name":  "skills.sing", "value": 10},
     {"name":  "skills.spirit_combat", "value": 30},

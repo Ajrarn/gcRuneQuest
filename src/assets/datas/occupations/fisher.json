@@ -1,5 +1,5 @@
 {
-  "name": "occupations.fisher",
+  "name": "occupations.common.fisher",
   "skills": [
     {"name":  "skills.boat", "value": 30},
     {"name":  "skills.javelin_selfbow_or_thrown_net", "value": 20},

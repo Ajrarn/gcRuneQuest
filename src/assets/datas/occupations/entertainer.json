@@ -1,5 +1,5 @@
 {
-  "name": "occupations.entertainer",
+  "name": "occupations.common.entertainer",
   "skills": [
     {"name":  "skills.dance", "value": 30},
     {"name":  "skills.customs_any", "value": 10},

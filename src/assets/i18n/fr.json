@@ -59,13 +59,33 @@
 		"spirit": "langue des esprits"
 	},
 	"occupations": {
-		"assistant_shaman": "Assistant Shaman",
 		"baboon": {
 			"troop": "Babouin de meute"
 		},
-		"bandit": "Bandit",
-		"chariot_driver": "Conducteur de Char",
-		"crafter": "Artisan",
+		"common": {
+			"assistant_shaman": "Assistant Shaman",
+			"bandit": "Bandit",
+			"chariot_driver": "Conducteur de Char",
+			"crafter": "Artisan",
+			"entertainer": "Artiste",
+			"farmer": "Fermier",
+			"fisher": "Pêcheur",
+			"healer": "Guérisseur",
+			"herder": "Berger",
+			"hunter": "Chasseur",
+			"merchant": "Marchand",
+			"noble": "Noble",
+			"philosopher": "Philosophe",
+			"priest": "Prêtre",
+			"scribe": "Scribe",
+			"thief": "Voleur",
+			"warrior": {
+				"heavy_cavalry": "Cavalerie lourde",
+				"heavy_infantry": "Infanterie lourde",
+				"light_cavalry": "Cavalerie légère",
+				"light_infantry": "Infanterie Légère"
+			}
+		},
 		"dwarf": {
 			"brass": "Nain de laiton",
 			"copper": "Nain de cuivre",
@@ -84,24 +104,6 @@
 			"plant_tender": "Tuteur",
 			"priestess_shaman": "Prêtresse-chaman",
 			"warrior": "Guerrier"
-		},
-		"entertainer": "Artiste",
-		"farmer": "Fermier",
-		"fisher": "Pêcheur",
-		"healer": "Guérisseur",
-		"herder": "Berger",
-		"hunter": "Chasseur",
-		"merchant": "Marchand",
-		"noble": "Noble",
-		"philosopher": "Philosophe",
-		"priest": "Prêtre",
-		"scribe": "Scribe",
-		"thief": "Voleur",
-		"warrior": {
-			"heavy_cavalry": "Cavalerie lourde",
-			"heavy_infantry": "Infanterie lourde",
-			"light_cavalry": "Cavalerie légère",
-			"light_infantry": "Infanterie Légère"
 		}
 	},
 	"passions": {

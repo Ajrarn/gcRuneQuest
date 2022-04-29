@@ -1,5 +1,5 @@
 {
-  "name": "occupations.priest",
+  "name": "occupations.common.priest",
   "skills": [
     {"name":  "skills.any_cult", "value": 10},
     {"name":  "skills.lore_cult", "value": 30},

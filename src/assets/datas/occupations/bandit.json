@@ -1,5 +1,5 @@
 {
-  "name": "occupations.bandit",
+  "name": "occupations.common.bandit",
   "skills": [
     {"name":  "skills.intimidate", "value": 10},
     {"name":  "skills.hide", "value": 30},

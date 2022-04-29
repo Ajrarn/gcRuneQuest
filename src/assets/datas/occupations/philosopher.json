@@ -1,5 +1,5 @@
 {
-  "name": "occupations.philosopher",
+  "name": "occupations.common.philosopher",
   "skills": [
     {"name":  "skills.read_write_any", "value": 50},
     {"name":  "skills.sorcery_spell", "value": 10},

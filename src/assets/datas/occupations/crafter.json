@@ -1,5 +1,5 @@
 {
-  "name": "occupations.crafter",
+  "name": "occupations.common.crafter",
   "skills": [
     {"name":  "skills.art", "value": 10},
     {"name":  "skills.evaluate", "value": 10},

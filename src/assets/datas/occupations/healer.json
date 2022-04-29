@@ -1,5 +1,5 @@
 {
-  "name": "occupations.healer",
+  "name": "occupations.common.healer",
   "skills": [
     {"name":  "skills.orate", "value": 10},
     {"name":  "skills.treat_disease", "value": 30},

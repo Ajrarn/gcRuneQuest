@@ -1,5 +1,5 @@
 {
-  "name": "occupations.chariot_driver",
+  "name": "occupations.common.chariot_driver",
   "skills": [
     {"name":  "skills.battle", "value": 20},
     {"name":  "skills.drive_chariot", "value": 40},

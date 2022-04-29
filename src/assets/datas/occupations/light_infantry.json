@@ -1,5 +1,5 @@
 {
-  "name": "occupations.warrior.light_infantry",
+  "name": "occupations.common.warrior.light_infantry",
   "skills": [
     {"name":  "skills.battle", "value": 30},
     {"name":  "skills.hide", "value": 10},

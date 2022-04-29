@@ -1,5 +1,5 @@
 {
-  "name": "occupations.hunter",
+  "name": "occupations.common.hunter",
   "skills": [
     {"name":  "skills.animal_lore", "value": 30},
     {"name":  "skills.scan", "value": 10},

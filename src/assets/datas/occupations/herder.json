@@ -1,5 +1,5 @@
 {
-  "name": "occupations.herder",
+  "name": "occupations.common.herder",
   "skills": [
     {"name":  "skills.jump_or_climb", "value": 10},
     {"name":  "skills.scan", "value": 10},

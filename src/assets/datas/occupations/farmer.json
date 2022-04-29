@@ -1,5 +1,5 @@
 {
-  "name": "occupations.farmer",
+  "name": "occupations.common.farmer",
   "skills": [
     {"name":  "skills.lore_local", "value": 15},
     {"name":  "skills.jump_or_climb", "value": 10},

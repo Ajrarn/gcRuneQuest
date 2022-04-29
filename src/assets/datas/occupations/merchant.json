@@ -1,5 +1,5 @@
 {
-  "name": "occupations.merchant",
+  "name": "occupations.common.merchant",
   "skills": [
     {"name":  "skills.ride", "value": 10},
     {"name":  "skills.customs_any", "value": 10},
