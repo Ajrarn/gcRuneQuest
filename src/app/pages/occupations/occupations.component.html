@@ -1,8 +1,16 @@
 <div class="inner-content">
   <div>
-    <h1>{{'static.skills' | translate}}</h1>
+    <h1>{{'static.occupations' | translate}}</h1>
 
-    <nz-table #basicTable [nzData]="occupationData?.skills">
+    <form [formGroup]="formOccupationGroup">
+        <nz-select [formControlName]="'occupation'">
+          <nz-option-group nzLabel="{{group.name | translate}}" *ngFor="let group of occupationData">
+            <nz-option *ngFor="let occupation of group.occupations" nzValue="{{occupation.name}}" nzLabel="{{occupation.name | translate}}"></nz-option>
+          </nz-option-group>
+        </nz-select>
+    </form>
+
+    <nz-table #basicTable [nzData]="occupation.skills">
       <thead>
       <tr>
         <th>{{ 'static.name' | translate}}</th>

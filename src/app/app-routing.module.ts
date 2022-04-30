@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'character', component: CharacterComponent, canActivate: [CanActivateWhenReady] },
   { path: 'species', component: SpeciesComponent, canActivate: [CanActivateWhenReady] },
   { path: 'occupations', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
+  { path: 'occupations/:id', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
   { path: 'cultures', component: CulturesComponent, canActivate: [CanActivateWhenReady] },
 ];
 
