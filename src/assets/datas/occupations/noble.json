@@ -2,14 +2,14 @@
   "name": "occupations.common.noble",
   "skills": [
     {"name":  "skills.ride_any_or_drive_chariot", "value": 10},
-    {"name":  "skills.insight_human", "value": 10},
+    {"name":  "skills.insight_own_specie", "value": 10},
     {"name":  "skills.intrigue", "value": 10},
     {"name":  "skills.read_write_own", "value": 10},
     {"name":  "skills.orate", "value": 30},
     {"name":  "skills.manage_household", "value": 30},
     {"name":  "skills.speak_own_language", "value": 10},
     {"name":  "skills.cultural_weapon", "value": 30},
-    {"name":  "skills.customs_own", "value": 10},
-    {"name":  "skills.shield", "value": 30}
+    {"name":  "skills.customs_local", "value": 10},
+    {"name":  "skills.shield_any", "value": 30}
   ]
 }

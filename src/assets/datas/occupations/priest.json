@@ -1,7 +1,7 @@
 {
   "name": "occupations.common.priest",
   "skills": [
-    {"name":  "skills.any_cult", "value": 10},
+    {"name":  "skills.any_cult_skill", "value": 10},
     {"name":  "skills.lore_cult", "value": 30},
     {"name":  "skills.dance", "value": 10},
     {"name":  "skills.read_write_own", "value": 10},
