@@ -1913,23 +1913,6 @@
                                 </translations>
                             </concept_node>
                             <concept_node>
-                                <name>dance</name>
-                                <definition_loaded>false</definition_loaded>
-                                <description/>
-                                <comment/>
-                                <default_text/>
-                                <translations>
-                                    <translation>
-                                        <language>en-US</language>
-                                        <approved>true</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>fr-FR</language>
-                                        <approved>true</approved>
-                                    </translation>
-                                </translations>
-                            </concept_node>
-                            <concept_node>
                                 <name>dodge</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description/>
@@ -2123,6 +2106,40 @@
                             </concept_node>
                             <concept_node>
                                 <name>charm</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>dance</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description/>
+                                <comment/>
+                                <default_text/>
+                                <translations>
+                                    <translation>
+                                        <language>en-US</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>fr-FR</language>
+                                        <approved>true</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
+                                <name>disguise</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description/>
                                 <comment/>
@@ -4257,23 +4274,6 @@
                     <folder_node>
                         <name>stealth</name>
                         <children>
-                            <concept_node>
-                                <name>disguise</name>
-                                <definition_loaded>false</definition_loaded>
-                                <description/>
-                                <comment/>
-                                <default_text/>
-                                <translations>
-                                    <translation>
-                                        <language>en-US</language>
-                                        <approved>true</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>fr-FR</language>
-                                        <approved>true</approved>
-                                    </translation>
-                                </translations>
-                            </concept_node>
                             <concept_node>
                                 <name>hide</name>
                                 <definition_loaded>false</definition_loaded>

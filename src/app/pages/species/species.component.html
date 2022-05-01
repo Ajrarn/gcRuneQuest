@@ -22,11 +22,11 @@
   <nz-divider nzText="{{'static.skills' | translate}}"></nz-divider>
 
   <nz-list nzGrid>
-    <div nz-row [nzGutter]="16">
-      <div nz-col [nzXXl]="8" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let skillCategory of specie.skills">
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzXXl]="6" [nzXl]="8" [nzLg]="12" [nzMd]="24" [nzSm]="24" [nzXs]="24" *ngFor="let skillCategory of specie.skills">
         <nz-list-item>
           <nz-card [nzTitle]="skillCategory.name | translate">
-            <nz-table #basicTable [nzData]="skillCategory.items" [nzSize]="'small'" [nzPageSize]="50" [nzShowPagination]="false" [nzScroll]="{ y: '300px' }" >
+          <nz-table #basicTable [nzData]="skillCategory.items" [nzSize]="'small'" [nzPageSize]="50" [nzShowPagination]="false" [nzScroll]="{ y: '300px' }" >
               <tbody>
               <tr *ngFor="let data of basicTable.data">
                 <td>{{data.name | translate}}</td>

@@ -148,7 +148,6 @@
 		"agility": {
 			"boat": "Boat",
 			"climb": "Climb",
-			"dance": "Dance",
 			"dodge": "Dodge",
 			"drive_chariot": "Drive chariot",
 			"jump": "Jump",
@@ -163,6 +162,8 @@
 			"art": "Art",
 			"bargain": "Bargain",
 			"charm": "Charm",
+			"dance": "Dance",
+			"disguise": "Disguise",
 			"fast_talk": "Fast Talk",
 			"intimidate": "Intimidate",
 			"intrigue": "Intrigue",
@@ -303,7 +304,6 @@
 			"small_shield": "Small Shield"
 		},
 		"stealth": {
-			"disguise": "Disguise",
 			"hide": "Hide",
 			"move_quietly": "Move Quietly",
 			"name": "Stealth"

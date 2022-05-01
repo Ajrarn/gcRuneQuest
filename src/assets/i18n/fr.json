@@ -148,7 +148,6 @@
 		"agility": {
 			"boat": "Canotage",
 			"climb": "Escalade",
-			"dance": "Danse",
 			"dodge": "Esquive",
 			"drive_chariot": "Conduite de char",
 			"jump": "Saut",
@@ -163,6 +162,8 @@
 			"art": "Art",
 			"bargain": "Marchandage",
 			"charm": "Charme",
+			"dance": "Danse",
+			"disguise": "Déguisement",
 			"fast_talk": "Baratin",
 			"intimidate": "Intimidation",
 			"intrigue": "Intrigue",
@@ -303,7 +304,6 @@
 			"small_shield": "Petit bouclier"
 		},
 		"stealth": {
-			"disguise": "Déguisement",
 			"hide": "Camouflage",
 			"move_quietly": "Déplacement silencieux",
 			"name": "Discrétion"
