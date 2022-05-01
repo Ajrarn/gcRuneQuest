@@ -1,11 +1,13 @@
 import { Action, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, tap } from 'rxjs';
 import { LoadAllCultures, LoadCulture } from './cultures.actions';
 import { AbstractDataState } from './abstract-data-state';
 import { HttpClient } from '@angular/common/http';
+import { Culture, Homeland, Occupation } from './models';
+import * as _ from 'lodash';
 
-@State<any>({
+@State<Homeland[]>({
   name: 'cultures',
   defaults: []
 })
@@ -18,7 +20,7 @@ export class CulturesState extends AbstractDataState {
 
 
   @Action(LoadAllCultures)
-  loadAllCultures(ctx: StateContext<any>) {
+  loadAllCultures(ctx: StateContext<Homeland[]>) {
     const ready$ = new Subject<boolean>();
     this.httpClient.get('assets/datas/cultures/index.txt', { responseType: 'text' })
       .subscribe(index => {
@@ -42,8 +44,29 @@ export class CulturesState extends AbstractDataState {
   }
 
   @Action(LoadCulture)
-  loadOccupation(ctx: StateContext<any>, loadCulture: LoadCulture) {
-    return this.load('assets/datas/cultures/' + loadCulture.filename, ctx);
+  loadOccupation(ctx: StateContext<Homeland[]>, loadCulture: LoadCulture) {
+    return this.httpClient.get('assets/datas/cultures/' + loadCulture.filename, { responseType: 'json' })
+      .pipe(
+        tap((data: any) => {
+          const state = _.cloneDeep(ctx.getState());
+
+          let line = data.name.split('.');
+          let group = line[0] + '.' + line[1] + '.name';
+          let theGroup = state.find((itemGroup: any) => itemGroup.name.startsWith(group));
+          if (theGroup) {
+            theGroup.cultures.push(data);
+            theGroup.cultures = theGroup.cultures.sort((previous: Culture, current: Culture) => {
+              return previous.name.localeCompare(current.name);
+            })
+          } else {
+            state.push({name: group, cultures: [data]})
+          }
+
+          ctx.setState(state.sort((previous: any, current: any) => {
+            return previous.name.localeCompare(current.name);
+          }));
+        })
+      );
   }
 
 }

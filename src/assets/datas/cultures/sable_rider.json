@@ -6,6 +6,20 @@
     { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.moon", "bonus": 10}
+    { "name":  "elemental.moon", "value": 10}
+  ],
+  "occupations": [
+    "occupations.common.assistant_shaman",
+    "occupations.common.bandit",
+    "occupations.common.entertainer",
+    "occupations.common.healer",
+    "occupations.common.herder",
+    "occupations.common.hunter",
+    "occupations.common.merchant",
+    "occupations.common.noble",
+    "occupations.common.priest",
+    "occupations.common.scribe",
+    "occupations.common.warrior.light_cavalry",
+    "occupations.common.warrior.heavy_cavalry"
   ]
 }

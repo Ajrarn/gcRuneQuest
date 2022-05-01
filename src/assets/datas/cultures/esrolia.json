@@ -1,11 +1,33 @@
 {
-  "name": "cultures.esrolia",
+  "name": "cultures.esrolia.esrolia",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.city')" , "value": 60 },
     { "name":  "passions.loyalty('groups.clan')" , "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.earth", "bonus": 10}
+    { "name":  "elemental.earth", "value": 10}
+  ],
+  "occupations": [
+    "occupations.common.assistant_shaman",
+    "occupations.common.bandit",
+    "occupations.common.chariot_driver",
+    "occupations.common.crafter",
+    "occupations.common.entertainer",
+    "occupations.common.farmer",
+    "occupations.common.fisher",
+    "occupations.common.healer",
+    "occupations.common.herder",
+    "occupations.common.hunter",
+    "occupations.common.merchant",
+    "occupations.common.noble",
+    "occupations.common.philosopher",
+    "occupations.common.priest",
+    "occupations.common.scribe",
+    "occupations.common.thief",
+    "occupations.common.warrior.heavy_infantry",
+    "occupations.common.warrior.light_infantry",
+    "occupations.common.warrior.light_cavalry",
+    "occupations.common.warrior.heavy_cavalry"
   ]
 }

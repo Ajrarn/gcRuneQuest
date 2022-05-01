@@ -1,0 +1,14 @@
+{
+  "name": "cultures.baboon",
+  "passions": [
+    { "name":  "passions.love('groups.family')", "value": 60 },
+    { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+    { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+  ],
+  "runes": [
+    { "name":  "elemental.air", "value": 10}
+  ],
+  "occupations": [
+    "occupations.baboon.troop"
+  ]
+}

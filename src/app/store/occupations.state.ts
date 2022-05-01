@@ -45,7 +45,6 @@ export class OccupationsState extends AbstractDataState {
 
   @Action(LoadOccupation)
   loadOccupation(ctx: StateContext<any>, loadOccupation: LoadOccupation) {
-    //return this.load('assets/datas/occupations/' + loadOccupation.filename, ctx);
     return this.httpClient.get('assets/datas/occupations/' + loadOccupation.filename, { responseType: 'json' })
       .pipe(
         tap((data: any) => {

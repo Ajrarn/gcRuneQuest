@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'occupations', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
   { path: 'occupations/:id', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
   { path: 'cultures', component: CulturesComponent, canActivate: [CanActivateWhenReady] },
+  { path: 'cultures/:id', component: CulturesComponent, canActivate: [CanActivateWhenReady] }
 ];
 
 @NgModule({

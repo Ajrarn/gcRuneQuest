@@ -1,4 +1,9 @@
 <div class="inner-content">
-Culture
+  <form [formGroup]="formCulture">
+    <nz-select [formControlName]="'culture'">
+      <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
+        <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture.name}}" nzLabel="{{culture.name |translate}}"></nz-option>
+      </nz-option-group>
+    </nz-select>
+  </form>
 </div>
-

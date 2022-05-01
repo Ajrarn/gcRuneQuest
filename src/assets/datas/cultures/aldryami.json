@@ -1,0 +1,19 @@
+{
+  "name": "cultures.aldryami",
+  "passions": [
+    { "name":  "passions.love('groups.family')", "value": 60 },
+    { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+    { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+  ],
+  "runes": [
+    { "name":  "elemental.air", "value": 10}
+  ],
+  "occupations": [
+    "occupations.elf.crafter",
+    "occupations.elf.healer",
+    "occupations.elf.noble",
+    "occupations.elf.plant_tender",
+    "occupations.elf.priestess_shaman",
+    "occupations.elf.warrior"
+  ]
+}

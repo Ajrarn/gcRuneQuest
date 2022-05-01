@@ -1,5 +1,5 @@
 {
-  "name": "cultures.sartar.sartar",
+  "name": "cultures.duck",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },
@@ -26,8 +26,6 @@
     "occupations.common.scribe",
     "occupations.common.thief",
     "occupations.common.warrior.heavy_infantry",
-    "occupations.common.warrior.light_infantry",
-    "occupations.common.warrior.light_cavalry",
-    "occupations.common.warrior.heavy_cavalry"
+    "occupations.common.warrior.light_infantry"
   ]
 }

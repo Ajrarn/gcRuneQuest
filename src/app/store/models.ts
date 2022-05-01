@@ -18,8 +18,6 @@ export interface OccupationGroup {
   occupations: Occupation[];
 }
 
-
-
 export interface Characteristics {
   STR: string;
   CON: string;
@@ -41,4 +39,21 @@ export interface Specie {
   characteristics: Characteristics;
   runes: Rune[];
   skills: SkillCategorie[];
+}
+
+export interface Passion {
+  name: string;
+  value: number;
+}
+
+export interface Culture {
+  name: string;
+  runes: Rune[],
+  passions: Passion[],
+  occupations: string []
+}
+
+export interface Homeland {
+  name: string;
+  cultures: Culture[]
 }

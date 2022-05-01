@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './species.component.html',
   styleUrls: ['./species.component.scss']
 })
-export class SpeciesComponent implements OnInit {
+export class SpeciesComponent {
 
   species: Specie[];
   specie: Specie = {
@@ -64,9 +64,6 @@ export class SpeciesComponent implements OnInit {
       }
       this.store.dispatch(new ChangeTitle(specieName));
     }
-  }
-
-  ngOnInit(): void {
   }
 
 }

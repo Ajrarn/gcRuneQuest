@@ -1,11 +1,11 @@
 {
-  "name": "cultures.old_tarsh",
+  "name": "cultures.tarsh.old_tarsh",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },
     { "name":  "passions.love('groups.shaker_temple')", "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.earth", "bonus": 10}
+    { "name":  "elemental.earth", "value": 10}
   ]
 }

@@ -14,18 +14,29 @@
 		}
 	},
 	"cultures": {
-		"esrolia": "Esrolia",
-		"grazelands": "Pâturages",
+		"esrolia": {
+			"esrolia": "Esrolia",
+			"name": "Esrolia"
+		},
+		"grazelands": {
+			"grazelands": "Pâturages",
+			"name": "Pâturages"
+		},
 		"prax": {
 			"bison_rider": "Monteur de bison",
 			"high_llama_rider": "Monteur du Grand Lama",
 			"impala_rider": "Monteur d'Impala",
+			"name": "Prax",
 			"pol_joni": "Pol Joni",
 			"sable_rider": "Monteur de l'Antilope Noire"
 		},
-		"sartar": "Sartar",
+		"sartar": {
+			"name": "Sartar",
+			"sartar": "Sartar"
+		},
 		"tarsh": {
 			"lunar_tarsh": "Tarsh Lunar",
+			"name": "Tarsh",
 			"old_tarsh": "Vieux Tarsh"
 		}
 	},

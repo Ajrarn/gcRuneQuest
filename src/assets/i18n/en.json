@@ -14,18 +14,29 @@
 		}
 	},
 	"cultures": {
-		"esrolia": "Esrolia",
-		"grazelands": "Grazelands",
+		"esrolia": {
+			"esrolia": "Esrolia",
+			"name": "Esrolia"
+		},
+		"grazelands": {
+			"grazelands": "Grazelands",
+			"name": "Grazelands"
+		},
 		"prax": {
 			"bison_rider": "Bison Rider",
 			"high_llama_rider": "High Llama Rider",
 			"impala_rider": "Impala Rider",
+			"name": "Prax",
 			"pol_joni": "Pol Joni",
 			"sable_rider": "Sable Rider"
 		},
-		"sartar": "Sartar",
+		"sartar": {
+			"name": "Sartar",
+			"sartar": "Sartar"
+		},
 		"tarsh": {
 			"lunar_tarsh": "Lunar Tarsh",
+			"name": "Tarsh",
 			"old_tarsh": "Old Tarsh"
 		}
 	},

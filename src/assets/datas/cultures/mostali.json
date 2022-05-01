@@ -1,0 +1,22 @@
+{
+  "name": "cultures.mostali",
+  "passions": [
+    { "name":  "passions.love('groups.family')", "value": 60 },
+    { "name":  "passions.loyalty('groups.clan')", "value": 60 },
+    { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
+  ],
+  "runes": [
+    { "name":  "elemental.air", "value": 10}
+  ],
+  "occupations": [
+    "occupations.dwarf.brass",
+    "occupations.dwarf.copper",
+    "occupations.dwarf.gold",
+    "occupations.dwarf.iron",
+    "occupations.dwarf.lead",
+    "occupations.dwarf.quicksilver",
+    "occupations.dwarf.rock",
+    "occupations.dwarf.silver",
+    "occupations.dwarf.tin"
+  ]
+}
