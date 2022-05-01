@@ -1,30 +1,36 @@
 <div class="inner-content">
+  <form [formGroup]="formSpecie">
+    <nz-select [formControlName]="'specie'">
+      <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name | translate}}"></nz-option>
+    </nz-select>
+  </form>
   <nz-space nzSize="large" nzAlign="start">
     <nz-card style="width:300px;" nzTitle="{{'static.characteristics' | translate}}" *nzSpaceItem>
-      <p><b>{{'characteristics.abrev.STR' | translate}}</b>: {{specieData?.characteristics.STR}}</p>
-      <p><b>{{'characteristics.abrev.CON' | translate}}</b>: {{specieData?.characteristics.CON}}</p>
-      <p><b>{{'characteristics.abrev.SIZ' | translate}}</b>: {{specieData?.characteristics.SIZ}}</p>
-      <p><b>{{'characteristics.abrev.INT' | translate}}</b>: {{specieData?.characteristics.INT}}</p>
-      <p><b>{{'characteristics.abrev.POW' | translate}}</b>: {{specieData?.characteristics.POW}}</p>
-      <p><b>{{'characteristics.abrev.DEX' | translate}}</b>: {{specieData?.characteristics.DEX}}</p>
-      <p><b>{{'characteristics.abrev.CHA' | translate}}</b>: {{specieData?.characteristics.CHA}}</p>
+      <p><b>{{'characteristics.abrev.STR' | translate}}</b>: {{specie.characteristics.STR}}</p>
+      <p><b>{{'characteristics.abrev.CON' | translate}}</b>: {{specie.characteristics.CON}}</p>
+      <p><b>{{'characteristics.abrev.SIZ' | translate}}</b>: {{specie.characteristics.SIZ}}</p>
+      <p><b>{{'characteristics.abrev.INT' | translate}}</b>: {{specie.characteristics.INT}}</p>
+      <p><b>{{'characteristics.abrev.POW' | translate}}</b>: {{specie.characteristics.POW}}</p>
+      <p><b>{{'characteristics.abrev.DEX' | translate}}</b>: {{specie.characteristics.DEX}}</p>
+      <p><b>{{'characteristics.abrev.CHA' | translate}}</b>: {{specie.characteristics.CHA}}</p>
     </nz-card>
 
     <nz-card style="width:300px;" nzTitle="{{'static.runes' | translate}}" *nzSpaceItem>
-      <p *ngFor="let rune of specieData?.runes"><b>{{rune.name | translate}}</b>: {{rune.value}}</p>
+      <p *ngFor="let rune of specie.runes"><b>{{rune.name | translate}}</b>: {{rune.value}}</p>
     </nz-card>
   </nz-space>
   <nz-divider nzText="{{'static.skills' | translate}}"></nz-divider>
+
   <nz-list nzGrid>
     <div nz-row [nzGutter]="16">
-      <div nz-col [nzXXl]="8" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let panel of skillPanels">
+      <div nz-col [nzXXl]="8" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let skillCategory of specie.skills">
         <nz-list-item>
-          <nz-card [nzTitle]="panel.name | translate">
-            <nz-table #basicTable [nzData]="getSkillDatas(panel.name)" [nzSize]="'small'" [nzPageSize]="50" [nzShowPagination]="false" [nzScroll]="{ y: '300px' }">
+          <nz-card [nzTitle]="skillCategory.name | translate">
+            <nz-table #basicTable [nzData]="skillCategory.items" [nzSize]="'small'" [nzPageSize]="50" [nzShowPagination]="false" [nzScroll]="{ y: '300px' }" >
               <tbody>
               <tr *ngFor="let data of basicTable.data">
                 <td>{{data.name | translate}}</td>
-                <td>{{data.base}}</td>
+                <td>{{data.value}}</td>
               </tr>
               </tbody>
             </nz-table>

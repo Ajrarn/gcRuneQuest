@@ -5,22 +5,8 @@ import { LoadAllOccupations, LoadOccupation } from './occupations.actions';
 import { Subject, tap } from 'rxjs';
 import { AbstractDataState } from './abstract-data-state';
 import * as _ from 'lodash';
+import { Occupation, OccupationGroup } from './models';
 
-
-export interface Skills {
-  name: string;
-  value: number | string;
-}
-
-export interface Occupation {
-  name: string;
-  skills: Skills[];
-}
-
-export interface OccupationGroup {
-  name: string;
-  occupations: Occupation[];
-}
 
 @State<OccupationGroup[]>({
   name: 'occupations',

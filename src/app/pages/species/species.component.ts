@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngxs/store';
-import { first } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
 import { ChangeTitle } from '../../store/title.action';
+import { Specie } from '../../store/models';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-species',
@@ -12,66 +12,58 @@ import { ChangeTitle } from '../../store/title.action';
 })
 export class SpeciesComponent implements OnInit {
 
-  specieData: any;
-
-  skillPanels = [
-    {
-      active: true,
-      name: 'This is panel header 1',
-      disabled: false
+  species: Specie[];
+  specie: Specie = {
+    name:'vide',
+    characteristics: {
+      STR: '',
+      CON: '',
+      SIZ: '',
+      INT: '',
+      POW: '',
+      DEX: '',
+      CHA: ''
     },
-    {
-      active: false,
-      disabled: false,
-      name: 'This is panel header 2'
-    },
-    {
-      active: false,
-      disabled: true,
-      name: 'This is panel header 3'
-    }
-  ];
+    skills: [],
+    cultures: [],
+    runes: []
+  };
 
-  constructor(private route: ActivatedRoute, private store: Store, private translate: TranslateService) {
+
+  formSpecie: FormGroup;
+
+
+  constructor(private route: ActivatedRoute, private store: Store, private fb: FormBuilder, private router: Router) {
+
+    this.species = this.store.selectSnapshot(state => state.species);
+
+    this.formSpecie = fb.group({
+      specie: fb.control(null)
+    });
+
+    this.formSpecie.controls['specie'].valueChanges.subscribe((occ) => {
+      this.router.navigate(['species', { id: occ }]);
+    });
 
     // listen to the params to filter with the good specie
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       if (id) {
-        this.store.select(state => state.species)
-          .pipe(first())
-          .subscribe(datas => {
-            this.specieData = datas.find((item: any) => item.name === id);
-            console.log('specieData', this.specieData);
-            this.preparePanels();
-          });
-        this.store.dispatch(new ChangeTitle(id));
+        this.formSpecie.patchValue({specie: id}, {emitEvent:false});
+        this.selectSpecie(id);
       }
     });
-  }
+}
 
-  preparePanels() {
-    this.skillPanels = this.specieData.skills.map( (item:any) => {
-      return {
-        name: item.category,
-        active: false,
-        disabled: false
+  selectSpecie(specieName: string) {
+    if (specieName) {
+      let specie = this.species.find(item => item.name === specieName);
+      if (specie) {
+        this.specie = specie;
+        console.log('specie', this.specie);
       }
-    });
-  }
-
-  getSkillDatas(category: string):any[] {
-    let datas:any[] = [];
-    if (this.specieData) {
-      const specie = this.specieData.skills.find((item: any) => item.category === category);
-      if (specie && specie.items) {
-        datas = specie.items
-      }
-      return datas;
-    } else {
-      return [];
+      this.store.dispatch(new ChangeTitle(specieName));
     }
-
   }
 
   ngOnInit(): void {

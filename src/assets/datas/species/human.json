@@ -20,153 +20,153 @@
   ],
   "skills": [
     {
-      "category": "categories.agility",
+      "name": "skills.agility.name",
       "items": [
-        { "name": "skills.boat", "base": 5 },
-        { "name": "skills.climb", "base": 40 },
-        { "name": "skills.dodge", "base": "DEX*2" },
-        { "name": "skills.drive_chariot", "base": 5 },
-        { "name": "skills.jump", "base": "DEX*3" },
-        { "name": "skills.ride", "base": 5 },
-        { "name": "skills.swim", "base": 15 }
+        { "name": "skills.agility.boat", "value": 5 },
+        { "name": "skills.agility.climb", "value": 40 },
+        { "name": "skills.agility.dodge", "value": "DEX*2" },
+        { "name": "skills.agility.drive_chariot", "value": 5 },
+        { "name": "skills.agility.jump", "value": "DEX*3" },
+        { "name": "skills.agility.ride", "value": 5 },
+        { "name": "skills.agility.swim", "value": 15 }
       ]
     },
     {
-      "category": "categories.communication",
+      "name": "skills.communication.name",
       "items": [
-        { "name": "skills.act", "base": 5 },
-        { "name": "skills.art", "base": 5 },
-        { "name": "skills.bargain", "base": 5 },
-        { "name": "skills.charm", "base": 15 },
-        { "name": "skills.dance", "base": 10 },
-        { "name": "skills.disguise", "base": 5 },
-        { "name": "skills.fast_talk", "base": 5 },
-        { "name": "skills.intimidate", "base": 15 },
-        { "name": "skills.intrigue", "base": 5},
-        { "name": "skills.orate", "base": 10},
-        { "name": "skills.sing", "base": 10},
-        { "name": "skills.speak_other_language", "base": 0 },
-        { "name": "skills.speak_own_language", "base": 50 }
+        { "name": "skills.communication.act", "value": 5 },
+        { "name": "skills.communication.art", "value": 5 },
+        { "name": "skills.communication.bargain", "value": 5 },
+        { "name": "skills.communication.charm", "value": 15 },
+        { "name": "skills.communication.dance", "value": 10 },
+        { "name": "skills.communication.disguise", "value": 5 },
+        { "name": "skills.communication.fast_talk", "value": 5 },
+        { "name": "skills.communication.intimidate", "value": 15 },
+        { "name": "skills.communication.intrigue", "value": 5},
+        { "name": "skills.communication.orate", "value": 10},
+        { "name": "skills.communication.sing", "value": 10},
+        { "name": "skills.communication.speak_other_language", "value": 0 },
+        { "name": "skills.communication.speak_own_language", "value": 50 }
       ]
     },
     {
-      "category": "categories.knowledge",
+      "name": "skills.knowledge.name",
       "items": [
-        { "name": "skills.alchemy", "base": 0 },
-        { "name": "skills.animal_lore", "base": 5 },
-        { "name": "skills.battle", "base": 10 },
-        { "name": "skills.bureaucracy", "base": 0 },
-        { "name": "skills.celestial_lore", "base": 5 },
-        { "name": "skills.cult_lore", "base": 5 },
-        { "name": "skills.customs_local", "base": 25 },
-        { "name": "skills.customs", "base": 0 },
-        { "name": "skills.elder_race_lore", "base": 5 },
-        { "name": "skills.evaluate", "base": 10 },
-        { "name": "skills.farm", "base": 10 },
-        { "name": "skills.first_aid", "base": 10 },
-        { "name": "skills.game", "base": 15 },
-        { "name": "skills.herd", "base": 5 },
-        { "name": "skills.homeland_lore_own", "base": 30 },
-        { "name": "skills.homeland_lore", "base": 0 },
-        { "name": "skills.library_use", "base": 0 },
-        { "name": "skills.manage_household", "base": 10 },
-        { "name": "skills.mineral_lore", "base": 5 },
-        { "name": "skills.peaceful_cut", "base": 10 },
-        { "name": "skills.plant_lore", "base": 5 },
-        { "name": "skills.read_write", "base": 0 },
-        { "name": "skills.shiphandling", "base": 0 },
-        { "name": "skills.survival", "base": 15 },
-        { "name": "skills.treat_disease", "base": 5 },
-        { "name": "skills.treat_poison", "base": 5 }
+        { "name": "skills.knowledge.alchemy", "value": 0 },
+        { "name": "skills.knowledge.animal_lore", "value": 5 },
+        { "name": "skills.knowledge.battle", "value": 10 },
+        { "name": "skills.knowledge.bureaucracy", "value": 0 },
+        { "name": "skills.knowledge.celestial_lore", "value": 5 },
+        { "name": "skills.knowledge.cult_lore", "value": 5 },
+        { "name": "skills.knowledge.customs_local", "value": 25 },
+        { "name": "skills.knowledge.customs", "value": 0 },
+        { "name": "skills.knowledge.elder_race_lore", "value": 5 },
+        { "name": "skills.knowledge.evaluate", "value": 10 },
+        { "name": "skills.knowledge.farm", "value": 10 },
+        { "name": "skills.knowledge.first_aid", "value": 10 },
+        { "name": "skills.knowledge.game", "value": 15 },
+        { "name": "skills.knowledge.herd", "value": 5 },
+        { "name": "skills.knowledge.homeland_lore_own", "value": 30 },
+        { "name": "skills.knowledge.homeland_lore", "value": 0 },
+        { "name": "skills.knowledge.library_use", "value": 0 },
+        { "name": "skills.knowledge.manage_household", "value": 10 },
+        { "name": "skills.knowledge.mineral_lore", "value": 5 },
+        { "name": "skills.knowledge.peaceful_cut", "value": 10 },
+        { "name": "skills.knowledge.plant_lore", "value": 5 },
+        { "name": "skills.knowledge.read_write", "value": 0 },
+        { "name": "skills.knowledge.shiphandling", "value": 0 },
+        { "name": "skills.knowledge.survival", "value": 15 },
+        { "name": "skills.knowledge.treat_disease", "value": 5 },
+        { "name": "skills.knowledge.treat_poison", "value": 5 }
       ]
     },
     {
-      "category": "categories.magic",
+      "name": "skills.magic.name",
       "items": [
-        { "name": "skills.meditate", "base": 0 },
-        { "name": "skills.prepare_corpse", "base": 10 },
-        { "name": "skills.sense_assassin", "base": 0 },
-        { "name": "skills.sense_chaos", "base": 0 },
-        { "name": "skills.spirit_combat", "base": 20 },
-        { "name": "skills.spirit_dance", "base": 0 },
-        { "name": "skills.spirit_lore", "base": 0 },
-        { "name": "skills.spirit_travel", "base": 10 },
-        { "name": "skills.understand_herd_beast", "base": 0 },
-        { "name": "skills.worship", "base": 5 }
+        { "name": "skills.magic.meditate", "value": 0 },
+        { "name": "skills.magic.prepare_corpse", "value": 10 },
+        { "name": "skills.magic.sense_assassin", "value": 0 },
+        { "name": "skills.magic.sense_chaos", "value": 0 },
+        { "name": "skills.magic.spirit_combat", "value": 20 },
+        { "name": "skills.magic.spirit_dance", "value": 0 },
+        { "name": "skills.magic.spirit_lore", "value": 0 },
+        { "name": "skills.magic.spirit_travel", "value": 10 },
+        { "name": "skills.magic.understand_herd_beast", "value": 0 },
+        { "name": "skills.magic.worship", "value": 5 }
       ]
     },
     {
-      "category": "categories.manipulation",
+      "name": "skills.manipulation.name",
       "items": [
-        { "name": "skills.conceal", "base": 5 },
-        { "name": "skills.craft", "base": 5 },
-        { "name": "skills.devise", "base": 5 },
-        { "name": "skills.play_instrument", "base": 5 },
-        { "name": "skills.sleight", "base": 5 }
+        { "name": "skills.manipulation.conceal", "value": 5 },
+        { "name": "skills.manipulation.craft", "value": 5 },
+        { "name": "skills.manipulation.devise", "value": 5 },
+        { "name": "skills.manipulation.play_instrument", "value": 5 },
+        { "name": "skills.manipulation.sleight", "value": 5 }
       ]
     },
     {
-      "category": "categories.perception",
+      "name": "skills.perception.name",
       "items": [
-        { "name": "skills.insight_own_specie", "base": 20 },
-        { "name": "skills.insight", "base": 0 },
-        { "name": "skills.listen", "base": 25 },
-        { "name": "skills.scan", "base": 25 },
-        { "name": "skills.search", "base": 25 },
-        { "name": "skills.track", "base": 5 }
+        { "name": "skills.perception.insight_own_specie", "value": 20 },
+        { "name": "skills.perception.insight", "value": 0 },
+        { "name": "skills.perception.listen", "value": 25 },
+        { "name": "skills.perception.scan", "value": 25 },
+        { "name": "skills.perception.search", "value": 25 },
+        { "name": "skills.perception.track", "value": 5 }
       ]
     },
     {
-      "category": "categories.stealth",
+      "name": "skills.stealth.name",
       "items": [
-        { "name": "skills.hide", "base": 10 },
-        { "name": "skills.move_quietly", "base": 10 }
+        { "name": "skills.stealth.hide", "value": 10 },
+        { "name": "skills.stealth.move_quietly", "value": 10 }
       ]
     },
     {
-      "category": "categories.melee_weapons",
+      "name": "skills.melee_weapons.name",
       "items": [
-        { "name": "skills.1h_axe", "base": 10 },
-        { "name": "skills.2h_axe", "base": 5 },
-        { "name": "skills.broadsword", "base": 10 },
-        { "name": "skills.dagger", "base": 15 },
-        { "name": "skills.kopis", "base": 10 },
-        { "name": "skills.1h_mace", "base": 15 },
-        { "name": "skills.pike", "base": 15 },
-        { "name": "skills.rapier", "base": 10 },
-        { "name": "skills.shortsword", "base": 10 },
-        { "name": "skills.1h_spear", "base": 5 },
-        { "name": "skills.2h_spear", "base": 15 },
-        { "name": "skills.2h_sword", "base": 5 }
+        { "name": "skills.melee_weapons.1h_axe", "value": 10 },
+        { "name": "skills.melee_weapons.2h_axe", "value": 5 },
+        { "name": "skills.melee_weapons.broadsword", "value": 10 },
+        { "name": "skills.melee_weapons.dagger", "value": 15 },
+        { "name": "skills.melee_weapons.kopis", "value": 10 },
+        { "name": "skills.melee_weapons.1h_mace", "value": 15 },
+        { "name": "skills.melee_weapons.pike", "value": 15 },
+        { "name": "skills.melee_weapons.rapier", "value": 10 },
+        { "name": "skills.melee_weapons.shortsword", "value": 10 },
+        { "name": "skills.melee_weapons.1h_spear", "value": 5 },
+        { "name": "skills.melee_weapons.2h_spear", "value": 15 },
+        { "name": "skills.melee_weapons.2h_sword", "value": 5 }
       ]
     },
     {
-      "category": "categories.missile_weapons",
+      "name": "skills.missile_weapons.name",
       "items": [
-        { "name": "skills.composite_bow", "base": 5 },
-        { "name": "skills.crossbow", "base": 25 },
-        { "name": "skills.javelin", "base": 10 },
-        { "name": "skills.pole_lasso", "base": 5 },
-        { "name": "skills.self_bow", "base": 5 },
-        { "name": "skills.sling", "base": 5 },
-        { "name": "skills.throwing_dagger", "base": 5 },
-        { "name": "skills.thrown_axe", "base": 10 }
+        { "name": "skills.missile_weapons.composite_bow", "value": 5 },
+        { "name": "skills.missile_weapons.crossbow", "value": 25 },
+        { "name": "skills.missile_weapons.javelin", "value": 10 },
+        { "name": "skills.missile_weapons.pole_lasso", "value": 5 },
+        { "name": "skills.missile_weapons.self_bow", "value": 5 },
+        { "name": "skills.missile_weapons.sling", "value": 5 },
+        { "name": "skills.missile_weapons.throwing_dagger", "value": 5 },
+        { "name": "skills.missile_weapons.thrown_axe", "value": 10 }
       ]
     },
     {
-      "category": "categories.shields",
+      "name": "skills.shields.name",
       "items": [
-        { "name": "skills.small_shield", "base": 15 },
-        { "name": "skills.medium_shield", "base": 15 },
-        { "name": "skills.large_shield", "base": 15 }
+        { "name": "skills.shields.small_shield", "value": 15 },
+        { "name": "skills.shields.medium_shield", "value": 15 },
+        { "name": "skills.shields.large_shield", "value": 15 }
       ]
     },
     {
-      "category": "categories.natural_weapons",
+      "name": "skills.natural_weapons.name",
       "items": [
-        { "name": "skills.fist", "base": 25 },
-        { "name": "skills.grapple", "base": 25 },
-        { "name": "skills.kick", "base": 15 }
+        { "name": "skills.natural_weapons.fist", "value": 25 },
+        { "name": "skills.natural_weapons.grapple", "value": 25 },
+        { "name": "skills.natural_weapons.kick", "value": 15 }
       ]
     }
   ]

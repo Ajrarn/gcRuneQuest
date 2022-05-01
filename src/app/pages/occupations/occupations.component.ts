@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngxs/store';
-import { Occupation, OccupationGroup } from '../../store/occupations.state';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ChangeTitle } from '../../store/title.action';
+import { Occupation, OccupationGroup } from '../../store/models';
 
 @Component({
   selector: 'app-occupations',
@@ -12,12 +12,11 @@ import { ChangeTitle } from '../../store/title.action';
 })
 export class OccupationsComponent implements OnInit {
 
-  occupationData:OccupationGroup[];
+  occupationData: OccupationGroup[];
 
   occupation: Occupation = {name: 'vide', skills:[]};
 
   formOccupationGroup: FormGroup;
-
 
 
   constructor(private route: ActivatedRoute, private router: Router, private store: Store, private fb: FormBuilder) {

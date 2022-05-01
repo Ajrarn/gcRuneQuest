@@ -5,13 +5,14 @@ import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { LoadOccupation } from './occupations.actions';
 import { AbstractDataState } from './abstract-data-state';
+import { Specie } from './models';
 
 export interface SpeciesSelect {
   name: string;
   cultures: string[];
 }
 
-@State<any>({
+@State<Specie[]>({
   name: 'species',
   defaults: []
 })
@@ -23,8 +24,8 @@ export class SpeciesState extends AbstractDataState {
   }
 
   @Selector()
-  static specieForSelect(state: any[]): SpeciesSelect[] {
-    return state.map((item: any) => {
+  static specieForSelect(state: Specie[]): SpeciesSelect[] {
+    return state.map((item: Specie) => {
       return {
         name: item.name,
         cultures: item.cultures
@@ -33,7 +34,7 @@ export class SpeciesState extends AbstractDataState {
   }
 
   @Action(LoadAllSpecies)
-  loadAllSpecies(ctx: StateContext<any>) {
+  loadAllSpecies(ctx: StateContext<Specie[]>) {
     const ready$ = new Subject<boolean>();
     this.httpClient.get('assets/datas/species/index.txt', { responseType: 'text' })
       .subscribe(index => {
@@ -58,8 +59,7 @@ export class SpeciesState extends AbstractDataState {
   }
 
   @Action(LoadSpecie)
-  loadSpecie(ctx: StateContext<any>, loadSpecie: LoadSpecie) {
-    console.log('filename', loadSpecie.filename);
+  loadSpecie(ctx: StateContext<Specie[]>, loadSpecie: LoadSpecie) {
     return this.load('assets/datas/species/' + loadSpecie.filename, ctx);
   }
 }
