@@ -1,5 +1,12 @@
 {
   "name": "occupations.common.crafter",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.grazelands.grazelands",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.tarsh.old_tarsh"
+  ],
   "skills": [
     {"name":  "skills.communication.art", "value": 10},
     {"name":  "skills.knowledge.evaluate", "value": 10},

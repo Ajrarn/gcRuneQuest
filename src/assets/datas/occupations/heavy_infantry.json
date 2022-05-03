@@ -1,5 +1,10 @@
 {
   "name": "occupations.common.warrior.heavy_infantry",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh"
+  ],
   "skills": [
     {"name":  "skills.communication.sing", "value": 10},
     {"name":  "skills.perception.scan", "value": 10},

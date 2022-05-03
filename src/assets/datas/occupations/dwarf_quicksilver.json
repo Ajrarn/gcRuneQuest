@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.quicksilver",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.knowledge.alchemy", "value": 30},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},

@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.copper",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.manipulation.craft_copper_smithing", "value": 40},
     {"name":  "skills.manipulation.craft_redsmithing", "value": 40},

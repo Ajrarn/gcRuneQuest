@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.gold",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.manipulation.craft_gold", "value": 15},
     {"name":  "skills.knowledge.dwarf_lore", "value": 30},

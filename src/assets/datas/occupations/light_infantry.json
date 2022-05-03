@@ -1,5 +1,11 @@
 {
   "name": "occupations.common.warrior.light_infantry",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.tarsh.old_tarsh"
+  ],
   "skills": [
     {"name":  "skills.knowledge.battle", "value": 30},
     {"name":  "skills.stealth.hide", "value": 10},

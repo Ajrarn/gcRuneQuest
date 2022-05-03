@@ -1,5 +1,10 @@
 {
   "name": "occupations.common.thief",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh"
+  ],
   "skills": [
     {"name":  "skills.agility.climb", "value": 10},
     {"name":  "skills.manipulation.devise", "value": 10},

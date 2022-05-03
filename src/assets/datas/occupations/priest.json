@@ -1,5 +1,17 @@
 {
   "name": "occupations.common.priest",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.grazelands.grazelands",
+    "cultures.prax.bison_rider",
+    "cultures.prax.high_llama_rider",
+    "cultures.prax.impala_rider",
+    "cultures.prax.pol_joni",
+    "cultures.prax.sable_rider",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.tarsh.old_tarsh"
+  ],
   "skills": [
     {"name":  "skills.knowledge.any_cult_skill", "value": 10},
     {"name":  "skills.knowledge.lore_cult", "value": 30},

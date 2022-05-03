@@ -1,5 +1,6 @@
 {
   "name": "occupations.elf.plant_tender",
+  "cultures": ["cultures.aldryami"],
   "skills": [
     {"name":  "skills.knowledge.animal_lore", "value": 10},
     {"name":  "skills.knowledge.area_lore_elf_forest", "value": 20},

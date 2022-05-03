@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.rock",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.agility.climb", "value": 10},
     {"name":  "skills.manipulation.craft_architecture", "value": 30},

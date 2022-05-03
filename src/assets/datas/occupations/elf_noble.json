@@ -1,5 +1,6 @@
 {
   "name": "occupations.elf.noble",
+  "cultures": ["cultures.aldryami"],
   "skills": [
     {"name":  "skills.agility.dodge", "value": 10},
     {"name":  "skills.missile_weapons.elf_bow", "value": 30},

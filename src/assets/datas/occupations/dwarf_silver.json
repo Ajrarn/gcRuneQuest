@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.silver",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.manipulation.craft_silversmith", "value": 10},
     {"name":  "skills.manipulation.craft_magic_item", "value": 10},

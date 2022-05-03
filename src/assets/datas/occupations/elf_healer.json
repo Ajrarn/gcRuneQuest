@@ -1,5 +1,6 @@
 {
   "name": "occupations.elf.healer",
+  "cultures": ["cultures.aldryami"],
   "skills": [
     {"name":  "skills.knowledge.alchemy", "value": 10},
     {"name":  "skills.perception.elfsense", "value": 10},

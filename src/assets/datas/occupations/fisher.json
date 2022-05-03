@@ -1,5 +1,11 @@
 {
   "name": "occupations.common.fisher",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.tarsh.old_tarsh"
+  ],
   "skills": [
     {"name":  "skills.agility.boat", "value": 30},
     {"name":  "skills.missile_weapons.javelin_selfbow_or_thrown_net", "value": 20},

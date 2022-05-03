@@ -1,5 +1,10 @@
 {
   "name": "occupations.common.philosopher",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh"
+  ],
   "skills": [
     {"name":  "skills.knowledge.read_write_any", "value": 50},
     {"name":  "skills.magic.sorcery_spell", "value": 10},

@@ -1,5 +1,6 @@
 {
   "name": "occupations.elf.crafter",
+  "cultures": ["cultures.aldryami"],
   "skills": [
     {"name":  "skills.communication.bargain", "value": 10},
     {"name":  "skills.communication.conceal", "value": 10},

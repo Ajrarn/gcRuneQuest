@@ -1,5 +1,6 @@
 {
   "name": "occupations.baboon.troop",
+  "cultures": ["cultures.baboon"],
   "skills": [
     {"name":  "skills.knowledge.area_lore_local", "value": 20},
     {"name":  "skills.natural_weapons.bite", "value": 25},

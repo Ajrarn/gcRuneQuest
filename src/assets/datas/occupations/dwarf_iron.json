@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.iron",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.knowledge.battle", "value": 30},
     {"name":  "skills.manipulation.craft_secrets_of_iron", "value": 25},

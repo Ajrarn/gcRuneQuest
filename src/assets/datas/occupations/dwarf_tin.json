@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.tin",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.manipulation.craft_stonecarving", "value": 25},
     {"name":  "skills.manipulation.craft_tinsmith", "value": 10},

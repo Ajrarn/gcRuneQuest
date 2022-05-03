@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.lead",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.knowledge.alchemy", "value": 10},
     {"name":  "skills.manipulation.craft_glass", "value": 30},

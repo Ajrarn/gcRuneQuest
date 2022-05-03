@@ -1,5 +1,16 @@
 {
   "name": "occupations.common.hunter",
+  "cultures": [
+    "cultures.grazelands.grazelands",
+    "cultures.prax.bison_rider",
+    "cultures.prax.high_llama_rider",
+    "cultures.prax.impala_rider",
+    "cultures.prax.pol_joni",
+    "cultures.prax.sable_rider",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.old_tarsh",
+    "cultures.centaur"
+  ],
   "skills": [
     {"name":  "skills.knowledge.animal_lore", "value": 30},
     {"name":  "skills.perception.scan", "value": 10},

@@ -1,5 +1,6 @@
 {
   "name": "occupations.dwarf.brass",
+  "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.manipulation.craft_redsmithing", "value": 25},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},

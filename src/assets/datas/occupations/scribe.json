@@ -1,5 +1,12 @@
 {
   "name": "occupations.common.scribe",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.grazelands.grazelands",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.tarsh.old_tarsh"
+  ],
   "skills": [
     {"name":  "skills.communication.speak_other_language", "value": 10},
     {"name":  "skills.knowledge.lore_any", "value": 30},

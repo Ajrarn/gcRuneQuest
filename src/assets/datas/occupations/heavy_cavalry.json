@@ -1,5 +1,15 @@
 {
   "name": "occupations.common.warrior.heavy_cavalry",
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.prax.bison_rider",
+    "cultures.prax.high_llama_rider",
+    "cultures.prax.pol_joni",
+    "cultures.prax.sable_rider",
+    "cultures.sartar.sartar",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.centaur"
+  ],
   "skills": [
     {"name":  "skills.knowledge.battle", "value": 30},
     {"name":  "skills.knowledge.first_aid", "value": 10},

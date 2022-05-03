@@ -1,5 +1,6 @@
 {
   "name": "occupations.elf.warrior",
+  "cultures": ["cultures.aldryami"],
   "skills": [
     {"name":  "skills.knowledge.area_lore_elf_forest", "value": 20},
     {"name":  "skills.agility.dodge", "value": 20},

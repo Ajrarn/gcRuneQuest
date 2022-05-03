@@ -1,5 +1,6 @@
 {
   "name": "occupations.elf.priestess_shaman",
+  "cultures": ["cultures.aldryami"],
   "skills": [
     {"name":  "skills.knowledge.cult_lore_aldrya", "value": 30},
     {"name":  "skills.communication.dance", "value": 10},
