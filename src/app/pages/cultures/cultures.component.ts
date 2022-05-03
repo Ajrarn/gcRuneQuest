@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngxs/store';
-import { first } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
 import { ChangeTitle } from '../../store/title.action';
 import { Culture, Homeland } from '../../store/models';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -42,7 +40,7 @@ export class CulturesComponent {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       if (id) {
-        this.formCulture.patchValue({specie: id}, {emitEvent:false});
+        this.formCulture.patchValue({culture: id}, {emitEvent:false});
         this.selectCulture(id);
       }
     });
@@ -51,7 +49,7 @@ export class CulturesComponent {
   selectCulture(cultureName: string) {
     if (cultureName) {
       let nameSplitted = cultureName.split('.');
-      let homelandName = nameSplitted[0]+ '.' + nameSplitted[1];
+      let homelandName = nameSplitted[0]+ '.' + nameSplitted[1]+'.name';
       let homeland = this.homelands.find(item => item.name === homelandName);
       if (homeland) {
         let culture = homeland.cultures.find(item => item.name === cultureName);

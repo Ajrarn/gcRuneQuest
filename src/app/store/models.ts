@@ -10,6 +10,7 @@ export interface SkillCategorie {
 
 export interface Occupation {
   name: string;
+  cultures: string[];
   skills: Skill[];
 }
 

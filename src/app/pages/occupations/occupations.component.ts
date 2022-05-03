@@ -14,7 +14,7 @@ export class OccupationsComponent implements OnInit {
 
   occupationData: OccupationGroup[];
 
-  occupation: Occupation = {name: 'vide', skills:[]};
+  occupation: Occupation = {name: 'vide', cultures: [], skills:[]};
 
   formOccupationGroup: FormGroup;
 

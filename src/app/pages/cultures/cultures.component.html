@@ -6,4 +6,11 @@
       </nz-option-group>
     </nz-select>
   </form>
+
+  <h1>{{'static.occupations' | translate}}</h1>
+  <ul>
+    <li *ngFor="let occupation of culture.occupations">
+      <a [routerLink]="['/occupations', {id: occupation}]" routerLinkActive="active">{{occupation | translate}}</a>
+    </li>
+  </ul>
 </div>

@@ -24,6 +24,13 @@
       </tr>
       </tbody>
     </nz-table>
+
+    <h1>{{'static.cultures' | translate}}</h1>
+    <ul>
+      <li *ngFor="let culture of occupation.cultures">
+        <a [routerLink]="['/cultures', {id: culture}]" routerLinkActive="active">{{culture | translate}}</a>
+      </li>
+    </ul>
   </div>
 </div>
 
