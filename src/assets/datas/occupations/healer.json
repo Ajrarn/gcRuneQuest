@@ -1,13 +1,13 @@
 {
   "name": "occupations.common.healer",
   "skills": [
-    {"name":  "skills.orate", "value": 10},
-    {"name":  "skills.treat_disease", "value": 30},
-    {"name":  "skills.alchemy", "value": 10},
-    {"name":  "skills.treat_poison", "value": 10},
-    {"name":  "skills.first_aid", "value": 30},
-    {"name":  "skills.devise", "value": 10},
-    {"name":  "skills.plant_lore", "value": 30},
-    {"name":  "skills.insight_own_specie", "value": 10}
+    {"name":  "skills.communication.orate", "value": 10},
+    {"name":  "skills.knowledge.treat_disease", "value": 30},
+    {"name":  "skills.knowledge.alchemy", "value": 10},
+    {"name":  "skills.knowledge.treat_poison", "value": 10},
+    {"name":  "skills.knowledge.first_aid", "value": 30},
+    {"name":  "skills.manipulation.devise", "value": 10},
+    {"name":  "skills.knowledge.plant_lore", "value": 30},
+    {"name":  "skills.perception.insight_own_specie", "value": 10}
   ]
 }

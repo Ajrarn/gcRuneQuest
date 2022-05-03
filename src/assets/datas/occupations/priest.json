@@ -1,14 +1,14 @@
 {
   "name": "occupations.common.priest",
   "skills": [
-    {"name":  "skills.any_cult_skill", "value": 10},
-    {"name":  "skills.lore_cult", "value": 30},
-    {"name":  "skills.dance", "value": 10},
-    {"name":  "skills.read_write_own", "value": 10},
-    {"name":  "skills.orate", "value": 10},
-    {"name":  "skills.manage_household", "value": 10},
-    {"name":  "skills.sing", "value": 30},
-    {"name":  "skills.worship_deity", "value": 30},
-    {"name":  "skills.meditate", "value": 10}
+    {"name":  "skills.knowledge.any_cult_skill", "value": 10},
+    {"name":  "skills.knowledge.lore_cult", "value": 30},
+    {"name":  "skills.communication.dance", "value": 10},
+    {"name":  "skills.knowledge.read_write_own", "value": 10},
+    {"name":  "skills.communication.orate", "value": 10},
+    {"name":  "skills.knowledge.manage_household", "value": 10},
+    {"name":  "skills.communication.sing", "value": 30},
+    {"name":  "skills.magic.worship_deity", "value": 30},
+    {"name":  "skills.magic.meditate", "value": 10}
   ]
 }

@@ -1,15 +1,15 @@
 {
   "name": "occupations.elf.noble",
   "skills": [
-    {"name":  "skills.dodge", "value": 10},
-    {"name":  "skills.elf_bow", "value": 30},
-    {"name":  "skills.elf_lore", "value": 20},
-    {"name":  "skills.elfsense", "value": 10},
-    {"name":  "skills.hide", "value": 20},
-    {"name":  "skills.orate", "value": 10},
-    {"name":  "skills.plant_lore", "value": 20},
-    {"name":  "skills.short_spear", "value": 20},
-    {"name":  "skills.shortsword", "value": 20},
-    {"name":  "skills.speak_other_language_any", "value": 10}
+    {"name":  "skills.agility.dodge", "value": 10},
+    {"name":  "skills.missile_weapons.elf_bow", "value": 30},
+    {"name":  "skills.knowledge.elf_lore", "value": 20},
+    {"name":  "skills.perception.elfsense", "value": 10},
+    {"name":  "skills.stealth.hide", "value": 20},
+    {"name":  "skills.communication.orate", "value": 10},
+    {"name":  "skills.knowledge.plant_lore", "value": 20},
+    {"name":  "skills.melee_weapons.short_spear", "value": 20},
+    {"name":  "skills.melee_weapons.shortsword", "value": 20},
+    {"name":  "skills.communication.speak_other_language", "value": 10}
   ]
 }

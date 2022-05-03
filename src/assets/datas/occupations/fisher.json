@@ -1,14 +1,14 @@
 {
   "name": "occupations.common.fisher",
   "skills": [
-    {"name":  "skills.boat", "value": 30},
-    {"name":  "skills.javelin_selfbow_or_thrown_net", "value": 20},
-    {"name":  "skills.swim", "value": 30},
-    {"name":  "skills.1h_spear", "value": 10},
-    {"name":  "skills.first_aid", "value": 10},
-    {"name":  "skills.shield_any", "value": 10},
-    {"name":  "skills.river_lore", "value": 15},
-    {"name":  "skills.scan", "value": 10}
+    {"name":  "skills.agility.boat", "value": 30},
+    {"name":  "skills.missile_weapons.javelin_selfbow_or_thrown_net", "value": 20},
+    {"name":  "skills.agility.swim", "value": 30},
+    {"name":  "skills.melee_weapons.1h_spear", "value": 10},
+    {"name":  "skills.knowledge.first_aid", "value": 10},
+    {"name":  "skills.shields.shield_any", "value": 10},
+    {"name":  "skills.knowledge.river_lore", "value": 15},
+    {"name":  "skills.perception.scan", "value": 10}
   ]
 }
 

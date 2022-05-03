@@ -1,14 +1,14 @@
 {
   "name": "occupations.common.scribe",
   "skills": [
-    {"name":  "skills.speak_any", "value": 10},
-    {"name":  "skills.lore_any", "value": 30},
-    {"name":  "skills.bureaucracy", "value": 30},
-    {"name":  "skills.lore_any", "value": 10},
-    {"name":  "skills.customs_any", "value": 30},
-    {"name":  "skills.read_write_any", "value": 30},
-    {"name":  "skills.library_use", "value": 10},
-    {"name":  "skills.read_write_own", "value": 50},
-    {"name":  "skills.evaluate", "value": 10}
+    {"name":  "skills.communication.speak_other_language", "value": 10},
+    {"name":  "skills.knowledge.lore_any", "value": 30},
+    {"name":  "skills.knowledge.bureaucracy", "value": 30},
+    {"name":  "skills.knowledge.lore_any", "value": 10},
+    {"name":  "skills.knowledge.customs_any", "value": 30},
+    {"name":  "skills.knowledge.read_write_any", "value": 30},
+    {"name":  "skills.knowledge.library_use", "value": 10},
+    {"name":  "skills.knowledge.read_write_own", "value": 50},
+    {"name":  "skills.knowledge.evaluate", "value": 10}
   ]
 }

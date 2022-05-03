@@ -1,13 +1,13 @@
 {
   "name": "occupations.common.chariot_driver",
   "skills": [
-    {"name":  "skills.battle", "value": 20},
-    {"name":  "skills.drive_chariot", "value": 40},
-    {"name":  "skills.whip", "value": 20},
-    {"name":  "skills.cultural_melee_weapon", "value": 20},
-    {"name":  "skills.cultural_missile_weapon", "value": 20},
-    {"name":  "skills.dance", "value": 15},
-    {"name":  "skills.first_aid", "value": 10},
-    {"name":  "skills.scan", "value": 15}
+    {"name":  "skills.knowledge.battle", "value": 20},
+    {"name":  "skills.agility.drive_chariot", "value": 40},
+    {"name":  "skills.melee_weapons.whip", "value": 20},
+    {"name":  "skills.melee_weapons.cultural_melee_weapon", "value": 20},
+    {"name":  "skills.missile_weapons.cultural_missile_weapon", "value": 20},
+    {"name":  "skills.communication.dance", "value": 15},
+    {"name":  "skills.knowledge.first_aid", "value": 10},
+    {"name":  "skills.perception.scan", "value": 15}
   ]
 }

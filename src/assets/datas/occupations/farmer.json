@@ -1,15 +1,15 @@
 {
   "name": "occupations.common.farmer",
   "skills": [
-    {"name":  "skills.lore_local", "value": 15},
-    {"name":  "skills.jump_or_climb", "value": 10},
-    {"name":  "skills.farm", "value": 30},
-    {"name":  "skills.craft_any", "value": 15},
-    {"name":  "skills.first_aid", "value": 10},
-    {"name":  "skills.scan", "value": 10},
-    {"name":  "skills.herd", "value": 15},
-    {"name":  "skills.cultural_weapon", "value": 15},
-    {"name":  "skills.manage_household", "value": 30},
-    {"name":  "skills.shield_any", "value": 15}
+    {"name":  "skills.knowledge.lore_local", "value": 15},
+    {"name":  "skills.agility.jump_or_climb", "value": 10},
+    {"name":  "skills.knowledge.farm", "value": 30},
+    {"name":  "skills.manipulation.craft_any", "value": 15},
+    {"name":  "skills.knowledge.first_aid", "value": 10},
+    {"name":  "skills.perception.scan", "value": 10},
+    {"name":  "skills.knowledge.herd", "value": 15},
+    {"name":  "skills.melee_weapons.cultural_weapon", "value": 15},
+    {"name":  "skills.knowledge.manage_household", "value": 30},
+    {"name":  "skills.shields.shield_any", "value": 15}
   ]
 }

@@ -180,7 +180,12 @@
 			"intrigue": "Intrigue",
 			"name": "Communication",
 			"orate": "Orate",
-			"sing": "Sing"
+			"sing": "Sing",
+			"speak_mostali": "Speak Mostali",
+			"speak_other_language": "Speak Other Language ({{name}})",
+			"speak_own_language": "Speak Own Language",
+			"speak_spiritspeech": "Speak Spiritspeech",
+			"speak_tradetalk": "Speak (Tradetalk)"
 		},
 		"knowledge": {
 			"alchemy": "Alchemy",
@@ -219,11 +224,6 @@
 			"read_write_own": "Read/Write (own)",
 			"river_lore": "River Lore",
 			"shiphandling": "Shiphandling",
-			"speak_mostali": "Speak Mostali",
-			"speak_other_language": "Speak Other Language ({{name}})",
-			"speak_own_language": "Speak Own Language",
-			"speak_spiritspeech": "Speak Spiritspeech",
-			"speak_tradetalk": "Speak (Tradetalk)",
 			"survival": "Survival",
 			"treat_disease": "Treat Disease",
 			"treat_poison": "Treat Poison",

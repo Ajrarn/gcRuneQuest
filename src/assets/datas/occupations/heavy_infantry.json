@@ -1,13 +1,13 @@
 {
   "name": "occupations.common.warrior.heavy_infantry",
   "skills": [
-    {"name":  "skills.sing", "value": 10},
-    {"name":  "skills.scan", "value": 10},
-    {"name":  "skills.battle", "value": 30},
-    {"name":  "skills.all_unit_weapons", "value": 25},
-    {"name":  "skills.first_aid", "value": 15},
-    {"name":  "skills.other_weapon", "value": 25},
-    {"name":  "skills.listen", "value": 10},
-    {"name":  "skills.tertiary_weapon", "value": 15}
+    {"name":  "skills.communication.sing", "value": 10},
+    {"name":  "skills.perception.scan", "value": 10},
+    {"name":  "skills.knowledge.battle", "value": 30},
+    {"name":  "skills.melee_weapons.all_unit_weapons", "value": 25},
+    {"name":  "skills.knowledge.first_aid", "value": 15},
+    {"name":  "skills.melee_weapons.other_weapon", "value": 25},
+    {"name":  "skills.perception.listen", "value": 10},
+    {"name":  "skills.melee_weapons.tertiary_weapon", "value": 15}
   ]
 }

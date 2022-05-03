@@ -1,15 +1,15 @@
 {
   "name": "occupations.elf.plant_tender",
   "skills": [
-    {"name":  "skills.animal_lore", "value": 10},
-    {"name":  "skills.area_lore_elf_forest", "value": 20},
-    {"name":  "skills.elf_bow", "value": 20},
-    {"name":  "skills.elfsense", "value": 30},
-    {"name":  "skills.first_aid", "value": 10},
-    {"name":  "skills.hide", "value": 10},
-    {"name":  "skills.listen", "value": 10},
-    {"name":  "skills.plant_lore", "value": 30},
-    {"name":  "skills.scan", "value": 10},
-    {"name":  "skills.search", "value": 10}
+    {"name":  "skills.knowledge.animal_lore", "value": 10},
+    {"name":  "skills.knowledge.area_lore_elf_forest", "value": 20},
+    {"name":  "skills.missile_weapons.elf_bow", "value": 20},
+    {"name":  "skills.perception.elfsense", "value": 30},
+    {"name":  "skills.knowledge.first_aid", "value": 10},
+    {"name":  "skills.stealth.hide", "value": 10},
+    {"name":  "skills.perception.listen", "value": 10},
+    {"name":  "skills.knowledge.plant_lore", "value": 30},
+    {"name":  "skills.perception.scan", "value": 10},
+    {"name":  "skills.perception.search", "value": 10}
   ]
 }

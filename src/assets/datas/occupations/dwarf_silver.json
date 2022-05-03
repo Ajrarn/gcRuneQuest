@@ -1,13 +1,13 @@
 {
   "name": "occupations.dwarf.silver",
   "skills": [
-    {"name":  "skills.craft_silversmith", "value": 10},
-    {"name":  "skills.craft_magic_item", "value": 10},
-    {"name":  "skills.dwarf_lore", "value": 10},
-    {"name":  "skills.glorantha_lore", "value": 10},
-    {"name":  "skills.read_write_mostali", "value": 10},
-    {"name":  "skills.sorcery_spell", "value": 30},
-    {"name":  "skills.sorcery_spell", "value": 30},
-    {"name":  "skills.sorcery_spell", "value": 10}
+    {"name":  "skills.manipulation.craft_silversmith", "value": 10},
+    {"name":  "skills.manipulation.craft_magic_item", "value": 10},
+    {"name":  "skills.knowledge.dwarf_lore", "value": 10},
+    {"name":  "skills.knowledge.glorantha_lore", "value": 10},
+    {"name":  "skills.knowledge.read_write_mostali", "value": 10},
+    {"name":  "skills.magic.sorcery_spell", "value": 30},
+    {"name":  "skills.magic.sorcery_spell", "value": 30},
+    {"name":  "skills.magic.sorcery_spell", "value": 10}
   ]
 }

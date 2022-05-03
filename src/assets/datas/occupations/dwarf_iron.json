@@ -1,12 +1,12 @@
 {
   "name": "occupations.dwarf.iron",
   "skills": [
-    {"name":  "skills.battle", "value": 30},
-    {"name":  "skills.craft_secrets_of_iron", "value": 25},
-    {"name":  "skills.dwarf_lore", "value": 10},
-    {"name":  "skills.medium_shield", "value": 40},
-    {"name":  "skills.melee_weapon", "value": 40},
-    {"name":  "skills.missile_weapon", "value": 40},
-    {"name":  "skills.secondary_weapon", "value": 25}
+    {"name":  "skills.knowledge.battle", "value": 30},
+    {"name":  "skills.manipulation.craft_secrets_of_iron", "value": 25},
+    {"name":  "skills.knowledge.dwarf_lore", "value": 10},
+    {"name":  "skills.shields.medium_shield", "value": 40},
+    {"name":  "skills.melee_weapon.melee_weapon", "value": 40},
+    {"name":  "skills.missile_weapon.missile_weapon", "value": 40},
+    {"name":  "skills.melee_weapon.secondary_weapon", "value": 25}
   ]
 }

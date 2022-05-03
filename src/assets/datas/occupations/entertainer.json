@@ -1,14 +1,14 @@
 {
   "name": "occupations.common.entertainer",
   "skills": [
-    {"name":  "skills.dance", "value": 30},
-    {"name":  "skills.customs_any", "value": 10},
-    {"name":  "skills.orate", "value": 10},
-    {"name":  "skills.insight_own_specie", "value": 10},
-    {"name":  "skills.sing", "value": 30},
-    {"name":  "skills.lore_any", "value": 10},
-    {"name":  "skills.speak_own_language", "value": 30},
-    {"name":  "skills.cultural_weapon", "value": 15},
-    {"name":  "skills.play_instrument", "value": 30}
+    {"name":  "skills.communication.dance", "value": 30},
+    {"name":  "skills.knowledge.customs_any", "value": 10},
+    {"name":  "skills.communication.orate", "value": 10},
+    {"name":  "skills.perception.insight_own_specie", "value": 10},
+    {"name":  "skills.communication.sing", "value": 30},
+    {"name":  "skills.knowledge.lore_any", "value": 10},
+    {"name":  "skills.communication.speak_own_language", "value": 30},
+    {"name":  "skills.melee_weapons.cultural_weapon", "value": 15},
+    {"name":  "skills.manipulation.play_instrument", "value": 30}
   ]
 }

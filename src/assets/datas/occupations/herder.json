@@ -1,16 +1,16 @@
 {
   "name": "occupations.common.herder",
   "skills": [
-    {"name":  "skills.jump_or_climb", "value": 10},
-    {"name":  "skills.scan", "value": 10},
-    {"name":  "skills.animal_lore", "value": 10},
-    {"name":  "skills.track", "value": 10},
-    {"name":  "skills.lore_local", "value": 30},
-    {"name":  "skills.cultural_missile_weapon", "value": 30},
-    {"name":  "skills.first_aid", "value": 10},
-    {"name":  "skills.cultural_weapon", "value": 10},
-    {"name":  "skills.herd", "value": 30},
-    {"name":  "skills.shield_any", "value": 10},
-    {"name":  "skills.peaceful_cut", "value": 30}
+    {"name":  "skills.agility.jump_or_climb", "value": 10},
+    {"name":  "skills.perception.scan", "value": 10},
+    {"name":  "skills.knowledge.animal_lore", "value": 10},
+    {"name":  "skills.perception.track", "value": 10},
+    {"name":  "skills.knowledge.lore_local", "value": 30},
+    {"name":  "skills.missile_weapons.cultural_missile_weapon", "value": 30},
+    {"name":  "skills.knowledge.first_aid", "value": 10},
+    {"name":  "skills.melee_weapons.cultural_weapon", "value": 10},
+    {"name":  "skills.knowledge.herd", "value": 30},
+    {"name":  "skills.shields.shield_any", "value": 10},
+    {"name":  "skills.knowledge.peaceful_cut", "value": 30}
   ]
 }

@@ -1,13 +1,13 @@
 {
   "name": "occupations.elf.warrior",
   "skills": [
-    {"name":  "skills.area_lore_elf_forest", "value": 20},
-    {"name":  "skills.dodge", "value": 20},
-    {"name":  "skills.elf_bow", "value": 30},
-    {"name":  "skills.elfsense", "value": 10},
-    {"name":  "skills.hide", "value": 20},
-    {"name":  "skills.move_quietly", "value": 20},
-    {"name":  "skills.short_spear", "value": 25},
-    {"name":  "skills.small_shield", "value": 20}
+    {"name":  "skills.knowledge.area_lore_elf_forest", "value": 20},
+    {"name":  "skills.agility.dodge", "value": 20},
+    {"name":  "skills.missile_weapons.elf_bow", "value": 30},
+    {"name":  "skills.perception.elfsense", "value": 10},
+    {"name":  "skills.stealth.hide", "value": 20},
+    {"name":  "skills.stealth.move_quietly", "value": 20},
+    {"name":  "skills.melee_weapons.short_spear", "value": 25},
+    {"name":  "skills.shields.small_shield", "value": 20}
   ]
 }

@@ -1,15 +1,15 @@
 {
   "name": "occupations.common.crafter",
   "skills": [
-    {"name":  "skills.art", "value": 10},
-    {"name":  "skills.evaluate", "value": 10},
-    {"name":  "skills.bargain", "value": 10},
-    {"name":  "skills.craft_primary", "value": 30},
-    {"name":  "skills.insight_own_specie", "value": 10},
-    {"name":  "skills.craft_secondary", "value": 20},
-    {"name":  "skills.lore_any", "value": 10},
-    {"name":  "skills.devise", "value": 15},
-    {"name":  "skills.manage_household", "value": 30},
-    {"name":  "skills.cultural_weapon", "value": 15}
+    {"name":  "skills.communication.art", "value": 10},
+    {"name":  "skills.knowledge.evaluate", "value": 10},
+    {"name":  "skills.communication.bargain", "value": 10},
+    {"name":  "skills.manipulation.craft_primary", "value": 30},
+    {"name":  "skills.perception.insight_own_specie", "value": 10},
+    {"name":  "skills.manipulation.craft_secondary", "value": 20},
+    {"name":  "skills.knowledge.lore_any", "value": 10},
+    {"name":  "skills.manipulation.devise", "value": 15},
+    {"name":  "skills.knowledge.manage_household", "value": 30},
+    {"name":  "skills.melee_weapons.cultural_weapon", "value": 15}
   ]
 }

@@ -180,7 +180,12 @@
 			"intrigue": "Intrigue",
 			"name": "Communication",
 			"orate": "Éloquence",
-			"sing": "Chant"
+			"sing": "Chant",
+			"speak_mostali": "Parler mostali",
+			"speak_other_language": "Langue étrangère",
+			"speak_own_language": "Langue natale",
+			"speak_spiritspeech": "Langues des esprits",
+			"speak_tradetalk": "Langue des marchands"
 		},
 		"knowledge": {
 			"alchemy": "Alchimie",
@@ -219,11 +224,6 @@
 			"read_write_own": "Lecture/Écriture (natale)",
 			"river_lore": "Connaissance des rivières",
 			"shiphandling": "Navigation",
-			"speak_mostali": "Parler mostali",
-			"speak_other_language": "Langue étrangère",
-			"speak_own_language": "Langue natale",
-			"speak_spiritspeech": "Langue (Langues des esprits)",
-			"speak_tradetalk": "Langue des marchands",
 			"survival": "Survie",
 			"treat_disease": "Traitement des maladies",
 			"treat_poison": "Traitements des poisons",

@@ -1,15 +1,15 @@
 {
   "name": "occupations.dwarf.lead",
   "skills": [
-    {"name":  "skills.alchemy", "value": 10},
-    {"name":  "skills.craft_glass", "value": 30},
-    {"name":  "skills.craft_plumbing", "value": 30},
-    {"name":  "skills.devise", "value": 30},
-    {"name":  "skills.dwarf_lore", "value": 10},
-    {"name":  "skills.earthsense_scan", "value": 15},
-    {"name":  "skills.earthsense_search", "value": 15},
-    {"name":  "skills.listen", "value": 15},
-    {"name":  "skills.mineral_lore", "value": 30},
-    {"name":  "skills.swim", "value": 10}
+    {"name":  "skills.knowledge.alchemy", "value": 10},
+    {"name":  "skills.manipulation.craft_glass", "value": 30},
+    {"name":  "skills.manipulation.craft_plumbing", "value": 30},
+    {"name":  "skills.manipulation.devise", "value": 30},
+    {"name":  "skills.knowledge.dwarf_lore", "value": 10},
+    {"name":  "skills.perception.earthsense_scan", "value": 15},
+    {"name":  "skills.perception.earthsense_search", "value": 15},
+    {"name":  "skills.perception.listen", "value": 15},
+    {"name":  "skills.knowledge.mineral_lore", "value": 30},
+    {"name":  "skills.agility.swim", "value": 10}
   ]
 }

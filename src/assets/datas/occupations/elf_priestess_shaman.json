@@ -1,17 +1,17 @@
 {
   "name": "occupations.elf.priestess_shaman",
   "skills": [
-    {"name":  "skills.cult_lore_aldrya", "value": 30},
-    {"name":  "skills.dance", "value": 10},
-    {"name":  "skills.elf_bow", "value": 10},
-    {"name":  "skills.meditate", "value": 10},
-    {"name":  "skills.plant_lore", "value": 20},
-    {"name":  "skills.sing", "value": 10},
-    {"name":  "skills.speak_spiritspeach", "value": 10},
-    {"name":  "skills.spirit_combat", "value": 20},
-    {"name":  "skills.spirit_dance", "value": 10},
-    {"name":  "skills.spirit_lore", "value": 10},
-    {"name":  "skills.spirit_travel", "value": 10},
-    {"name":  "skills.worship_aldrya", "value": 30}
+    {"name":  "skills.knowledge.cult_lore_aldrya", "value": 30},
+    {"name":  "skills.communication.dance", "value": 10},
+    {"name":  "skills.missile_weapons.elf_bow", "value": 10},
+    {"name":  "skills.magic.meditate", "value": 10},
+    {"name":  "skills.knowledge.plant_lore", "value": 20},
+    {"name":  "skills.communication.sing", "value": 10},
+    {"name":  "skills.communication.speak_spiritspeach", "value": 10},
+    {"name":  "skills.magic.spirit_combat", "value": 20},
+    {"name":  "skills.magic.spirit_dance", "value": 10},
+    {"name":  "skills.knowledge.spirit_lore", "value": 10},
+    {"name":  "skills.magic.spirit_travel", "value": 10},
+    {"name":  "skills.magic.worship_aldrya", "value": 30}
   ]
 }

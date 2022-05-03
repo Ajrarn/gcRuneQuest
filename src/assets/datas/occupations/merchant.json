@@ -1,14 +1,14 @@
 {
   "name": "occupations.common.merchant",
   "skills": [
-    {"name":  "skills.ride", "value": 10},
-    {"name":  "skills.customs_any", "value": 10},
-    {"name":  "skills.bargain", "value": 30},
-    {"name":  "skills.insight_own_specie", "value": 10},
-    {"name":  "skills.speak_other_language", "value": 10},
-    {"name":  "skills.read_write_any", "value": 10},
-    {"name":  "skills.speak_tradetalk", "value": 30},
-    {"name":  "skills.manage_household", "value": 30},
-    {"name":  "skills.evaluate", "value": 30}
+    {"name":  "skills.agility.ride", "value": 10},
+    {"name":  "skills.knowledge.customs_any", "value": 10},
+    {"name":  "skills.communication.bargain", "value": 30},
+    {"name":  "skills.perception.insight_own_specie", "value": 10},
+    {"name":  "skills.communication.speak_other_language", "value": 10},
+    {"name":  "skills.knowledge.read_write_any", "value": 10},
+    {"name":  "skills.communication.speak_tradetalk", "value": 30},
+    {"name":  "skills.knowledge.manage_household", "value": 30},
+    {"name":  "skills.knowledge.evaluate", "value": 30}
   ]
 }

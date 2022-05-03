@@ -1,14 +1,14 @@
 {
   "name": "occupations.common.warrior.light_infantry",
   "skills": [
-    {"name":  "skills.battle", "value": 30},
-    {"name":  "skills.hide", "value": 10},
-    {"name":  "skills.first_aid", "value": 15},
-    {"name":  "skills.move_quietly", "value": 10},
-    {"name":  "skills.survival", "value": 10},
-    {"name":  "skills.all_unit_weapons", "value": 25},
-    {"name":  "skills.listen", "value": 10},
-    {"name":  "skills.other_weapon", "value": 25},
-    {"name":  "skills.scan", "value": 10}
+    {"name":  "skills.knowledge.battle", "value": 30},
+    {"name":  "skills.stealth.hide", "value": 10},
+    {"name":  "skills.knowledge.first_aid", "value": 15},
+    {"name":  "skills.stealth.move_quietly", "value": 10},
+    {"name":  "skills.knowledge.survival", "value": 10},
+    {"name":  "skills.melee_weapons.all_unit_weapons", "value": 25},
+    {"name":  "skills.perception.listen", "value": 10},
+    {"name":  "skills.melee_weapons.other_weapon", "value": 25},
+    {"name":  "skills.perception.scan", "value": 10}
   ]
 }

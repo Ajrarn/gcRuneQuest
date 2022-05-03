@@ -1,15 +1,15 @@
 {
   "name": "occupations.common.assistant_shaman",
   "skills": [
-    {"name":  "skills.sing", "value": 10},
-    {"name":  "skills.spirit_combat", "value": 30},
-    {"name":  "skills.animal_lore", "value": 15},
-    {"name":  "skills.speak_spiritspeech", "value": 10},
-    {"name":  "skills.spirit_dance", "value": 10},
-    {"name":  "skills.first_aid", "value": 15},
-    {"name":  "skills.spirit_lore", "value": 20},
-    {"name":  "skills.plant_lore", "value": 20},
-    {"name":  "skills.spirit_travel", "value": 20},
-    {"name":  "skills.meditate", "value": 20}
+    {"name":  "skills.communication.sing", "value": 10},
+    {"name":  "skills.magic.spirit_combat", "value": 30},
+    {"name":  "skills.knowledge.animal_lore", "value": 15},
+    {"name":  "skills.communication.speak_spiritspeech", "value": 10},
+    {"name":  "skills.magic.spirit_dance", "value": 10},
+    {"name":  "skills.knowledge.first_aid", "value": 15},
+    {"name":  "skills.magic.spirit_lore", "value": 20},
+    {"name":  "skills.knowledge.plant_lore", "value": 20},
+    {"name":  "skills.magic.spirit_travel", "value": 20},
+    {"name":  "skills.magic.meditate", "value": 20}
   ]
 }
