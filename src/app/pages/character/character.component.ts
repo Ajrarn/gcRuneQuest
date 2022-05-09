@@ -4,11 +4,12 @@ import { ChangeTitle } from '../../store/title.action';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { SpeciesSelect, SpeciesState } from '../../store/species.state';
+import { NzResizeEvent } from 'ng-zorro-antd/resizable';
 
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['./character.component.scss']
+  styleUrls: ['./character.component.less']
 })
 export class CharacterComponent {
 
@@ -130,5 +131,17 @@ export class CharacterComponent {
        response = 'color:orange';
     }
     return response;
+  }
+
+  width = 400;
+  height = 200;
+  id = -1;
+
+  onResize({ width, height }: NzResizeEvent): void {
+    cancelAnimationFrame(this.id);
+    this.id = requestAnimationFrame(() => {
+      this.width = width!;
+      this.height = height!;
+    });
   }
 }

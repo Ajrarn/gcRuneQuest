@@ -46,6 +46,7 @@ import { CulturesComponent } from './pages/cultures/cultures.component';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzResizableModule, NzResizableService } from 'ng-zorro-antd/resizable';
 
 registerLocaleData(fr);
 
@@ -90,8 +91,9 @@ registerLocaleData(fr);
     NzListModule,
     NzGridModule,
     NzSelectModule,
+    NzResizableModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady],
+  providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady, NzResizableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,7 +8,7 @@ import { Occupation, OccupationGroup } from '../../store/models';
 @Component({
   selector: 'app-occupations',
   templateUrl: './occupations.component.html',
-  styleUrls: ['./occupations.component.scss']
+  styleUrls: ['./occupations.component.less']
 })
 export class OccupationsComponent implements OnInit {
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-species',
   templateUrl: './species.component.html',
-  styleUrls: ['./species.component.scss']
+  styleUrls: ['./species.component.less']
 })
 export class SpeciesComponent {
 

@@ -1,52 +1,67 @@
+<div class="my-row">
+  <div class="box" nz-resizable (nzResize)="onResize($event)" [style.width.px]="width">
+    <h1>{{'static.creation_steps' | translate}}</h1>
+    <nz-tabset [nzTabPosition]="'left'">
+      <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+        <ng-template #titleTemplate>
+          <i nz-icon [nzType]="getIcon(tab.name)" style="{{getStyleIcon(tab.name)}}"></i>
+          {{ tab.name | translate }}
+        </ng-template>
+        <div *ngIf="tab.name === 'steps.homeland'">
+          <form [formGroup]="formHomeland">
+            <nz-space nzDirection="vertical">
+              <nz-space *nzSpaceItem>
+                <p *nzSpaceItem>Race</p>
+                <nz-select [formControlName]="'specie'" *nzSpaceItem>
+                  <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name |translate}}"></nz-option>
+                </nz-select>
+              </nz-space>
+              <nz-space *nzSpaceItem>
+                <p *nzSpaceItem>Culture</p>
+                <nz-select [formControlName]="'culture'" *nzSpaceItem>
+                  <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
+                    <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture}}" nzLabel="{{culture |translate}}"></nz-option>
+                  </nz-option-group>
+                </nz-select>
+              </nz-space>
+            </nz-space>
+          </form>
+        </div>
+        <div *ngIf="tab.name === 'steps.family_history'">
+          Family
+        </div>
+        <div *ngIf="tab.name === 'steps.rune_affinities'">
+          Runes
+        </div>
+        <div *ngIf="tab.name === 'steps.characteristics'">
+          Char
+        </div>
+        <div *ngIf="tab.name === 'steps.occupation'">
+          Occupation
+        </div>
+        <div *ngIf="tab.name === 'steps.cult'">
+          Cult
+        </div>
+        <div *ngIf="tab.name === 'steps.personal_skill_bonuses'">
+          bonus
+        </div>
+        <div *ngIf="tab.name === 'steps.other_informations'">
+          other
+        </div>
+      </nz-tab>
+    </nz-tabset>
+    <nz-resize-handle nzDirection="right">
+      <div class="right-wrap">
+        <i class="right" nz-icon nzType="more" nzTheme="outline"></i>
+      </div>
+    </nz-resize-handle>
+  </div>
+  <div>
+    <h1>{{'static.character' | translate}}</h1>
+  </div>
+</div>
 
-<nz-divider nzText="{{'static.creation_steps' | translate}}"></nz-divider>
-<nz-tabset [nzTabPosition]="'left'">
-  <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
-    <ng-template #titleTemplate>
-      <i nz-icon [nzType]="getIcon(tab.name)" style="{{getStyleIcon(tab.name)}}"></i>
-      {{ tab.name | translate }}
-    </ng-template>
-    <div *ngIf="tab.name === 'steps.homeland'">
-      <form [formGroup]="formHomeland">
-        <nz-space nzDirection="vertical">
-          <nz-space *nzSpaceItem>
-            <p *nzSpaceItem>Race</p>
-            <nz-select [formControlName]="'specie'" *nzSpaceItem>
-              <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name |translate}}"></nz-option>
-            </nz-select>
-          </nz-space>
-          <nz-space *nzSpaceItem>
-            <p *nzSpaceItem>Culture</p>
-            <nz-select [formControlName]="'culture'" *nzSpaceItem>
-              <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
-                <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture}}" nzLabel="{{culture |translate}}"></nz-option>
-              </nz-option-group>
-            </nz-select>
-          </nz-space>
-        </nz-space>
-      </form>
-    </div>
-    <div *ngIf="tab.name === 'steps.family_history'">
-      Family
-    </div>
-    <div *ngIf="tab.name === 'steps.rune_affinities'">
-      Runes
-    </div>
-    <div *ngIf="tab.name === 'steps.characteristics'">
-      Char
-    </div>
-    <div *ngIf="tab.name === 'steps.occupation'">
-      Occupation
-    </div>
-    <div *ngIf="tab.name === 'steps.cult'">
-      Cult
-    </div>
-    <div *ngIf="tab.name === 'steps.personal_skill_bonuses'">
-      bonus
-    </div>
-    <div *ngIf="tab.name === 'steps.other_informations'">
-      other
-    </div>
-  </nz-tab>
-</nz-tabset>
-<nz-divider nzText="{{'static.character' | translate}}"></nz-divider>
+
+
+
+

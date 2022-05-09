@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-cultures',
   templateUrl: './cultures.component.html',
-  styleUrls: ['./cultures.component.scss']
+  styleUrls: ['./cultures.component.less']
 })
 export class CulturesComponent {
 
