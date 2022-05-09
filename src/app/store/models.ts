@@ -58,3 +58,11 @@ export interface Homeland {
   name: string;
   cultures: Culture[]
 }
+
+export interface Character {
+  specie: Specie | null;
+  culture: Culture | null;
+  skills: Skill[];
+  spells: string[];
+  languages: string[];
+}

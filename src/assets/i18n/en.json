@@ -14,6 +14,26 @@
 		}
 	},
 	"cultures": {
+		"agimori": {
+			"agimori": "Agimori",
+			"name": "Agimori"
+		},
+		"baboon": {
+			"baboon": "Baboon",
+			"name": "Baboon"
+		},
+		"beast_men": {
+			"centaur": "Centaur",
+			"duck": "Duck",
+			"minotaur": "Minotaur",
+			"name": "Beast Men"
+		},
+		"elder_races": {
+			"aldryami": "Aldryami",
+			"mostali": "Mostali",
+			"name": "Elder Races",
+			"uz": "Uz"
+		},
 		"esrolia": {
 			"esrolia": "Esrolia",
 			"name": "Esrolia"
@@ -21,6 +41,10 @@
 		"grazelands": {
 			"grazelands": "Grazelands",
 			"name": "Grazelands"
+		},
+		"morokanth": {
+			"morokanth": "Morokanth",
+			"name": "Morokanth"
 		},
 		"prax": {
 			"bison_rider": "Bison Rider",
@@ -238,7 +262,7 @@
 			"spirit_dance": "Spirit Dance",
 			"spirit_lore": "Spirit Lore",
 			"spirit_travel": "Spirit Travel",
-			"worship": "Worship ({{name}})"
+			"worship_deity": "Worship (Deity)"
 		},
 		"manipulation": {
 			"conceal": "Conceal",

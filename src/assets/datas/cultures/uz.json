@@ -1,5 +1,5 @@
 {
-  "name": "cultures.uz",
+  "name": "cultures.elder_races.uz",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },

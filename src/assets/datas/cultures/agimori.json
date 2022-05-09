@@ -1,5 +1,5 @@
 {
-  "name": "cultures.agimori",
+  "name": "cultures.agimori.agimori",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },

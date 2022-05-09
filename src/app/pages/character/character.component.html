@@ -18,9 +18,9 @@
               </nz-space>
               <nz-space *nzSpaceItem>
                 <p *nzSpaceItem>Culture</p>
-                <nz-select [formControlName]="'culture'" *nzSpaceItem>
+                <nz-select [formControlName]="'culture'">
                   <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
-                    <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture}}" nzLabel="{{culture |translate}}"></nz-option>
+                    <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture.name}}" nzLabel="{{culture.name |translate}}"></nz-option>
                   </nz-option-group>
                 </nz-select>
               </nz-space>

@@ -1,5 +1,5 @@
 {
-  "name": "cultures.centaur",
+  "name": "cultures.beast_men.centaur",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },

@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { SpeciesSelect, SpeciesState } from '../../store/species.state';
 import { NzResizeEvent } from 'ng-zorro-antd/resizable';
+import { Character, Homeland } from '../../store/models';
 
 @Component({
   selector: 'app-character',
@@ -12,6 +13,8 @@ import { NzResizeEvent } from 'ng-zorro-antd/resizable';
   styleUrls: ['./character.component.less']
 })
 export class CharacterComponent {
+
+  character: Character;
 
   index = 0;
 
@@ -47,7 +50,7 @@ export class CharacterComponent {
   // @ts-ignore
   @Select(SpeciesState.specieForSelect) species$: Observable<string>;
   species: SpeciesSelect[] = [];
-  homelands: any[] = [];
+  homelands: Homeland[] = [];
 
   constructor(private store: Store, fb: FormBuilder) {
     this.store.dispatch(new ChangeTitle('static.character'));
@@ -63,42 +66,10 @@ export class CharacterComponent {
       console.log('species', this.species);
     });
 
-    this.formHomeland.controls['specie'].valueChanges.subscribe((specieForm) => {
-      this.updateHomelands(specieForm);
-    })
-
-    //because default specie is human we must initialize homelands
-    this.updateHomelands('species.human')
+    this.homelands = this.store.selectSnapshot(state => state.cultures);
+    this.character = this.store.selectSnapshot(state => state.character);
   }
 
-  updateHomelands(specieForm: string) {
-    this.homelands = [];
-    if (specieForm) {
-      const specie = this.species.find((specie: any) => specie.name === specieForm);
-      if (specie && specie.cultures) {
-        specie.cultures.forEach((item) => {
-          let line = item.split('.');
-          let homeland = 'homeland.' + line[1];
-          let home = this.homelands.find((item: any) => item.name === homeland);
-          if (home) {
-            home.cultures.push(item);
-          } else {
-            this.homelands.push({name: homeland, cultures: [item]})
-          }
-        });
-
-        this.homelands.sort((previous, current) => {
-          return previous.name.localeCompare(current.name);
-        });
-
-        this.homelands.forEach((homeland) => {
-          homeland.cultures.sort((previous: string, current: string) => {
-            return previous.localeCompare(current);
-          });
-        })
-      }
-    }
-  }
 
   getIcon(key: string | null): string {
     let response: string | null;

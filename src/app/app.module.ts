@@ -47,6 +47,7 @@ import { NzListModule } from 'ng-zorro-antd/list';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzResizableModule, NzResizableService } from 'ng-zorro-antd/resizable';
+import { CharacterState } from './store/character.state';
 
 registerLocaleData(fr);
 
@@ -69,7 +70,7 @@ registerLocaleData(fr);
         deps: [HttpClient]
       }
     }),
-    NgxsModule.forRoot([SpeciesState, OccupationsState, CulturesState, ReadyState, TitleState], {
+    NgxsModule.forRoot([SpeciesState, OccupationsState, CulturesState, ReadyState, TitleState, CharacterState], {
       developmentMode: !environment.production
     }),
     NgxsLoggerPluginModule.forRoot(),
