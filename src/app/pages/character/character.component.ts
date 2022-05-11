@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Select, Store } from '@ngxs/store';
+import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { SpeciesSelect, SpeciesState } from '../../store/species.state';
+import { SpeciesSelect} from '../../store/species.state';
 import { NzResizeEvent } from 'ng-zorro-antd/resizable';
-import { Character, Homeland } from '../../store/models';
+import { Character, Culture, Homeland, Specie } from '../../store/models';
+import { CharacterUpdateCulture, CharacterUpdateSpecie } from '../../store/character.actions';
 
 @Component({
   selector: 'app-character',
@@ -47,8 +47,6 @@ export class CharacterComponent {
 
   formHomeland: FormGroup;
 
-  // @ts-ignore
-  @Select(SpeciesState.specieForSelect) species$: Observable<string>;
   species: SpeciesSelect[] = [];
   homelands: Homeland[] = [];
 
@@ -57,17 +55,32 @@ export class CharacterComponent {
 
     this.formHomeland = fb.group({
       specie: fb.control('species.human'),
-      culture: fb.control(null)
+      culture: fb.control('cultures.sartar.sartar')
     });
 
-    // @ts-ignore
-    this.species$.subscribe((values: SpeciesSelect[]) => {
-      this.species = values;
-      console.log('species', this.species);
-    });
-
+    this.species = this.store.selectSnapshot(state => state.species);
     this.homelands = this.store.selectSnapshot(state => state.cultures);
     this.character = this.store.selectSnapshot(state => state.character);
+
+    this.formHomeland.controls['specie'].valueChanges.subscribe(specieName => {
+      const specie = this.species.find(item => item.name === specieName);
+      if (specie) {
+        this.store.dispatch(new CharacterUpdateSpecie(<Specie>specie));
+      }
+    });
+
+    this.formHomeland.controls['culture'].valueChanges.subscribe(cultureName => {
+      const splitName = cultureName.split('.');
+      const homelandName = splitName[0] + '.' + splitName[1] + '.name';
+      const homeland = this.homelands.find(item => item.name === homelandName);
+      if (homeland) {
+        const culture = homeland.cultures.find(item => item.name === cultureName);
+        if (culture) {
+          this.store.dispatch(new CharacterUpdateCulture(<Culture>culture));
+        }
+      }
+
+    });
   }
 
 
@@ -104,7 +117,7 @@ export class CharacterComponent {
     return response;
   }
 
-  width = 400;
+  width = 800;
   height = 200;
   id = -1;
 

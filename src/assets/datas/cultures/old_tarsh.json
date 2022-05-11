@@ -7,5 +7,6 @@
   ],
   "runes": [
     { "name":  "elemental.earth", "value": 10}
-  ]
+  ],
+  "skills": []
 }

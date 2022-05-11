@@ -21,5 +21,6 @@
     "occupations.common.scribe",
     "occupations.common.warrior.light_cavalry",
     "occupations.common.warrior.heavy_cavalry"
-  ]
+  ],
+  "skills": []
 }

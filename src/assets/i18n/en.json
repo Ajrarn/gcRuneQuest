@@ -55,8 +55,8 @@
 			"sable_rider": "Sable Rider"
 		},
 		"sartar": {
-			"name": "Sartar",
-			"sartar": "Sartar"
+			"heortling": "Heortling",
+			"name": "Sartar"
 		},
 		"tarsh": {
 			"lunar_tarsh": "Lunar Tarsh",
@@ -80,7 +80,10 @@
 		"tarsh": "Tarsh"
 	},
 	"languages": {
-		"spirit": "Spirit Language"
+		"esrolian": "Esrolian",
+		"heortling": "Heortling",
+		"spirit": "Spirit Language",
+		"tradetalk": "Tradetalk"
 	},
 	"occupations": {
 		"baboon": {

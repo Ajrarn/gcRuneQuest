@@ -27,5 +27,6 @@
     "occupations.common.thief",
     "occupations.common.warrior.heavy_infantry",
     "occupations.common.warrior.light_infantry"
-  ]
+  ],
+  "skills": []
 }

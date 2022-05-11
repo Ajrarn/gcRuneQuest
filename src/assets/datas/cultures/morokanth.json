@@ -19,5 +19,6 @@
     "occupations.common.noble",
     "occupations.common.priest",
     "occupations.common.warrior.heavy_infantry"
-  ]
+  ],
+  "skills": []
 }

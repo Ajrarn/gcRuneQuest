@@ -48,6 +48,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzResizableModule, NzResizableService } from 'ng-zorro-antd/resizable';
 import { CharacterState } from './store/character.state';
+import { CharacterSheetComponent } from './pages/character-sheet/character-sheet.component';
 
 registerLocaleData(fr);
 
@@ -56,6 +57,7 @@ registerLocaleData(fr);
     AppComponent,
     SpeciesComponent,
     CharacterComponent,
+    CharacterSheetComponent,
     OccupationsComponent,
     CulturesComponent
   ],

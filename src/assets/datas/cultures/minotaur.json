@@ -11,5 +11,6 @@
   "occupations": [
     "occupations.common.bandit",
     "occupations.common.warrior.heavy_infantry"
-  ]
+  ],
+  "skills": []
 }

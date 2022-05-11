@@ -20,5 +20,6 @@
     "occupations.common.priest",
     "occupations.common.scribe",
     "occupations.common.warrior.light_cavalry"
-  ]
+  ],
+  "skills": []
 }

@@ -55,8 +55,8 @@
 			"sable_rider": "Monteur de l'Antilope Noire"
 		},
 		"sartar": {
-			"name": "Sartar",
-			"sartar": "Sartar"
+			"heortling": "Heortling",
+			"name": "Sartar"
 		},
 		"tarsh": {
 			"lunar_tarsh": "Tarsh Lunar",
@@ -80,7 +80,10 @@
 		"tarsh": "Tarsh"
 	},
 	"languages": {
-		"spirit": "langue des esprits"
+		"esrolian": "Esrolien",
+		"heortling": "Heortling",
+		"spirit": "Langue des esprits",
+		"tradetalk": "Marchand"
 	},
 	"occupations": {
 		"baboon": {

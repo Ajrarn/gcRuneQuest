@@ -1,5 +1,5 @@
 {
-  "name": "cultures.sartar.sartar",
+  "name": "cultures.sartar.heortling",
   "passions": [
     { "name":  "passions.love('groups.family')", "value": 60 },
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },
@@ -29,5 +29,24 @@
     "occupations.common.warrior.light_infantry",
     "occupations.common.warrior.light_cavalry",
     "occupations.common.warrior.heavy_cavalry"
+  ],
+  "skills": [
+    { "name": "skills.agility.ride_any", "value": 5 },
+    { "name": "skills.melee_weapon.dagger", "value": 10 },
+    { "name": "skills.communication.dance", "value": 5 },
+    { "name": "skills.communication.sing", "value": 10 },
+    { "name": "skills.melee_weapon.1H_spear", "value": 10 },
+    { "name": "skills.knowledge.speak_own_language", "param": "languages.heortling", "value": 50 },
+    { "name": "skills.melee_weapon.broadsword", "value": 15 },
+    { "name": "skills.communication.speak_other_language", "param": "languages.tradetalk", "value": 10 },
+    { "name": "skills.missile_weapon.composite_bow_or_sling", "value": 10 },
+    { "name": "skills.knowledge.customs", "param": "cultures.sartar.heortling", "value": 25 },
+    { "name": "skills.missile_weapon.javelin", "value": 10 },
+    { "name": "skills.knowledge.farm", "value": 20 },
+    { "name": "skills.shield.medium_shield", "value": 15 },
+    { "name": "skills.knowledge.herd", "value": 10 },
+    { "name": "skills.shield.large_shield", "value": 10 },
+    { "name": "skills.magic.spirit_combat", "value": 15 }
   ]
 }
+

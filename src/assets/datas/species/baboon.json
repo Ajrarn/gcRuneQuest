@@ -20,9 +20,9 @@
       "items": [
         { "name": "skills.agility.agility.boat", "value": 5 },
         { "name": "skills.agility.agility.climb", "value": 40 },
-        { "name": "skills.agility.agility.dodge", "value": "DEX*2" },
+        { "name": "skills.agility.agility.dodge", "formula": "DEX*2" },
         { "name": "skills.agility.agility.drive_chariot", "value": 5 },
-        { "name": "skills.agility.agility.jump", "value": "DEX*3" },
+        { "name": "skills.agility.agility.jump", "formula": "DEX*3" },
         { "name": "skills.agility.agility.ride", "value": 5 },
         { "name": "skills.agility.agility.swim", "value": 15 }
       ]

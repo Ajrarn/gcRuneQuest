@@ -29,5 +29,25 @@
     "occupations.common.warrior.light_infantry",
     "occupations.common.warrior.light_cavalry",
     "occupations.common.warrior.heavy_cavalry"
+  ],
+  "skills": [
+    { "name": "skills.communication.bargain", "value": 5 },
+    { "name": "skills.melee_weapon.battle_axe", "value": 15 },
+    { "name": "skills.communication.dance", "value": 10 },
+    { "name": "skills.communication.sing", "value": 5 },
+    { "name": "skills.communication.intrigue", "value": 5 },
+    { "name": "skills.melee_weapon.1H_spear", "value": 10 },
+    { "name": "skills.melee_weapon.rapier", "value": 10 },
+    { "name": "skills.knowledge.speak_own_language", "param": "languages.esrolian", "value": 50 },
+    { "name": "skills.missile_weapon.self_bow", "value": 10 },
+    { "name": "skills.missile_weapon.thrown_axe", "value": 10 },
+    { "name": "skills.knowledge.speak_other_language", "param": "languages.tradetalk", "value": 50 },
+    { "name": "skills.shield.small_shield", "value": 15 },
+    { "name": "skills.knowledge.customs", "param": "cultures.esrolia.esrolian", "value": 25 },
+    { "name": "skills.shield.medium_shield", "value": 10 },
+    { "name": "skills.shield.large_shield", "value": 10 },
+    { "name": "skills.knowledge.farm", "value": 25 },
+    { "name": "skills.knowledge.first_aid", "value": 5 },
+    { "name": "skills.magic.spirit_combat", "value": 15 }
   ]
 }

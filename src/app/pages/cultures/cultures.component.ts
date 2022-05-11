@@ -15,6 +15,7 @@ export class CulturesComponent {
  homelands: Homeland[];
  culture: Culture = {
    name: 'vide',
+   skills: [],
    runes: [],
    passions: [],
    occupations: []

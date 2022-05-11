@@ -29,5 +29,6 @@
     "occupations.common.warrior.light_infantry",
     "occupations.common.warrior.light_cavalry",
     "occupations.common.warrior.heavy_cavalry"
-  ]
+  ],
+  "skills": []
 }
