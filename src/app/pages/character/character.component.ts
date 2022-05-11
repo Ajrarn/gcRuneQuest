@@ -55,32 +55,42 @@ export class CharacterComponent {
 
     this.formHomeland = fb.group({
       specie: fb.control('species.human'),
-      culture: fb.control('cultures.sartar.sartar')
+      culture: fb.control('cultures.sartar.heortling')
     });
 
     this.species = this.store.selectSnapshot(state => state.species);
     this.homelands = this.store.selectSnapshot(state => state.cultures);
     this.character = this.store.selectSnapshot(state => state.character);
 
+    this.selectSpecie('species.human');
+    this.selectCulture('cultures.sartar.heortling');
+
     this.formHomeland.controls['specie'].valueChanges.subscribe(specieName => {
-      const specie = this.species.find(item => item.name === specieName);
-      if (specie) {
-        this.store.dispatch(new CharacterUpdateSpecie(<Specie>specie));
-      }
+      this.selectSpecie(specieName);
     });
 
     this.formHomeland.controls['culture'].valueChanges.subscribe(cultureName => {
-      const splitName = cultureName.split('.');
-      const homelandName = splitName[0] + '.' + splitName[1] + '.name';
-      const homeland = this.homelands.find(item => item.name === homelandName);
-      if (homeland) {
-        const culture = homeland.cultures.find(item => item.name === cultureName);
-        if (culture) {
-          this.store.dispatch(new CharacterUpdateCulture(<Culture>culture));
-        }
-      }
-
+      this.selectCulture(cultureName);
     });
+  }
+
+  selectSpecie(specieName: string): void {
+    const specie = this.species.find(item => item.name === specieName);
+    if (specie) {
+      this.store.dispatch(new CharacterUpdateSpecie(<Specie>specie));
+    }
+  }
+
+  selectCulture(cultureName: string): void {
+    const splitName = cultureName.split('.');
+    const homelandName = splitName[0] + '.' + splitName[1] + '.name';
+    const homeland = this.homelands.find(item => item.name === homelandName);
+    if (homeland) {
+      const culture = homeland.cultures.find(item => item.name === cultureName);
+      if (culture) {
+        this.store.dispatch(new CharacterUpdateCulture(<Culture>culture));
+      }
+    }
   }
 
 

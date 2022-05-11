@@ -1,10 +1,9 @@
 import { Action, State, StateContext } from '@ngxs/store';
 import {
+  categoriesToCharacterCategories,
   Character,
   CharacteristicsValues,
-  CharacterSkill,
-  CharacterSkillCategorie,
-  getCharacteristicValue,
+  CharacterSkillCategorie, convertFormula,
   Skill,
   SkillCategorie,
   SkillProvenance
@@ -60,7 +59,7 @@ export class CharacterState {
 
   fusionSkillsWithSpecie(initialCategories: CharacterSkillCategorie[], specieCategories: SkillCategorie[], characteristics: CharacteristicsValues): CharacterSkillCategorie[] {
     let responseCategories = initialCategories;
-    const specieCharacterCategories = this.categoriesToCharacterCategories(specieCategories, SkillProvenance.Specie, characteristics);
+    const specieCharacterCategories = categoriesToCharacterCategories(specieCategories, SkillProvenance.Specie, characteristics);
 
     if (responseCategories && responseCategories.length > 0) {
       specieCharacterCategories.forEach((categorie: CharacterSkillCategorie) => {
@@ -103,7 +102,7 @@ export class CharacterState {
           value = skill.value;
         } else {
           if (skill.formula) {
-            value = this.convertFormula(characteristics, skill.formula);
+            value = convertFormula(characteristics, skill.formula);
           }
         }
 
@@ -122,57 +121,11 @@ export class CharacterState {
     return responseCategories;
   }
 
-  skillToCharacterSkill(skill: Skill, provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkill {
-    const name = skill.name;
-    let valueSpecie = 0;
-    let valueCulture = 0;
 
-    let value: number;
-    if (skill.value) {
-      value = skill.value;
-    } else {
-      if (skill.formula) {
-        value = this.convertFormula(characteristics, skill.formula);
-      } else {
-        value = 0;
-      }
-    }
-    if (provenance === SkillProvenance.Culture) {
-      valueCulture = value;
-    } else {
-      valueSpecie = value;
-    }
 
-    return {
-      name,
-      valueSpecie,
-      valueCulture
-    };
 
-  }
 
-  skillsToCharacterSkills(skills: Skill[], provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkill[] {
-    return skills.map((item: Skill) => this.skillToCharacterSkill(item, provenance, characteristics));
-  }
 
-  categorieToCharacterCategorie(categorie: SkillCategorie, provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkillCategorie {
-    return {
-      name: categorie.name,
-      bonus: 0,
-      skills: this.skillsToCharacterSkills(categorie.items, provenance, characteristics)
-    }
-  }
-
-  categoriesToCharacterCategories(categories: SkillCategorie[], provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkillCategorie[] {
-    return categories.map(categorie => this.categorieToCharacterCategorie(categorie, provenance, characteristics));
-  }
-
-  convertFormula(characteristics: CharacteristicsValues, formula: string): number {
-    const [charName, factor] = formula.split('*');
-    const nFactor = Number(factor);
-    const valueChar = getCharacteristicValue(characteristics, charName);
-    return valueChar * nFactor;
-  }
 
 
 }

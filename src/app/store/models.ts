@@ -125,8 +125,11 @@ export interface Character {
 
 export interface CharacterSkill {
   name: string;
+  param?: string;
   valueSpecie: number;
+  formulaSpecie?: string;
   valueCulture: number;
+  formulaCulture?: string;
 }
 
 export interface CharacterSkillCategorie {
@@ -138,4 +141,63 @@ export interface CharacterSkillCategorie {
 export enum SkillProvenance {
   Specie,
   Culture
+}
+
+export function skillToCharacterSkill(skill: Skill, provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkill {
+  const name = skill.name;
+  const param = skill.param
+  let valueSpecie = 0;
+  let valueCulture = 0;
+  let formulaSpecie: string | undefined = undefined;
+  let formulaCulture: string | undefined  = undefined;
+
+  let value: number;
+  if (skill.value) {
+    value = skill.value;
+  } else {
+    if (skill.formula) {
+      value = convertFormula(characteristics, skill.formula);
+    } else {
+      value = 0;
+    }
+  }
+  if (provenance === SkillProvenance.Culture) {
+    valueCulture = value;
+    formulaCulture = skill.formula;
+  } else {
+    valueSpecie = value;
+    formulaSpecie = skill.formula
+  }
+
+  return {
+    name,
+    param,
+    valueSpecie,
+    valueCulture,
+    formulaCulture,
+    formulaSpecie
+  };
+}
+
+export function skillsToCharacterSkills(skills: Skill[], provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkill[] {
+  return skills.map((item: Skill) => skillToCharacterSkill(item, provenance, characteristics));
+}
+
+export function categorieToCharacterCategorie(categorie: SkillCategorie, provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkillCategorie {
+  return {
+    name: categorie.name,
+    bonus: 0,
+    skills: skillsToCharacterSkills(categorie.items, provenance, characteristics)
+  }
+}
+
+export function categoriesToCharacterCategories(categories: SkillCategorie[], provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkillCategorie[] {
+  return categories.map(categorie => categorieToCharacterCategorie(categorie, provenance, characteristics));
+}
+
+export function convertFormula(characteristics: CharacteristicsValues, formula: string): number {
+  const [charName, factor] = formula.split('*');
+  const nFactor = Number(factor);
+  const valueChar = getCharacteristicValue(characteristics, charName);
+  return valueChar * nFactor;
 }
