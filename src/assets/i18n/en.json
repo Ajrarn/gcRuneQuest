@@ -209,8 +209,8 @@
 			"orate": "Orate",
 			"sing": "Sing",
 			"speak_mostali": "Speak Mostali",
-			"speak_other_language": "Speak Other Language ({{name}})",
-			"speak_own_language": "Speak Own Language",
+			"speak_other_language": "Speak Other Language ({{value}})",
+			"speak_own_language": "Speak Own Language {{value}}",
 			"speak_spiritspeech": "Speak Spiritspeech",
 			"speak_tradetalk": "Speak (Tradetalk)"
 		},

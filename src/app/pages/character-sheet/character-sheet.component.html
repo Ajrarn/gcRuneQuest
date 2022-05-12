@@ -19,7 +19,7 @@
             [(nzExpand)]="item.expand"
             (nzExpandChange)="collapse(mapOfExpandedData[data.name], item, $event)"
           >
-            {{ item.param ? (item.name | translate:{value: item.param}) :  (item.name | translate) }}
+            {{ item.param ? (item.name | translate:{value: item.param | translate}) :  (item.name | translate) }}
           </td>
           <td>{{ item.valueSpecie }}</td>
           <td>{{ item.valueCulture }}</td>

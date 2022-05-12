@@ -110,11 +110,12 @@ export class CharacterState {
           let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name);
           if (initialSkill) {
             initialSkill.valueCulture = value;
+            initialSkill.param = skill.param;
           } else {
-            responseCategorie.skills.push({name: skill.name, valueCulture: value, valueSpecie:0});
+            responseCategorie.skills.push({name: skill.name, valueCulture: value, param: skill.param, valueSpecie:0});
           }
         } else {
-          responseCategories.push({name: categorieName, bonus: 0, skills: [{name: skill.name, valueCulture: value, valueSpecie:0}]});
+          responseCategories.push({name: categorieName, bonus: 0, skills: [{name: skill.name, valueCulture: value, param: skill.param, valueSpecie:0}]});
         }
       });
     }

@@ -209,8 +209,8 @@
 			"orate": "Éloquence",
 			"sing": "Chant",
 			"speak_mostali": "Parler mostali",
-			"speak_other_language": "Langue étrangère",
-			"speak_own_language": "Langue natale",
+			"speak_other_language": "Langue étrangère ({{value}})",
+			"speak_own_language": "Langue natale {{value}}",
 			"speak_spiritspeech": "Langues des esprits",
 			"speak_tradetalk": "Langue des marchands"
 		},
