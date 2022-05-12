@@ -1,5 +1,5 @@
 <div class="my-row">
-  <div class="box" nz-resizable (nzResize)="onResize($event)" [style.width.px]="width">
+  <div class="box">
     <h1>{{'static.creation_steps' | translate}}</h1>
     <nz-tabset [nzTabPosition]="'left'">
       <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
@@ -10,20 +10,24 @@
         <div *ngIf="tab.name === 'steps.homeland'">
           <form [formGroup]="formHomeland">
             <nz-space nzDirection="vertical">
-              <nz-space *nzSpaceItem>
-                <p *nzSpaceItem>Race</p>
-                <nz-select [formControlName]="'specie'" *nzSpaceItem>
-                  <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name |translate}}"></nz-option>
-                </nz-select>
-              </nz-space>
-              <nz-space *nzSpaceItem>
-                <p *nzSpaceItem>Culture</p>
-                <nz-select [formControlName]="'culture'">
-                  <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
-                    <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture.name}}" nzLabel="{{culture.name |translate}}"></nz-option>
-                  </nz-option-group>
-                </nz-select>
-              </nz-space>
+              <nz-form-item>
+                <nz-form-label nzFor="selectSpecie">{{'static.specie' | translate }}</nz-form-label>
+                <nz-form-control>
+                  <nz-select [formControlName]="'specie'" id="selectSpecie">
+                    <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name |translate}}"></nz-option>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label nzFor="selectCulture">{{'static.culture' | translate }}</nz-form-label>
+                <nz-form-control>
+                  <nz-select [formControlName]="'culture'" id="selectCulture">
+                    <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
+                      <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture.name}}" nzLabel="{{culture.name |translate}}"></nz-option>
+                    </nz-option-group>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
             </nz-space>
           </form>
         </div>
@@ -50,11 +54,6 @@
         </div>
       </nz-tab>
     </nz-tabset>
-    <nz-resize-handle nzDirection="right">
-      <div class="right-wrap">
-        <i class="right" nz-icon nzType="more" nzTheme="outline"></i>
-      </div>
-    </nz-resize-handle>
   </div>
   <div>
     <h1>{{'static.character' | translate}}</h1>

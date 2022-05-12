@@ -49,6 +49,9 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzResizableModule, NzResizableService } from 'ng-zorro-antd/resizable';
 import { CharacterState } from './store/character.state';
 import { CharacterSheetComponent } from './pages/character-sheet/character-sheet.component';
+import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 registerLocaleData(fr);
 
@@ -94,7 +97,10 @@ registerLocaleData(fr);
     NzListModule,
     NzGridModule,
     NzSelectModule,
-    NzResizableModule
+    NzResizableModule,
+    NzTreeViewModule,
+    NzSwitchModule,
+    NzFormModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady, NzResizableService],
   bootstrap: [AppComponent]

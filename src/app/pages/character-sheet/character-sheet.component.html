@@ -1,3 +1,35 @@
-<div>
-{{getCharacter()}}
+<div class="character-sheet">
+  <nz-table *ngIf="sheet && sheet.skills && sheet.skills.length > 0" #expandTable [nzData]="sheet.skills"
+            nzTableLayout="fixed" [nzScroll]="{ y: '500px' }" nzSize="middle" [nzShowPagination]="false"
+            [nzPageSize]="150">
+    <thead>
+    <tr>
+      <th>{{'static.skills' | translate}}</th>
+      <th>{{'static.specie' | translate}}</th>
+      <th>{{'static.culture' | translate}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let data of expandTable.data">
+      <ng-container *ngFor="let item of mapOfExpandedData[data.name]">
+        <tr *ngIf="(item.parent && item.parent.expand) || !item.parent">
+          <td
+            [nzIndentSize]="item.level! * 20"
+            [nzShowExpand]="!!item.skills"
+            [(nzExpand)]="item.expand"
+            (nzExpandChange)="collapse(mapOfExpandedData[data.name], item, $event)"
+          >
+            {{ item.param ? (item.name | translate:{value: item.param}) :  (item.name | translate) }}
+          </td>
+          <td>{{ item.valueSpecie }}</td>
+          <td>{{ item.valueCulture }}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+    </tbody>
+  </nz-table>
+
+
+  <!--div>{{getCharacter()}}</div-->
+
 </div>

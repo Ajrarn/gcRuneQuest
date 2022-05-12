@@ -374,6 +374,7 @@
 		"characteristics": "Characteristics",
 		"creation": "Creation",
 		"creation_steps": "Creation steps",
+		"culture": "Culture",
 		"cultures": "Cultures",
 		"datas": "Datas",
 		"language": "Language",
@@ -382,6 +383,7 @@
 		"occupations": "Occupations",
 		"runes": "Runes",
 		"skills": "Skills",
+		"specie": "Specie",
 		"species": "Species",
 		"title": "Runequest Character Creation Assistant "
 	},

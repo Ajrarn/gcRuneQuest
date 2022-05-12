@@ -3,7 +3,6 @@ import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SpeciesSelect} from '../../store/species.state';
-import { NzResizeEvent } from 'ng-zorro-antd/resizable';
 import { Character, Culture, Homeland, Specie } from '../../store/models';
 import { CharacterUpdateCulture, CharacterUpdateSpecie } from '../../store/character.actions';
 
@@ -127,15 +126,4 @@ export class CharacterComponent {
     return response;
   }
 
-  width = 800;
-  height = 200;
-  id = -1;
-
-  onResize({ width, height }: NzResizeEvent): void {
-    cancelAnimationFrame(this.id);
-    this.id = requestAnimationFrame(() => {
-      this.width = width!;
-      this.height = height!;
-    });
-  }
 }

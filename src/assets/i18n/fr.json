@@ -374,6 +374,7 @@
 		"characteristics": "Caractéristiques",
 		"creation": "Création",
 		"creation_steps": "Étapes de création",
+		"culture": "Culture",
 		"cultures": "Cultures",
 		"datas": "Données",
 		"language": "Langage",
@@ -382,6 +383,7 @@
 		"occupations": "Occupations",
 		"runes": "Runes",
 		"skills": "Compétences",
+		"specie": "Race",
 		"species": "Races",
 		"title": "Assistant de Création de Personnage pour RuneQuest"
 	},
