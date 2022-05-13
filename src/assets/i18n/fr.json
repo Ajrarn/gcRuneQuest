@@ -385,7 +385,8 @@
 		"skills": "Compétences",
 		"specie": "Race",
 		"species": "Races",
-		"title": "Assistant de Création de Personnage pour RuneQuest"
+		"title": "Assistant de Création de Personnage pour RuneQuest",
+		"total": "Total"
 	},
 	"steps": {
 		"characteristics": "Caractéristiques",

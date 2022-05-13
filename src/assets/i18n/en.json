@@ -385,7 +385,8 @@
 		"skills": "Skills",
 		"specie": "Specie",
 		"species": "Species",
-		"title": "Runequest Character Creation Assistant "
+		"title": "Runequest Character Creation Assistant ",
+		"total": "Total"
 	},
 	"steps": {
 		"characteristics": "Characteristics",

@@ -35,7 +35,7 @@
     { "name": "skills.melee_weapons.dagger", "value": 10 },
     { "name": "skills.communication.dance", "value": 5 },
     { "name": "skills.communication.sing", "value": 10 },
-    { "name": "skills.melee_weapons.1H_spear", "value": 10 },
+    { "name": "skills.melee_weapons.1h_spear", "value": 10 },
     { "name": "skills.communication.speak_own_language", "param": "languages.heortling", "value": 50 },
     { "name": "skills.melee_weapons.broadsword", "value": 15 },
     { "name": "skills.communication.speak_other_language", "param": "languages.tradetalk", "value": 10 },

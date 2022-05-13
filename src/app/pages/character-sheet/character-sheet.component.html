@@ -7,6 +7,7 @@
       <th>{{'static.skills' | translate}}</th>
       <th>{{'static.specie' | translate}}</th>
       <th>{{'static.culture' | translate}}</th>
+      <th>{{'static.total' | translate}}</th>
     </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
           </td>
           <td>{{ item.valueSpecie }}</td>
           <td>{{ item.valueCulture }}</td>
+          <td>{{ getTotal(item) }}</td>
         </tr>
       </ng-container>
     </ng-container>

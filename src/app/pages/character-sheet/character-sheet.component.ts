@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Character } from '../../store/models';
 import { Select } from '@ngxs/store';
@@ -23,7 +23,7 @@ export interface TreeNodeInterface {
   templateUrl: './character-sheet.component.html',
   styleUrls: ['./character-sheet.component.less']
 })
-export class CharacterSheetComponent implements OnInit{
+export class CharacterSheetComponent {
 
   @Select((state: { character: any; }) => state.character) sheet$: Observable<Character> | undefined;
   sheet: Character | undefined;
@@ -48,70 +48,6 @@ export class CharacterSheetComponent implements OnInit{
     return response;
   }
 
-  /*listOfMapData: TreeNodeInterface[] = [
-    {
-      key: `1`,
-      name: 'John Brown sr.',
-      age: 60,
-      address: 'New York No. 1 Lake Park',
-      children: [
-        {
-          key: `1-1`,
-          name: 'John Brown',
-          age: 42,
-          address: 'New York No. 2 Lake Park'
-        },
-        {
-          key: `1-2`,
-          name: 'John Brown jr.',
-          age: 30,
-          address: 'New York No. 3 Lake Park',
-          children: [
-            {
-              key: `1-2-1`,
-              name: 'Jimmy Brown',
-              age: 16,
-              address: 'New York No. 3 Lake Park'
-            }
-          ]
-        },
-        {
-          key: `1-3`,
-          name: 'Jim Green sr.',
-          age: 72,
-          address: 'London No. 1 Lake Park',
-          children: [
-            {
-              key: `1-3-1`,
-              name: 'Jim Green',
-              age: 42,
-              address: 'London No. 2 Lake Park',
-              children: [
-                {
-                  key: `1-3-1-1`,
-                  name: 'Jim Green jr.',
-                  age: 25,
-                  address: 'London No. 3 Lake Park'
-                },
-                {
-                  key: `1-3-1-2`,
-                  name: 'Jimmy Green sr.',
-                  age: 18,
-                  address: 'London No. 4 Lake Park'
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      key: `2`,
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park'
-    }
-  ];*/
   mapOfExpandedData: { [key: string]: TreeNodeInterface[] } = {};
 
   collapse(array: TreeNodeInterface[], data: TreeNodeInterface, $event: boolean): void {
@@ -154,7 +90,14 @@ export class CharacterSheetComponent implements OnInit{
     }
   }
 
-  ngOnInit(): void {
+  getTotal(item: TreeNodeInterface): number | null {
+    if (!!item.valueCulture && !!item.valueSpecie) {
+      return null;
+    }
+
+    let value: number = !!item.valueSpecie ? item.valueSpecie : 0;
+    value = !!item.valueCulture ? value + item.valueCulture : value;
+    return value;
 
   }
 
