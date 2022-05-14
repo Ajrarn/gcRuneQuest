@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Character, Culture, Homeland, Specie } from '../../store/models';
 import { CharacterUpdateCulture, CharacterUpdateSpecie } from '../../store/character.actions';
 import * as _ from 'lodash';
@@ -39,8 +39,8 @@ export class CharacterComponent {
     this.store.dispatch(new ChangeTitle('static.character'));
 
     this.formHomeland = fb.group({
-      specie: fb.control('species.human'),
-      culture: fb.control('cultures.sartar.heortling'),
+      specie: fb.control('species.human', [ Validators.required ]),
+      culture: fb.control('cultures.sartar.heortling', [ Validators.required ]),
       cultureSelectAll: fb.control(false)
     });
 
@@ -129,8 +129,11 @@ export class CharacterComponent {
     let response: string | null;
 
     switch (key) {
+      case 'steps.homeland':
+        response = this.formHomeland.status === 'VALID' ? 'check' : 'warning';
+        break;
       case 'steps.cult':
-        response = 'check';
+        response = 'warning';
         break;
       case 'steps.other_informations':
         response = 'warning';
@@ -146,8 +149,11 @@ export class CharacterComponent {
     let response: string;
 
     switch (key) {
+      case 'steps.homeland':
+        response = this.formHomeland.status === 'VALID' ? 'color:green' : 'color:orange';
+        break;
       case 'steps.cult':
-        response = 'color:green';
+        response = 'color:orange';
         break;
       case 'steps.other_informations':
         response = 'color:orange';
