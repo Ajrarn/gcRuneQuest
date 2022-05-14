@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Action, Selector, State, StateContext } from '@ngxs/store';
+import { Action, State, StateContext } from '@ngxs/store';
 import { LoadAllSpecies,LoadSpecie } from './species.actions';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
@@ -7,10 +7,6 @@ import { LoadOccupation } from './occupations.actions';
 import { AbstractDataState } from './abstract-data-state';
 import { Specie } from './models';
 
-export interface SpeciesSelect {
-  name: string;
-  cultures: string[];
-}
 
 @State<Specie[]>({
   name: 'species',
@@ -23,15 +19,6 @@ export class SpeciesState extends AbstractDataState {
     super(httpClient);
   }
 
-  @Selector()
-  static specieForSelect(state: Specie[]): SpeciesSelect[] {
-    return state.map((item: Specie) => {
-      return {
-        name: item.name,
-        cultures: item.cultures
-      };
-    });
-  }
 
   @Action(LoadAllSpecies)
   loadAllSpecies(ctx: StateContext<Specie[]>) {

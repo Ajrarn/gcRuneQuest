@@ -67,7 +67,7 @@ export class CharacterState {
         if (responseCategorie) {
           categorie.skills.forEach(skill => {
             // @ts-ignore
-            let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name);
+            let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name && sk.param === skill.param);
             if (initialSkill) {
               initialSkill.valueSpecie = skill.valueSpecie;
             } else {
@@ -107,7 +107,7 @@ export class CharacterState {
         }
 
         if (responseCategorie) {
-          let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name);
+          let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name && sk.param === skill.param);
           if (initialSkill) {
             initialSkill.valueCulture = value;
             initialSkill.param = skill.param;

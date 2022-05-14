@@ -149,6 +149,17 @@
 		"red_emperor": "Red Emperor",
 		"white_bull": "White Bull"
 	},
+	"riding_beasts": {
+		"bison": "Bison",
+		"herd_man": "Herd-man, Trained",
+		"high_llama": "High Llama",
+		"horse": "Horse",
+		"impala": "Impala",
+		"mule": "Mule",
+		"rhino": "Rhino",
+		"sable_antelope": "Sable Antelope",
+		"zebra": "Zebra"
+	},
 	"runes": {
 		"conditions": {
 			"fate": "Fate",
@@ -191,7 +202,7 @@
 			"jump": "Jump",
 			"jump_or_climb": "Jump or Climb",
 			"name": "Agility",
-			"ride": "Ride",
+			"ride": "Ride ({{value}})",
 			"ride_any_or_drive_chariot": "Ride (any) or Drive Chariot ",
 			"swim": "Swim"
 		},
@@ -382,6 +393,7 @@
 		"occupation": "Occupation",
 		"occupations": "Occupations",
 		"runes": "Runes",
+		"show_all": "Show All",
 		"skills": "Skills",
 		"specie": "Specie",
 		"species": "Species",

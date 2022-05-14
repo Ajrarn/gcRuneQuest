@@ -149,6 +149,17 @@
 		"red_emperor": "Empereur rouge",
 		"white_bull": "Taureau Blanc"
 	},
+	"riding_beasts": {
+		"bison": "Bison",
+		"herd_man": "Bétail humain, dressé",
+		"high_llama": "Grand lama",
+		"horse": "Cheval",
+		"impala": "Impala",
+		"mule": "Mule",
+		"rhino": "Rhinocéros",
+		"sable_antelope": "Antilope noire",
+		"zebra": "Zèbre"
+	},
 	"runes": {
 		"conditions": {
 			"fate": "Destinée",
@@ -191,7 +202,7 @@
 			"jump": "Saut",
 			"jump_or_climb": "Saut ou Escalade",
 			"name": "Agilité",
-			"ride": "Monte",
+			"ride": "Monte ({{value}})",
 			"ride_any_or_drive_chariot": "Monte (au choix) ou Conduite ",
 			"swim": "Nage"
 		},
@@ -382,6 +393,7 @@
 		"occupation": "Occupation",
 		"occupations": "Occupations",
 		"runes": "Runes",
+		"show_all": "Afficher Toutes",
 		"skills": "Compétences",
 		"specie": "Race",
 		"species": "Races",

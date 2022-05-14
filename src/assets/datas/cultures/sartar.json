@@ -31,7 +31,15 @@
     "occupations.common.warrior.heavy_cavalry"
   ],
   "skills": [
-    { "name": "skills.agility.ride_any", "value": 5 },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.bison" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.herd_man" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.high_llama" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.horse" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.impala" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.mule" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.rhino" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.sable_antelope" },
+    { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.zebra" },
     { "name": "skills.melee_weapons.dagger", "value": 10 },
     { "name": "skills.communication.dance", "value": 5 },
     { "name": "skills.communication.sing", "value": 10 },

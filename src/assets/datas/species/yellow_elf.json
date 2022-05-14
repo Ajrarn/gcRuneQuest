@@ -9,6 +9,7 @@
     "DEX": "3D6+3",
     "CHA": "3D6"
   },
+  "cultures": ["cultures.elder_races.aldryami"],
   "runes": [
     { "name": "elemental", "value": 60 },
     { "name": "elemental", "value": 40 },

@@ -9,14 +9,21 @@
     "DEX": "3D6",
     "CHA": "3D6"
   },
+  "cultures": [
+    "cultures.esrolia.esrolia",
+    "cultures.grazelands.grazelands",
+    "cultures.prax.bison_rider",
+    "cultures.prax.high_llama_rider",
+    "cultures.prax.impala_rider",
+    "cultures.prax.sable_rider",
+    "cultures.sartar.heortling",
+    "cultures.tarsh.lunar_tarsh",
+    "cultures.tarsh.old_tarsh"
+  ],
   "runes": [
     { "name": "elemental", "value": 60 },
     { "name": "elemental", "value": 40 },
     { "name": "elemental", "value": 20 }
-  ],
-  "cultures": [ "cultures.prax.bison_rider", "cultures.esrolia", "cultures.grazelands", "cultures.prax.high_llama_rider",
-    "cultures.prax.impala_rider", "cultures.tarsh.lunar_tarsh", "cultures.tarsh.old_tarsh", "cultures.prax.pol_joni",
-    "cultures.prax.sable_rider", "cultures.sartar"
   ],
   "skills": [
     {
@@ -27,7 +34,15 @@
         { "name": "skills.agility.dodge", "formula": "DEX*2" },
         { "name": "skills.agility.drive_chariot", "value": 5 },
         { "name": "skills.agility.jump", "formula": "DEX*3" },
-        { "name": "skills.agility.ride", "value": 5 },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.bison" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.herd_man" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.high_llama" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.horse" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.impala" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.mule" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.rhino" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.sable_antelope" },
+        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.zebra" },
         { "name": "skills.agility.swim", "value": 15 }
       ]
     },

@@ -9,6 +9,7 @@
     "DEX": "3D6",
     "CHA": "3D6"
   },
+  "cultures": ["cultures.agimori.agimori"],
   "runes": [
     { "name": "runes.elemental.fire", "value": 100 }
   ],

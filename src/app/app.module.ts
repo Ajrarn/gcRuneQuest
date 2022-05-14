@@ -52,6 +52,7 @@ import { CharacterSheetComponent } from './pages/character-sheet/character-sheet
 import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 registerLocaleData(fr);
 
@@ -100,7 +101,8 @@ registerLocaleData(fr);
     NzResizableModule,
     NzTreeViewModule,
     NzSwitchModule,
-    NzFormModule
+    NzFormModule,
+    NzCheckboxModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady, NzResizableService],
   bootstrap: [AppComponent]

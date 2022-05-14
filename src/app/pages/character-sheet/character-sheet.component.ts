@@ -84,25 +84,21 @@ export class CharacterSheetComponent {
   }
 
   visitNode(node: TreeNodeInterface, hashMap: { [key: string]: boolean }, array: TreeNodeInterface[]): void {
-    if (!hashMap[node.name]) {
-      hashMap[node.name] = true;
+    if (!hashMap[node.name + node.param]) {
+      hashMap[node.name + node.param] = true;
       array.push(node);
     }
   }
 
   getTotal(item: TreeNodeInterface): number | null {
-    if (!!item.valueCulture && !!item.valueSpecie) {
+    if ((item.valueCulture === null || item.valueCulture === undefined) && (item.valueSpecie === null || item.valueSpecie === undefined)) {
       return null;
     }
 
-    let value: number = !!item.valueSpecie ? item.valueSpecie : 0;
-    value = !!item.valueCulture ? value + item.valueCulture : value;
+    let value: number = !(item.valueSpecie === null || item.valueSpecie === undefined) ? item.valueSpecie : 0;
+    value = !(item.valueCulture === null || item.valueCulture === undefined) ? value + item.valueCulture : value;
     return value;
 
   }
-
-
-
-
 
 }
