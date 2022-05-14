@@ -18,20 +18,17 @@
                   </nz-select>
                 </nz-form-control>
               </nz-form-item>
-              <nz-space nzDirection="horizontal">
-                <nz-form-item nzSpaceItem>
-                  <nz-form-label nzFor="selectCulture">{{'static.culture' | translate }}</nz-form-label>
-                  <nz-form-control>
-                    <nz-select formControlName="culture" id="selectCulture">
-                      <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
-                        <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture.name}}" nzLabel="{{culture.name |translate}}"></nz-option>
-                      </nz-option-group>
-                    </nz-select>
-                  </nz-form-control>
-                </nz-form-item>
-                <label nzSpaceItem nz-checkbox formControlName="cultureSelectAll">{{'static.show_all' | translate}}</label>
-              </nz-space>
-
+              <nz-form-item>
+                <nz-form-label nzFor="selectCulture">{{'static.culture' | translate }}</nz-form-label>
+                <nz-form-control>
+                  <nz-select formControlName="culture" id="selectCulture">
+                    <nz-option-group nzLabel="{{homeland.name | translate}}" *ngFor="let homeland of homelands">
+                      <nz-option *ngFor="let culture of homeland.cultures" nzValue="{{culture.name}}" nzLabel="{{culture.name |translate}}"></nz-option>
+                    </nz-option-group>
+                  </nz-select>
+                </nz-form-control>
+                <label nz-checkbox formControlName="cultureSelectAll">{{'static.show_all' | translate}}</label>
+              </nz-form-item>
             </nz-space>
           </form>
         </div>
