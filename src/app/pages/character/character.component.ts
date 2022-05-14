@@ -6,6 +6,16 @@ import { Character, Culture, Homeland, Specie } from '../../store/models';
 import { CharacterUpdateCulture, CharacterUpdateSpecie } from '../../store/character.actions';
 import * as _ from 'lodash';
 
+enum Icon {
+  WARNING = 'warning',
+  CHECK = 'check'
+}
+
+enum IconStyle {
+  ORANGE = 'color:orange',
+  GREEN = 'color:green'
+}
+
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
@@ -126,42 +136,30 @@ export class CharacterComponent {
 
 
   getIcon(key: string | null): string {
-    let response: string | null;
-
     switch (key) {
       case 'steps.homeland':
-        response = this.formHomeland.status === 'VALID' ? 'check' : 'warning';
-        break;
+        return this.formHomeland.status === 'VALID' ? Icon.CHECK : Icon.WARNING;
       case 'steps.cult':
-        response = 'warning';
-        break;
+        return Icon.WARNING;
       case 'steps.other_informations':
-        response = 'warning';
-        break;
+        return Icon.WARNING;
       default:
-        response = 'warning';
+        return Icon.WARNING;
     }
-    return response;
   }
 
-  getStyleIcon(key:string | null): string | null {
-
-    let response: string;
+  getStyleIcon(key:string | null): string {
 
     switch (key) {
       case 'steps.homeland':
-        response = this.formHomeland.status === 'VALID' ? 'color:green' : 'color:orange';
-        break;
+        return this.formHomeland.status === 'VALID' ? IconStyle.GREEN : IconStyle.ORANGE;
       case 'steps.cult':
-        response = 'color:orange';
-        break;
+        return IconStyle.ORANGE;
       case 'steps.other_informations':
-        response = 'color:orange';
-        break;
+        return IconStyle.ORANGE;
       default:
-       response = 'color:orange';
+       return IconStyle.ORANGE;
     }
-    return response;
   }
 
 }
