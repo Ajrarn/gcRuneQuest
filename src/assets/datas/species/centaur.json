@@ -42,8 +42,8 @@
         { "name": "skills.communication.intrigue", "value": 5},
         { "name": "skills.communication.orate", "value": 10},
         { "name": "skills.communication.sing", "value": 10},
-        { "name": "skills.communication.speak_other_language", "value": 0 },
-        { "name": "skills.communication.speak_own_language", "value": 50 }
+        { "name": "skills.communication.speak_other_language", "param": "static.any", "value": 0 },
+        { "name": "skills.communication.speak_own_language", "param": "static.any", "value": 50 }
       ]
     },
     {
@@ -54,23 +54,23 @@
         { "name": "skills.knowledge.battle", "value": 10 },
         { "name": "skills.knowledge.bureaucracy", "value": 0 },
         { "name": "skills.knowledge.celestial_lore", "value": 5 },
-        { "name": "skills.knowledge.cult_lore", "value": 5 },
-        { "name": "skills.knowledge.customs_local", "value": 25 },
-        { "name": "skills.knowledge.customs", "value": 0 },
+        { "name": "skills.knowledge.cult_lore", "param": "static.any", "value": 5 },
+        { "name": "skills.knowledge.customs_local", "param": "static.any", "value": 25 },
+        { "name": "skills.knowledge.customs", "param": "static.any", "value": 0 },
         { "name": "skills.knowledge.elder_race_lore", "value": 5 },
         { "name": "skills.knowledge.evaluate", "value": 10 },
         { "name": "skills.knowledge.farm", "value": 10 },
         { "name": "skills.knowledge.first_aid", "value": 10 },
         { "name": "skills.knowledge.game", "value": 15 },
         { "name": "skills.knowledge.herd", "value": 5 },
-        { "name": "skills.knowledge.homeland_lore_own", "value": 30 },
-        { "name": "skills.knowledge.homeland_lore", "value": 0 },
+        { "name": "skills.knowledge.homeland_lore_own", "param": "static.any", "value": 30 },
+        { "name": "skills.knowledge.homeland_lore", "param": "static.any", "value": 0 },
         { "name": "skills.knowledge.library_use", "value": 0 },
         { "name": "skills.knowledge.manage_household", "value": 10 },
         { "name": "skills.knowledge.mineral_lore", "value": 5 },
         { "name": "skills.knowledge.peaceful_cut", "value": 10 },
         { "name": "skills.knowledge.plant_lore", "value": 5 },
-        { "name": "skills.knowledge.read_write", "value": 0 },
+        { "name": "skills.knowledge.read_write", "param": "static.any", "value": 0 },
         { "name": "skills.knowledge.shiphandling", "value": 0 },
         { "name": "skills.knowledge.survival", "value": 15 },
         { "name": "skills.knowledge.treat_disease", "value": 5 },
@@ -89,24 +89,24 @@
         { "name": "skills.magic.spirit_lore", "value": 0 },
         { "name": "skills.magic.spirit_travel", "value": 10 },
         { "name": "skills.magic.understand_herd_beast", "value": 0 },
-        { "name": "skills.magic.worship", "value": 5 }
+        { "name": "skills.magic.worship", "param": "static.any", "value": 5 }
       ]
     },
     {
       "name": "skills.manipulation.name",
       "items": [
         { "name": "skills.manipulation.conceal", "value": 5 },
-        { "name": "skills.manipulation.craft", "value": 5 },
+        { "name": "skills.manipulation.craft", "param": "static.any", "value": 5 },
         { "name": "skills.manipulation.devise", "value": 5 },
-        { "name": "skills.manipulation.play_instrument", "value": 5 },
+        { "name": "skills.manipulation.play_instrument", "param": "static.any", "value": 5 },
         { "name": "skills.manipulation.sleight", "value": 5 }
       ]
     },
     {
       "name": "skills.perception.name",
       "items": [
-        { "name": "skills.perception.insight_own_specie", "value": 20 },
-        { "name": "skills.perception.insight", "value": 0 },
+        { "name": "skills.perception.insight_own_specie", "param": "static.any", "value": 20 },
+        { "name": "skills.perception.insight", "param": "static.any", "value": 0 },
         { "name": "skills.perception.listen", "value": 25 },
         { "name": "skills.perception.scan", "value": 25 },
         { "name": "skills.perception.search", "value": 25 },
