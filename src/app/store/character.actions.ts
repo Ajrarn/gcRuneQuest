@@ -1,9 +1,5 @@
-import { Character, Culture, Specie } from './models';
+import { Culture, Specie } from './models';
 
-export class UpdateCharacter {
-  static readonly type = '[Character] update';
-  constructor(public character: Character) {}
-}
 
 export class CharacterUpdateSpecie {
   static readonly type = '[Character] update specie';

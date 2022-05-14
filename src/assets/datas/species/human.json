@@ -34,15 +34,7 @@
         { "name": "skills.agility.dodge", "formula": "DEX*2" },
         { "name": "skills.agility.drive_chariot", "value": 5 },
         { "name": "skills.agility.jump", "formula": "DEX*3" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.bison" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.herd_man" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.high_llama" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.horse" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.impala" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.mule" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.rhino" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.sable_antelope" },
-        { "name": "skills.agility.ride", "value": 5, "param": "riding_beasts.zebra" },
+        { "name": "skills.agility.ride", "value": 5, "param": "static.any" },
         { "name": "skills.agility.swim", "value": 15 }
       ]
     },
@@ -60,8 +52,8 @@
         { "name": "skills.communication.intrigue", "value": 5},
         { "name": "skills.communication.orate", "value": 10},
         { "name": "skills.communication.sing", "value": 10},
-        { "name": "skills.communication.speak_other_language", "value": 0 },
-        { "name": "skills.communication.speak_own_language", "value": 50 }
+        { "name": "skills.communication.speak_other_language", "param": "static.any", "value": 0 },
+        { "name": "skills.communication.speak_own_language", "param": "static.any", "value": 50 }
       ]
     },
     {
@@ -82,7 +74,7 @@
         { "name": "skills.knowledge.game", "value": 15 },
         { "name": "skills.knowledge.herd", "value": 5 },
         { "name": "skills.knowledge.homeland_lore_own", "value": 30 },
-        { "name": "skills.knowledge.homeland_lore", "value": 0 },
+        { "name": "skills.knowledge.homeland_lore", "param": "static.any", "value": 0 },
         { "name": "skills.knowledge.library_use", "value": 0 },
         { "name": "skills.knowledge.manage_household", "value": 10 },
         { "name": "skills.knowledge.mineral_lore", "value": 5 },
@@ -114,9 +106,9 @@
       "name": "skills.manipulation.name",
       "items": [
         { "name": "skills.manipulation.conceal", "value": 5 },
-        { "name": "skills.manipulation.craft", "value": 5 },
+        { "name": "skills.manipulation.craft", "param": "static.any", "value": 5 },
         { "name": "skills.manipulation.devise", "value": 5 },
-        { "name": "skills.manipulation.play_instrument", "value": 5 },
+        { "name": "skills.manipulation.play_instrument", "param": "static.any", "value": 5 },
         { "name": "skills.manipulation.sleight", "value": 5 }
       ]
     },

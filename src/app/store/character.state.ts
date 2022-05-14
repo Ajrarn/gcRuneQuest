@@ -1,15 +1,14 @@
-import { Action, State, StateContext } from '@ngxs/store';
+import { Action, State, StateContext, Store } from '@ngxs/store';
 import {
   categoriesToCharacterCategories,
   Character,
-  CharacteristicsValues,
-  CharacterSkillCategorie, convertFormula,
-  Skill,
-  SkillCategorie,
-  SkillProvenance
+  CharacterSkill,Culture,
+  SkillProvenance,
+  skillsToCharacterSkills,
+  Specie
 } from './models';
 import { Injectable } from '@angular/core';
-import { CharacterUpdateCulture, CharacterUpdateSpecie, UpdateCharacter } from './character.actions';
+import { CharacterUpdateCulture, CharacterUpdateSpecie } from './character.actions';
 import * as _ from 'lodash';
 
 @State<Character>({
@@ -27,6 +26,8 @@ import * as _ from 'lodash';
       CHA: 0
     },
     skills: [],
+    specialSkillsSpecie: [],
+    specialSkillsCulture: [],
     spells: [],
     languages: []
   }
@@ -34,99 +35,101 @@ import * as _ from 'lodash';
 @Injectable()
 export class CharacterState {
 
-  @Action(UpdateCharacter)
-  updateCharacter(ctx: StateContext<Character>, action: UpdateCharacter) {
-    ctx.setState(action.character);
-  }
+  constructor(private store: Store){}
 
   @Action(CharacterUpdateSpecie)
   updateSpecie(ctx: StateContext<Character>, action: CharacterUpdateSpecie) {
-    let character = _.cloneDeep(ctx.getState());
     ctx.patchState({
-      specie: action.specie.name,
-      skills: this.fusionSkillsWithSpecie(character.skills, action.specie.skills, character.characteristics)
+      specie: action.specie.name
     });
+    this.updateCharacter(ctx);
   }
 
   @Action(CharacterUpdateCulture)
   updateCulture(ctx: StateContext<Character>, action: CharacterUpdateCulture) {
-    let character = _.cloneDeep(ctx.getState());
     ctx.patchState({
-      culture: action.culture.name,
-      skills: this.fusionSkillsWithCulture(character.skills, action.culture.skills, character.characteristics)
+      culture: action.culture.name
+    });
+    this.updateCharacter(ctx);
+  }
+
+  updateCharacter(ctx: StateContext<Character>) {
+    const character = _.cloneDeep(ctx.getState());
+
+    if (!!character.specie) {
+      this.skillsFromSpecie(ctx);
+    }
+    if (!!character.culture) {
+      this.skillsFromCulture(ctx);
+    }
+  }
+
+  skillsFromSpecie(ctx: StateContext<Character>): void {
+
+    const character = _.cloneDeep(ctx.getState());
+
+    const species = this.store.selectSnapshot(state => state.species);
+    const specie = species.find((item: Specie) => item.name === character.specie);
+
+    let specialSkills: CharacterSkill[] = [];
+    const specieCharacterCategories = categoriesToCharacterCategories(specie.skills, SkillProvenance.Specie, character.characteristics);
+
+    specieCharacterCategories.forEach(categorie => {
+      // first we search for the specials skills (with param)
+      let sSkills = categorie.skills.filter(skill => !!skill.param);
+      sSkills.forEach(item => {
+        specialSkills.push(item);
+        })
+      // then we delete those from the normal list
+      categorie.skills = categorie.skills.filter(skill => !skill.param);
+    });
+
+    ctx.patchState({
+      skills: specieCharacterCategories,
+      specialSkillsSpecie: specialSkills
     });
   }
 
-  fusionSkillsWithSpecie(initialCategories: CharacterSkillCategorie[], specieCategories: SkillCategorie[], characteristics: CharacteristicsValues): CharacterSkillCategorie[] {
-    let responseCategories = initialCategories;
-    const specieCharacterCategories = categoriesToCharacterCategories(specieCategories, SkillProvenance.Specie, characteristics);
+  skillsFromCulture(ctx: StateContext<Character>) {
+    const character = _.cloneDeep(ctx.getState());
 
-    if (responseCategories && responseCategories.length > 0) {
-      specieCharacterCategories.forEach((categorie: CharacterSkillCategorie) => {
-        let responseCategorie = responseCategories.find(cat => cat.name === categorie.name);
-        if (responseCategorie) {
-          categorie.skills.forEach(skill => {
-            // @ts-ignore
-            let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name && sk.param === skill.param);
-            if (initialSkill) {
-              initialSkill.valueSpecie = skill.valueSpecie;
-            } else {
-              // @ts-ignore
-              responseCategorie.skills.push(skill);
-            }
-          });
-        } else {
-          responseCategories.push( categorie);
+    const categoriesCultures = this.store.selectSnapshot(state => state.cultures);
+    const categorieCultureName = character.culture.split('.', 2).join('.') + '.name';
+    const categorieCulture = categoriesCultures.find((item: Culture) => item.name === categorieCultureName);
+    const culture = categorieCulture.cultures.find((item: Culture) => item.name === character.culture);
+
+
+    const skillsFromCulture = skillsToCharacterSkills(culture.skills, SkillProvenance.Culture, character.characteristics);
+    const skillCategoriesFromCharacter = character.skills;
+
+    skillsFromCulture.forEach(skill => {
+      let categorieName = skill.name.split( '.', 2).join('.') + '.name';
+      let categorie = skillCategoriesFromCharacter.find(categorie => categorie.name === categorieName);
+
+      if (!!skill.param) {
+        // in this case we'll find the skill in the special list
+        let specieSkill = character.specialSkillsSpecie.find(item => item.name === skill.name);
+        if (!!specieSkill) {
+          skill.valueSpecie = specieSkill.valueSpecie;
         }
-      })
-    } else {
-      responseCategories = specieCharacterCategories;
-    }
-    return responseCategories;
-  }
 
-  fusionSkillsWithCulture(initialCategories: CharacterSkillCategorie[], cultureSkills: Skill[], characteristics: CharacteristicsValues): CharacterSkillCategorie[] {
-    let responseCategories:CharacterSkillCategorie[] = [];
-    if (initialCategories) {
-      responseCategories = initialCategories;
-    }
-
-    if (responseCategories && responseCategories.length > 0) {
-      cultureSkills.forEach((skill: Skill) => {
-        let arrayName = skill.name.split('.');
-        let categorieName = arrayName[0] + '.' + arrayName[1] + '.name';
-        let responseCategorie = responseCategories.find(cat => cat.name === categorieName);
-
-        let value = 0;
-        if (skill.value) {
-          value = skill.value;
-        } else {
-          if (skill.formula) {
-            value = convertFormula(characteristics, skill.formula);
+        if (categorie) {
+          categorie.skills.push(skill);
+        }
+      } else {
+        // in this case we'll update the existing skill
+        if (categorie) {
+          let characterSkill = categorie.skills.find(item => item.name === skill.name);
+          if (characterSkill) {
+            characterSkill.valueCulture = skill.valueCulture;
+            characterSkill.formulaCulture = skill.formulaCulture;
           }
         }
+      }
+    });
 
-        if (responseCategorie) {
-          let initialSkill = responseCategorie.skills.find(sk => sk.name === skill.name && sk.param === skill.param);
-          if (initialSkill) {
-            initialSkill.valueCulture = value;
-            initialSkill.param = skill.param;
-          } else {
-            responseCategorie.skills.push({name: skill.name, valueCulture: value, param: skill.param, valueSpecie:0});
-          }
-        } else {
-          responseCategories.push({name: categorieName, bonus: 0, skills: [{name: skill.name, valueCulture: value, param: skill.param, valueSpecie:0}]});
-        }
-      });
-    }
-    return responseCategories;
+    ctx.patchState({
+      skills: skillCategoriesFromCharacter
+    })
   }
-
-
-
-
-
-
-
-
 }

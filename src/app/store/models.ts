@@ -119,6 +119,8 @@ export interface Character {
   culture: string;
   characteristics: CharacteristicsValues;
   skills: CharacterSkillCategorie[];
+  specialSkillsSpecie: CharacterSkill[];
+  specialSkillsCulture: CharacterSkill[];
   spells: string[];
   languages: string[];
 }
