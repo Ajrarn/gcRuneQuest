@@ -9,7 +9,7 @@
     "DEX": "3D6",
     "CHA": "3D6"
   },
-  "cultures": ["cultures.beast_man.minotaur"],
+  "cultures": ["cultures.beast_men.minotaur"],
   "runes": [
     { "name": "elemental", "value": 60 },
     { "name": "elemental", "value": 40 },

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Character, Culture, Homeland, Specie } from '../../store/models';
+import { Character, Culture, Homeland, OccupationGroup, Specie } from '../../store/models';
 import { CharacterUpdateCulture, CharacterUpdateSpecie } from '../../store/character.actions';
 import * as _ from 'lodash';
 
@@ -39,10 +39,13 @@ export class CharacterComponent {
   ];
 
   formHomeland: FormGroup;
+  formOccupation: FormGroup;
 
   species: Specie[] = [];
   homelands: Homeland[] = [];
   allHomelands: Homeland[] = [];
+  allOccupations: OccupationGroup[] = [];
+  occupations: OccupationGroup[] = [];
 
 
   constructor(private store: Store, fb: FormBuilder) {
@@ -54,8 +57,13 @@ export class CharacterComponent {
       cultureSelectAll: fb.control(false)
     });
 
+    this.formOccupation = fb.group({
+      occupation: fb.control('occupations.common.farmer', [ Validators.required ])
+    });
+
     this.species = this.store.selectSnapshot(state => state.species);
     this.allHomelands = this.store.selectSnapshot(state => state.cultures);
+    this.allOccupations = this.store.selectSnapshot(state => state.occupations);
     this.character = this.store.selectSnapshot(state => state.character);
 
     this.selectSpecie('species.human');
@@ -89,15 +97,13 @@ export class CharacterComponent {
     if (!seeAll && specie) {
       this.homelands = allHomelands.filter(homeland => {
         let cultures = homeland.cultures.filter(culture => {
-          // @ts-ignore
-          return specie.cultures.findIndex((item: string) => item === culture.name) >= 0;
+          return specie.cultures.includes(culture.name);
         });
         return cultures.length > 0;
       });
       this.homelands.forEach(homeland => {
         homeland.cultures = homeland.cultures.filter(culture => {
-          // @ts-ignore
-          return specie.cultures.findIndex((item: string) => item === culture.name) >= 0;
+          return specie.cultures.includes(culture.name);
         });
       })
     } else {
@@ -122,15 +128,31 @@ export class CharacterComponent {
 
   selectCulture(cultureName: string): void {
     if (cultureName) {
-      const splitName = cultureName.split('.');
-      const homelandName = splitName[0] + '.' + splitName[1] + '.name';
+      const homelandName = cultureName.split('.', 2).join('.') + '.name';
       const homeland = this.homelands.find(item => item.name === homelandName);
       if (homeland) {
         const culture = homeland.cultures.find(item => item.name === cultureName);
         if (culture) {
           this.store.dispatch(new CharacterUpdateCulture(<Culture>culture));
+          this.filterOccupations(culture);
         }
       }
+    }
+  }
+
+  filterOccupations(culture: Culture) {
+    this.occupations = [];
+    this.allOccupations.forEach(occGroup => {
+      let occupationsFiltered = occGroup.occupations.filter(occupation => culture.occupations.includes(occupation.name));
+      if (occupationsFiltered && occupationsFiltered.length > 0) {
+        this.occupations.push({
+          name: occGroup.name,
+          occupations: occupationsFiltered
+        });
+      }
+    });
+    if (this.occupations && this.occupations.length > 0) {
+      this.formOccupation.controls['occupation'].setValue(this.occupations[0].occupations[0].name);
     }
   }
 

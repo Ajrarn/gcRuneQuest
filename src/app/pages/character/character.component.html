@@ -42,7 +42,20 @@
           Char
         </div>
         <div *ngIf="tab.name === 'steps.occupation'">
-          Occupation
+          <form [formGroup]="formOccupation">
+            <nz-space nzDirection="vertical">
+              <nz-form-item>
+                <nz-form-label nzFor="selectOccupation">{{'static.occupation' | translate }}</nz-form-label>
+                <nz-form-control>
+                  <nz-select formControlName="occupation" id="selectOccupation">
+                    <nz-option-group nzLabel="{{occupationGroup.name | translate}}" *ngFor="let occupationGroup of occupations">
+                      <nz-option *ngFor="let occupation of occupationGroup.occupations" nzValue="{{occupation.name}}" nzLabel="{{occupation.name |translate}}"></nz-option>
+                    </nz-option-group>
+                  </nz-select>
+                </nz-form-control>
+              </nz-form-item>
+            </nz-space>
+          </form>
         </div>
         <div *ngIf="tab.name === 'steps.cult'">
           Cult
