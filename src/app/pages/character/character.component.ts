@@ -3,7 +3,11 @@ import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Character, Culture, Homeland, OccupationGroup, Specie } from '../../store/models';
-import { CharacterUpdateCulture, CharacterUpdateSpecie } from '../../store/character.actions';
+import {
+  CharacterUpdateCulture,
+  CharacterUpdateOccupation,
+  CharacterUpdateSpecie
+} from '../../store/character.actions';
 import * as _ from 'lodash';
 
 enum Icon {
@@ -68,6 +72,7 @@ export class CharacterComponent {
 
     this.selectSpecie('species.human');
     this.selectCulture('cultures.sartar.heortling');
+    this.selectOccupation('occupations.common.farmer');
 
     this.formHomeland.controls['specie'].valueChanges.subscribe(specieName => {
       this.selectSpecie(specieName);
@@ -78,6 +83,9 @@ export class CharacterComponent {
     });
     this.formHomeland.controls['cultureSelectAll'].valueChanges.subscribe(() => {
       this.filterCulture();
+    });
+    this.formOccupation.controls['occupation'].valueChanges.subscribe((occupationName) => {
+      this.selectOccupation(occupationName);
     });
   }
 
@@ -135,6 +143,19 @@ export class CharacterComponent {
         if (culture) {
           this.store.dispatch(new CharacterUpdateCulture(<Culture>culture));
           this.filterOccupations(culture);
+        }
+      }
+    }
+  }
+
+  selectOccupation(occupationName: string): void {
+    if (occupationName) {
+      const occupationGroupName = occupationName.split('.', 2).join('.') + '.name';
+      const occupationGroup = this.occupations.find(item => item.name === occupationGroupName);
+      if (occupationGroup) {
+        const occupation = occupationGroup.occupations.find(item => item.name === occupationName);
+        if (occupation) {
+          this.store.dispatch(new CharacterUpdateOccupation(occupation));
         }
       }
     }

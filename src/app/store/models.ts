@@ -117,6 +117,7 @@ export interface Homeland {
 export interface Character {
   specie: string;
   culture: string;
+  occupation: string;
   characteristics: CharacteristicsValues;
   skills: CharacterSkillCategorie[];
   specialSkillsSpecie: CharacterSkill[];
@@ -132,6 +133,8 @@ export interface CharacterSkill {
   formulaSpecie?: string;
   valueCulture: number;
   formulaCulture?: string;
+  valueOccupation: number;
+  formulaOccupation?: string;
 }
 
 export interface CharacterSkillCategorie {
@@ -142,7 +145,8 @@ export interface CharacterSkillCategorie {
 
 export enum SkillProvenance {
   Specie,
-  Culture
+  Culture,
+  Occupation
 }
 
 export function skillToCharacterSkill(skill: Skill, provenance: SkillProvenance, characteristics: CharacteristicsValues): CharacterSkill {
@@ -150,8 +154,10 @@ export function skillToCharacterSkill(skill: Skill, provenance: SkillProvenance,
   const param = skill.param
   let valueSpecie = 0;
   let valueCulture = 0;
+  let valueOccupation = 0;
   let formulaSpecie: string | undefined = undefined;
   let formulaCulture: string | undefined  = undefined;
+  let formulaOccupation: string | undefined  = undefined;
 
   let value: number;
   if (skill.value) {
@@ -163,21 +169,34 @@ export function skillToCharacterSkill(skill: Skill, provenance: SkillProvenance,
       value = 0;
     }
   }
-  if (provenance === SkillProvenance.Culture) {
-    valueCulture = value;
-    formulaCulture = skill.formula;
-  } else {
-    valueSpecie = value;
-    formulaSpecie = skill.formula
+
+  switch (provenance) {
+    case SkillProvenance.Culture: {
+      valueCulture = value;
+      formulaCulture = skill.formula;
+      break;
+    }
+    case SkillProvenance.Specie: {
+      valueSpecie = value;
+      formulaSpecie = skill.formula;
+      break;
+    }
+    default: { //SkillProvenance.Occupation
+      valueOccupation = value;
+      formulaOccupation = skill.formula
+    }
   }
+
 
   return {
     name,
     param,
     valueSpecie,
     valueCulture,
+    valueOccupation,
     formulaCulture,
-    formulaSpecie
+    formulaSpecie,
+    formulaOccupation
   };
 }
 

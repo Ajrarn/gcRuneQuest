@@ -10,6 +10,7 @@ export interface TreeNodeInterface {
   bonus?: number;
   valueSpecie?: number;
   valueCulture?: number;
+  valueOccupation?: number;
   level?: number;
   expand?: boolean;
   skills?: TreeNodeInterface[];
@@ -38,14 +39,6 @@ export class CharacterSheetComponent {
     });
 
 
-  }
-
-  getCharacter() {
-    let response = '';
-    if (this.sheet) {
-      response = JSON.stringify(this.sheet);
-    }
-    return response;
   }
 
   mapOfExpandedData: { [key: string]: TreeNodeInterface[] } = {};
@@ -91,12 +84,14 @@ export class CharacterSheetComponent {
   }
 
   getTotal(item: TreeNodeInterface): number | null {
-    if ((item.valueCulture === null || item.valueCulture === undefined) && (item.valueSpecie === null || item.valueSpecie === undefined)) {
+    if ((item.valueCulture === null || item.valueCulture === undefined) && (item.valueSpecie === null || item.valueSpecie === undefined)
+    && (item.valueOccupation === null || item.valueOccupation === undefined)) {
       return null;
     }
 
     let value: number = !(item.valueSpecie === null || item.valueSpecie === undefined) ? item.valueSpecie : 0;
     value = !(item.valueCulture === null || item.valueCulture === undefined) ? value + item.valueCulture : value;
+    value = !(item.valueOccupation === null || item.valueOccupation === undefined) ? value + item.valueOccupation : value;
     return value;
 
   }
