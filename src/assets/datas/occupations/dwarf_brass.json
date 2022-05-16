@@ -2,11 +2,11 @@
   "name": "occupations.dwarf.brass",
   "cultures": ["cultures.mostali"],
   "skills": [
-    {"name":  "skills.manipulation.craft_redsmithing", "value": 25},
+    {"name":  "skills.manipulation.craft", "param": "craft.redsmithing", "value": 25},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},
     {"name":  "skills.knowledge.evaluate", "value": 30},
     {"name":  "skills.knowledge.metal_lore", "value": 30},
-    {"name":  "skills.knowledge.read_write_mostali", "value": 10},
+    {"name":  "skills.knowledge.read_write", "param": "languages.mostali", "value": 10},
     {"name":  "skills.manipulation.devise", "value": 30},
     {"name":  "skills.perception.earthsense_search", "value": 5}
   ]

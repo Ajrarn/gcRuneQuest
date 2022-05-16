@@ -10,6 +10,6 @@
     {"name":  "skills.perception.elfsense", "value": 10},
     {"name":  "skills.knowledge.lore_any", "value": 10},
     {"name":  "skills.knowledge.plant_lore", "value": 30},
-    {"name":  "skills.communication.speak_other_language_any", "value": 10}
+    {"name":  "skills.communication.speak_other_language", "param": "static.any", "value": 10}
   ]
 }

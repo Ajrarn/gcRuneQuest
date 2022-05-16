@@ -11,7 +11,7 @@
     {"name":  "skills.perception.listen", "value": 15},
     {"name":  "skills.knowledge.mineral_lore", "value": 25},
     {"name":  "skills.communication.orate", "value": 15},
-    {"name":  "skills.knowledge.read_write_mostali", "value": 15},
-    {"name":  "skills.communication.speak_mostali", "value": 10}
+    {"name":  "skills.knowledge.read", "param":"languages.mostali", "value": 15},
+    {"name":  "skills.communication.speak", "param":"languages.mostali", "value": 10}
   ]
 }

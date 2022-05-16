@@ -13,6 +13,20 @@
 			"STR": "FOR"
 		}
 	},
+	"craft": {
+		"architecture": "Architecture",
+		"copper_smithing": "Travail du cuivre",
+		"glass": "travail du verre",
+		"gold": "or",
+		"magic_item": "objet magique",
+		"masonry": "maçonnerie",
+		"plumbing": "Plomberie",
+		"redsmithing": "Forge",
+		"secrets_of_iron": "secrets du fer",
+		"silversmith": "travail de l'argent",
+		"stonecarving": "taille de la pierre",
+		"tinsmith": "travail de l'étain"
+	},
 	"cultures": {
 		"agimori": {
 			"agimori": "Agimori",
@@ -82,6 +96,7 @@
 	"languages": {
 		"esrolian": "Esrolien",
 		"heortling": "Heortling",
+		"mostali": "Mostali",
 		"spirit": "Langue des esprits",
 		"tradetalk": "Marchand"
 	},
@@ -219,11 +234,9 @@
 			"name": "Communication",
 			"orate": "Éloquence",
 			"sing": "Chant",
-			"speak_mostali": "Parler mostali",
 			"speak_other_language": "Langue étrangère ({{value}})",
 			"speak_own_language": "Langue natale ({{value}})",
-			"speak_spiritspeech": "Langues des esprits",
-			"speak_tradetalk": "Langue des marchands"
+			"speak_spiritspeech": "Langues des esprits"
 		},
 		"knowledge": {
 			"alchemy": "Alchimie",
@@ -233,9 +246,9 @@
 			"battle": "Bataille",
 			"bureaucracy": "Bureaucratie",
 			"celestial_lore": "Connaissance des cieux",
-			"cult_lore": "Connaissance du culte ({{name}})",
-			"customs_any": "Coutumes (au choix)",
-			"customs_local": "Coutumes (local)",
+			"cult_lore": "Connaissance du culte ({{value}})",
+			"customs": "Coutumes ({{value}})",
+			"customs_local": "Coutumes locales ({{value}})",
 			"dwarf_lore": "Connaissance des nains",
 			"elder_race_lore": "Connaissance des Races ainées",
 			"evaluate": "Évaluation",
@@ -244,12 +257,12 @@
 			"game": "Jeu",
 			"glorantha_lore": "Connaissance de Glorantha",
 			"herd": "Élevage",
-			"homeland_lore": "Connaissance de la région ({{name}})",
-			"homeland_lore_own": "Connaissance de la région natale",
+			"homeland_lore": "Connaissance de la région ({{value}})",
+			"homeland_lore_own": "Connaissance de la région natale ({{value}})",
 			"library_use": "Recherche en bibliothèque",
 			"lore_animal_or_plant": "Connaissance des animaux ou des plantes",
 			"lore_any": "Connaissance (au choix)",
-			"lore_cult": "Connaissance (culte)",
+			"lore_cult": "Connaissance ({{vamue}})",
 			"lore_local": "Connaissance (locale)",
 			"manage_household": "Intendance",
 			"metal_lore": "Connaissance des métaux",
@@ -257,35 +270,31 @@
 			"name": "Connaissance",
 			"peaceful_cut": "Mort paisible",
 			"plant_lore": "Connaissance des plantes",
-			"read_write_any": "Lire / Écrire (au choix)",
-			"read_write_mostali": "Lecture / Écriture mostali",
-			"read_write_own": "Lecture/Écriture (natale)",
+			"read_write": "Lire / Écrire ({{value}})",
 			"river_lore": "Connaissance des rivières",
 			"shiphandling": "Navigation",
 			"survival": "Survie",
 			"treat_disease": "Traitement des maladies",
-			"treat_poison": "Traitements des poisons",
-			"understand_herd_beast": "Compréhension des troupeaux"
+			"treat_poison": "Traitements des poisons"
 		},
 		"magic": {
 			"meditate": "Méditation",
 			"name": "Magie",
 			"prepare_corpse": "Apprêter le corps",
+			"sense_assassin": "Détection d'assassin",
+			"sense_chaos": "Détection du Chaos",
 			"sorcery_spell": "Sort de sorcellerie (au choix)",
 			"spirit_combat": "Combat Spirituel",
 			"spirit_dance": "Danse spirituelle",
 			"spirit_lore": "Connaissance des esprits",
 			"spirit_travel": "Voyage spirituel",
-			"worship_deity": "Vénération (Déité)"
+			"understand_herd_beast": "Compréhension des troupeaux",
+			"worship": "Vénération ({{value}})"
 		},
 		"manipulation": {
 			"conceal": "Dissimulation",
-			"craft": "Artisanat ({{name}})",
-			"craft_any": "Artisanat (au choix)",
-			"craft_copper_smithing": "Aritsanat (Travail du cuivre)",
-			"craft_gold": "Artisanat (or)",
+			"craft": "Artisanat ({{value}})",
 			"craft_primary": "Artisanat (Primaire)",
-			"craft_redsmithing": "Artisanat (Forge)",
 			"craft_secondary": "Artisant (Secondaire)",
 			"devise": "Invention",
 			"name": "Manipulation",
@@ -335,14 +344,12 @@
 		"perception": {
 			"earthsense_scan": "Sens de la Terre (Observation)",
 			"earthsense_search": "Sens de la Terre (Recherche)",
-			"insight": "Empathie ({{name}})",
+			"insight": "Empathie ({{value}})",
 			"insight_own_specie": "Empathie (même espèce)",
 			"listen": "Écouter",
 			"name": "Perception",
 			"scan": "Observation",
 			"search": "Recherche",
-			"sense_assassin": "Détection d'assassin",
-			"sense_chaos": "Détection du Chaos",
 			"track": "Pistage"
 		},
 		"shields": {
@@ -379,6 +386,8 @@
 		}
 	},
 	"static": {
+		"all": "Tous",
+		"any": "au choix",
 		"base": "Base",
 		"bonus": "Bonus",
 		"character": "Personnage",
@@ -394,6 +403,7 @@
 		"occupations": "Occupations",
 		"runes": "Runes",
 		"show_all": "Afficher Toutes",
+		"skill": "Compétence",
 		"skills": "Compétences",
 		"specie": "Race",
 		"species": "Races",

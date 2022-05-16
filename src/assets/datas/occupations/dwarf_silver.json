@@ -2,11 +2,11 @@
   "name": "occupations.dwarf.silver",
   "cultures": ["cultures.mostali"],
   "skills": [
-    {"name":  "skills.manipulation.craft_silversmith", "value": 10},
-    {"name":  "skills.manipulation.craft_magic_item", "value": 10},
+    {"name":  "skills.manipulation.craft", "param": "craft.silversmith","value": 10},
+    {"name":  "skills.manipulation.craft", "param": "craft.magic_item", "value": 10},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},
     {"name":  "skills.knowledge.glorantha_lore", "value": 10},
-    {"name":  "skills.knowledge.read_write_mostali", "value": 10},
+    {"name":  "skills.knowledge.read_write", "param": "languages.mostali", "value": 10},
     {"name":  "skills.magic.sorcery_spell", "value": 30},
     {"name":  "skills.magic.sorcery_spell", "value": 30},
     {"name":  "skills.magic.sorcery_spell", "value": 10}

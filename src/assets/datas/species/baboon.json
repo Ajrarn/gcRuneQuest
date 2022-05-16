@@ -19,13 +19,13 @@
     {
       "name": "skills.agility.name",
       "items": [
-        { "name": "skills.agility.agility.boat", "value": 5 },
-        { "name": "skills.agility.agility.climb", "value": 40 },
-        { "name": "skills.agility.agility.dodge", "formula": "DEX*2" },
-        { "name": "skills.agility.agility.drive_chariot", "value": 5 },
-        { "name": "skills.agility.agility.jump", "formula": "DEX*3" },
-        { "name": "skills.agility.agility.ride", "param": "static.any", "value": 5 },
-        { "name": "skills.agility.agility.swim", "value": 15 }
+        { "name": "skills.agility.boat", "value": 5 },
+        { "name": "skills.agility.climb", "value": 40 },
+        { "name": "skills.agility.dodge", "formula": "DEX*2" },
+        { "name": "skills.agility.drive_chariot", "value": 5 },
+        { "name": "skills.agility.jump", "formula": "DEX*3" },
+        { "name": "skills.agility.ride", "param": "static.any", "value": 5 },
+        { "name": "skills.agility.swim", "value": 15 }
       ]
     },
     {
@@ -80,7 +80,7 @@
     {
       "name": "skills.magic.name",
       "items": [
-        { "name": "skills.meditate", "value": 0 },
+        { "name": "skills.magic.meditate", "value": 0 },
         { "name": "skills.magic.prepare_corpse", "value": 10 },
         { "name": "skills.magic.sense_assassin", "value": 0 },
         { "name": "skills.magic.sense_chaos", "value": 0 },
@@ -105,8 +105,8 @@
     {
       "name": "skills.perception.name",
       "items": [
-        { "name": "skills.perception.insight_own_specie", "value": 20 },
-        { "name": "skills.perception.insight", "value": 0 },
+        { "name": "skills.perception.insight", "param": "species.baboon", "value": 20 },
+        { "name": "skills.perception.insight", "param": "static.any", "value": 0 },
         { "name": "skills.perception.listen", "value": 25 },
         { "name": "skills.perception.scan", "value": 25 },
         { "name": "skills.perception.search", "value": 25 },

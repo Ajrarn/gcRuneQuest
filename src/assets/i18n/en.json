@@ -13,6 +13,20 @@
 			"STR": "STR"
 		}
 	},
+	"craft": {
+		"architecture": "Architecture",
+		"copper_smithing": "Copper Smithing",
+		"glass": "Glass",
+		"gold": "Gold",
+		"magic_item": "Magic item",
+		"masonry": "Masonry",
+		"plumbing": "Plumbing",
+		"redsmithing": "Redsmithing",
+		"secrets_of_iron": "Secrets of Iron",
+		"silversmith": "Silversmith",
+		"stonecarving": "Stonecarving",
+		"tinsmith": "Tinsmith"
+	},
 	"cultures": {
 		"agimori": {
 			"agimori": "Agimori",
@@ -82,6 +96,7 @@
 	"languages": {
 		"esrolian": "Esrolian",
 		"heortling": "Heortling",
+		"mostali": "Mostali",
 		"spirit": "Spirit Language",
 		"tradetalk": "Tradetalk"
 	},
@@ -219,11 +234,9 @@
 			"name": "Communication",
 			"orate": "Orate",
 			"sing": "Sing",
-			"speak_mostali": "Speak Mostali",
 			"speak_other_language": "Speak Other Language ({{value}})",
 			"speak_own_language": "Speak Own Language ({{value}})",
-			"speak_spiritspeech": "Speak Spiritspeech",
-			"speak_tradetalk": "Speak (Tradetalk)"
+			"speak_spiritspeech": "Speak Spiritspeech"
 		},
 		"knowledge": {
 			"alchemy": "Alchemy",
@@ -233,9 +246,9 @@
 			"battle": "Battle",
 			"bureaucracy": "Bureaucracy",
 			"celestial_lore": "Celestial Lore",
-			"cult_lore": "Cult Lore ({{name}})",
-			"customs_any": "Customs (any)",
-			"customs_local": "Customs (local)",
+			"cult_lore": "Cult Lore ({{value}})",
+			"customs": "Customs ({{value}})",
+			"customs_local": "Local Customs ({{value}})",
 			"dwarf_lore": "Dwarf Lore",
 			"elder_race_lore": "Elder Race Lore",
 			"evaluate": "Evaluate",
@@ -244,12 +257,12 @@
 			"game": "Game",
 			"glorantha_lore": "Glorantha (Lore)",
 			"herd": "Herd",
-			"homeland_lore": "Homeland Lore ({{name}})",
-			"homeland_lore_own": "Homeland Lore (own)",
+			"homeland_lore": "Homeland Lore ({{value}})",
+			"homeland_lore_own": "Homeland Lore ({{value}})",
 			"library_use": "Library Use",
 			"lore_animal_or_plant": "Lore (Animal or Plant)",
 			"lore_any": "Lore (any)",
-			"lore_cult": "Lore (Cult)",
+			"lore_cult": "Lore ({{value}})",
 			"lore_local": "Lore (local)",
 			"manage_household": "Manage Household",
 			"metal_lore": "Metal Lore",
@@ -257,35 +270,31 @@
 			"name": "Knowledge",
 			"peaceful_cut": "Peaceful Cut",
 			"plant_lore": "Plant Lore",
-			"read_write_any": "Read / Write (any)",
-			"read_write_mostali": "Read / Write Mostali",
-			"read_write_own": "Read/Write (own)",
+			"read_write": "Read / Write ({{value}})",
 			"river_lore": "River Lore",
 			"shiphandling": "Shiphandling",
 			"survival": "Survival",
 			"treat_disease": "Treat Disease",
-			"treat_poison": "Treat Poison",
-			"understand_herd_beast": "Understand Herd Beast"
+			"treat_poison": "Treat Poison"
 		},
 		"magic": {
 			"meditate": "Meditate",
 			"name": "Magic",
 			"prepare_corpse": "Prepare Corps",
+			"sense_assassin": "Sense Assassin",
+			"sense_chaos": "Sense Chaos",
 			"sorcery_spell": "Sorcery Spell (choose any)",
 			"spirit_combat": "Spirit Combat",
 			"spirit_dance": "Spirit Dance",
 			"spirit_lore": "Spirit Lore",
 			"spirit_travel": "Spirit Travel",
-			"worship_deity": "Worship (Deity)"
+			"understand_herd_beast": "Understand Herd Beast",
+			"worship": "Worship ({{value}})"
 		},
 		"manipulation": {
 			"conceal": "Conceal",
-			"craft": "Craft ({{name}})",
-			"craft_any": "Craft (any)",
-			"craft_copper_smithing": "Craft (CopperSmithing)",
-			"craft_gold": "Craft (Gold)",
+			"craft": "Craft ({{value}})",
 			"craft_primary": "Craft (primary)",
-			"craft_redsmithing": "Craft (Redsmithing)",
 			"craft_secondary": "Craft (Secondary)",
 			"devise": "Devise",
 			"name": "Manipulation",
@@ -335,14 +344,12 @@
 		"perception": {
 			"earthsense_scan": "Earthsense Scan",
 			"earthsense_search": "Earthsense Search",
-			"insight": "Insight {{{name}})",
+			"insight": "Insight ({{value}})",
 			"insight_own_specie": "Insight (own specie)",
 			"listen": "Listen",
 			"name": "Perception",
 			"scan": "Scan",
 			"search": "Search",
-			"sense_assassin": "Sense Assassin",
-			"sense_chaos": "Sense Chaos",
 			"track": "Track"
 		},
 		"shields": {
@@ -379,6 +386,8 @@
 		}
 	},
 	"static": {
+		"all": "All",
+		"any": "any",
 		"base": "Base",
 		"bonus": "Bonus",
 		"character": "Character",
@@ -394,6 +403,7 @@
 		"occupations": "Occupations",
 		"runes": "Runes",
 		"show_all": "Show All",
+		"skill": "Skill",
 		"skills": "Skills",
 		"specie": "Specie",
 		"species": "Species",

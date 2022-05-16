@@ -4,6 +4,7 @@
       <nz-option *ngFor="let specie of species" nzValue="{{specie.name}}" nzLabel="{{specie.name | translate}}"></nz-option>
     </nz-select>
   </form>
+
   <nz-space nzSize="large" nzAlign="start">
     <nz-card style="width:300px;" nzTitle="{{'static.characteristics' | translate}}" *nzSpaceItem>
       <p><b>{{'characteristics.abrev.STR' | translate}}</b>: {{specie.characteristics.STR}}</p>
@@ -21,23 +22,32 @@
   </nz-space>
   <nz-divider nzText="{{'static.skills' | translate}}"></nz-divider>
 
-  <nz-list nzGrid>
-    <div nz-row [nzGutter]="24">
-      <div nz-col [nzXXl]="6" [nzXl]="8" [nzLg]="12" [nzMd]="24" [nzSm]="24" [nzXs]="24" *ngFor="let skillCategory of specie.skills">
-        <nz-list-item>
-          <nz-card [nzTitle]="skillCategory.name | translate">
-          <nz-table #basicTable [nzData]="skillCategory.items" [nzSize]="'small'" [nzPageSize]="50" [nzShowPagination]="false" [nzScroll]="{ y: '300px' }" >
-              <tbody>
-              <tr *ngFor="let data of basicTable.data">
-                <td>{{data.name | translate}}</td>
-                <td>{{data.value}}</td>
-              </tr>
-              </tbody>
-            </nz-table>
-          </nz-card>
-        </nz-list-item>
-      </div>
-    </div>
-  </nz-list>
+  <nz-table *ngIf="specie && specie.skills && specie.skills.length > 0" #expandTable [nzData]="specie.skills"
+            nzTableLayout="fixed" [nzScroll]="{ y: '500px' }" nzSize="middle" [nzShowPagination]="false"
+            [nzPageSize]="150">
+    <thead>
+    <tr>
+      <th>{{'static.skill' | translate}}</th>
+      <th>{{'static.base' | translate}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let data of expandTable.data">
+      <ng-container *ngFor="let item of mapOfExpandedData[data.name]">
+        <tr *ngIf="(item.parent && item.parent.expand) || !item.parent">
+          <td
+            [nzIndentSize]="item.level! * 20"
+            [nzShowExpand]="!!item.items"
+            [(nzExpand)]="item.expand"
+            (nzExpandChange)="collapse(mapOfExpandedData[data.name], item, $event)"
+          >
+            {{ item.param ? (item.name | translate:{value: item.param | translate}) :  (item.name | translate) }}
+          </td>
+          <td>{{ !!item.formula ? item.formula : item.value }}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+    </tbody>
+  </nz-table>
 </div>
 

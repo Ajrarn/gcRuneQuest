@@ -3,8 +3,8 @@
   "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.knowledge.alchemy", "value": 10},
-    {"name":  "skills.manipulation.craft_glass", "value": 30},
-    {"name":  "skills.manipulation.craft_plumbing", "value": 30},
+    {"name":  "skills.manipulation.craft", "param": "craft.glass", "value": 30},
+    {"name":  "skills.manipulation.craft", "param": "craft.plumbing", "value": 30},
     {"name":  "skills.manipulation.devise", "value": 30},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},
     {"name":  "skills.perception.earthsense_scan", "value": 15},

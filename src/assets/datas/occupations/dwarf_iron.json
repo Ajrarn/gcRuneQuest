@@ -3,7 +3,7 @@
   "cultures": ["cultures.mostali"],
   "skills": [
     {"name":  "skills.knowledge.battle", "value": 30},
-    {"name":  "skills.manipulation.craft_secrets_of_iron", "value": 25},
+    {"name":  "skills.manipulation.craft", "param": "craft.secrets_of_iron", "value": 25},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},
     {"name":  "skills.shields.medium_shield", "value": 40},
     {"name":  "skills.melee_weapon.melee_weapon", "value": 40},

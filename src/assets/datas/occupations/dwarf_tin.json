@@ -2,8 +2,8 @@
   "name": "occupations.dwarf.tin",
   "cultures": ["cultures.mostali"],
   "skills": [
-    {"name":  "skills.manipulation.craft_stonecarving", "value": 25},
-    {"name":  "skills.manipulation.craft_tinsmith", "value": 10},
+    {"name":  "skills.manipulation.craft", "param": "craft.stonecarving", "value": 25},
+    {"name":  "skills.manipulation.craft", "param": "craft.tinsmith", "value": 10},
     {"name":  "skills.manipulation.devise", "value": 30},
     {"name":  "skills.knowledge.dwarf_lore", "value": 10},
     {"name":  "skills.knowledge.evaluate", "value": 20},

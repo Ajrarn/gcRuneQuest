@@ -2,8 +2,8 @@
   "name": "occupations.dwarf.copper",
   "cultures": ["cultures.mostali"],
   "skills": [
-    {"name":  "skills.manipulation.craft_copper_smithing", "value": 40},
-    {"name":  "skills.manipulation.craft_redsmithing", "value": 40},
+    {"name":  "skills.manipulation.craft_copper_smithing", "param": "craft.copper_smithing", "value": 40},
+    {"name":  "skills.manipulation.craft_redsmithing", "param": "redsmithing", "value": 40},
     {"name":  "skills.manipulation.devise", "value": 30},
     {"name":  "skills.knowledge.dwarf_lore", "value": 5},
     {"name":  "skills.perception.earthsense_scan", "value": 15},

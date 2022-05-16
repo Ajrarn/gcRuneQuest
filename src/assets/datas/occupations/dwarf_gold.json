@@ -2,13 +2,13 @@
   "name": "occupations.dwarf.gold",
   "cultures": ["cultures.mostali"],
   "skills": [
-    {"name":  "skills.manipulation.craft_gold", "value": 15},
+    {"name":  "skills.manipulation.craft", "param": "craft.gold", "value": 15},
     {"name":  "skills.knowledge.dwarf_lore", "value": 30},
     {"name":  "skills.knowledge.evaluate", "value": 20},
     {"name":  "skills.knowledge.glorantha_lore", "value": 30},
     {"name":  "skills.knowledge.mineral_lore", "value": 15},
     {"name":  "skills.communication.orate", "value": 25},
-    {"name":  "skills.knowledge.read_write_mostali", "value": 25},
-    {"name":  "skills.communication.speak_mostali", "value": 20}
+    {"name":  "skills.knowledge.read_write", "param":"languages.mostali", "value": 25},
+    {"name":  "skills.communication.speak", "param":"languages.mostali", "value": 20}
   ]
 }
