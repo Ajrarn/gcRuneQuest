@@ -18,7 +18,7 @@
     {"name":  "skills.stealth.hide", "value": 30},
     {"name":  "skills.melee_weapons.cultural_weapon", "value": 30},
     {"name":  "skills.melee_weapons.cultural_weapon", "value": 10},
-    {"name":  "skills.knowledge.lore_animal_or_plant", "value": 10},
+    {"name":  "skills.choice.lore_animal_or_plant", "value": 10, "or":  [ "skills.knowledge.lore_animal", "skills.knowledge.lore_plant"]},
     {"name":  "skills.knowledge.first_aid", "value": 10},
     {"name":  "skills.knowledge.survival", "value": 30},
     {"name":  "skills.shields.shield_any", "value": 10},

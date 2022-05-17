@@ -70,9 +70,25 @@ export class CharacterComponent {
     this.allOccupations = this.store.selectSnapshot(state => state.occupations);
     this.character = this.store.selectSnapshot(state => state.character);
 
-    this.selectSpecie('species.human');
-    this.selectCulture('cultures.sartar.heortling');
-    this.selectOccupation('occupations.common.farmer');
+    if (this.character && this.character.specie && this.character.specie.length > 0) {
+      this.formHomeland.patchValue({specie: this.character.specie}, { emitEvent: false });
+      this.filterCulture();
+    } else {
+      this.selectSpecie('species.human');
+    }
+
+    if (this.character && this.character.culture && this.character.culture.length > 0) {
+      this.formHomeland.patchValue({culture: this.character.culture}, { emitEvent: false });
+    } else {
+      this.selectCulture('cultures.sartar.heortling');
+    }
+
+    if (this.character && this.character.occupation && this.character.occupation.length > 0) {
+      this.formOccupation.patchValue({occupation: this.character.occupation}, { emitEvent: false });
+    } else {
+      this.selectOccupation('occupations.common.farmer');
+    }
+
 
     this.formHomeland.controls['specie'].valueChanges.subscribe(specieName => {
       this.selectSpecie(specieName);

@@ -15,17 +15,25 @@
 	},
 	"craft": {
 		"architecture": "Architecture",
+		"bowmaking": "Bowmaking",
+		"brewing": "Brewing",
+		"carpentry": "Carpentry",
 		"copper_smithing": "Copper Smithing",
 		"glass": "Glass",
 		"gold": "Gold",
+		"jewelry": "Jewelry",
+		"leatherworking": "Leatherworking",
 		"magic_item": "Magic item",
 		"masonry": "Masonry",
 		"plumbing": "Plumbing",
+		"pottery": "Pottery",
 		"redsmithing": "Redsmithing",
 		"secrets_of_iron": "Secrets of Iron",
 		"silversmith": "Silversmith",
 		"stonecarving": "Stonecarving",
-		"tinsmith": "Tinsmith"
+		"tinsmith": "Tinsmith",
+		"vinification": "Vinification",
+		"weaving": "Weaving"
 	},
 	"cultures": {
 		"agimori": {
@@ -94,10 +102,29 @@
 		"tarsh": "Tarsh"
 	},
 	"languages": {
-		"esrolian": "Esrolian",
-		"heortling": "Heortling",
+		"aldryami": "Aldryami",
+		"auld_wyrmish": "Auld Wyrmish",
+		"beastspeech": "Beastspeech",
+		"boatspeech": "Boatspeech",
+		"darktongue": "DarkTongue",
+		"earthtongue": "Earthtongue",
+		"firespeech": "Firespeech",
 		"mostali": "Mostali",
+		"pelorian": {
+			"dara_happan": "Dara Happan",
+			"new_pelorian": "New Pelorian"
+		},
+		"praxian": "Praxian",
+		"pure_horse_tongue": "Pure Horse Tongue",
+		"seatongue": "Seatongue",
 		"spirit": "Spirit Language",
+		"stormspeech": "Stormspeech",
+		"theyalan": {
+			"esrolian": "Esrolian",
+			"heortling": "Heortling",
+			"old_pavic": "Old Pavic",
+			"tarshite": "Tarshite"
+		},
 		"tradetalk": "Tradetalk"
 	},
 	"occupations": {
@@ -221,6 +248,13 @@
 			"ride_any_or_drive_chariot": "Ride (any) or Drive Chariot ",
 			"swim": "Swim"
 		},
+		"choice": {
+			"craft_primary": "Craft (primary)",
+			"craft_secondary": "Craft (Secondary)",
+			"cultural_melee_weapon": "Cultural Melee Weapon (Pick one)",
+			"cultural_weapon": "Cultural Weapon (Pick one)",
+			"lore_animal_or_plant": "Lore (Animal or Plant)"
+		},
 		"communication": {
 			"act": "Act",
 			"art": "Art",
@@ -260,7 +294,6 @@
 			"homeland_lore": "Homeland Lore ({{value}})",
 			"homeland_lore_own": "Homeland Lore ({{value}})",
 			"library_use": "Library Use",
-			"lore_animal_or_plant": "Lore (Animal or Plant)",
 			"lore_any": "Lore (any)",
 			"lore_cult": "Lore ({{value}})",
 			"lore_local": "Lore (local)",
@@ -294,8 +327,6 @@
 		"manipulation": {
 			"conceal": "Conceal",
 			"craft": "Craft ({{value}})",
-			"craft_primary": "Craft (primary)",
-			"craft_secondary": "Craft (Secondary)",
 			"devise": "Devise",
 			"name": "Manipulation",
 			"play_instrument": "Play instrument",
@@ -309,8 +340,6 @@
 			"2h_spear": "2H Spear",
 			"2h_sword": "2H Sword",
 			"broadsword": "Broadsword",
-			"cultural_melee_weapon": "Cultural Melee Weapon (Pick one)",
-			"cultural_weapon": "Cultural Weapon (Pick one)",
 			"dagger": "Dagger",
 			"kopis": "Kopis",
 			"name": "Melee Weapons",

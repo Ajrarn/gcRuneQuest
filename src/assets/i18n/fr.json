@@ -15,17 +15,25 @@
 	},
 	"craft": {
 		"architecture": "Architecture",
+		"bowmaking": "Fabrication d'arcs",
+		"brewing": "Brasserie",
+		"carpentry": "Menuiserie",
 		"copper_smithing": "Travail du cuivre",
 		"glass": "travail du verre",
 		"gold": "or",
+		"jewelry": "Joaillerie",
+		"leatherworking": "Travail du cuir",
 		"magic_item": "objet magique",
 		"masonry": "maçonnerie",
 		"plumbing": "Plomberie",
+		"pottery": "Poterie",
 		"redsmithing": "Forge",
 		"secrets_of_iron": "secrets du fer",
 		"silversmith": "travail de l'argent",
 		"stonecarving": "taille de la pierre",
-		"tinsmith": "travail de l'étain"
+		"tinsmith": "travail de l'étain",
+		"vinification": "Vinification",
+		"weaving": "Tissanderie"
 	},
 	"cultures": {
 		"agimori": {
@@ -94,10 +102,29 @@
 		"tarsh": "Tarsh"
 	},
 	"languages": {
-		"esrolian": "Esrolien",
-		"heortling": "Heortling",
+		"aldryami": "Aldryami",
+		"auld_wyrmish": "Draconique ancien",
+		"beastspeech": "Langue des bêtes",
+		"boatspeech": "Langue des bateliers",
+		"darktongue": "Langue des ténèbres",
+		"earthtongue": "Terreux",
+		"firespeech": "Langue du feu",
 		"mostali": "Mostali",
+		"pelorian": {
+			"dara_happan": "Dara Happan",
+			"new_pelorian": "Néo-pélorien"
+		},
+		"praxian": "Praxien",
+		"pure_horse_tongue": "Cheval pur",
+		"seatongue": "Ondin",
 		"spirit": "Langue des esprits",
+		"stormspeech": "Tonnant",
+		"theyalan": {
+			"esrolian": "Esrolien",
+			"heortling": "Heortling",
+			"old_pavic": "Vieux pavique",
+			"tarshite": "Tarshite"
+		},
 		"tradetalk": "Marchand"
 	},
 	"occupations": {
@@ -221,6 +248,13 @@
 			"ride_any_or_drive_chariot": "Monte (au choix) ou Conduite ",
 			"swim": "Nage"
 		},
+		"choice": {
+			"craft_primary": "Artisanat (Primaire)",
+			"craft_secondary": "Artisant (Secondaire)",
+			"cultural_melee_weapon": "Arme de mêlée culturelle (au choix) ",
+			"cultural_weapon": "Arme culturelle (au choix) ",
+			"lore_animal_or_plant": "Connaissance des animaux ou des plantes"
+		},
 		"communication": {
 			"act": "Comédie",
 			"art": "Art",
@@ -260,7 +294,6 @@
 			"homeland_lore": "Connaissance de la région ({{value}})",
 			"homeland_lore_own": "Connaissance de la région natale ({{value}})",
 			"library_use": "Recherche en bibliothèque",
-			"lore_animal_or_plant": "Connaissance des animaux ou des plantes",
 			"lore_any": "Connaissance (au choix)",
 			"lore_cult": "Connaissance ({{vamue}})",
 			"lore_local": "Connaissance (locale)",
@@ -294,8 +327,6 @@
 		"manipulation": {
 			"conceal": "Dissimulation",
 			"craft": "Artisanat ({{value}})",
-			"craft_primary": "Artisanat (Primaire)",
-			"craft_secondary": "Artisant (Secondaire)",
 			"devise": "Invention",
 			"name": "Manipulation",
 			"play_instrument": "Jouer d'un instrument",
@@ -309,8 +340,6 @@
 			"2h_spear": "Lance 2 mains",
 			"2h_sword": "Épée 2 mains",
 			"broadsword": "Épée large",
-			"cultural_melee_weapon": "Arme de mêlée culturelle (au choix) ",
-			"cultural_weapon": "Arme culturelle (au choix) ",
 			"dagger": "Dague",
 			"kopis": "Kopis",
 			"name": "Armes de mêlée",
