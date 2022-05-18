@@ -13,6 +13,11 @@
 			"STR": "STR"
 		}
 	},
+	"choice": {
+		"primary": "Primary ({{value}})",
+		"secondary": "Secondary ({{value}})",
+		"tertiary": "Tertiary ({{value}})"
+	},
 	"craft": {
 		"architecture": "Architecture",
 		"bowmaking": "Bowmaking",

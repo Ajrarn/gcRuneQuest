@@ -13,6 +13,11 @@
 			"STR": "FOR"
 		}
 	},
+	"choice": {
+		"primary": "Primaire ({{value}})",
+		"secondary": "Secondaire ({{value}})",
+		"tertiary": "Tertiaire ({{value}})"
+	},
 	"craft": {
 		"architecture": "Architecture",
 		"bowmaking": "Fabrication d'arcs",
@@ -20,7 +25,7 @@
 		"carpentry": "Menuiserie",
 		"copper_smithing": "Travail du cuivre",
 		"glass": "travail du verre",
-		"gold": "or",
+		"gold": "choice",
 		"jewelry": "Joaillerie",
 		"leatherworking": "Travail du cuir",
 		"magic_item": "objet magique",

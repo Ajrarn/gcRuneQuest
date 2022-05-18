@@ -53,6 +53,7 @@ import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { CastFormControlArrayPipe } from './shared/cast-form-control-array.pipe';
 
 registerLocaleData(fr);
 
@@ -63,7 +64,8 @@ registerLocaleData(fr);
     CharacterComponent,
     CharacterSheetComponent,
     OccupationsComponent,
-    CulturesComponent
+    CulturesComponent,
+    CastFormControlArrayPipe
   ],
   imports: [
     BrowserModule,

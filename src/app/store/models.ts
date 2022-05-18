@@ -86,6 +86,7 @@ export function getCharacteristicValue(characteristics: CharacteristicsValues, c
 export interface Rune {
   name: string;
   value: string;
+  choice: string[];
 }
 
 export interface Specie {
