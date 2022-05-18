@@ -37,7 +37,7 @@
         </div>
         <div *ngIf="tab.name === 'steps.rune_affinities'">
           <form [formGroup]="formRuneAffinity">
-            <div  formArrayName="runes">
+            <nz-space  nzDirection="vertical" formArrayName="runes">
               <nz-form-item *ngFor="let charRune of runes.controls; let i=index">
                 <nz-form-label nzFor="select{{(charRune | cfca).label }}">{{ getRuneLabel((charRune | cfca)) }}</nz-form-label>
                 <nz-form-control>
@@ -46,7 +46,7 @@
                   </nz-select>
                 </nz-form-control>
               </nz-form-item>
-            </div>
+            </nz-space>
           </form>
         </div>
         <div *ngIf="tab.name === 'steps.characteristics'">
