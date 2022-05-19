@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { ChangeTitle } from '../../store/title.action';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Character, Culture, Homeland, OccupationGroup, Specie } from '../../store/models';
 import {
   CharacterUpdateCulture,
@@ -9,8 +9,6 @@ import {
   CharacterUpdateSpecie
 } from '../../store/character.actions';
 import * as _ from 'lodash';
-import { FormControlArray } from '../../shared/Form-control-array';
-import { TranslateService } from '@ngx-translate/core';
 
 enum Icon {
   WARNING = 'warning',
@@ -46,7 +44,6 @@ export class CharacterComponent {
 
   formHomeland: FormGroup;
   formOccupation: FormGroup;
-  formRuneAffinity: FormGroup;
 
   species: Specie[] = [];
   specie: Specie | undefined;
@@ -56,7 +53,7 @@ export class CharacterComponent {
   occupations: OccupationGroup[] = [];
 
 
-  constructor(private store: Store, private fb: FormBuilder, private translateService: TranslateService) {
+  constructor(private store: Store, private fb: FormBuilder) {
     this.store.dispatch(new ChangeTitle('static.character'));
 
     this.formHomeland = fb.group({
@@ -69,9 +66,7 @@ export class CharacterComponent {
       occupation: fb.control('occupations.common.farmer', [ Validators.required ])
     });
 
-    this.formRuneAffinity = fb.group({
-        runes: fb.array([])
-    });
+
 
     this.species = this.store.selectSnapshot(state => state.species);
     this.allHomelands = this.store.selectSnapshot(state => state.cultures);
@@ -111,31 +106,6 @@ export class CharacterComponent {
     this.formOccupation.controls['occupation'].valueChanges.subscribe((occupationName) => {
       this.selectOccupation(occupationName);
     });
-
-    this.initFormRuneAffinity();
-  }
-
-  initFormRuneAffinity() {
-    if (this.specie) {
-      this.specie.runes.forEach(rune => {
-        if (rune.name.includes('choice')) {
-          (this.formRuneAffinity.controls['runes'] as FormArray).push(
-            new FormControlArray(null,null, null, rune.name,{ choice: rune.choice, value: rune.value })
-          );
-        } // else on ajoute la rune directement dans character
-      });
-    }
-  }
-
-  get runes() : FormArray {
-    return this.formRuneAffinity.get("runes") as FormArray
-  }
-
-  getRuneLabel(rune: FormControlArray): string {
-    if (rune.label && rune.options && rune.options.value) {
-      return this.translateService.instant(rune.label, {value: rune.options.value});
-    }
-    return '';
   }
 
   selectSpecie(specieName: string): void {
@@ -247,11 +217,16 @@ export class CharacterComponent {
         return this.formHomeland.status === 'VALID' ? IconStyle.GREEN : IconStyle.ORANGE;
       case 'steps.cult':
         return IconStyle.ORANGE;
+      case 'steps.rune_affinities':
+        return IconStyle.ORANGE;
+        // return this.formRuneAffinity.status === 'VALID' ? IconStyle.GREEN : IconStyle.ORANGE;
       case 'steps.other_informations':
         return IconStyle.ORANGE;
       default:
        return IconStyle.ORANGE;
     }
+
+
   }
 
 }

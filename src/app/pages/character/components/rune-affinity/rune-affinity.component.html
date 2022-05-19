@@ -1,0 +1,12 @@
+<form [formGroup]="formRuneAffinity">
+  <nz-space  nzDirection="vertical" formArrayName="runes">
+    <nz-form-item *ngFor="let charRune of runes.controls; let i=index">
+      <nz-form-label nzFor="select{{(charRune | cfca).label }}">{{ getRuneLabel((charRune | cfca)) }}</nz-form-label>
+      <nz-form-control>
+        <nz-select [formGroupName]="i" id="select{{(charRune | cfca).label }}">
+          <nz-option *ngFor="let rune of (charRune | cfca).options.choice" nzValue="{{rune}}" nzLabel="{{rune |translate}}"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+  </nz-space>
+</form>
