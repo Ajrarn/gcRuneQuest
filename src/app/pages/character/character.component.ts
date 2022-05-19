@@ -52,6 +52,8 @@ export class CharacterComponent {
   allOccupations: OccupationGroup[] = [];
   occupations: OccupationGroup[] = [];
 
+  stepRuneValid: boolean | undefined;
+
 
   constructor(private store: Store, private fb: FormBuilder) {
     this.store.dispatch(new ChangeTitle('static.character'));
@@ -203,6 +205,8 @@ export class CharacterComponent {
         return this.formHomeland.status === 'VALID' ? Icon.CHECK : Icon.WARNING;
       case 'steps.cult':
         return Icon.WARNING;
+      case 'steps.rune_affinities':
+        return this.stepRuneValid ? Icon.CHECK : Icon.WARNING;
       case 'steps.other_informations':
         return Icon.WARNING;
       default:
@@ -218,15 +222,16 @@ export class CharacterComponent {
       case 'steps.cult':
         return IconStyle.ORANGE;
       case 'steps.rune_affinities':
-        return IconStyle.ORANGE;
-        // return this.formRuneAffinity.status === 'VALID' ? IconStyle.GREEN : IconStyle.ORANGE;
+        return this.stepRuneValid ? IconStyle.GREEN : IconStyle.ORANGE;
       case 'steps.other_informations':
         return IconStyle.ORANGE;
       default:
        return IconStyle.ORANGE;
     }
+  }
 
-
+  runeValidChange($event: boolean): void {
+    this.stepRuneValid = $event;
   }
 
 }

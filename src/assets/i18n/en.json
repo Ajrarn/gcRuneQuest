@@ -91,6 +91,9 @@
 			"old_tarsh": "Old Tarsh"
 		}
 	},
+	"error": {
+		"different_values": "Values must be different !"
+	},
 	"groups": {
 		"chaos": "Chaos",
 		"city": "City",

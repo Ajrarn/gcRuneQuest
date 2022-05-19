@@ -1,9 +1,10 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
 import { TranslateService } from '@ngx-translate/core';
 import { FormControlArray } from '../../../../shared/Form-control-array';
 import { Specie } from '../../../../store/models';
+import { GCRValidators } from '../../../../shared/gcr-validators';
 
 @Component({
   selector: 'app-rune-affinity',
@@ -17,10 +18,19 @@ export class RuneAffinityComponent implements OnChanges {
   @Input()
   specie: Specie | undefined;
 
+  @Output()
+  valid = new EventEmitter<boolean>();
+
   constructor(private store: Store, private fb: FormBuilder, private translateService: TranslateService) {
     this.formRuneAffinity = fb.group({
-      runes: fb.array([])
+      runes: fb.array([], [GCRValidators.differentValues()])
     });
+
+    this.formRuneAffinity.valueChanges.subscribe(formValues => {
+      console.log('formRuneAffinityValues', formValues);
+      console.log('formRuneAffinity', this.formRuneAffinity);
+      this.valid.emit(this.formRuneAffinity.valid);
+    })
   }
 
   initFormRuneAffinity() {

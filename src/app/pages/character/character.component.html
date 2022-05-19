@@ -36,7 +36,7 @@
           Family
         </div>
         <div *ngIf="tab.name === 'steps.rune_affinities'">
-          <app-rune-affinity [specie]="specie"></app-rune-affinity>
+          <app-rune-affinity [specie]="specie" (valid)="runeValidChange($event)"></app-rune-affinity>
         </div>
         <div *ngIf="tab.name === 'steps.characteristics'">
           Char

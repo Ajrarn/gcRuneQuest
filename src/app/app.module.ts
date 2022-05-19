@@ -108,7 +108,11 @@ registerLocaleData(fr);
     NzFormModule,
     NzCheckboxModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: fr_FR }, CanActivateWhenReady, NzResizableService],
+  providers: [
+    { provide: NZ_I18N, useValue: fr_FR },
+    CanActivateWhenReady,
+    NzResizableService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
