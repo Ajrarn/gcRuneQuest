@@ -2,11 +2,15 @@
   <nz-space  nzDirection="vertical" formArrayName="runes">
     <nz-form-item *ngFor="let charRune of runes.controls; let i=index">
       <nz-form-label nzFor="select{{(charRune | cfca).label }}">{{ getRuneLabel((charRune | cfca)) }}</nz-form-label>
-      <nz-form-control>
+      <nz-form-control [nzErrorTip]="runeErrorTpl">
         <nz-select [formControlName]="i" id="select{{(charRune | cfca).label }}">
           <nz-option *ngFor="let rune of (charRune | cfca).options.choice" nzValue="{{rune}}" nzLabel="{{rune |translate}}"></nz-option>
         </nz-select>
+        <ng-template #runeErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')">{{'error.required' | translate}}</ng-container>
+        </ng-template>
       </nz-form-control>
     </nz-form-item>
+    <p class="red" *ngIf="runes.hasError('differentValues')">{{'error.different_values' | translate}}</p>
   </nz-space>
 </form>

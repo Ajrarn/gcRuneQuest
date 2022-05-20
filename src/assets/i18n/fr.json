@@ -92,7 +92,8 @@
 		}
 	},
 	"error": {
-		"different_values": "Les valeurs doivent être différentes !"
+		"different_values": "Les valeurs doivent être différentes !",
+		"required": "Champ obligatoire !"
 	},
 	"groups": {
 		"chaos": "Chaos",

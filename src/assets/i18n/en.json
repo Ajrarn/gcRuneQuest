@@ -92,7 +92,8 @@
 		}
 	},
 	"error": {
-		"different_values": "Values must be different !"
+		"different_values": "Values must be different !",
+		"required": "Mandatory field !"
 	},
 	"groups": {
 		"chaos": "Chaos",
