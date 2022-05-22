@@ -55,6 +55,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { CastFormControlArrayPipe } from './shared/cast-form-control-array.pipe';
 import { RuneAffinityComponent } from './pages/character/components/rune-affinity/rune-affinity.component';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { RuneInputComponent } from './shared/rune-input/rune-input.component';
 
 registerLocaleData(fr);
 
@@ -67,6 +69,7 @@ registerLocaleData(fr);
     OccupationsComponent,
     CulturesComponent,
     RuneAffinityComponent,
+    RuneInputComponent,
     CastFormControlArrayPipe
   ],
   imports: [
@@ -106,7 +109,8 @@ registerLocaleData(fr);
     NzTreeViewModule,
     NzSwitchModule,
     NzFormModule,
-    NzCheckboxModule
+    NzCheckboxModule,
+    NzInputNumberModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },

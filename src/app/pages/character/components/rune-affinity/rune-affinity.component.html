@@ -1,16 +1,29 @@
 <form [formGroup]="formRuneAffinity">
-  <nz-space  nzDirection="vertical" formArrayName="runes">
-    <nz-form-item *ngFor="let charRune of runes.controls; let i=index">
-      <nz-form-label nzFor="select{{(charRune | cfca).label }}">{{ getRuneLabel((charRune | cfca)) }}</nz-form-label>
-      <nz-form-control [nzErrorTip]="runeErrorTpl">
-        <nz-select [formControlName]="i" id="select{{(charRune | cfca).label }}">
-          <nz-option *ngFor="let rune of (charRune | cfca).options.choice" nzValue="{{rune}}" nzLabel="{{rune |translate}}"></nz-option>
-        </nz-select>
-        <ng-template #runeErrorTpl let-control>
-          <ng-container *ngIf="control.hasError('required')">{{'error.required' | translate}}</ng-container>
-        </ng-template>
-      </nz-form-control>
-    </nz-form-item>
-    <p class="red" *ngIf="runes.hasError('differentValues')">{{'error.different_values' | translate}}</p>
+  <nz-space  nzDirection="vertical">
+    <nz-space  nzDirection="vertical" formArrayName="specie_runes">
+      <nz-form-item *ngFor="let charRune of specie_runes.controls; let i=index">
+        <nz-form-label nzFor="select{{(charRune | cfca).label }}">{{ getRuneLabel((charRune | cfca)) }}</nz-form-label>
+        <nz-form-control [nzErrorTip]="runeErrorTpl">
+          <nz-select [formControlName]="i" id="select{{(charRune | cfca).label }}">
+            <nz-option *ngFor="let rune of (charRune | cfca).options.choice" nzValue="{{rune}}" nzLabel="{{rune |translate}}"></nz-option>
+          </nz-select>
+          <ng-template #runeErrorTpl let-control>
+            <ng-container *ngIf="control.hasError('required')">{{'error.required' | translate}}</ng-container>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <p class="red" *ngIf="specie_runes.hasError('differentValues')">{{'error.different_values' | translate}}</p>
+    </nz-space>
+    <nz-space>
+      <div class="rune-circle" formGroupName="elemental_runes">
+        <app-rune-input class="fire" formControlName="fire" minValue="0" maxValue="100" runeIcon="rune:fire-sky"></app-rune-input>
+        <app-rune-input class="air" formControlName="air" minValue="0" maxValue="100" runeIcon="rune:air"></app-rune-input>
+        <app-rune-input class="darkness" formControlName="darkness" minValue="0" maxValue="100" runeIcon="rune:darkness"></app-rune-input>
+        <app-rune-input class="moon" formControlName="moon" minValue="0" maxValue="100" runeIcon="rune:moon-full"></app-rune-input>
+        <app-rune-input class="earth" formControlName="earth" minValue="0" maxValue="100" runeIcon="rune:earth"></app-rune-input>
+        <app-rune-input class="water" formControlName="water" minValue="0" maxValue="100" runeIcon="rune:water"></app-rune-input>
+      </div>
+    </nz-space>
   </nz-space>
 </form>
+

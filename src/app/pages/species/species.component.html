@@ -17,7 +17,7 @@
     </nz-card>
 
     <nz-card style="width:300px;" nzTitle="{{'static.runes' | translate}}" *nzSpaceItem>
-      <p *ngFor="let rune of specie.runes"><b>{{rune.name | translate}}</b>: {{rune.value}}</p>
+      <p *ngFor="let rune of specie.elemental_runes"><b>{{rune.name | translate}}</b>: {{rune.value}}</p>
     </nz-card>
   </nz-space>
   <nz-divider nzText="{{'static.skills' | translate}}"></nz-divider>

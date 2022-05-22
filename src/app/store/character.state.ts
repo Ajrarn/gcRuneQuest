@@ -26,6 +26,9 @@ import * as _ from 'lodash';
       DEX: 0,
       CHA: 0
     },
+    runeSpecie: [],
+    runeAlterations: [],
+    runes: [],
     skills: [],
     specialSkillsSpecie: [],
     specialSkillsCulture: [],

@@ -10,10 +10,35 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.morokanth.morokanth"],
-  "runes": [
-    { "name": "elemental", "value": 60 },
-    { "name": "elemental", "value": 40 },
-    { "name": "elemental", "value": 20 }
+  "elemental_runes": [
+    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"]},
+    { "name": "choice.secondary", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] },
+    { "name": "choice.tertiary", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] }
+  ],
+  "power_runes": [
+    {
+      "leftRune": { "name": "runes.power_form.man", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.beast", "value": 50 }
+    },
+    {
+      "leftRune": { "name": "runes.power_form.fertility", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.death", "value": 50 }
+    },
+    {
+      "leftRune": { "name": "runes.power_form.harmony", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.disorder", "value": 50 }
+    },
+    {
+      "leftRune": { "name": "runes.power_form.truth", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.illusion", "value": 50 }
+    },
+    {
+      "leftRune": { "name": "runes.power_form.stasis", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.movement", "value": 50 }
+    }
   ],
   "skills": [
     {

@@ -86,14 +86,20 @@ export function getCharacteristicValue(characteristics: CharacteristicsValues, c
 export interface Rune {
   name: string;
   value: string;
-  choice: string[];
+  choice?: string[];
+}
+
+export interface OppositeRunes {
+  leftRune: Rune;
+  rightRune: Rune;
 }
 
 export interface Specie {
   name: string;
   cultures: string[];
   characteristics: Characteristics;
-  runes: Rune[];
+  elemental_runes: Rune[];
+  power_runes: OppositeRunes[];
   skills: SkillCategorie[];
 }
 
@@ -125,6 +131,9 @@ export interface Character {
   specialSkillsCulture: CharacterSkill[];
   spells: string[];
   languages: string[];
+  runeSpecie: CharacterRune[];
+  runeAlterations: CharacterRune[];
+  runes: CharacterRune[];
 }
 
 export interface CharacterSkill {
@@ -142,6 +151,13 @@ export interface CharacterSkillCategorie {
   name: string;
   bonus: number;
   skills: CharacterSkill[];
+}
+
+export interface CharacterRune {
+  name: string;
+  valueSpecie: number;
+  valueCulture: number;
+  valuePersonal: number;
 }
 
 export enum SkillProvenance {

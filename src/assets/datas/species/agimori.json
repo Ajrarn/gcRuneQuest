@@ -10,7 +10,7 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.agimori.agimori"],
-  "runes": [
+  "elemental_runes": [
     { "name": "runes.elemental.fire", "value": 100 }
   ],
   "skills": [
