@@ -14,16 +14,21 @@
       </nz-form-item>
       <p class="red" *ngIf="specie_runes.hasError('differentValues')">{{'error.different_values' | translate}}</p>
     </nz-space>
-    <nz-space>
-      <div class="rune-circle" formGroupName="elemental_runes">
-        <app-rune-input class="fire" formControlName="fire" minValue="0" maxValue="100" runeIcon="rune:fire-sky"></app-rune-input>
-        <app-rune-input class="air" formControlName="air" minValue="0" maxValue="100" runeIcon="rune:air"></app-rune-input>
-        <app-rune-input class="darkness" formControlName="darkness" minValue="0" maxValue="100" runeIcon="rune:darkness"></app-rune-input>
-        <app-rune-input class="moon" formControlName="moon" minValue="0" maxValue="100" runeIcon="rune:moon-full"></app-rune-input>
-        <app-rune-input class="earth" formControlName="earth" minValue="0" maxValue="100" runeIcon="rune:earth"></app-rune-input>
-        <app-rune-input class="water" formControlName="water" minValue="0" maxValue="100" runeIcon="rune:water"></app-rune-input>
+    <nz-space nzDirection="horizontal">
+      <div class="box>">
+        <h3>{{'static.elemental_runes' | translate}}</h3>
+        <div class="rune-circle" formGroupName="elemental_runes">
+          <app-rune-input class="fire" formControlName="fire" minValue="0" maxValue="100" runeIcon="rune:fire-sky"></app-rune-input>
+          <app-rune-input class="air" formControlName="air" minValue="0" maxValue="100" runeIcon="rune:air"></app-rune-input>
+          <app-rune-input class="darkness" formControlName="darkness" minValue="0" maxValue="100" runeIcon="rune:darkness"></app-rune-input>
+          <app-rune-input class="moon" formControlName="moon" minValue="0" maxValue="100" runeIcon="rune:moon-full"></app-rune-input>
+          <app-rune-input class="earth" formControlName="earth" minValue="0" maxValue="100" runeIcon="rune:earth"></app-rune-input>
+          <app-rune-input class="water" formControlName="water" minValue="0" maxValue="100" runeIcon="rune:water"></app-rune-input>
+        </div>
       </div>
     </nz-space>
+
   </nz-space>
 </form>
+
 
