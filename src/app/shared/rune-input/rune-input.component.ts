@@ -16,9 +16,12 @@ export class RuneInputComponent implements ControlValueAccessor {
 
   @Input()
   runeIcon: string = '';
+  @Input()
+  title: string = '';
 
   _minValue: number = 0;
   _maxValue: number = 100;
+  _leftInput: boolean = false;
 
   get minValue(): string {
     return this._minValue.toString();
@@ -33,11 +36,16 @@ export class RuneInputComponent implements ControlValueAccessor {
     return this._maxValue.toString();
   }
 
-
   @Input('maxValue')
   set maxValue(val: string) {
     this._maxValue = parseInt(val);
   }
+
+  @Input('leftInput')
+  set leftInput(val: string) {
+    this._leftInput = val === 'true';
+  }
+
 
   internalValue: number = 100;
   isDisabled = false;

@@ -17,45 +17,45 @@ label {
 }
 
 
-.circle {
-  position: relative;
+.rune-circle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . . fire fire . . ."
+    ". . . fire fire . . ."
+    "air air . . . darkness darkness ."
+    "air air . moon moon darkness darkness ."
+    ". . . moon moon . . ."
+    ". earth earth . water water . ."
+    ". earth earth . water water . .";
 }
 
 .fire {
-  position: relative;
-  top: 0;
-  left: 0;
+  grid-area: fire;
 }
 
 .air {
-  position: relative;
-  top: 10px;
-  left: -100px;
+  grid-area: air;
 }
 
 .darkness {
-  position: relative;
-  top: -35px;
-  left: 110px;
+  grid-area: darkness;
 }
 
 .moon {
-  position: relative;
-  top: -55px;
-  left: 0;
+  grid-area: moon;
 }
 
 .earth {
-  position: relative;
-  top: -20px;
-  left: -50px;
+  grid-area: earth;
 }
 
 .water {
-  position: relative;
-  top: -65px;
-  left: 65px;
+  grid-area: water;
 }
+
+
 
 .box {
   border: 1px solid #ddd;
