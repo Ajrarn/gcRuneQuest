@@ -24,6 +24,7 @@ export class RuneInputComponent implements ControlValueAccessor {
   _minValue: number = 0;
   _maxValue: number = 100;
   _leftInput: boolean = false;
+  _fixed: boolean = false;
 
   get minValue(): string {
     return this._minValue.toString();
@@ -46,6 +47,11 @@ export class RuneInputComponent implements ControlValueAccessor {
   @Input('leftInput')
   set leftInput(val: string) {
     this._leftInput = val === 'true';
+  }
+
+  @Input('fixed')
+  set fixed(val: string) {
+    this._fixed = val === 'true';
   }
 
  _value: number = 100;

@@ -59,7 +59,6 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { RuneInputComponent } from './shared/rune-input/rune-input.component';
 import { OppositeRuneInputComponent } from './shared/opposite-rune-input/opposite-rune-input.component';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
-import { SyncControlDirective } from './shared/sync-control.directive';
 
 registerLocaleData(fr);
 
@@ -74,8 +73,7 @@ registerLocaleData(fr);
     RuneAffinityComponent,
     RuneInputComponent,
     OppositeRuneInputComponent,
-    CastFormControlArrayPipe,
-    SyncControlDirective
+    CastFormControlArrayPipe
   ],
   imports: [
     BrowserModule,
