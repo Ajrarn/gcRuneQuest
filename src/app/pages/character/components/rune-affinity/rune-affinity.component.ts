@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
 import { TranslateService } from '@ngx-translate/core';
-import { FormControlArray } from '../../../../shared/Form-control-array';
+import { FormControlPlus } from '../../../../shared/form-control-plus';
 import { Specie } from '../../../../store/models';
 import { GCRValidators } from '../../../../shared/gcr-validators';
 import { CharacterUpdateRunes } from '../../../../store/character.actions';
@@ -32,6 +32,24 @@ export class RuneAffinityComponent implements OnChanges {
         moon: fb.control(100),
         earth: fb.control(100),
         water: fb.control(100)
+      }),
+      power_runes: fb.group({
+        fertility_death: fb.group({
+          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.fertility', {runeIcon:'rune:fertility'}),
+          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.death', {runeIcon:'rune:death'})
+        }),
+        harmony_disorder: fb.group({
+          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.harmony', {runeIcon:'rune:harmony'}),
+          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.disorder', {runeIcon:'rune:disorder'})
+        }),
+        truth_illusion: fb.group({
+          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.truth', {runeIcon:'rune:truth'}),
+          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.illusion', {runeIcon:'rune:illusion'})
+        }),
+        stasis_movement: fb.group({
+          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.stasis', {runeIcon:'rune:stasis'}),
+          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.movement', {runeIcon:'rune:movement-change'})
+        })
       })
     });
 
@@ -44,12 +62,20 @@ export class RuneAffinityComponent implements OnChanges {
     })
   }
 
+  getOppositeRuneGroup(groupName: string): FormGroup {
+    const power_runes = this.formRuneAffinity.get('power_runes');
+    if (power_runes) {
+      return power_runes.get(groupName) as FormGroup;
+    }
+    return this.formRuneAffinity;
+  }
+
   initFormRuneAffinity() {
     if (this.specie) {
       this.specie.elemental_runes.forEach(rune => {
         if (rune.name.includes('choice')) {
           (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
-            new FormControlArray(null, [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
+            new FormControlPlus(null, [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
           );
         } // TODO: else on ajoute la rune directement dans character
       });
@@ -60,7 +86,7 @@ export class RuneAffinityComponent implements OnChanges {
     return this.formRuneAffinity.get("specie_runes") as FormArray
   }
 
-  getRuneLabel(rune: FormControlArray): string {
+  getRuneLabel(rune: FormControlPlus): string {
     if (rune.label && rune.options && rune.options.value) {
       return this.translateService.instant(rune.label, {value: rune.options.value});
     }

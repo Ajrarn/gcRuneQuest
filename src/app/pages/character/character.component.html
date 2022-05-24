@@ -1,7 +1,7 @@
 <div class="my-row">
-  <div class="box">
+  <div>
     <h1>{{'static.creation_steps' | translate}}</h1>
-    <nz-tabset [nzTabPosition]="'left'">
+    <nz-tabset [nzTabPosition]="'top'">
       <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
         <ng-template #titleTemplate>
           <i nz-icon [nzType]="getIcon(tab.name)" style="{{getStyleIcon(tab.name)}}"></i>

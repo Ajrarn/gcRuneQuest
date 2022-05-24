@@ -18,6 +18,8 @@ export class RuneInputComponent implements ControlValueAccessor {
   runeIcon: string = '';
   @Input()
   title: string = '';
+  @Input()
+  runeSize: string = 'xxx-large';
 
   _minValue: number = 0;
   _maxValue: number = 100;
@@ -46,23 +48,26 @@ export class RuneInputComponent implements ControlValueAccessor {
     this._leftInput = val === 'true';
   }
 
-
-  internalValue: number = 100;
+ _value: number = 100;
   isDisabled = false;
 
   onChange: any = () => {}
   onTouch: any = () => {}
 
   set value(val: number) {
-    if( val !== undefined && this.internalValue !== val) {
-      this.internalValue = val;
+    if( val !== undefined && this._value !== val) {
+      this._value = val;
       this.onChange(val)
       this.onTouch(val)
     }
   }
 
+  get value() {
+    return this._value;
+  }
+
   registerOnChange(fn: any): void {
-    this.onTouch = fn;
+    this.onChange = fn;
   }
 
   registerOnTouched(fn: any): void {
@@ -76,5 +81,4 @@ export class RuneInputComponent implements ControlValueAccessor {
   writeValue(value: number): void {
     this.value = value;
   }
-
 }

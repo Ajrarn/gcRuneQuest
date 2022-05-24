@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { FormControlArray } from './Form-control-array';
+import { FormControlPlus } from './form-control-plus';
 
 @Pipe({
   name: 'cfca',
   pure: true
 })
 export class CastFormControlArrayPipe implements PipeTransform {
-  transform(value: any, args?: any): FormControlArray {
+  transform(value: any, args?: any): FormControlPlus {
     return value;
   }
 }

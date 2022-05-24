@@ -57,6 +57,9 @@ import { CastFormControlArrayPipe } from './shared/cast-form-control-array.pipe'
 import { RuneAffinityComponent } from './pages/character/components/rune-affinity/rune-affinity.component';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { RuneInputComponent } from './shared/rune-input/rune-input.component';
+import { OppositeRuneInputComponent } from './shared/opposite-rune-input/opposite-rune-input.component';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
+import { SyncControlDirective } from './shared/sync-control.directive';
 
 registerLocaleData(fr);
 
@@ -70,7 +73,9 @@ registerLocaleData(fr);
     CulturesComponent,
     RuneAffinityComponent,
     RuneInputComponent,
-    CastFormControlArrayPipe
+    OppositeRuneInputComponent,
+    CastFormControlArrayPipe,
+    SyncControlDirective
   ],
   imports: [
     BrowserModule,
@@ -110,7 +115,8 @@ registerLocaleData(fr);
     NzSwitchModule,
     NzFormModule,
     NzCheckboxModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzSliderModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },
