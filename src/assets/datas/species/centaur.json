@@ -20,12 +20,12 @@
   ],
   "power_runes": [
     {
-      "leftRune": { "name": "runes.power_form.man", "value": 50 },
-      "rightRune" : { "name": "runes.power_form.beast", "value": 50 }
+      "leftRune": { "name": "runes.power_form.man", "value": 25 },
+      "rightRune" : { "name": "runes.power_form.beast", "value": 75 }
     },
     {
-      "leftRune": { "name": "runes.power_form.fertility", "value": 50 },
-      "rightRune" : { "name": "runes.power_form.death", "value": 50 }
+      "leftRune": { "name": "runes.power_form.fertility", "value": 75 },
+      "rightRune" : { "name": "runes.power_form.death", "value": 25 }
     },
     {
       "leftRune": { "name": "runes.power_form.harmony", "value": 50 },

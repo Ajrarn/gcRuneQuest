@@ -11,7 +11,34 @@
   },
   "cultures": ["cultures.agimori.agimori"],
   "elemental_runes": [
-    { "name": "runes.elemental.fire", "value": 100 }
+    { "name": "choice.primary", "value": 100 , "choice": ["runes.elemental.fire"]}
+  ],
+  "power_runes": [
+    {
+      "name": "man_beast",
+      "leftRune": { "name": "runes.power_form.man", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.beast", "value": 50 }
+    },
+    {
+      "name": "fertility_death",
+      "leftRune": { "name": "runes.power_form.fertility", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.death", "value": 50 }
+    },
+    {
+      "name": "harmony_disorder",
+      "leftRune": { "name": "runes.power_form.harmony", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.disorder", "value": 50 }
+    },
+    {
+      "name": "truth_illusion",
+      "leftRune": { "name": "runes.power_form.truth", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.illusion", "value": 50 }
+    },
+    {
+      "name": "stasis_movement",
+      "leftRune": { "name": "runes.power_form.stasis", "value": 50 },
+      "rightRune" : { "name": "runes.power_form.movement", "value": 50 }
+    }
   ],
   "skills": [
     {

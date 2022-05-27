@@ -11,12 +11,7 @@
   },
   "cultures": ["cultures.elder_races.mostali"],
   "elemental_runes": [
-    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"]},
-    { "name": "choice.secondary", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] },
-    { "name": "choice.tertiary", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] }
+    { "name": "choice.primary", "value": 80 , "choice":  [ "runes.elemental.earth"]}
   ],
   "power_runes": [
     {
@@ -36,8 +31,8 @@
       "rightRune" : { "name": "runes.power_form.illusion", "value": 50 }
     },
     {
-      "leftRune": { "name": "runes.power_form.stasis", "value": 50 },
-      "rightRune" : { "name": "runes.power_form.movement", "value": 50 }
+      "leftRune": { "name": "runes.power_form.stasis", "value": 80 },
+      "rightRune" : { "name": "runes.power_form.movement", "value": 20 }
     }
   ],
   "skills": [

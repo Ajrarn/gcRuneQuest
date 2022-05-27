@@ -20,8 +20,8 @@
   ],
   "power_runes": [
     {
-      "leftRune": { "name": "runes.power_form.man", "value": 50 },
-      "rightRune" : { "name": "runes.power_form.beast", "value": 50 }
+      "leftRune": { "name": "runes.power_form.man", "value": 20 },
+      "rightRune" : { "name": "runes.power_form.beast", "value": 80 }
     },
     {
       "leftRune": { "name": "runes.power_form.fertility", "value": 50 },

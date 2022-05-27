@@ -11,17 +11,12 @@
   },
   "cultures": ["cultures.beast_men.minotaur"],
   "elemental_runes": [
-    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"]},
-    { "name": "choice.secondary", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] },
-    { "name": "choice.tertiary", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] }
+    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air"]}
   ],
   "power_runes": [
     {
-      "leftRune": { "name": "runes.power_form.man", "value": 50 },
-      "rightRune" : { "name": "runes.power_form.beast", "value": 50 }
+      "leftRune": { "name": "runes.power_form.man", "value": 40 },
+      "rightRune" : { "name": "runes.power_form.beast", "value": 60 }
     },
     {
       "leftRune": { "name": "runes.power_form.fertility", "value": 50 },

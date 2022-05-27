@@ -11,17 +11,17 @@
   },
   "cultures": ["cultures.elder_races.aldryami"],
   "elemental_runes": [
-    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"]},
-    { "name": "choice.secondary", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] },
-    { "name": "choice.tertiary", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon"] }
+    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.earth","runes.elemental.fire"]},
+    { "name": "choice.power", "value": 75 , "choice":  ["runes.power_form.fertility","runes.power_form.death",
+      "runes.power_form.harmony", "runes.power_form.disorder",
+      "runes.power_form.truth", "runes.power_form.illusion",
+      "runes.power_form.stasis", "runes.power_form.movement"
+    ]}
   ],
   "power_runes": [
     {
-      "leftRune": { "name": "runes.power_form.man", "value": 50 },
-      "rightRune" : { "name": "runes.power_form.plant", "value": 50 }
+      "leftRune": { "name": "runes.power_form.man", "value": 25 },
+      "rightRune" : { "name": "runes.power_form.plant", "value": 75 }
     },
     {
       "leftRune": { "name": "runes.power_form.fertility", "value": 50 },

@@ -6,7 +6,7 @@
     { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.air", "value": 10}
+    { "name":  "elemental.darkness", "value": 10}
   ],
   "occupations": [
     "occupations.common.assistant_shaman",
