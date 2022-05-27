@@ -5,6 +5,7 @@ import { CharacterComponent } from './pages/character/character.component';
 import { OccupationsComponent } from './pages/occupations/occupations.component';
 import { CanActivateWhenReady } from './can-activate-when-ready';
 import { CulturesComponent } from './pages/cultures/cultures.component';
+import { RunesComponent } from './pages/runes/runes.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/character' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'occupations', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
   { path: 'occupations/:id', component: OccupationsComponent, canActivate: [CanActivateWhenReady] },
   { path: 'cultures', component: CulturesComponent, canActivate: [CanActivateWhenReady] },
-  { path: 'cultures/:id', component: CulturesComponent, canActivate: [CanActivateWhenReady] }
+  { path: 'cultures/:id', component: CulturesComponent, canActivate: [CanActivateWhenReady] },
+  { path: 'runes', component: RunesComponent }
 ];
 
 @NgModule({

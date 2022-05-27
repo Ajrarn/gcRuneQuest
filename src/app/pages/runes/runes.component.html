@@ -1,0 +1,15 @@
+<nz-collapse>
+  <nz-collapse-panel
+    *ngFor="let category of runes"
+    [nzHeader]="category.name | translate"
+    [nzActive]="category.active"
+  >
+    <div class="card-box">
+      <nz-card *ngFor="let rune of category.runes" nzTitle="{{rune.title | translate}}" style="width: 300px">
+        <i nz-icon [nzType]="rune.icon"></i>
+      </nz-card>
+    </div>
+
+  </nz-collapse-panel>
+</nz-collapse>
+

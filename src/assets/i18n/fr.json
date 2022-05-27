@@ -227,6 +227,37 @@
 			"moon": "Lune",
 			"water": "Eau"
 		},
+		"moon": {
+			"black": "Lune noire",
+			"crescent_come": "Lune montante",
+			"crescent_go": "Lune descendante",
+			"empty_half": "Demi-lune montante",
+			"full": "Pleine lune",
+			"full_half": "Demi-lune descendante"
+		},
+		"others": {
+			"alternate_fire_sky": "Feu / Ciel alternative",
+			"bartar": "Bartar",
+			"cold": "Froid",
+			"communication_trade": "Communication / Commerce",
+			"dragon": "Dragon",
+			"eternal_battle": "Bataille éternelle",
+			"god": "Dieu",
+			"heler": "Heler",
+			"hell": "Enfer",
+			"horse": "Cheval",
+			"law": "Loi",
+			"light": "Lumière",
+			"lightbringers": "Porteurs de lumière",
+			"maker": "Fabricant",
+			"malkion": "Malkion",
+			"odayla": "Odayla",
+			"pamalt": "Pamalt",
+			"sartar": "Sartar",
+			"shargash": "Shargash",
+			"undeath": "Non mort",
+			"yinkin": "Yinkin"
+		},
 		"power_form": {
 			"beast": "Bête",
 			"chaos": "Chaos",
@@ -242,6 +273,14 @@
 			"spirit": "Esprit",
 			"stasis": "Stase",
 			"truth": "Vérité"
+		},
+		"sorcery": {
+			"combine": "Combiner",
+			"command": "Commander",
+			"dispel": "Dissiper",
+			"separate": "Séparer",
+			"summon": "Invoquer",
+			"tap": "Drainer"
 		}
 	},
 	"skills": {
@@ -430,6 +469,7 @@
 		"bonus": "Bonus",
 		"character": "Personnage",
 		"characteristics": "Caractéristiques",
+		"conditions_runes": "Runes de condition",
 		"creation": "Création",
 		"creation_steps": "Étapes de création",
 		"culture": "Culture",
@@ -437,14 +477,17 @@
 		"datas": "Données",
 		"elemental_runes": "Runes élémentaires",
 		"language": "Langage",
+		"moon_runes": "Runes de la lune",
 		"name": "Nom",
 		"occupation": "Occupation",
 		"occupations": "Occupations",
+		"other_runes": "Autres runes",
 		"power_runes": "Runes de pouvoir",
 		"runes": "Runes",
 		"show_all": "Afficher Toutes",
 		"skill": "Compétence",
 		"skills": "Compétences",
+		"sorcery_runes": "Runes de sorcellerie",
 		"specie": "Race",
 		"species": "Races",
 		"title": "Assistant de Création de Personnage pour RuneQuest",

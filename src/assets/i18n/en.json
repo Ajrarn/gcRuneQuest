@@ -227,6 +227,37 @@
 			"moon": "Moon",
 			"water": "Water"
 		},
+		"moon": {
+			"black": "Black Moon",
+			"crescent_come": "Crescent Come",
+			"crescent_go": "Crescent Go",
+			"empty_half": "Empty Half",
+			"full": "Full Moon",
+			"full_half": "Full Half"
+		},
+		"others": {
+			"alternate_fire_sky": "Aleterante Fire / Sky",
+			"bartar": "Bartar",
+			"cold": "Cold",
+			"communication_trade": "Communication / Trade",
+			"dragon": "Dragon",
+			"eternal_battle": "Eternal Battle",
+			"god": "God",
+			"heler": "Heler",
+			"hell": "Hell",
+			"horse": "Horse",
+			"law": "Law",
+			"light": "Light",
+			"lightbringers": "Lightbringers",
+			"maker": "Maker",
+			"malkion": "Malkion",
+			"odayla": "Odayla",
+			"pamalt": "Pamalt",
+			"sartar": "Sartar",
+			"shargash": "Shargash",
+			"undeath": "Undeath",
+			"yinkin": "Yinkin"
+		},
 		"power_form": {
 			"beast": "Beast",
 			"chaos": "Chaos",
@@ -242,6 +273,14 @@
 			"spirit": "Spirit",
 			"stasis": "Stasis",
 			"truth": "Truth"
+		},
+		"sorcery": {
+			"combine": "Combine",
+			"command": "Command",
+			"dispel": "Dispel",
+			"separate": "Separate",
+			"summon": "Summon",
+			"tap": "Tap"
 		}
 	},
 	"skills": {
@@ -430,6 +469,7 @@
 		"bonus": "Bonus",
 		"character": "Character",
 		"characteristics": "Characteristics",
+		"conditions_runes": "Conditions Runes",
 		"creation": "Creation",
 		"creation_steps": "Creation steps",
 		"culture": "Culture",
@@ -437,14 +477,17 @@
 		"datas": "Datas",
 		"elemental_runes": "Elemental Runes",
 		"language": "Language",
+		"moon_runes": "Moon runes",
 		"name": "Name",
 		"occupation": "Occupation",
 		"occupations": "Occupations",
+		"other_runes": "Other Runes",
 		"power_runes": "Power Runes",
 		"runes": "Runes",
 		"show_all": "Show All",
 		"skill": "Skill",
 		"skills": "Skills",
+		"sorcery_runes": "Sorcery Runes",
 		"specie": "Specie",
 		"species": "Species",
 		"title": "Runequest Character Creation Assistant ",
