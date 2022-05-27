@@ -1,4 +1,4 @@
-<nz-row [formGroup]="runeGroup">
+<nz-row [formGroup]="_runeGroup">
   <app-rune-input formControlName="leftRune" minValue="0" maxValue="100" runeIcon="{{getIcon('leftRune')}}" title="{{getLabel('leftRune') | translate}}"  leftInput="true" fixed="true" runeSize="x-large"></app-rune-input>
   <nz-slider [nzMin]="0" [nzMax]="100" [nzTooltipVisible]="'never'" formControlName="rightRune"></nz-slider>
   <app-rune-input formControlName="rightRune" minValue="0" maxValue="100" runeIcon="{{getIcon('rightRune')}}" title="{{getLabel('rightRune') | translate}}" runeSize="x-large" fixed="true"></app-rune-input>

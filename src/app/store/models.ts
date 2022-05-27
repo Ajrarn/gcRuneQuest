@@ -90,6 +90,7 @@ export interface Rune {
 }
 
 export interface OppositeRunes {
+  name: string;
   leftRune: Rune;
   rightRune: Rune;
 }

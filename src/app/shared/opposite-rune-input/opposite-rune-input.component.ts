@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input, OnChanges } from '@angular/core';
-import { FormBuilder, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FormControlPlus } from '../form-control-plus';
 
 @Component({
@@ -15,19 +15,24 @@ import { FormControlPlus } from '../form-control-plus';
 })
 export class OppositeRuneInputComponent implements OnChanges {
 
-  @Input()
-  runeGroup: FormGroup;
+
+  _runeGroup: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.runeGroup = fb.group({
+    this._runeGroup = fb.group({
       leftRune: new FormControlPlus(),
       rightRune: new FormControlPlus()
     });
   }
 
+  @Input()
+  set runeGroup(group: AbstractControl) {
+    this._runeGroup = group as FormGroup;
+  }
+
   getRuneControl(controlName: string): FormControlPlus | null {
-    if (this.runeGroup) {
-      return this.runeGroup.controls[controlName] as FormControlPlus;
+    if (this._runeGroup) {
+      return this._runeGroup.controls[controlName] as FormControlPlus;
     }
     return null;
   }
@@ -49,24 +54,20 @@ export class OppositeRuneInputComponent implements OnChanges {
   }
 
   ngOnChanges(changes: any): void {
+
     // @ts-ignore
-    this.runeGroup.get('rightRune').valueChanges.subscribe(value => {
+    this._runeGroup.get('rightRune').valueChanges.subscribe(value => {
       // @ts-ignore
-      this.runeGroup.get('rightRune').setValue(value, {onlySelf: true, emitEvent: false});
+      this._runeGroup.get('rightRune').setValue(value, {onlySelf: true, emitEvent: false});
       // @ts-ignore
-      this.runeGroup.get('leftRune').setValue(100 - value, {onlySelf: true, emitEvent: false});
+      this._runeGroup.get('leftRune').setValue(100 - value, {onlySelf: true, emitEvent: false});
     });
 
     // @ts-ignore
-    this.runeGroup.get('leftRune').valueChanges.subscribe(value => {
+    this._runeGroup.get('leftRune').valueChanges.subscribe(value => {
       // @ts-ignore
-      this.runeGroup.get('rightRune').setValue(100 - value, {onlySelf: true, emitEvent: false});
+      this._runeGroup.get('rightRune').setValue(100 - value, {onlySelf: true, emitEvent: false});
     });
 
   }
-
-
-
-
-
 }

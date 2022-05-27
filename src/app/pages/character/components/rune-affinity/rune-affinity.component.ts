@@ -33,25 +33,8 @@ export class RuneAffinityComponent implements OnChanges {
         earth: fb.control(100),
         water: fb.control(100)
       }),
-      power_runes: fb.group({
-        fertility_death: fb.group({
-          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.fertility', {runeIcon:'rune:fertility'}),
-          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.death', {runeIcon:'rune:death'})
-        }),
-        harmony_disorder: fb.group({
-          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.harmony', {runeIcon:'rune:harmony'}),
-          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.disorder', {runeIcon:'rune:disorder'})
-        }),
-        truth_illusion: fb.group({
-          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.truth', {runeIcon:'rune:truth'}),
-          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.illusion', {runeIcon:'rune:illusion'})
-        }),
-        stasis_movement: fb.group({
-          leftRune: new FormControlPlus(75, null, null, 'runes.power_form.stasis', {runeIcon:'rune:stasis'}),
-          rightRune: new FormControlPlus(25, null, null, 'runes.power_form.movement', {runeIcon:'rune:movement-change'})
-        })
-      })
-    });
+      power_runes: fb.array([])
+      });
 
     this.formRuneAffinity.valueChanges.subscribe(formValues => {
       this.valid.emit(this.formRuneAffinity.valid);
@@ -62,16 +45,9 @@ export class RuneAffinityComponent implements OnChanges {
     })
   }
 
-  getOppositeRuneGroup(groupName: string): FormGroup {
-    const power_runes = this.formRuneAffinity.get('power_runes');
-    if (power_runes) {
-      return power_runes.get(groupName) as FormGroup;
-    }
-    return this.formRuneAffinity;
-  }
-
   initFormRuneAffinity() {
     if (this.specie) {
+      this.formRuneAffinity.controls['specie_runes'] = new FormArray([]);
       this.specie.elemental_runes.forEach(rune => {
         if (rune.name.includes('choice')) {
           (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
@@ -79,11 +55,65 @@ export class RuneAffinityComponent implements OnChanges {
           );
         } // TODO: else on ajoute la rune directement dans character
       });
+
+      this.formRuneAffinity.controls['power_runes'] = new FormArray([]);
+      this.specie.power_runes.forEach(oppositeRunes => {
+        (this.formRuneAffinity.controls['power_runes'] as FormArray).push(new FormGroup({
+          leftRune: new FormControlPlus(oppositeRunes.leftRune.value, null, null, oppositeRunes.leftRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.leftRune.name)}),
+          rightRune: new FormControlPlus(oppositeRunes.rightRune.value, null, null, oppositeRunes.rightRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.rightRune.name)})
+        }));
+      });
+
     }
   }
 
   get specie_runes() : FormArray {
-    return this.formRuneAffinity.get("specie_runes") as FormArray
+    return this.formRuneAffinity.get("specie_runes") as FormArray;
+  }
+
+  get power_runes(): FormArray {
+    return this.formRuneAffinity.get("power_runes") as FormArray;
+  }
+
+  getRuneIcon(runeName: string) {
+    switch (runeName) {
+      case 'runes.power_form.man': {
+        return 'rune:man';
+      }
+      case 'runes.power_form.plant': {
+        return 'rune:plant';
+      }
+      case 'runes.power_form.beast': {
+        return 'rune:beast';
+      }
+      case 'runes.power_form.fertility': {
+        return 'rune:fertility';
+      }
+      case 'runes.power_form.death': {
+        return 'rune:death';
+      }
+      case 'runes.power_form.harmony': {
+        return 'rune:harmony';
+      }
+      case 'runes.power_form.disorder': {
+        return 'rune:disorder';
+      }
+      case 'runes.power_form.truth': {
+        return 'rune:truth';
+      }
+      case 'runes.power_form.illusion': {
+        return 'rune:illusion';
+      }
+      case 'runes.power_form.stasis': {
+        return 'rune:stasis';
+      }
+      case 'runes.power_form.movement': {
+        return 'rune:movement-change';
+      }
+      default: {
+        return '';
+      }
+    }
   }
 
   getRuneLabel(rune: FormControlPlus): string {

@@ -28,10 +28,7 @@
       </div>
       <div formGroupName="power_runes">
         <h3>{{'static.power_runes' | translate}}</h3>
-        <app-opposite-rune-input [runeGroup]="getOppositeRuneGroup('fertility_death')"></app-opposite-rune-input>
-        <app-opposite-rune-input [runeGroup]="getOppositeRuneGroup('harmony_disorder')"></app-opposite-rune-input>
-        <app-opposite-rune-input [runeGroup]="getOppositeRuneGroup('truth_illusion')"></app-opposite-rune-input>
-        <app-opposite-rune-input [runeGroup]="getOppositeRuneGroup('stasis_movement')"></app-opposite-rune-input>
+        <app-opposite-rune-input *ngFor="let fg of power_runes.controls; let i=index" [runeGroup]="fg"></app-opposite-rune-input>
       </div>
     </nz-space>
 
