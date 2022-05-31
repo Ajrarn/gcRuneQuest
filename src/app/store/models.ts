@@ -132,9 +132,7 @@ export interface Character {
   specialSkillsCulture: CharacterSkill[];
   spells: string[];
   languages: string[];
-  runeSpecie: CharacterRune[];
-  runeAlterations: CharacterRune[];
-  runes: CharacterRune[];
+  runes: any;
 }
 
 export interface CharacterSkill {

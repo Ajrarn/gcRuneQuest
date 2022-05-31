@@ -1,18 +1,18 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, Output, SimpleChanges } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
 import { TranslateService } from '@ngx-translate/core';
 import { FormControlPlus } from '../../../../shared/form-control-plus';
 import { Specie } from '../../../../store/models';
 import { GCRValidators } from '../../../../shared/gcr-validators';
-import { CharacterUpdateRunes } from '../../../../store/character.actions';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-rune-affinity',
   templateUrl: './rune-affinity.component.html',
   styleUrls: ['./rune-affinity.component.less']
 })
-export class RuneAffinityComponent implements OnChanges {
+export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   formRuneAffinity: FormGroup;
 
@@ -22,32 +22,32 @@ export class RuneAffinityComponent implements OnChanges {
   @Output()
   valid = new EventEmitter<boolean>();
 
+  subscription = new Subscription();
+
   constructor(private store: Store, private fb: FormBuilder, private translateService: TranslateService) {
     this.formRuneAffinity = fb.group({
       specie_runes: fb.array([], [GCRValidators.differentValues()]),
       elemental_runes: fb.group({
         fire: fb.control(100),
-        air: fb.control(100),
+        air: fb.control(50),
         darkness: fb.control(100),
-        moon: fb.control(100),
-        earth: fb.control(100),
+        moon: fb.control(75),
+        earth: fb.control(25),
         water: fb.control(100)
       }),
       power_runes: fb.array([])
-      });
+    });
 
-    this.formRuneAffinity.valueChanges.subscribe(formValues => {
+    this.formRuneAffinity.valueChanges.subscribe(values => {
       this.valid.emit(this.formRuneAffinity.valid);
-
-      if (this.formRuneAffinity.valid) {
-        this.store.dispatch(new CharacterUpdateRunes(formValues))
-      }
-    })
+    });
   }
 
   initFormRuneAffinity() {
+
     if (this.specie) {
-      this.formRuneAffinity.controls['specie_runes'] = new FormArray([]);
+
+      this.clearFormArray(this.formRuneAffinity.controls['specie_runes'] as FormArray);
       this.specie.elemental_runes.forEach(rune => {
         if (rune.name.includes('choice')) {
           (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
@@ -56,23 +56,28 @@ export class RuneAffinityComponent implements OnChanges {
         } // TODO: else on ajoute la rune directement dans character
       });
 
-      this.formRuneAffinity.controls['power_runes'] = new FormArray([]);
+      this.clearFormArray(this.formRuneAffinity.controls['power_runes'] as FormArray);
       this.specie.power_runes.forEach(oppositeRunes => {
         (this.formRuneAffinity.controls['power_runes'] as FormArray).push(new FormGroup({
           leftRune: new FormControlPlus(oppositeRunes.leftRune.value, null, null, oppositeRunes.leftRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.leftRune.name)}),
           rightRune: new FormControlPlus(oppositeRunes.rightRune.value, null, null, oppositeRunes.rightRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.rightRune.name)})
         }));
       });
-
     }
   }
 
-  get specie_runes() : FormArray {
-    return this.formRuneAffinity.get("specie_runes") as FormArray;
+  getSpecieRunes(): FormArray {
+    return this.formRuneAffinity.get('specie_runes') as FormArray;
   }
 
-  get power_runes(): FormArray {
-    return this.formRuneAffinity.get("power_runes") as FormArray;
+
+
+  getPowerRunes(): FormArray {
+    return this.formRuneAffinity.get('power_runes') as FormArray;
+  }
+
+  getElementalRunes(): FormGroup {
+    return this.formRuneAffinity.get('elemental_runes') as FormGroup;
   }
 
   getRuneIcon(runeName: string) {
@@ -125,6 +130,16 @@ export class RuneAffinityComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.initFormRuneAffinity();
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
+  clearFormArray = (formArray: FormArray) => {
+    while (formArray.length !== 0) {
+      formArray.removeAt(0)
+    }
   }
 
 }

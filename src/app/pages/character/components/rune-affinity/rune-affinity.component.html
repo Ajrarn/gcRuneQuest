@@ -1,7 +1,7 @@
 <form [formGroup]="formRuneAffinity">
   <nz-space  nzDirection="vertical">
     <nz-space  nzDirection="vertical" formArrayName="specie_runes">
-      <nz-form-item *ngFor="let charRune of specie_runes.controls; let i=index">
+      <nz-form-item *ngFor="let charRune of getSpecieRunes().controls; let i=index">
         <nz-form-label nzFor="select{{(charRune | cfca).label }}">{{ getRuneLabel((charRune | cfca)) }}</nz-form-label>
         <nz-form-control [nzErrorTip]="runeErrorTpl">
           <nz-select [formControlName]="i" id="select{{(charRune | cfca).label }}">
@@ -12,7 +12,7 @@
           </ng-template>
         </nz-form-control>
       </nz-form-item>
-      <p class="red" *ngIf="specie_runes.hasError('differentValues')">{{'error.different_values' | translate}}</p>
+      <p class="red" *ngIf="getSpecieRunes().hasError('differentValues')">{{'error.different_values' | translate}}</p>
     </nz-space>
     <nz-space nzDirection="horizontal">
       <div class="box>">
@@ -26,9 +26,9 @@
           <app-rune-input class="water" formControlName="water" minValue="0" maxValue="100" runeIcon="rune:water" title="{{'runes.elemental.water' | translate}}"></app-rune-input>
         </div>
       </div>
-      <div formGroupName="power_runes">
+      <div formArrayName="power_runes">
         <h3>{{'static.power_runes' | translate}}</h3>
-        <app-opposite-rune-input *ngFor="let fg of power_runes.controls; let i=index" [runeGroup]="fg"></app-opposite-rune-input>
+        <app-opposite-rune-input *ngFor="let fg of getPowerRunes().controls; let i=index" [runeGroup]="fg"></app-opposite-rune-input>
       </div>
     </nz-space>
 

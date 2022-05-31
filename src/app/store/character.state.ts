@@ -8,7 +8,12 @@ import {
   Specie
 } from './models';
 import { Injectable } from '@angular/core';
-import { CharacterUpdateCulture, CharacterUpdateOccupation, CharacterUpdateSpecie } from './character.actions';
+import {
+  CharacterUpdateCulture,
+  CharacterUpdateOccupation,
+  CharacterUpdateRunes,
+  CharacterUpdateSpecie
+} from './character.actions';
 import * as _ from 'lodash';
 
 @State<Character>({
@@ -26,9 +31,7 @@ import * as _ from 'lodash';
       DEX: 0,
       CHA: 0
     },
-    runeSpecie: [],
-    runeAlterations: [],
-    runes: [],
+    runes: {},
     skills: [],
     specialSkillsSpecie: [],
     specialSkillsCulture: [],
@@ -61,6 +64,14 @@ export class CharacterState {
   updateOccupation(ctx: StateContext<Character>, action: CharacterUpdateOccupation) {
     ctx.patchState({
       occupation: action.occupation.name
+    });
+    this.updateCharacter(ctx);
+  }
+
+  @Action(CharacterUpdateRunes)
+  updateRunes(ctx: StateContext<Character>, action: CharacterUpdateRunes) {
+    ctx.patchState({
+      runes: action.runes
     });
     this.updateCharacter(ctx);
   }

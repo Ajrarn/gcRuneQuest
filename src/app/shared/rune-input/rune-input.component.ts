@@ -61,7 +61,7 @@ export class RuneInputComponent implements ControlValueAccessor {
   onTouch: any = () => {}
 
   set value(val: number) {
-    if( val !== undefined && this._value !== val) {
+    if ( val !== undefined && this._value !== val) {
       this._value = val;
       this.onChange(val)
       this.onTouch(val)
