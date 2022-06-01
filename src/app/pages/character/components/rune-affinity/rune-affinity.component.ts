@@ -5,7 +5,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { FormControlPlus } from '../../../../shared/form-control-plus';
 import { Specie } from '../../../../store/models';
 import { GCRValidators } from '../../../../shared/gcr-validators';
-import { Subscription } from 'rxjs';
+import { debounceTime, Subscription } from 'rxjs';
+import { CharacterUpdateRunes } from '../../../../store/character.actions';
 
 @Component({
   selector: 'app-rune-affinity',
@@ -38,9 +39,13 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
       power_runes: fb.array([])
     });
 
-    this.formRuneAffinity.valueChanges.subscribe(values => {
-      this.valid.emit(this.formRuneAffinity.valid);
-    });
+    this.formRuneAffinity.valueChanges
+      .pipe(
+        debounceTime(300)
+      ).subscribe(values => {
+        this.valid.emit(this.formRuneAffinity.valid);
+        this.store.dispatch(new CharacterUpdateRunes(values));
+      });
   }
 
   initFormRuneAffinity() {
