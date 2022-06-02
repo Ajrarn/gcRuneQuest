@@ -29,12 +29,12 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
     this.formRuneAffinity = fb.group({
       specie_runes: fb.array([], [GCRValidators.differentValues()]),
       elemental_runes: fb.group({
-        fire: fb.control(100),
-        air: fb.control(50),
-        darkness: fb.control(100),
-        moon: fb.control(75),
-        earth: fb.control(25),
-        water: fb.control(100)
+        fire: fb.control(0),
+        air: fb.control(0),
+        darkness: fb.control(0),
+        moon: fb.control(0),
+        earth: fb.control(0),
+        water: fb.control(0)
       }),
       power_runes: fb.array([])
     });
@@ -49,16 +49,20 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   initFormRuneAffinity() {
-
     if (this.specie) {
-
       this.clearFormArray(this.formRuneAffinity.controls['specie_runes'] as FormArray);
       this.specie.elemental_runes.forEach(rune => {
         if (rune.name.includes('choice')) {
-          (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
-            new FormControlPlus(null, [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
-          );
-        } // TODO: else on ajoute la rune directement dans character
+          if (rune.choice?.length === 1) {
+            (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
+              new FormControlPlus(rune.choice[0], [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
+            );
+          } else {
+            (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
+              new FormControlPlus(null, [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
+            );
+          }
+        }
       });
 
       this.clearFormArray(this.formRuneAffinity.controls['power_runes'] as FormArray);
@@ -75,14 +79,8 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
     return this.formRuneAffinity.get('specie_runes') as FormArray;
   }
 
-
-
   getPowerRunes(): FormArray {
     return this.formRuneAffinity.get('power_runes') as FormArray;
-  }
-
-  getElementalRunes(): FormGroup {
-    return this.formRuneAffinity.get('elemental_runes') as FormGroup;
   }
 
   getRuneIcon(runeName: string) {
@@ -141,6 +139,10 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  /**
+   * this function remove all items in FormArray without losing the synchronisation that trigger valueChanges
+   * @param formArray
+   */
   clearFormArray = (formArray: FormArray) => {
     while (formArray.length !== 0) {
       formArray.removeAt(0)
