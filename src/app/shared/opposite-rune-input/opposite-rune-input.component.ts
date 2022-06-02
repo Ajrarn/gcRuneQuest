@@ -68,6 +68,5 @@ export class OppositeRuneInputComponent implements OnChanges {
       // @ts-ignore
       this._runeGroup.get('rightRune').setValue(100 - value, {onlySelf: true, emitEvent: false});
     });
-
   }
 }

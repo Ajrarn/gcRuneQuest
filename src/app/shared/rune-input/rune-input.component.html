@@ -3,5 +3,5 @@
     <p>{{title}}</p>
     <i nz-icon [nzType]="runeIcon" class="{{runeSize}}"></i>
   </div>
-  <nz-input-number [(ngModel)]="value" [nzMin]="0" [nzMax]="100" [nzStep]="1" id="input"></nz-input-number>
+  <nz-input-number [(ngModel)]="value" [nzMin]="0" [nzMax]="100" [nzStep]="1" id="input" [disabled]="isDisabled"></nz-input-number>
 </div>

@@ -45,10 +45,44 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
       ).subscribe(values => {
         this.valid.emit(this.formRuneAffinity.valid);
         this.store.dispatch(new CharacterUpdateRunes(values));
+        this.initElementalRuneForm();
+        this.initPowerRuneForm();
       });
   }
 
-  initFormRuneAffinity() {
+  initElementalRuneForm() {
+    const specieRuneForm = this.formRuneAffinity.get('specie_runes');
+    const elementalRunesForm = this.formRuneAffinity.get('elemental_runes');
+    if (elementalRunesForm) {
+      if (specieRuneForm && specieRuneForm.valid) {
+        if (elementalRunesForm.disabled) {
+          elementalRunesForm.enable();
+        }
+      } else {
+        if (elementalRunesForm.enabled) {
+          elementalRunesForm.disable();
+        }
+      }
+    }
+  }
+
+  initPowerRuneForm() {
+    const specieRuneForm = this.formRuneAffinity.get('specie_runes');
+    const powerRunesForm = this.formRuneAffinity.get('power_runes');
+    if (powerRunesForm) {
+      if (specieRuneForm && specieRuneForm.valid) {
+        if (powerRunesForm.disabled) {
+          powerRunesForm.enable();
+        }
+      } else {
+        if (powerRunesForm.enabled) {
+          powerRunesForm.disable();
+        }
+      }
+    }
+  }
+
+  initSpecieRuneForm() {
     if (this.specie) {
       this.clearFormArray(this.formRuneAffinity.controls['specie_runes'] as FormArray);
       this.specie.elemental_runes.forEach(rune => {
@@ -132,7 +166,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.initFormRuneAffinity();
+    this.initSpecieRuneForm();
   }
 
   ngOnDestroy() {
