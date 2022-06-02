@@ -28,7 +28,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   constructor(private store: Store, private fb: FormBuilder, private translateService: TranslateService) {
     this.formRuneAffinity = fb.group({
       specie_runes: fb.array([], [GCRValidators.differentValues()]),
-      elemental_runes: fb.group({
+      elementalRunes: fb.group({
         fire: fb.control(0),
         air: fb.control(0),
         darkness: fb.control(0),
@@ -36,7 +36,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
         earth: fb.control(0),
         water: fb.control(0)
       }),
-      power_runes: fb.array([])
+      powerRunes: fb.array([])
     });
 
     this.formRuneAffinity.valueChanges
@@ -52,7 +52,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   initElementalRuneForm() {
     const specieRuneForm = this.formRuneAffinity.get('specie_runes');
-    const elementalRunesForm = this.formRuneAffinity.get('elemental_runes');
+    const elementalRunesForm = this.formRuneAffinity.get('elementalRunes');
     if (elementalRunesForm) {
       if (specieRuneForm && specieRuneForm.valid) {
         if (elementalRunesForm.disabled) {
@@ -68,7 +68,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   initPowerRuneForm() {
     const specieRuneForm = this.formRuneAffinity.get('specie_runes');
-    const powerRunesForm = this.formRuneAffinity.get('power_runes');
+    const powerRunesForm = this.formRuneAffinity.get('powerRunes');
     if (powerRunesForm) {
       if (specieRuneForm && specieRuneForm.valid) {
         if (powerRunesForm.disabled) {
@@ -85,7 +85,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   initSpecieRuneForm() {
     if (this.specie) {
       this.clearFormArray(this.formRuneAffinity.controls['specie_runes'] as FormArray);
-      this.specie.elemental_runes.forEach(rune => {
+      this.specie.elementalRunes.forEach(rune => {
         if (rune.name.includes('choice')) {
           if (rune.choice?.length === 1) {
             (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
@@ -99,9 +99,9 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
         }
       });
 
-      this.clearFormArray(this.formRuneAffinity.controls['power_runes'] as FormArray);
-      this.specie.power_runes.forEach(oppositeRunes => {
-        (this.formRuneAffinity.controls['power_runes'] as FormArray).push(new FormGroup({
+      this.clearFormArray(this.formRuneAffinity.controls['powerRunes'] as FormArray);
+      this.specie.powerRunes.forEach(oppositeRunes => {
+        (this.formRuneAffinity.controls['powerRunes'] as FormArray).push(new FormGroup({
           leftRune: new FormControlPlus(oppositeRunes.leftRune.value, null, null, oppositeRunes.leftRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.leftRune.name)}),
           rightRune: new FormControlPlus(oppositeRunes.rightRune.value, null, null, oppositeRunes.rightRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.rightRune.name)})
         }));
@@ -114,7 +114,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   getPowerRunes(): FormArray {
-    return this.formRuneAffinity.get('power_runes') as FormArray;
+    return this.formRuneAffinity.get('powerRunes') as FormArray;
   }
 
   getRuneIcon(runeName: string) {

@@ -16,8 +16,8 @@
     </nz-space>
     <nz-space nzDirection="horizontal">
       <div class="box>">
-        <h3>{{'static.elemental_runes' | translate}}</h3>
-        <div class="rune-circle" formGroupName="elemental_runes">
+        <h3>{{'static.elementalRunes' | translate}}</h3>
+        <div class="rune-circle" formGroupName="elementalRunes">
           <app-rune-input class="fire" formControlName="fire" minValue="0" maxValue="100" runeIcon="rune:fire-sky" title="{{'runes.elemental.fire' | translate}}"></app-rune-input>
           <app-rune-input class="air" formControlName="air" minValue="0" maxValue="100" runeIcon="rune:air" title="{{'runes.elemental.air' | translate}}" leftInput="true"></app-rune-input>
           <app-rune-input class="darkness" formControlName="darkness" minValue="0" maxValue="100" runeIcon="rune:darkness" title="{{'runes.elemental.darkness' | translate}}"></app-rune-input>
@@ -26,8 +26,8 @@
           <app-rune-input class="water" formControlName="water" minValue="0" maxValue="100" runeIcon="rune:water" title="{{'runes.elemental.water' | translate}}"></app-rune-input>
         </div>
       </div>
-      <div formArrayName="power_runes">
-        <h3>{{'static.power_runes' | translate}}</h3>
+      <div formArrayName="powerRunes">
+        <h3>{{'static.powerRunes' | translate}}</h3>
         <app-opposite-rune-input *ngFor="let fg of getPowerRunes().controls; let i=index" [runeGroup]="fg"></app-opposite-rune-input>
       </div>
     </nz-space>

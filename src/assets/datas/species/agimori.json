@@ -10,10 +10,10 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.agimori.agimori"],
-  "elemental_runes": [
+  "elementalRunes": [
     { "name": "choice.primary", "value": 100 , "choice": ["runes.elemental.fire"]}
   ],
-  "power_runes": [
+  "powerRunes": [
     {
       "name": "man_beast",
       "leftRune": { "name": "runes.power_form.man", "value": 50 },

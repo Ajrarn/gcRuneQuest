@@ -99,8 +99,8 @@ export interface Specie {
   name: string;
   cultures: string[];
   characteristics: Characteristics;
-  elemental_runes: Rune[];
-  power_runes: OppositeRunes[];
+  elementalRunes: Rune[];
+  powerRunes: OppositeRunes[];
   skills: SkillCategorie[];
 }
 

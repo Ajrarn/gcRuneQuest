@@ -10,7 +10,7 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.elder_races.aldryami"],
-  "elemental_runes": [
+  "elementalRunes": [
     { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.earth","runes.elemental.fire"]},
     { "name": "choice.power", "value": 75 , "choice":  ["runes.power_form.fertility","runes.power_form.death",
       "runes.power_form.harmony", "runes.power_form.disorder",
@@ -18,7 +18,7 @@
       "runes.power_form.stasis", "runes.power_form.movement"
     ]}
   ],
-  "power_runes": [
+  "powerRunes": [
     {
       "leftRune": { "name": "runes.power_form.man", "value": 25 },
       "rightRune" : { "name": "runes.power_form.plant", "value": 75 }

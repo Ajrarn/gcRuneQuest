@@ -10,10 +10,10 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.elder_races.mostali"],
-  "elemental_runes": [
+  "elementalRunes": [
     { "name": "choice.primary", "value": 80 , "choice":  [ "runes.elemental.earth"]}
   ],
-  "power_runes": [
+  "powerRunes": [
     {
       "leftRune": { "name": "runes.power_form.man", "value": 50 },
       "rightRune" : { "name": "runes.power_form.beast", "value": 50 }

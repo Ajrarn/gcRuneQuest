@@ -11,7 +11,7 @@ export class RunesComponent {
 
   runes = [
     {
-      name: 'static.elemental_runes',
+      name: 'static.elementalRunes',
       active: true,
       runes:[
         { title: 'runes.elemental.fire', icon: 'rune:fire-sky'},
@@ -23,7 +23,7 @@ export class RunesComponent {
       ]
     },
     {
-      name: 'static.power_runes',
+      name: 'static.powerRunes',
       active: true,
       runes:[
         { title: 'runes.power_form.beast', icon: 'rune:beast'},

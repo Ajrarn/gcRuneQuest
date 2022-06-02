@@ -10,10 +10,10 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.beast_men.minotaur"],
-  "elemental_runes": [
+  "elementalRunes": [
     { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air"]}
   ],
-  "power_runes": [
+  "powerRunes": [
     {
       "leftRune": { "name": "runes.power_form.man", "value": 40 },
       "rightRune" : { "name": "runes.power_form.beast", "value": 60 }

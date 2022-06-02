@@ -38,8 +38,8 @@ export class SpeciesComponent {
     },
     skills: [],
     cultures: [],
-    elemental_runes: [],
-    power_runes: []
+    elementalRunes: [],
+    powerRunes: []
   };
 
 
