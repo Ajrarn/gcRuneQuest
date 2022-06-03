@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnDestroy, Output, SimpleChanges } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
 import { TranslateService } from '@ngx-translate/core';
 import { FormControlPlus } from '../../../../shared/form-control-plus';
@@ -27,7 +27,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   constructor(private store: Store, private fb: FormBuilder, private translateService: TranslateService) {
     this.formRuneAffinity = fb.group({
-      specie_runes: fb.array([], [GCRValidators.differentValues()]),
+      specieRunes: fb.array([], [GCRValidators.differentValues()]),
       elementalRunes: fb.group({
         fire: fb.control(0),
         air: fb.control(0),
@@ -51,7 +51,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   initElementalRuneForm() {
-    const specieRuneForm = this.formRuneAffinity.get('specie_runes');
+    const specieRuneForm = this.formRuneAffinity.get('specieRunes');
     const elementalRunesForm = this.formRuneAffinity.get('elementalRunes');
     if (elementalRunesForm) {
       if (specieRuneForm && specieRuneForm.valid) {
@@ -67,7 +67,25 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   initPowerRuneForm() {
-    const specieRuneForm = this.formRuneAffinity.get('specie_runes');
+    const specieRuneForm = this.formRuneAffinity.get('specieRunes') as FormArray;
+    if (specieRuneForm) {
+      specieRuneForm.controls
+        .filter(item => item.status === 'VALID')
+        .map(control => control as FormControlPlus)
+        .map(item => {
+          return {
+            runeName: item.value,
+            value: item.options.value
+          }
+        })
+        .forEach(runeAndValue => {
+          console.log('specieRuneResult', runeAndValue);
+      });
+    }
+
+
+    // enable L disable
+
     const powerRunesForm = this.formRuneAffinity.get('powerRunes');
     if (powerRunesForm) {
       if (specieRuneForm && specieRuneForm.valid) {
@@ -84,15 +102,15 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   initSpecieRuneForm() {
     if (this.specie) {
-      this.clearFormArray(this.formRuneAffinity.controls['specie_runes'] as FormArray);
+      this.clearFormArray(this.formRuneAffinity.controls['specieRunes'] as FormArray);
       this.specie.elementalRunes.forEach(rune => {
         if (rune.name.includes('choice')) {
           if (rune.choice?.length === 1) {
-            (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
+            (this.formRuneAffinity.controls['specieRunes'] as FormArray).push(
               new FormControlPlus(rune.choice[0], [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
             );
           } else {
-            (this.formRuneAffinity.controls['specie_runes'] as FormArray).push(
+            (this.formRuneAffinity.controls['specieRunes'] as FormArray).push(
               new FormControlPlus(null, [Validators.required], null, rune.name,{ choice: rune.choice, value: rune.value })
             );
           }
@@ -110,7 +128,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   getSpecieRunes(): FormArray {
-    return this.formRuneAffinity.get('specie_runes') as FormArray;
+    return this.formRuneAffinity.get('specieRunes') as FormArray;
   }
 
   getPowerRunes(): FormArray {
