@@ -68,9 +68,11 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   initPowerRuneForm() {
     const specieRuneForm = this.formRuneAffinity.get('specieRunes') as FormArray;
-    if (specieRuneForm) {
+    const elementalRunesForm = this.formRuneAffinity.get('elementalRunes') as FormGroup;
+    const powerRunesForm = this.formRuneAffinity.get('powerRunes') as FormArray;
+
+    if (specieRuneForm && specieRuneForm.valid) {
       specieRuneForm.controls
-        .filter(item => item.status === 'VALID')
         .map(control => control as FormControlPlus)
         .map(item => {
           return {
@@ -79,14 +81,28 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
           }
         })
         .forEach(runeAndValue => {
-          console.log('specieRuneResult', runeAndValue);
+          if (runeAndValue.runeName.startsWith('runes.elemental')) {
+            let controlName = runeAndValue.runeName.split('.')[2];
+            let control = elementalRunesForm.get(controlName);
+            if (control) {
+              control.setValue(runeAndValue.value, {emitEvent: false});
+            }
+          } else {
+            powerRunesForm.controls.forEach((group: AbstractControl) => {
+              let left = group.get('leftRune') as FormControlPlus;
+              let right = group.get('rightRune') as FormControlPlus;
+              if (left && left.label === runeAndValue.runeName) {
+                left.setValue(runeAndValue.value, {emitEvent: false});
+              }
+              if (right && right.label === runeAndValue.runeName) {
+                right.setValue(runeAndValue.value, {emitEvent: false});
+              }
+            });
+          }
       });
     }
 
-
     // enable L disable
-
-    const powerRunesForm = this.formRuneAffinity.get('powerRunes');
     if (powerRunesForm) {
       if (specieRuneForm && specieRuneForm.valid) {
         if (powerRunesForm.disabled) {
