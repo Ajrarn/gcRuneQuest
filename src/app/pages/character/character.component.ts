@@ -47,6 +47,7 @@ export class CharacterComponent {
 
   species: Specie[] = [];
   specie: Specie | undefined;
+  culture: Culture | undefined;
   homelands: Homeland[] = [];
   allHomelands: Homeland[] = [];
   allOccupations: OccupationGroup[] = [];
@@ -160,10 +161,10 @@ export class CharacterComponent {
       const homelandName = cultureName.split('.', 2).join('.') + '.name';
       const homeland = this.homelands.find(item => item.name === homelandName);
       if (homeland) {
-        const culture = homeland.cultures.find(item => item.name === cultureName);
-        if (culture) {
-          this.store.dispatch(new CharacterUpdateCulture(<Culture>culture));
-          this.filterOccupations(culture);
+        this.culture = homeland.cultures.find(item => item.name === cultureName);
+        if (this.culture) {
+          this.store.dispatch(new CharacterUpdateCulture(<Culture>this.culture));
+          this.filterOccupations(this.culture);
         }
       }
     }

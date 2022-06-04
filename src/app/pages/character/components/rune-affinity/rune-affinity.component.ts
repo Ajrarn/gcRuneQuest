@@ -3,7 +3,7 @@ import { AbstractControl, FormArray, FormBuilder, FormGroup, Validators } from '
 import { Store } from '@ngxs/store';
 import { TranslateService } from '@ngx-translate/core';
 import { FormControlPlus } from '../../../../shared/form-control-plus';
-import { Specie } from '../../../../store/models';
+import { Culture, Specie } from '../../../../store/models';
 import { GCRValidators } from '../../../../shared/gcr-validators';
 import { debounceTime, Subscription } from 'rxjs';
 import { CharacterUpdateRunes } from '../../../../store/character.actions';
@@ -20,6 +20,9 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   @Input()
   specie: Specie | undefined;
+
+  @Input()
+  culture: Culture | undefined;
 
   @Output()
   valid = new EventEmitter<boolean>();
@@ -142,6 +145,8 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
           }
       });
     }
+
+    this.applyCultureModifier();
   }
 
   initSpecieRuneForm() {
@@ -172,6 +177,40 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
           rightRune: new FormControlPlus(oppositeRunes.rightRune.value, null, null, oppositeRunes.rightRune.name, {runeIcon:this.getRuneIcon(oppositeRunes.rightRune.name)})
         }));
       });
+    }
+  }
+
+  applyCultureModifier() {
+    if (this.culture) {
+
+      const elementalRunesForm = this.formRuneAffinity.get('elementalRunes') as FormGroup;
+      const powerRunesForm = this.formRuneAffinity.get('powerRunes') as FormArray;
+
+      this.culture.runes
+        .forEach(runeAndValue => {
+          if (runeAndValue.name.startsWith('runes.elemental')) {
+            let controlName = runeAndValue.name.split('.')[2];
+            let control = elementalRunesForm.get(controlName);
+            if (control) {
+              control.setValue(control.value + runeAndValue.value, {emitEvent: false});
+            }
+          } else {
+            powerRunesForm.controls.forEach((group: AbstractControl) => {
+              let left = group.get('leftRune') as FormControlPlus;
+              let right = group.get('rightRune') as FormControlPlus;
+              if (left && left.label === runeAndValue.name) {
+                left.setValue(left.value + runeAndValue.value, {emitEvent: false});
+                // @ts-ignore
+                right.setValue(right.value - runeAndValue.value, {emitEvent:false})
+              }
+              if (right && right.label === runeAndValue.name) {
+                right.setValue(right.value + runeAndValue.value, {emitEvent: false});
+                // @ts-ignore
+                left.setValue(left.value - runeAndValue.value, {emitEvent:false})
+              }
+            });
+          }
+        });
     }
   }
 
