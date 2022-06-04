@@ -16,6 +16,7 @@ import { CharacterUpdateRunes } from '../../../../store/character.actions';
 export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   formRuneAffinity: FormGroup;
+  specieRunes: FormArray;
 
   @Input()
   specie: Specie | undefined;
@@ -39,20 +40,35 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
       powerRunes: fb.array([])
     });
 
-    this.formRuneAffinity.valueChanges
-      .pipe(
-        debounceTime(300)
-      ).subscribe(values => {
+    this.subscription.add(
+      this.formRuneAffinity.valueChanges
+        .pipe(
+          debounceTime(300)
+        ).subscribe(values => {
         this.valid.emit(this.formRuneAffinity.valid);
         this.store.dispatch(new CharacterUpdateRunes(values));
-        this.initElementalRuneForm();
-        this.initPowerRuneForm();
-      });
+
+      })
+    );
+
+    this.specieRunes = this.formRuneAffinity.get('specieRunes') as FormArray;
+    if (this.specieRunes) {
+      this.subscription.add(
+        this.specieRunes.valueChanges.subscribe(() => {
+          this.enableDisableElementalRuneFormPowerRuneForm();
+          this.initElementalPowerRuneForm();
+        })
+      )
+    }
+
+    this.enableDisableElementalRuneFormPowerRuneForm();
   }
 
-  initElementalRuneForm() {
+  enableDisableElementalRuneFormPowerRuneForm() {
     const specieRuneForm = this.formRuneAffinity.get('specieRunes');
     const elementalRunesForm = this.formRuneAffinity.get('elementalRunes');
+    const powerRunesForm = this.formRuneAffinity.get('powerRunes') as FormArray;
+
     if (elementalRunesForm) {
       if (specieRuneForm && specieRuneForm.valid) {
         if (elementalRunesForm.disabled) {
@@ -64,14 +80,37 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
         }
       }
     }
+
+    if (powerRunesForm) {
+      if (specieRuneForm && specieRuneForm.valid) {
+        if (powerRunesForm.disabled) {
+          powerRunesForm.enable();
+        }
+      } else {
+        if (powerRunesForm.enabled) {
+          powerRunesForm.disable();
+        }
+      }
+    }
   }
 
-  initPowerRuneForm() {
+  initElementalPowerRuneForm() {
     const specieRuneForm = this.formRuneAffinity.get('specieRunes') as FormArray;
     const elementalRunesForm = this.formRuneAffinity.get('elementalRunes') as FormGroup;
     const powerRunesForm = this.formRuneAffinity.get('powerRunes') as FormArray;
 
     if (specieRuneForm && specieRuneForm.valid) {
+
+      elementalRunesForm.reset({
+        fire: 0,
+        air: 0,
+        darkness: 0,
+        water: 0,
+        earth: 0,
+        moon: 0
+      });
+      this.initPowerRunesForm();
+
       specieRuneForm.controls
         .map(control => control as FormControlPlus)
         .map(item => {
@@ -93,26 +132,15 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
               let right = group.get('rightRune') as FormControlPlus;
               if (left && left.label === runeAndValue.runeName) {
                 left.setValue(runeAndValue.value, {emitEvent: false});
+                right.setValue(100- runeAndValue.value, {emitEvent:false})
               }
               if (right && right.label === runeAndValue.runeName) {
                 right.setValue(runeAndValue.value, {emitEvent: false});
+                left.setValue(100- runeAndValue.value, {emitEvent:false})
               }
             });
           }
       });
-    }
-
-    // enable L disable
-    if (powerRunesForm) {
-      if (specieRuneForm && specieRuneForm.valid) {
-        if (powerRunesForm.disabled) {
-          powerRunesForm.enable();
-        }
-      } else {
-        if (powerRunesForm.enabled) {
-          powerRunesForm.disable();
-        }
-      }
     }
   }
 
@@ -132,7 +160,11 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
           }
         }
       });
+    }
+  }
 
+  initPowerRunesForm() {
+    if (this.specie) {
       this.clearFormArray(this.formRuneAffinity.controls['powerRunes'] as FormArray);
       this.specie.powerRunes.forEach(oppositeRunes => {
         (this.formRuneAffinity.controls['powerRunes'] as FormArray).push(new FormGroup({
@@ -201,6 +233,8 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.initSpecieRuneForm();
+    this.initPowerRunesForm();
+    this.enableDisableElementalRuneFormPowerRuneForm();
   }
 
   ngOnDestroy() {
