@@ -6,7 +6,7 @@
     { "name":  "passions.love('groups.shaker_temple')", "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.earth", "value": 10}
+    { "name":  "runes.elemental.earth", "value": 10}
   ],
   "skills": []
 }

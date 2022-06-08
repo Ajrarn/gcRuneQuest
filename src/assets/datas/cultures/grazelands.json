@@ -6,7 +6,7 @@
     { "name":  "passions.loyalty('persons.feathered_horse_queen')", "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.fire", "value": 10}
+    { "name":  "runes.elemental.fire", "value": 10}
   ],
   "occupations": [
     "occupations.common.assistant_shaman",

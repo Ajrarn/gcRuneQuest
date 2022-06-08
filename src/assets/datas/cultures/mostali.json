@@ -5,9 +5,7 @@
     { "name":  "passions.loyalty('groups.clan')", "value": 60 },
     { "name":  "passions.loyalty('groups.tribe')", "value": 60 }
   ],
-  "runes": [
-    { "name":  "elemental.air", "value": 10}
-  ],
+  "runes": [],
   "occupations": [
     "occupations.dwarf.brass",
     "occupations.dwarf.copper",

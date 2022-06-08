@@ -6,7 +6,7 @@
     { "name":  "passions.loyalty('groups.clan')" , "value": 60 }
   ],
   "runes": [
-    { "name":  "elemental.earth", "value": 10}
+    { "name":  "runes.elemental.earth", "value": 10}
   ],
   "occupations": [
     "occupations.common.assistant_shaman",
