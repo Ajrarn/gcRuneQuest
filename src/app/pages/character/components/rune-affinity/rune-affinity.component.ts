@@ -17,6 +17,8 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
   formRuneAffinity: FormGroup;
   specieRunes: FormArray;
+  initialValues: any;
+  pointsRemaining = 50;
 
   @Input()
   specie: Specie | undefined;
@@ -48,10 +50,21 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
         .pipe(
           debounceTime(300)
         ).subscribe(values => {
-        this.valid.emit(this.formRuneAffinity.valid);
-        this.store.dispatch(new CharacterUpdateRunes(values));
+          this.store.dispatch(new CharacterUpdateRunes(values));
 
-      })
+          if (this.formRuneAffinity.valid) {
+            this.pointsRemaining = 50 - this.changePoints(values);
+            if (this.pointsRemaining === 0) {
+              this.valid.emit(this.formRuneAffinity.valid);
+            }
+            console.log('initial', this.initialValues);
+            console.log('actual', values);
+            console.log('changes', this.changePoints(values));
+          } else  {
+            this.valid.emit(this.formRuneAffinity.valid);
+          }
+        }
+      )
     );
 
     this.specieRunes = this.formRuneAffinity.get('specieRunes') as FormArray;
@@ -147,6 +160,11 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
     }
 
     this.applyCultureModifier();
+
+    // save the initila values
+    this.initialValues = this.formRuneAffinity.getRawValue();
+    console.log('initialValues', this.initialValues);
+
   }
 
   initSpecieRuneForm() {
@@ -261,6 +279,26 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
         return '';
       }
     }
+  }
+
+  changePoints(values: { elementalRunes: { fire: number; darkness: number; water: number; earth: number; air: number; moon: number; }; powerRunes: { leftRune: number; rightRune: number; }[]; }) {
+    let difference = 0;
+    difference += (values.elementalRunes.fire - this.initialValues.elementalRunes.fire);
+    difference += (values.elementalRunes.darkness - this.initialValues.elementalRunes.darkness);
+    difference += (values.elementalRunes.water - this.initialValues.elementalRunes.water);
+    difference += (values.elementalRunes.earth - this.initialValues.elementalRunes.earth);
+    difference += (values.elementalRunes.air - this.initialValues.elementalRunes.air);
+    difference += (values.elementalRunes.moon - this.initialValues.elementalRunes.moon);
+
+    values.powerRunes.forEach((line: { leftRune: number; rightRune: number; }, index: number) => {
+      if (line.leftRune > this.initialValues.powerRunes[index].leftRune) {
+        difference += (line.leftRune - this.initialValues.powerRunes[index].leftRune)
+      } else {
+        difference += (line.rightRune - this.initialValues.powerRunes[index].rightRune)
+      }
+    });
+
+    return difference;
   }
 
   getRuneLabel(rune: FormControlPlus): string {
