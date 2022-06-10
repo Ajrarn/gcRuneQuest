@@ -170,7 +170,7 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   initSpecieRuneForm() {
     if (this.specie) {
       this.clearFormArray(this.formRuneAffinity.controls['specieRunes'] as FormArray);
-      this.specie.elementalRunes.forEach(rune => {
+      this.specie.specieRunes.forEach(rune => {
         if (rune.name.includes('choice')) {
           if (rune.choice?.length === 1) {
             (this.formRuneAffinity.controls['specieRunes'] as FormArray).push(

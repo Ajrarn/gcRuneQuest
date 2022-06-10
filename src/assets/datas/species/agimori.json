@@ -10,8 +10,8 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.agimori.agimori"],
-  "elementalRunes": [
-    { "name": "choice.primary", "value": 100 , "choice": ["runes.elemental.fire"]}
+  "specieRunes": [
+    { "name": "choice.elemental", "value": 100 , "choice": ["runes.elemental.fire"]}
   ],
   "powerRunes": [
     {

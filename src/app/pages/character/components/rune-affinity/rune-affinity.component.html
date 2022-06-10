@@ -30,12 +30,11 @@
         <h3>{{'static.powerRunes' | translate}}</h3>
         <app-opposite-rune-input *ngFor="let fg of getPowerRunes().controls; let i=index" [runeGroup]="fg"></app-opposite-rune-input>
       </div>
-      <div>
-        <h3>Remaining points</h3>
-        <h2>{{pointsRemaining}}</h2>
+      <div class="customization">
+        <h3>{{'static.customization' | translate}}</h3>
         <br>
-        <p *ngIf="pointsRemaining > 0">Il vous reste {{pointsRemaining}} à répartir dans vos runes</p>
-        <p *ngIf="pointsRemaining < 0">Vous avez dépensé {{-pointsRemaining}} en trop</p>
+        <p *ngIf="pointsRemaining > 0">{{'static.customize_runes' | translate:{value: pointsRemaining} }}</p>
+        <p *ngIf="pointsRemaining < 0">{{'static.customize_runes_exceed' | translate:{value: -pointsRemaining} }}</p>
       </div>
     </nz-space>
 

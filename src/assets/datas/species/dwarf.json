@@ -10,8 +10,8 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.elder_races.mostali"],
-  "elementalRunes": [
-    { "name": "choice.primary", "value": 80 , "choice":  [ "runes.elemental.earth"]}
+  "specieRunes": [
+    { "name": "choice.elemental", "value": 80 , "choice":  [ "runes.elemental.earth"]}
   ],
   "powerRunes": [
     {

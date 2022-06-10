@@ -14,6 +14,7 @@
 		}
 	},
 	"choice": {
+		"elemental": "Rune Elémentaire ({{value}})",
 		"power": "Rune de pouvoir ({{value}})",
 		"primary": "Primaire ({{value}})",
 		"secondary": "Secondaire ({{value}})",
@@ -475,6 +476,9 @@
 		"creation_steps": "Étapes de création",
 		"culture": "Culture",
 		"cultures": "Cultures",
+		"customization": "Personnalisation",
+		"customize_runes": "Il vous reste {{value}} points à répartir dans vos runes",
+		"customize_runes_exceed": "Vous avez dépassé de {{value}} le nombre de points assignables",
 		"datas": "Données",
 		"elementalRunes": "Runes élémentaires",
 		"language": "Langage",

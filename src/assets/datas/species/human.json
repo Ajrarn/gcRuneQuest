@@ -20,13 +20,25 @@
     "cultures.tarsh.lunar_tarsh",
     "cultures.tarsh.old_tarsh"
   ],
-  "elementalRunes": [
-    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+  "specieRunes": [
+    { "name": "choice.elemental", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
       "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"]},
-    { "name": "choice.secondary", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+    { "name": "choice.elemental", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
       "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"] },
-    { "name": "choice.tertiary", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
-      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"] }
+    { "name": "choice.elemental", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+      "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"] },
+    { "name": "choice.power", "value": 75 , "choice":  ["runes.power_form.fertility","runes.power_form.death",
+      "runes.power_form.harmony", "runes.power_form.disorder",
+      "runes.power_form.truth", "runes.power_form.illusion",
+      "runes.power_form.stasis", "runes.power_form.movement",
+      "runes.power_form.man", "runes.power_form.beast"
+    ]},
+    { "name": "choice.power", "value": 75 , "choice":  ["runes.power_form.fertility","runes.power_form.death",
+      "runes.power_form.harmony", "runes.power_form.disorder",
+      "runes.power_form.truth", "runes.power_form.illusion",
+      "runes.power_form.stasis", "runes.power_form.movement",
+      "runes.power_form.man", "runes.power_form.beast"
+    ]}
   ],
   "powerRunes": [
     {

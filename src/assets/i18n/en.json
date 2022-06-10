@@ -14,6 +14,7 @@
 		}
 	},
 	"choice": {
+		"elemental": "Elemental Rune ({{value}})",
 		"power": "Power Rune ({{value}})",
 		"primary": "Primary ({{value}})",
 		"secondary": "Secondary ({{value}})",
@@ -475,6 +476,9 @@
 		"creation_steps": "Creation steps",
 		"culture": "Culture",
 		"cultures": "Cultures",
+		"customization": "Customization",
+		"customize_runes": "You have {{value}} points left to assign to your rules",
+		"customize_runes_exceed": "You have an excedent of {{value}} points to your customization",
 		"datas": "Datas",
 		"elementalRunes": "Elemental Runes",
 		"language": "Language",

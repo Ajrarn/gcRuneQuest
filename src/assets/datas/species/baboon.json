@@ -10,12 +10,12 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.baboon.baboon"],
-  "elementalRunes": [
-    { "name": "choice.primary", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+  "specieRunes": [
+    { "name": "choice.elemental", "value": 60 , "choice":  ["runes.elemental.air", "runes.elemental.darkness",
       "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"]},
-    { "name": "choice.secondary", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+    { "name": "choice.elemental", "value": 40, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
       "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"] },
-    { "name": "choice.tertiary", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
+    { "name": "choice.elemental", "value": 20, "choice":  ["runes.elemental.air", "runes.elemental.darkness",
       "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"] }
   ],
   "powerRunes": [

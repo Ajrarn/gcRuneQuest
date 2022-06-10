@@ -10,9 +10,9 @@
     "CHA": "3D6"
   },
   "cultures": ["cultures.elder_races.uz"],
-  "elementalRunes": [
-    { "name": "choice.primary", "value": 40 , "choice":  ["runes.elemental.darkness"]},
-    { "name": "choice.secondary", "value": 20, "choice":  ["runes.elemental.air",
+  "specieRunes": [
+    { "name": "choice.elemental", "value": 40 , "choice":  ["runes.elemental.darkness"]},
+    { "name": "choice.elemental", "value": 20, "choice":  ["runes.elemental.air",
       "runes.elemental.earth","runes.elemental.fire","runes.elemental.moon", "runes.elemental.water"] }
   ],
   "powerRunes": [
