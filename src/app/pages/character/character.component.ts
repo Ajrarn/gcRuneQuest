@@ -75,6 +75,12 @@ export class CharacterComponent {
     this.allHomelands = this.store.selectSnapshot(state => state.cultures);
     this.allOccupations = this.store.selectSnapshot(state => state.occupations);
     this.character = this.store.selectSnapshot(state => state.character);
+    this.specie = this.species.find(item => item.name === this.character.specie);
+    const homelandName = this.character.culture.split('.', 2).join('.') + '.name';
+    const homeland = this.homelands.find(item => item.name === homelandName);
+    if (homeland) {
+      this.culture = homeland.cultures.find(item => item.name === this.character.culture);
+    }
 
     if (this.character && this.character.specie && this.character.specie.length > 0) {
       this.formHomeland.patchValue({specie: this.character.specie}, { emitEvent: false });

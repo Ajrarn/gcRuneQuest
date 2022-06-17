@@ -26,6 +26,9 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   @Input()
   culture: Culture | undefined;
 
+  @Input()
+  character: any | undefined;
+
   @Output()
   valid = new EventEmitter<boolean>();
 
@@ -57,9 +60,6 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
             if (this.pointsRemaining === 0) {
               this.valid.emit(this.formRuneAffinity.valid);
             }
-            console.log('initial', this.initialValues);
-            console.log('actual', values);
-            console.log('changes', this.changePoints(values));
           } else  {
             this.valid.emit(this.formRuneAffinity.valid);
           }
@@ -161,9 +161,8 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
 
     this.applyCultureModifier();
 
-    // save the initila values
+    // save the initial values
     this.initialValues = this.formRuneAffinity.getRawValue();
-    console.log('initialValues', this.initialValues);
 
   }
 
@@ -309,8 +308,16 @@ export class RuneAffinityComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.initSpecieRuneForm();
-    this.initPowerRunesForm();
+    console.log('changes', changes);
+
+    if (this.specie) {
+      this.initSpecieRuneForm();
+      this.initPowerRunesForm();
+    }
+
+    if (this.specie && this.character && this.character.runes && this.character.runes.specieRunes) {
+      this.formRuneAffinity.setValue(this.character.runes);
+    }
     this.enableDisableElementalRuneFormPowerRuneForm();
   }
 
